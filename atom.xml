@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-12T13:56:52.812Z</updated>
+  <updated>2019-04-13T08:23:53.881Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>immunity_0412</title>
-    <link href="http://yoursite.com/2019/04/12/immunity_0412/"/>
-    <id>http://yoursite.com/2019/04/12/immunity_0412/</id>
+    <title>The biology and function of fibroblasts in cancer</title>
+    <link href="http://yoursite.com/2019/04/13/The-biology-and-function-of-fibroblasts-in-cancer/"/>
+    <id>http://yoursite.com/2019/04/13/The-biology-and-function-of-fibroblasts-in-cancer/</id>
+    <published>2019-04-13T07:51:43.000Z</published>
+    <updated>2019-04-13T08:23:53.881Z</updated>
+    
+    <content type="html"><![CDATA[<p>Fibroblasts are usually quiescent and become acti vated in a wound healing response. The governing principles of how quiescent, resting fibroblasts become ‘activated’ is still being unravelled, and exciting new information suggests that there might be two types of fibroblast activation profile: ‘reversible’ and ‘irreversible’, determined partly by epigenetic regulation. Activated fibroblasts were identified predominantly by their expression of α-smooth muscle actin (αSMA; also known as ACTA2)</p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Fibroblasts are usually quiescent and become acti vated in a wound healing response. The governing principles of how quiescent, resting fibroblasts become ‘activated’ is still being unravelled, and exciting new information suggests that there might be two types of fibroblast activation profile: ‘reversible’ and ‘irreversible’, determined partly by epigenetic regulation. Activated fibroblasts were identified predominantly by their expression of α-smooth muscle actin (αSMA; also known as ACTA2)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>0413_RNAseq</title>
+    <link href="http://yoursite.com/2019/04/13/0413-RNAseq/"/>
+    <id>http://yoursite.com/2019/04/13/0413-RNAseq/</id>
+    <published>2019-04-13T05:47:04.000Z</published>
+    <updated>2019-04-13T05:47:04.245Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>0412-immunity</title>
+    <link href="http://yoursite.com/2019/04/12/0412-immunity/"/>
+    <id>http://yoursite.com/2019/04/12/0412-immunity/</id>
     <published>2019-04-12T13:34:49.000Z</published>
-    <updated>2019-04-12T13:56:52.812Z</updated>
+    <updated>2019-04-13T05:48:16.912Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应"><a href="#HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应" class="headerlink" title="HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应"></a>HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应</h2><a id="more"></a><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Loss of Neurological Disease HSAN-I-Associated Gene <em>SPTLC2</em> Impairs CD8+ T Cell Responses to Infection by Inhibiting T Cell Metabolic Fitness</a>)</p><p>Immmunity, 2019.03</p><p>SPTLC2(serine palmitoyltransferase subunit)</p><p>SPTLC2 mutations are associated with the neurological disorder HSAN-I, in which patients get frequent infections, attributed to loss of pain sensation and failure to seek treatment for minor injuries. Wu et al. show that protective CD8+ T cell responses are defective in HSAN-I patients and that CD8+ T cells require SPTLC2-mediated sphingolipid synthesis to promote T cell metabolic fitness.</p><p><em>Sptlc2</em> deficiency reduced <strong>sphingolipid biosynthetic flux and led to prolonged activation of the mechanistic target of rapamycin complex 1 (mTORC1), endoplasmic reticulum (ER) stress, and CD8 + T cell death</strong>. Protective CD8 + T cell responses in HSAN-I patient PBMCs and <em>Sptlc2</em>-deficient mice were restored by supplementing with sphingolipids and pharmacologically inhibiting ER stress-induced cell death. Therefore, SPTLC2 underpins protective immunity by translating extracellular stimuli into intracellular anabolic signals and antagonizes ER stress to promote T cell metabolic fitness.</p><p><img src="https://i.loli.net/2019/04/12/5cb073b2d43d4.jpg" alt></p><h2 id="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募"><a href="#角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募" class="headerlink" title="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募"></a>角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Keratinocyte-Mediated Activation of the Cytokine TGF-β Maintains Skin Recirculating Memory CD8+ T Cells</a>)</p><p>Regulated activation of the cytokine TGF-β by integrins α vβ 6 and α vβ 8 expressed on keratinocytes is required for residence of epidermal-resident memory T cells, but whether skin-derived signals also affect recirculating memory cells in the skin remains unclear. Here, we show that <strong>after resolution of skin vaccinia virus (VV) infection, antigen-specific circulating memory CD8 + T cells migrated into skin</strong>. In mice lacking α vβ 6 and α vβ 8 integrins ( <em>Itgb6</em> −/− <em>Itgb8</em> fl/fl <em>-</em>K14-cre), the absence of epidermal-activated TGF-β resulted in a gradual loss of E- or P-selectin-binding central and peripheral memory populations, which were rescued when skin entry was inhibited. Skin recirculating memory cells were required for optimal host defense against skin VV infection. These data demonstrate that skin migration can persist after resolution of local skin infection and that the cytokine environment within this nonlymphoid tissue shapes the differentiation state and persistence of the central and peripheral memory-T-cell pool.</p><p><img src="https://i.loli.net/2019/04/12/5cb07f58b3da3.jpg" alt></p><h2 id="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"><a href="#cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染" class="headerlink" title="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"></a>cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">A Subset of Type I Conventional Dendritic Cells Controls Cutaneous Bacterial Infections through VEGFα-Mediated Recruitment of Neutrophils</a>)</p><p>皮肤常规树突细胞（cDC）有两种不同的子集cDC1和cDC2存在，从而维持对病原体的免疫和对自身微生物群耐受的平衡。本文作者检测了皮肤cDC1s和cDC2s在细菌尤其是痤疮丙酸杆菌感染期间的作用。 cDC1s，而不是cDC2s，通过控制炎症部位的中性粒细胞募集及其存活和功能来调节对真皮中痤疮丙酸杆菌的免疫应答的程度。单细胞mRNA测序显示，该调节依赖于由一小部分活化的<font color="#F08080"><strong>EpCAM + CD59 + Ly-6D + cDC1s</strong></font>细胞分泌的细胞因子<font color="#F08080"><strong>VEGF-α</strong></font>。在金黄色葡萄球菌，卡介苗或大肠杆菌感染期间以及在人皮肤中的细菌损伤模型中也观察到真皮cDC1对中性粒细胞的募集作用。因此，皮肤cDC1是皮肤免疫中先天反应的必需调节剂，并且具有超出经典抗原呈递的作用。</p><p>In the skin, two subsets of ontogenetically distinct and functionally specialized conventional DCs (cDCs) exist: cDC1s, identified in mice as expressing <font color="#F08080"><strong>CD103 (integrin aE) and XCR1</strong></font>; and cDC2s, expressing <font color="#F08080"><strong>CD11b (integrin aM) and SIRPa</strong></font></p>]]></content>
     
