@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>SCENIC | keep exceeding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="SCENIC: Single-cell regulatory network inference and clustering">
+  <meta name="description" content="SCENIC: Single-cell regulatory network inference and clustering AbstractSCENIC can be use to demonstrate genomic regulatory code which can be exploited to guide the identification of transcription fac">
 <meta name="keywords" content="methods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SCENIC">
 <meta property="og:url" content="http://yoursite.com/2019/03/30/SCENIC/index.html">
 <meta property="og:site_name" content="keep exceeding">
-<meta property="og:description" content="SCENIC: Single-cell regulatory network inference and clustering">
+<meta property="og:description" content="SCENIC: Single-cell regulatory network inference and clustering AbstractSCENIC can be use to demonstrate genomic regulatory code which can be exploited to guide the identification of transcription fac">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/10636424-8f13717bcb851399.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2019-04-12T10:47:20.269Z">
+<meta property="og:updated_time" content="2019-04-13T11:37:30.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SCENIC">
-<meta name="twitter:description" content="SCENIC: Single-cell regulatory network inference and clustering">
+<meta name="twitter:description" content="SCENIC: Single-cell regulatory network inference and clustering AbstractSCENIC can be use to demonstrate genomic regulatory code which can be exploited to guide the identification of transcription fac">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/10636424-8f13717bcb851399.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
   
     <link rel="alternative" href="/atom.xml" title="keep exceeding" type="application/atom+xml">
@@ -176,13 +176,37 @@
       </header>
     
 	<!-- 目录内容 -->
-		
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Abstract"><span class="toc-number">1.</span> <span class="toc-text">Abstract</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">2.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-GENIE3-to-identify-sets-of-genes-that-are-co-expressed-with-transcription-factors"><span class="toc-number">3.</span> <span class="toc-text">Use GENIE3 to identify sets of genes that are co-expressed with transcription factors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Use-RcisTarge-to-identify-putative-direct-binding-targets-from-co-expression-module"><span class="toc-number">4.</span> <span class="toc-text">Use RcisTarge to identify putative direct-binding targets from co-expression module</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Score-the-activity-of-each-of-these-regulons-in-each-cell-with-AUCell"><span class="toc-number">5.</span> <span class="toc-text">Score the activity of each of these regulons in each cell with AUCell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cell-clustering-based-on-GRNs"><span class="toc-number">6.</span> <span class="toc-text">Cell clustering based on GRNs</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gene-filtering"><span class="toc-number">7.</span> <span class="toc-text">Gene filtering</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://www.nature.com/articles/nmeth.4463" target="_blank" rel="noopener">SCENIC: Single-cell regulatory network inference and clustering</a></p>
-<a id="more"></a>
 <h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>SCENIC can be use to demonstrate <strong>genomic regulatory code</strong> which can be exploited to guide the identification of transcription factors and cell states.</p>
+<a id="more"></a>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The transcriptional state of a cell emerges from an underlying gene regulatory network (GRN) in which a limited number of transcription factors and co-factors regulate each other and their downstream target genes.</p>
 <p>One challenge of single cell transcriptome profile analysis is that at the single cell level, gene expression may be partially disconnected from the dynamics of transcription factor inputs due to stochastic variation of gene expression consecutive to, for example, transcriptional bursting<br>(基因的表达式动态的，不稳定的)</p>
 <blockquote>

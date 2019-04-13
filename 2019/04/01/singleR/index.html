@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>singleR | keep exceeding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage">
+  <meta name="description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage ResultsReference data sets enhance annotation of scRNA-seqPipelineThe SingleR pipeline is based on">
 <meta name="keywords" content="methods">
 <meta property="og:type" content="article">
 <meta property="og:title" content="singleR">
 <meta property="og:url" content="http://yoursite.com/2019/04/01/singleR/index.html">
 <meta property="og:site_name" content="keep exceeding">
-<meta property="og:description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage">
+<meta property="og:description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage ResultsReference data sets enhance annotation of scRNA-seqPipelineThe SingleR pipeline is based on">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/31/5ca058a40ec09.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/03/31/5ca06b69ebecd.jpg">
@@ -24,10 +24,10 @@
 <meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1a38c303d7.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1a510967d7.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/04/01/5ca1a56682dfe.jpg">
-<meta property="og:updated_time" content="2019-04-12T10:47:17.477Z">
+<meta property="og:updated_time" content="2019-04-13T11:37:40.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="singleR">
-<meta name="twitter:description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage">
+<meta name="twitter:description" content="Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage ResultsReference data sets enhance annotation of scRNA-seqPipelineThe SingleR pipeline is based on">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/31/5ca058a40ec09.jpg">
   
     <link rel="alternative" href="/atom.xml" title="keep exceeding" type="application/atom+xml">
@@ -183,40 +183,57 @@
       </header>
     
 	<!-- 目录内容 -->
-		
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Results"><span class="toc-number">1.</span> <span class="toc-text">Results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference-data-sets-enhance-annotation-of-scRNA-seq"><span class="toc-number">1.1.</span> <span class="toc-text">Reference data sets enhance annotation of scRNA-seq</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Pipeline"><span class="toc-number">1.1.1.</span> <span class="toc-text">Pipeline</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Validate-SingleR"><span class="toc-number">1.1.2.</span> <span class="toc-text">Validate SingleR</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SingleR-identifies-a-transitional-macrophage-in-fibrosis"><span class="toc-number">1.2.</span> <span class="toc-text">SingleR identifies a transitional macrophage in fibrosis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models"><span class="toc-number">1.3.</span> <span class="toc-text">Cluster C2 and C3 markers are found in alternate lung fibrosis models</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cluster-C2-macrophages-localize-to-the-fibrotic-niche"><span class="toc-number">1.4.</span> <span class="toc-text">Cluster C2 macrophages localize to the fibrotic niche</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CX3CR1-expressing-macrophages-drive-lung-fibrosis"><span class="toc-number">1.5.</span> <span class="toc-text">CX3CR1-expressing macrophages drive lung fibrosis</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      		
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="https://doi.org/10.1038/s41590-018-0276-y" target="_blank" rel="noopener">Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</a></p>
-<a id="more"></a>
 <h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Reference-data-sets-enhance-annotation-of-scRNA-seq"><a href="#Reference-data-sets-enhance-annotation-of-scRNA-seq" class="headerlink" title="Reference data sets enhance annotation of scRNA-seq"></a>Reference data sets enhance annotation of scRNA-seq</h3><h4 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h4><p>The SingleR pipeline is based on correlating reference <strong>bulk transcriptomic data sets of pure cell types</strong> with single-cell gene expression.In the first step of the SingleR pipeline, a <strong>Spearman coefficient</strong> was calculated for single-cell gene expression with each of the samples in the reference data set, <strong>using only the variable genes in the reference data set</strong>. Using only variable genes among the cell types increased the ability to distinguish closely related cell types. This process was performed iteratively using only the top cell types from the previous step and the variable genes among them until only one cell type remaine</p>
 <p><img src="https://i.loli.net/2019/03/31/5ca058a40ec09.jpg" alt="Pipeline of singleR"></p>
-<p>&nbsp;</p>
+<a id="more"></a>
 <h4 id="Validate-SingleR"><a href="#Validate-SingleR" class="headerlink" title="Validate SingleR"></a>Validate SingleR</h4><p>Using SingleR to analyze a published study of scRNA-seq of mouse bone marrow-derived dendritic cells (BMDC) and fibroblasts. When applied to the ImmGen database as a reference library, SingleR identified 33 of the 48 cells thought in the study to be BMDCs as macrophages</p>
 <p><img src="https://i.loli.net/2019/03/31/5ca06b69ebecd.jpg" alt></p>
 <p>原文中用GM-CSF培养细胞，然后sorting CD11c+ 的细胞。这个protocol已被证明无法获得纯的DC细胞，会混进表达marcrophage markers的细胞。</p>
-<p>&nbsp;</p>
 <h3 id="SingleR-identifies-a-transitional-macrophage-in-fibrosis"><a href="#SingleR-identifies-a-transitional-macrophage-in-fibrosis" class="headerlink" title="SingleR identifies a transitional macrophage in fibrosis"></a>SingleR identifies a transitional macrophage in fibrosis</h3><p>applied SingleR to enhance annotation of a lung scRNA-seq data set obtained from whole lungs of adult, male mice (10–12 weeks age) dissociated into single-cell suspension and flow sorted on live cells, using 6 steady-state mice and 3 mice 14 days after a single tracheal instillation of bleomycin, the fibrotic phase of the injury model.</p>
 <p>  <img src="https://i.loli.net/2019/04/01/5ca1a1e0bff7b.jpg" alt></p>
 <p><strong>conclusion:</strong> The number of lung macrophages was higher in the bleomycin-treated condition than at steady state</p>
-<p>&nbsp;</p>
 <p>Macrophages and dendritic cells have similar transcriptomic profiles. So the authors repeated SingleR analysis using published RNA-seq data sets of mouse lung macrophages and dendritic cells to isolate the macrophages in the pooled bleomycin-injured and steady-state samples. Finally, singleR identified two subtypes of macrophages: alveolar and interstitial macrophages</p>
 <p>Similarity analysis by comparison of each cell to mouse RNA-seq data sets of alveolar and interstitial macrophages indicated a gradient of cellular identity in the macrophage cluster between alveolar and interstitial macrophages</p>
 <p>Deconvolution analysis in was performed using the DeconRNA-seq package using the average expression of AM samples and average expression of IM3 samples from GSE94135</p>
 <p><img src="https://i.loli.net/2019/04/01/5ca1a243a8188.jpg" alt></p>
-<p>&nbsp;</p>
 <p>Then, the full range of SingleR correlation scores for each cell with reference to ImmGen was used for unsupervised hierarchical clustering of the macrophages from the lung scRNA-seq data set. This analysis identified three distinct subclusters (C1, C2, and C3), all three detected at varying levels in both steady-state and bleomycin-treated mice.45% of cluster C2 cells (but only 7.3% of cluster C1 cells and 4.7% of cluster C3 cells) expressed at least 33% of cluster C1 genes and at least 33% of cluster C3 genes, suggesting that cluster C2 was intermediate in gene expression between C1 and C3</p>
 <p><img src="https://i.loli.net/2019/04/01/5ca1a2ee98ae4.jpg" alt="Hierarchical clustering by reference annotation reveals a transitional macrophage in fibrosis"></p>
 <p><strong>conclusion:</strong>cluster C1 was equally present in steady-state lung and bleomycin injury and corresponded to the cells that were annotated as alveolar macrophages by the lung-specific data sets; clusters C2 and C3 were enriched in cells isolated from mice with bleomycin-induced fibrosis and expressed Cx3cr1, Ccr2, Mafb, and MHCII genes, consistent with monocytic origin</p>
 <p>Clustering in Fig. 3a was performed using <strong>Ward’s hierarchical agglomerative clustering method</strong> based on the SingleR scores across all cell types</p>
-<p>&nbsp;</p>
 <h3 id="Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models"><a href="#Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models" class="headerlink" title="Cluster C2 and C3 markers are found in alternate lung fibrosis models"></a>Cluster C2 and C3 markers are found in alternate lung fibrosis models</h3><p>To test the relevance of the identified gene expression pat- tern to other models of fibrosis, the authors used a mouse model of lung fibrosis induced by epithelial telomere dysfunction</p>
 <p><img src="https://i.loli.net/2019/04/01/5ca1a38c303d7.jpg" alt="Markers of macrophages identified by scRNA-seq are found in multiple fibrosis models"></p>
 <p>用human芯片数据验证，发现在小鼠中得出的结论也使用与人.immunofluorescence of lung tissue indicated the expression of <strong>MAFB</strong>, a marker detected specifically in clusters C2 and C3, in CD68+  macrophages from patients with idiopathic lung fibrosis compared with healthy controls(Figc)</p>
-<p>&nbsp;</p>
 <h3 id="Cluster-C2-macrophages-localize-to-the-fibrotic-niche"><a href="#Cluster-C2-macrophages-localize-to-the-fibrotic-niche" class="headerlink" title="Cluster C2 macrophages localize to the fibrotic niche"></a>Cluster C2 macrophages localize to the fibrotic niche</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a510967d7.jpg" alt="transitional macrophages expressing CX3CR1, MHCII, and SiglecF localize to sites of fibroblast accumulation after lung injury"></p>
 <p><strong>Conclusion:</strong> macrophage cluster C2 localizes to the fibrotic niche</p>
-<p>&nbsp;</p>
 <h3 id="CX3CR1-expressing-macrophages-drive-lung-fibrosis"><a href="#CX3CR1-expressing-macrophages-drive-lung-fibrosis" class="headerlink" title="CX3CR1-expressing macrophages drive lung fibrosis"></a>CX3CR1-expressing macrophages drive lung fibrosis</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a56682dfe.jpg" alt="Pdgf-aa is a macrophage-derived trophic factor for fibroblasts"></p>
 <p><strong>Conclusion：</strong>during fibrogenesis, CX3CR1+ SiglecF+ macrophages localize to sites of Pdgfra+ and Pdgfrb+ fibroblast accumulation after bleomycin-induced injury in the lung. Deletion of these macrophages during the fibrotic period (days 8–21) eliminated Pdgfra+ or Pdgfrb+ fibroblasts and decreased total lung collagen. Mechanistic studies indicated that fibroblast migration and proliferation were dependent on secretion of Pdgf-aa by SiglecF+ CD11c+ MHCIIhi and CX3CR1+ cells, respectively, suggesting that paracrine interactions between these macrophages and fibroblasts sustain the fibroblast compartment and tissue fibrosis.</p>
 
