@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-18T13:42:13.116Z</updated>
+  <updated>2019-04-22T14:50:44.673Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>免疫学原理</title>
+    <link href="http://yoursite.com/2019/04/20/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%8E%9F%E7%90%86/"/>
+    <id>http://yoursite.com/2019/04/20/免疫学原理/</id>
+    <published>2019-04-20T12:14:05.000Z</published>
+    <updated>2019-04-22T14:50:44.673Z</updated>
+    
+    <content type="html"><![CDATA[<p>非淋巴细胞和固有淋巴细胞  <a href="https://mubu.com/doc/dwcLe46HQw" target="_blank" rel="noopener">https://mubu.com/doc/dwcLe46HQw</a></p><p>免疫原与免疫球蛋白 <a href="https://mubu.com/doc/mpILeMq500" target="_blank" rel="noopener">https://mubu.com/doc/mpILeMq500</a></p><p>主要组织相容性抗原 <a href="https://mubu.com/doc/kcgK6-1kE0" target="_blank" rel="noopener">https://mubu.com/doc/kcgK6-1kE0</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;非淋巴细胞和固有淋巴细胞  &lt;a href=&quot;https://mubu.com/doc/dwcLe46HQw&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://mubu.com/doc/dwcLe46HQw&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;免疫原与免疫球
+      
+    
+    </summary>
+    
+      <category term="basic" scheme="http://yoursite.com/categories/basic/"/>
+    
+    
+      <category term="immunity" scheme="http://yoursite.com/tags/immunity/"/>
+    
+  </entry>
   
   <entry>
     <title>immunity_0418</title>
