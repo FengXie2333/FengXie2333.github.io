@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-22T14:50:44.673Z</updated>
+  <updated>2019-04-25T06:24:10.889Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>0425-immunity</title>
+    <link href="http://yoursite.com/2019/04/25/0425-immunity/"/>
+    <id>http://yoursite.com/2019/04/25/0425-immunity/</id>
+    <published>2019-04-25T06:21:16.000Z</published>
+    <updated>2019-04-25T06:24:10.889Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction"><a href="#Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction" class="headerlink" title="Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction"></a>Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction</h2><a id="more"></a><h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><ul><li>HPGD is specifically upregulated in Treg cells and confers suppressive capabilities</li><li>HPGD-induced Tconv cell suppression is in part mediated by PPARγ signaling</li><li>HPGD expression in Treg cells is vital for VAT homeostasis and metabolic regulation</li><li>T2D patients have a reduced Treg cell fraction expressing lower amounts of HPGD</li></ul><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Regulatory T cells (Treg cells) are important for preventing autoimmunity and maintaining tissue homeostasis, but whether Treg cells can adopt tissue- or immune-context-specific suppressive mechanisms is unclear. Here, we found that the enzyme hydroxyprostaglandin dehydrogenase (HPGD), which catabolizes prostaglandin E 2 (PGE 2) into the metabolite 15-keto PGE 2, was highly expressed in Treg cells, particularly those in visceral adipose tissue (VAT). <strong>Nuclear receptor peroxisome proliferator-activated receptor-γ (PPARγ)-induced HPGD expression in VAT Treg cells, and consequential Treg-cell-mediated generation of 15-keto PGE 2 suppressed conventional T cell activation and proliferation</strong>. Conditional deletion of Hpgd in mouse Treg cells resulted in the accumulation of functionally impaired Treg cells specifically in VAT, causing local inflammation and systemic insulin resistance. Consistent with this mechanism, humans with type 2 diabetes showed decreased HPGD expression in Treg cells. These data indicate that HPGD-mediated suppression is a tissue- and context-dependent suppressive mechanism used by Treg cells to maintain adipose tissue homeostasis.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction&quot;&gt;&lt;a href=&quot;#Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction&quot; class=&quot;headerlink&quot; title=&quot;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&quot;&gt;&lt;/a&gt;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&lt;/h2&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="immunity" scheme="http://yoursite.com/tags/immunity/"/>
+    
+  </entry>
+  
+  <entry>
     <title>免疫学原理</title>
     <link href="http://yoursite.com/2019/04/20/%E5%85%8D%E7%96%AB%E5%AD%A6%E5%8E%9F%E7%90%86/"/>
     <id>http://yoursite.com/2019/04/20/免疫学原理/</id>
     <published>2019-04-20T12:14:05.000Z</published>
-    <updated>2019-04-22T14:50:44.673Z</updated>
+    <updated>2019-04-22T15:19:57.298Z</updated>
     
-    <content type="html"><![CDATA[<p>非淋巴细胞和固有淋巴细胞  <a href="https://mubu.com/doc/dwcLe46HQw" target="_blank" rel="noopener">https://mubu.com/doc/dwcLe46HQw</a></p><p>免疫原与免疫球蛋白 <a href="https://mubu.com/doc/mpILeMq500" target="_blank" rel="noopener">https://mubu.com/doc/mpILeMq500</a></p><p>主要组织相容性抗原 <a href="https://mubu.com/doc/kcgK6-1kE0" target="_blank" rel="noopener">https://mubu.com/doc/kcgK6-1kE0</a></p>]]></content>
+    <content type="html"><![CDATA[<p>非淋巴细胞和固有淋巴细胞  <a href="https://mubu.com/doc/dwcLe46HQw" target="_blank" rel="noopener">https://mubu.com/doc/dwcLe46HQw</a></p><p>免疫原与免疫球蛋白 <a href="https://mubu.com/doc/mpILeMq500" target="_blank" rel="noopener">https://mubu.com/doc/mpILeMq500</a></p><p>主要组织相容性抗原 <a href="https://mubu.com/doc/kcgK6-1kE0" target="_blank" rel="noopener">https://mubu.com/doc/kcgK6-1kE0</a></p><p>固有免疫 <a href="https://mubu.com/doc/gklhh9gUi0" target="_blank" rel="noopener">https://mubu.com/doc/gklhh9gUi0</a></p>]]></content>
     
     <summary type="html">
     
