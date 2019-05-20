@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-27T05:48:40.325Z</updated>
+  <updated>2019-05-20T01:49:03.815Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,263 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PD-1治疗需要CXCR3</title>
+    <link href="http://yoursite.com/2019/05/20/PD-1%E6%B2%BB%E7%96%97%E9%9C%80%E8%A6%81CXCR3/"/>
+    <id>http://yoursite.com/2019/05/20/PD-1治疗需要CXCR3/</id>
+    <published>2019-05-20T01:36:46.000Z</published>
+    <updated>2019-05-20T01:49:03.815Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Intratumoral Activity of the CXCR3 Chemokine System Is Required for the Efficacy of Anti-PD-1 Therapy</a>30190-6?rss=yes)</p><a id="more"></a><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>作者发现缺乏趋化因子受体CXCR3的荷瘤小鼠对抗PD-1治疗的反应很差。 在用抗PD-1处理的荷瘤小鼠中，CXCR3及其配体CXCL9对于productive CD8 + T细胞应答是关键的，但对于CD8 + T细胞向肿瘤的浸润不是必需的。瘤内CD103 +树突细胞产生的CXCL9促进了抗PD-1诱导的抗肿瘤反应，表明CXCR3促进肿瘤微环境中的DC-T细胞相互作用。小鼠肿瘤和黑素瘤患者血浆中的CXCR3配体是对抗PD-1的临床反应的指标，并且在非反应性小鼠肿瘤中诱导CXCL19表达可以促进抗PD-1的反应性。综上：CXCR3趋化因子系统是对PD-1阻断敏感性的生物标志物，并且增强该趋化因子系统的肿瘤内功能可以改善clinical outcome</p><p><img src="https://marlin-prod.literatumonline.com/cms/attachment/10b461fe-0506-43fb-9897-46bc720b5b1a/fx1_lrg.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.cell.com/immunity/fulltext/S1074-7613(19&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Intratumoral Activity of the CXCR3 Chemokine System Is Required for the Efficacy of Anti-PD-1 Therapy&lt;/a&gt;30190-6?rss=yes)&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="immunity" scheme="http://yoursite.com/tags/immunity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TGF-β--肿瘤免疫</title>
+    <link href="http://yoursite.com/2019/05/17/TGF-%CE%B2--%E8%82%BF%E7%98%A4%E5%85%8D%E7%96%AB/"/>
+    <id>http://yoursite.com/2019/05/17/TGF-β--肿瘤免疫/</id>
+    <published>2019-05-17T08:12:22.000Z</published>
+    <updated>2019-05-20T01:36:50.175Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><p>TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。</p><p>晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-β水平升高便可以<strong>阻断未成熟的T细胞向Th1细胞分化，促进其向Treg亚群的转化，并抑制树突状细胞的抗原递呈功能</strong>，从而导致肿瘤细胞的免疫逃逸。随着肿瘤的发展，肿瘤细胞内TGF-β受体或其下游的<em>Smad</em>基因突变积累，其抑制作用减弱。并且<strong>TGF-β信号促进上皮细胞间质转型</strong>（Epithelial-Mesenchymal Transition, EMT），这个过程使具有极性的上皮细胞转化为具有活动能力的间质细胞，从而获得侵袭和迁移的能力，这个转化过程在肿瘤的发生、恶化及转移中非常重要。肿瘤转移是导致癌症病人死亡的一个非常重要的原因，实体瘤患者中高达90%的患者死于肿瘤转移。</p><h1 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h1><h2 id="TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis"><a href="#TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis" class="headerlink" title="TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis"></a>TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h1&gt;&lt;p&gt;TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。&lt;/p&gt;
+&lt;p&gt;晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="immunity" scheme="http://yoursite.com/tags/immunity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>统计</title>
+    <link href="http://yoursite.com/2019/05/15/%E7%BB%9F%E8%AE%A1/"/>
+    <id>http://yoursite.com/2019/05/15/统计/</id>
+    <published>2019-05-15T02:54:31.000Z</published>
+    <updated>2019-05-15T02:59:22.220Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="生存曲线比较-Log-Rank检验"><a href="#生存曲线比较-Log-Rank检验" class="headerlink" title="生存曲线比较: Log Rank检验"></a>生存曲线比较: Log Rank检验</h1><blockquote><p>1、SPSS中的分析方法的名称为Log Rank和Breslow；SAS中相对应的为Log Rank和Wilcoxon。Breslow法即广义Wilcoxon法。Log Rank检验在实际工作中应用较多。</p></blockquote><p>2、Log Rank检验给结局事件的远期差别更大的权重，即对远期差异敏感；而Breslow检验给结局事件的近期差别更大的权重。因此，对于一开始粘在一起，随时时间的推移越拉越开的生存曲线，Log Rank检验较Breslow检验容易得到差异有显著性的结果；反之，对于一开始相差较大，随着时间的推移反而越来越近的生存曲线，Breslow法容易得到差异有显著性的结果。</p><p>3、用Log Rank检验比较时，要求各组生存曲线不能交叉，如果有交叉则提示可能存在混杂因素，此时应进行样本分层或多因素的方法校正混杂因素。</p><p><a href="https://zhuanlan.zhihu.com/p/24410512" target="_blank" rel="noopener">生存曲线比较：KM法及Log Rank检验（实例+SPSS）</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;生存曲线比较-Log-Rank检验&quot;&gt;&lt;a href=&quot;#生存曲线比较-Log-Rank检验&quot; class=&quot;headerlink&quot; title=&quot;生存曲线比较: Log Rank检验&quot;&gt;&lt;/a&gt;生存曲线比较: Log Rank检验&lt;/h1&gt;&lt;blockquote
+      
+    
+    </summary>
+    
+      <category term="basic" scheme="http://yoursite.com/categories/basic/"/>
+    
+    
+      <category term="statistics" scheme="http://yoursite.com/tags/statistics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pancreatic CAF associated papers</title>
+    <link href="http://yoursite.com/2019/05/15/pancreatic-CAF-associated-papers/"/>
+    <id>http://yoursite.com/2019/05/15/pancreatic-CAF-associated-papers/</id>
+    <published>2019-05-15T02:44:13.000Z</published>
+    <updated>2019-05-15T02:56:12.192Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R: Error in dyn.load(file, DLLpath = DLLpath, …)</title>
+    <link href="http://yoursite.com/2019/05/12/R-Error-in-dyn-load-file-DLLpath-DLLpath-%E2%80%A6/"/>
+    <id>http://yoursite.com/2019/05/12/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/</id>
+    <published>2019-05-12T14:05:26.000Z</published>
+    <updated>2019-05-12T14:07:21.342Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Re-installing the package was enough to getting it working again.</span><br><span class="line">$ sudo R</span><br><span class="line">&gt; install.packages(<span class="string">"rgdal"</span>)</span><br><span class="line">&gt; quit()</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure><p><a href="https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath" target="_blank" rel="noopener">https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;li
+      
+    
+    </summary>
+    
+      <category term="erro" scheme="http://yoursite.com/categories/erro/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>R install.packages returns “failed to create lock directory</title>
+    <link href="http://yoursite.com/2019/05/12/R-install-packages-returns-%E2%80%9Cfailed-to-create-lock-directory/"/>
+    <id>http://yoursite.com/2019/05/12/R-install-packages-returns-“failed-to-create-lock-directory/</id>
+    <published>2019-05-12T13:55:30.000Z</published>
+    <updated>2019-05-12T14:07:33.257Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">it was related to multiple distributed R processes spread over SGE cluster trying to interact with the package index files <span class="keyword">in</span> LIB_PATH and the latency of cleaning up lock file on NFS file system</span><br><span class="line">install.packages(<span class="string">"Rcpp"</span>, dependencies=<span class="literal">TRUE</span>, INSTALL_opts = c(<span class="string">'--no-lock'</span>))</span><br></pre></td></tr></table></figure><p>This happens when your last package installation has interrupted abnormally. to fix this you should remove the locked file</p><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlink(<span class="string">"/home/me/src/Rlibs/00LOCK-Rcpp"</span>, recursive = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure><p><a href="https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory" target="_blank" rel="noopener">https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight r&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td 
+      
+    
+    </summary>
+    
+      <category term="erro" scheme="http://yoursite.com/categories/erro/"/>
+    
+    
+      <category term="R" scheme="http://yoursite.com/tags/R/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>李梢--单细胞转录组发现早期胃癌特异标记基因</title>
+    <link href="http://yoursite.com/2019/05/12/%E6%9D%8E%E6%A2%A2-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%8F%91%E7%8E%B0%E6%97%A9%E6%9C%9F%E8%83%83%E7%99%8C%E7%89%B9%E5%BC%82%E6%A0%87%E8%AE%B0%E5%9F%BA%E5%9B%A0/"/>
+    <id>http://yoursite.com/2019/05/12/李梢-单细胞转录组发现早期胃癌特异标记基因/</id>
+    <published>2019-05-12T08:42:05.000Z</published>
+    <updated>2019-05-13T14:37:34.813Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul><li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p></li><li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p></li><li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p></li></ul><h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p><ul><li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li><li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li><li>proliferative cells (PCs)  MKI67 and BRIC5</li><li>cancer cells  CEACAM5 and CEACAM6</li><li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li><li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li><li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li></ul><p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p><h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.celrep.2019.04.052&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dissecting the Single-Cell Transcriptome Network Un
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python dataframe 获取行名和列名</title>
+    <link href="http://yoursite.com/2019/05/09/python-dataframe-%E8%8E%B7%E5%8F%96%E8%A1%8C%E5%90%8D%E5%92%8C%E5%88%97%E5%90%8D/"/>
+    <id>http://yoursite.com/2019/05/09/python-dataframe-获取行名和列名/</id>
+    <published>2019-05-09T14:32:53.000Z</published>
+    <updated>2019-05-09T14:36:10.514Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dfname._stat_axis.values.tolist() <span class="comment"># 行名称</span></span><br><span class="line"></span><br><span class="line">dfname.columns.values.tolist()    <span class="comment"># 列名称</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pandas.DataFrame更改列名</title>
+    <link href="http://yoursite.com/2019/05/09/pandas-DataFrame%E6%9B%B4%E6%94%B9%E5%88%97%E5%90%8D/"/>
+    <id>http://yoursite.com/2019/05/09/pandas-DataFrame更改列名/</id>
+    <published>2019-05-09T14:28:59.000Z</published>
+    <updated>2019-05-09T14:35:39.390Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">df.columns.values <span class="comment">## 显示每列的名称</span></span><br><span class="line">df.rename(columns=&#123; df.columns[<span class="number">2</span>]: <span class="string">"new name"</span> &#125;, inplace=<span class="literal">True</span>) <span class="comment">## 将第三列的列名改为'new name'</span></span><br><span class="line">df.columns = [<span class="string">'col_1'</span>, <span class="string">'col_2'</span>, <span class="string">'col_3'</span>]  <span class="comment">## 假如df一共有三列，你想把所有列名依次改为'col_1', 'col_2', 'col_3'</span></span><br><span class="line">df = df.rename(columns=&#123;<span class="string">'col_1'</span>: <span class="string">'col_a'</span>&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生物信息--山东大学</title>
+    <link href="http://yoursite.com/2019/05/08/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF-%E5%B1%B1%E4%B8%9C%E5%A4%A7%E5%AD%A6/"/>
+    <id>http://yoursite.com/2019/05/08/生物信息-山东大学/</id>
+    <published>2019-05-08T12:25:04.000Z</published>
+    <updated>2019-05-20T02:09:05.393Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="生物数据库"><a href="#生物数据库" class="headerlink" title="生物数据库"></a>生物数据库</h2><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><h3 id="核酸数据库"><a href="#核酸数据库" class="headerlink" title="核酸数据库"></a>核酸数据库</h3><p>一级：GeneBank ENA DDBJ</p><p>蛋白数据库：一级   二级</p><p>专用数据库</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;生物数据库&quot;&gt;&lt;a href=&quot;#生物数据库&quot; class=&quot;headerlink&quot; title=&quot;生物数据库&quot;&gt;&lt;/a&gt;生物数据库&lt;/h2&gt;&lt;h2 id=&quot;分类&quot;&gt;&lt;a href=&quot;#分类&quot; class=&quot;headerlink&quot; title=&quot;分类&quot;&gt;&lt;/a&gt;分
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatic" scheme="http://yoursite.com/tags/bioinformatic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gal1 inhibit PDAC via tumor-stroma crosstalk(PNAS_2017)</title>
+    <link href="http://yoursite.com/2019/04/30/Gal1-inhibit-PDAC-via-tumor-stroma-crosstalk-PNAS-2017/"/>
+    <id>http://yoursite.com/2019/04/30/Gal1-inhibit-PDAC-via-tumor-stroma-crosstalk-PNAS-2017/</id>
+    <published>2019-04-30T02:00:48.000Z</published>
+    <updated>2019-04-30T14:20:49.472Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5910865/" target="_blank" rel="noopener">Targeting galectin-1 inhibits pancreatic cancer progression by modulating tumor–stroma crosstalk</a></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5910865/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Targeting galectin-1 inhibits pancreatic cancer progression by modulating tumor–stroma crosstalk&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
+    
+  </entry>
   
   <entry>
     <title>Single-Cell-Transcriptomics-of-Human-and-Mouse-Lung-Cancers-Reveals-Conserved-Myeloid-Populations-across-Individuals-and-Species</title>
@@ -31,17 +288,17 @@
   </entry>
   
   <entry>
-    <title>0425-immunity</title>
-    <link href="http://yoursite.com/2019/04/25/0425-immunity/"/>
-    <id>http://yoursite.com/2019/04/25/0425-immunity/</id>
+    <title>Treg中HPGD发挥免疫抑制功能（通过pparg通路）</title>
+    <link href="http://yoursite.com/2019/04/25/Treg%E4%B8%ADHPGD%E5%8F%91%E6%8C%A5%E5%85%8D%E7%96%AB%E6%8A%91%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%88%E9%80%9A%E8%BF%87pparg%E9%80%9A%E8%B7%AF%EF%BC%89/"/>
+    <id>http://yoursite.com/2019/04/25/Treg中HPGD发挥免疫抑制功能（通过pparg通路）/</id>
     <published>2019-04-25T06:21:16.000Z</published>
-    <updated>2019-04-27T05:53:03.388Z</updated>
+    <updated>2019-05-20T02:08:15.875Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction"><a href="#Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction" class="headerlink" title="Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction"></a>Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction</h2><a id="more"></a><h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><ul><li>HPGD is specifically upregulated in Treg cells and confers suppressive capabilities</li><li>HPGD-induced Tconv cell suppression is in part mediated by PPARγ signaling</li><li>HPGD expression in Treg cells is vital for VAT homeostasis and metabolic regulation</li><li>T2D patients have a reduced Treg cell fraction expressing lower amounts of HPGD</li></ul><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Regulatory T cells (Treg cells) are important for preventing autoimmunity and maintaining tissue homeostasis, but whether Treg cells can adopt tissue- or immune-context-specific suppressive mechanisms is unclear. Here, we found that the enzyme hydroxyprostaglandin dehydrogenase (HPGD), which catabolizes prostaglandin E 2 (PGE 2) into the metabolite 15-keto PGE 2, was highly expressed in Treg cells, particularly those in visceral adipose tissue (VAT). <strong>Nuclear receptor peroxisome proliferator-activated receptor-γ (PPARγ)-induced HPGD expression in VAT Treg cells, and consequential Treg-cell-mediated generation of 15-keto PGE 2 suppressed conventional T cell activation and proliferation</strong>. Conditional deletion of Hpgd in mouse Treg cells resulted in the accumulation of functionally impaired Treg cells specifically in VAT, causing local inflammation and systemic insulin resistance. Consistent with this mechanism, humans with type 2 diabetes showed decreased HPGD expression in Treg cells. These data indicate that HPGD-mediated suppression is a tissue- and context-dependent suppressive mechanism used by Treg cells to maintain adipose tissue homeostasis.</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.immuni.2019.03.014" target="_blank" rel="noopener">Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction</a></p><a id="more"></a><h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><ul><li>HPGD is specifically upregulated in Treg cells and confers suppressive capabilities</li><li>HPGD-induced Tconv cell suppression is in part mediated by PPARγ signaling</li><li>HPGD expression in Treg cells is vital for VAT homeostasis and metabolic regulation</li><li>T2D patients have a reduced Treg cell fraction expressing lower amounts of HPGD</li></ul><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Regulatory T cells (Treg cells) are important for preventing autoimmunity and maintaining tissue homeostasis, but whether Treg cells can adopt tissue- or immune-context-specific suppressive mechanisms is unclear. Here, we found that the enzyme hydroxyprostaglandin dehydrogenase (HPGD), which catabolizes prostaglandin E 2 (PGE 2) into the metabolite 15-keto PGE 2, was highly expressed in Treg cells, particularly those in visceral adipose tissue (VAT). <strong>Nuclear receptor peroxisome proliferator-activated receptor-γ (PPARγ)-induced HPGD expression in VAT Treg cells, and consequential Treg-cell-mediated generation of 15-keto PGE 2 suppressed conventional T cell activation and proliferation</strong>. Conditional deletion of Hpgd in mouse Treg cells resulted in the accumulation of functionally impaired Treg cells specifically in VAT, causing local inflammation and systemic insulin resistance. Consistent with this mechanism, humans with type 2 diabetes showed decreased HPGD expression in Treg cells. These data indicate that HPGD-mediated suppression is a tissue- and context-dependent suppressive mechanism used by Treg cells to maintain adipose tissue homeostasis.</p>]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction&quot;&gt;&lt;a href=&quot;#Enzymatic-Activity-of-HPGD-in-Treg-Cells-Suppresses-Tconv-Cells-to-Maintain-Adipose-Tissue-Homeostasis-and-Prevent-Metabolic-Dysfunction&quot; class=&quot;headerlink&quot; title=&quot;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&quot;&gt;&lt;/a&gt;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&lt;/h2&gt;
+      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.immuni.2019.03.014&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&lt;/a&gt;&lt;/p&gt;
     
     </summary>
     
@@ -79,19 +336,19 @@
   </entry>
   
   <entry>
-    <title>immunity_0418</title>
-    <link href="http://yoursite.com/2019/04/18/0418-immunity/"/>
-    <id>http://yoursite.com/2019/04/18/0418-immunity/</id>
+    <title>Negative Co-stimulation 控制T细胞分化</title>
+    <link href="http://yoursite.com/2019/04/18/Negative%20Co-stimulation%20%E6%8E%A7%E5%88%B6T%E7%BB%86%E8%83%9E%E5%88%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/04/18/Negative Co-stimulation 控制T细胞分化/</id>
     <published>2019-04-18T05:33:41.000Z</published>
-    <updated>2019-04-27T05:52:35.057Z</updated>
+    <updated>2019-05-20T02:08:55.195Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Negative-Co-stimulation-Constrains-T-Cell-Differentiation-by-Imposing-Boundaries-on-Possible-Cell-States"><a href="#Negative-Co-stimulation-Constrains-T-Cell-Differentiation-by-Imposing-Boundaries-on-Possible-Cell-States" class="headerlink" title="Negative Co-stimulation Constrains T Cell Differentiation by Imposing Boundaries on Possible Cell States"></a>Negative Co-stimulation Constrains T Cell Differentiation by Imposing Boundaries on Possible Cell States</h2><p><a href="https://doi.org/10.1016/j.immuni.2019.03.004" target="_blank" rel="noopener">Negative Co-stimulation Constrains T Cell Differentiation by Imposing Boundaries on Possible Cell States</a></p><p>Immunity, 201904</p><p>T cell differentiation generates a wide range of specialized cell types; however, how the range of attainable cell states (i.e., phenotypes) is determined remains an open question. Given that T cell differentiation is tightly linked to TCR signal strength, the authors hypothesized that attenuation of downstream TCR signaling by CTLA-4 might also regulate differentiation. In order to verify this, the authors profiled lymphocytes derived from <em>Ctla4-/-</em> and littermate control mice via mass cytometry and subsequently used clustering methods to classify T cell populations. t-SNE visualization illustrated changes in T cell population frequencies and phenotypes in <em>Ctla4-/-</em> mice, but no differences between <em>Ctla4+/+</em> and <em>Ctla4+/-</em> mice were apparent. Populations that were only observed in <em>Ctla4-/-</em> mice were entirely contained within the CD4+ compartment. These enriched CD4+ T cell populations expressed high amounts of CD44 and inducible co-stimulatory molecule (ICOS) but displayed variable levels of other activation markers and lineage transcription factors. For example, the frequency of terminally differentiated (TBET+EOMES+CD44+CD62L+) CD8+ T cells increased in <em>Ctla4-/-</em> mice. Similarly, an ICOS+ Treg cell population that is very minor in CTLA-4 competent mice expanded in frequency in <em>Ctla4-/-</em> mice, whereas other Treg cell populations remained stable or contracted. These findings contrasted with the effects on CD8+ T cells, in which loss of CTLA-4 modulated expression levels (e.g., EOMES, IRF4, and CXCR3), but no CD8+ T cell clusters, was detected only in <em>Ctla4-/-</em> mice. This suggests that CTLA-4 limits CD4+ T cell phenotypes but not those of CD8+ T cells. Next, the authors concurrently assessed changes in 5-iodo-deoxyuridine (IdU) incorporation and changes in frequency in T cell subsets due to loss of CTLA-4 which suggested that there was no correlation between the change in frequency of each T cell subset and the respective changes in IdU incorporation. The phenomenon revealed above raised a question that whether loss of CTLA-4-mediated negative feedback allows cells to occupy otherwise unattainable phenotypic states. Archetypal analysis, an unsupervised computational approach used to identify optimal phenotypes associated with specific biological phenomena at the organismal and single-cell level, helped researchers identified phenotypic boundary and reveals that loss of CTLA-4 expands CD4+ but not CD8+ T cell phenotypic space. Next, because ICOS was highly expressed by phenotypically expanded T cells and antibody blockade of ICOS attenuates T cell activity in <em>Ctla4-/-</em> mice, researchers tested whether ICOS is necessary for the generation of aberrant populations. As a result, all T cell populations identified in <em>Ctla4-/-Icos+/-</em> mice were present in <em>Ctla4-/-Icos-/-</em> mice, indicating that although ICOS is highly expressed on phenotypically expanded subsets, it is not required for their development.</p><p>immunized <em>Ctla4-/-</em> and littermate controls with ovalbumin in complete Freund’s adjuvant (CFA) indicated that extension of phenotypic limits derives directly from loss of CTLA-4 rather than indirect effects of its deletion. Then, analysis of TCRβ repertoire of thymic and LN tissue from <em>Ctla4-/-</em> and littermate control mice revealed that no major molecular defects in thymic T cell repertoire or the frequency of productive rearrangements were detected. In contrast, T cell clonality increased in <em>Ctla4-/-</em> LN tissue. Increased clonality was accompanied by decreased average CDR3 length, in part resulting from a decrease in N1 and N2 nucleotides inserted at V-D and D-J junctions. On the other hand, analysis of PD1 suggested that PD1 mainly affected CD8+ populations but the subtle expansion of CD8+ T cell phenotype limits due to loss of PD-1 appears to be age dependent and most likely relies on the prior induction of an immune response. Finally, the authors used mass cytometry data to reconstruct differentiation trajectories between the naive CD4+ T cell archetype and each differentiated CD4+ T cell archetype. Along the trajectory, the authors investigated that a subset of markers (such as PD1) expression continued to increase beyond the boundary which suggested that a primary mechanism by which CTLA-4 restrains T cell phenotypes is through imposing maximal limits on already active pathways.</p><p>In summary, this paper revealed that (1) T cell negative co-stimulation regulates the limits of T cell differentiation, a role related to but distinct from its regulation of T cell activation; (2) CTLA-4 enforces boundaries on CD4+ T cell phenotypes; (3) PD-1 subtly restrains CD8+ T cell phenotypes; and (4) CTLA-4 constrains T cell phenotypes by imposing maximal expression limits during differentiation. These finding support the “nuanced model” in which T cell subsets represent a continuum of interrelated phenotypic states, defined by ratios of co-expression of lineage transcription factors, rather than discrete lineages. It remains to be assessed whether the expanded phenotypes represent stable terminally differentiated states or rather transient intermediate states not normally attainable.</p><p><img src="https://i.loli.net/2019/04/27/5cc3ee0aa5855.jpg" alt></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.immuni.2019.03.004" target="_blank" rel="noopener">Negative Co-stimulation Constrains T Cell Differentiation by Imposing Boundaries on Possible Cell States</a></p><p>Immunity, 201904</p><p>T cell differentiation generates a wide range of specialized cell types; however, how the range of attainable cell states (i.e., phenotypes) is determined remains an open question. Given that T cell differentiation is tightly linked to TCR signal strength, the authors hypothesized that attenuation of downstream TCR signaling by CTLA-4 might also regulate differentiation. In order to verify this, the authors profiled lymphocytes derived from <em>Ctla4-/-</em> and littermate control mice via mass cytometry and subsequently used clustering methods to classify T cell populations. t-SNE visualization illustrated changes in T cell population frequencies and phenotypes in <em>Ctla4-/-</em> mice, but no differences between <em>Ctla4+/+</em> and <em>Ctla4+/-</em> mice were apparent. Populations that were only observed in <em>Ctla4-/-</em> mice were entirely contained within the CD4+ compartment. These enriched CD4+ T cell populations expressed high amounts of CD44 and inducible co-stimulatory molecule (ICOS) but displayed variable levels of other activation markers and lineage transcription factors. For example, the frequency of terminally differentiated (TBET+EOMES+CD44+CD62L+) CD8+ T cells increased in <em>Ctla4-/-</em> mice. Similarly, an ICOS+ Treg cell population that is very minor in CTLA-4 competent mice expanded in frequency in <em>Ctla4-/-</em> mice, whereas other Treg cell populations remained stable or contracted. These findings contrasted with the effects on CD8+ T cells, in which loss of CTLA-4 modulated expression levels (e.g., EOMES, IRF4, and CXCR3), but no CD8+ T cell clusters, was detected only in <em>Ctla4-/-</em> mice. This suggests that CTLA-4 limits CD4+ T cell phenotypes but not those of CD8+ T cells. Next, the authors concurrently assessed changes in 5-iodo-deoxyuridine (IdU) incorporation and changes in frequency in T cell subsets due to loss of CTLA-4 which suggested that there was no correlation between the change in frequency of each T cell subset and the respective changes in IdU incorporation. The phenomenon revealed above raised a question that whether loss of CTLA-4-mediated negative feedback allows cells to occupy otherwise unattainable phenotypic states. Archetypal analysis, an unsupervised computational approach used to identify optimal phenotypes associated with specific biological phenomena at the organismal and single-cell level, helped researchers identified phenotypic boundary and reveals that loss of CTLA-4 expands CD4+ but not CD8+ T cell phenotypic space. Next, because ICOS was highly expressed by phenotypically expanded T cells and antibody blockade of ICOS attenuates T cell activity in <em>Ctla4-/-</em> mice, researchers tested whether ICOS is necessary for the generation of aberrant populations. As a result, all T cell populations identified in <em>Ctla4-/-Icos+/-</em> mice were present in <em>Ctla4-/-Icos-/-</em> mice, indicating that although ICOS is highly expressed on phenotypically expanded subsets, it is not required for their development.</p><p>immunized <em>Ctla4-/-</em> and littermate controls with ovalbumin in complete Freund’s adjuvant (CFA) indicated that extension of phenotypic limits derives directly from loss of CTLA-4 rather than indirect effects of its deletion. Then, analysis of TCRβ repertoire of thymic and LN tissue from <em>Ctla4-/-</em> and littermate control mice revealed that no major molecular defects in thymic T cell repertoire or the frequency of productive rearrangements were detected. In contrast, T cell clonality increased in <em>Ctla4-/-</em> LN tissue. Increased clonality was accompanied by decreased average CDR3 length, in part resulting from a decrease in N1 and N2 nucleotides inserted at V-D and D-J junctions. On the other hand, analysis of PD1 suggested that PD1 mainly affected CD8+ populations but the subtle expansion of CD8+ T cell phenotype limits due to loss of PD-1 appears to be age dependent and most likely relies on the prior induction of an immune response. Finally, the authors used mass cytometry data to reconstruct differentiation trajectories between the naive CD4+ T cell archetype and each differentiated CD4+ T cell archetype. Along the trajectory, the authors investigated that a subset of markers (such as PD1) expression continued to increase beyond the boundary which suggested that a primary mechanism by which CTLA-4 restrains T cell phenotypes is through imposing maximal limits on already active pathways.</p><p>In summary, this paper revealed that (1) T cell negative co-stimulation regulates the limits of T cell differentiation, a role related to but distinct from its regulation of T cell activation; (2) CTLA-4 enforces boundaries on CD4+ T cell phenotypes; (3) PD-1 subtly restrains CD8+ T cell phenotypes; and (4) CTLA-4 constrains T cell phenotypes by imposing maximal expression limits during differentiation. These finding support the “nuanced model” in which T cell subsets represent a continuum of interrelated phenotypic states, defined by ratios of co-expression of lineage transcription factors, rather than discrete lineages. It remains to be assessed whether the expanded phenotypes represent stable terminally differentiated states or rather transient intermediate states not normally attainable.</p><p><img src="https://i.loli.net/2019/04/27/5cc3ee0aa5855.jpg" alt></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;Negative-Co-stimulation-Constrains-T-Cell-Differentiation-by-Imposing-Boundaries-on-Possible-Cell-States&quot;&gt;&lt;a href=&quot;#Negative-Co-stim
+        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.immuni.2019.03.004&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Negative Co-stimulation Constrains T Cell Different
       
     
     </summary>
@@ -149,11 +406,11 @@
   </entry>
   
   <entry>
-    <title>0412-immunity</title>
-    <link href="http://yoursite.com/2019/04/12/0412-immunity/"/>
-    <id>http://yoursite.com/2019/04/12/0412-immunity/</id>
+    <title>SPTLC2 +  TGF-β活化&amp;记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募</title>
+    <link href="http://yoursite.com/2019/04/12/SPTLC2%20+%20%20TGF-%CE%B2%E6%B4%BB%E5%8C%96&amp;%E8%AE%B0%E5%BF%86%E6%80%A7CD8%20T%20%E7%BB%86%E8%83%9E%E7%9A%84%E6%8B%9B%E5%8B%9F%20+%20cDC1%E7%9A%84%E4%BA%9A%E7%BE%A4%E4%BB%8B%E5%AF%BC%E5%AF%B9%E4%BA%8E%E4%B8%AD%E6%80%A7%E7%B2%92%E7%BB%86%E8%83%9E%E7%9A%84%E6%8B%9B%E5%8B%9F/"/>
+    <id>http://yoursite.com/2019/04/12/SPTLC2 +  TGF-β活化&amp;记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募/</id>
     <published>2019-04-12T13:34:49.000Z</published>
-    <updated>2019-04-27T05:50:48.156Z</updated>
+    <updated>2019-05-20T01:50:53.411Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应"><a href="#HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应" class="headerlink" title="HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应"></a>HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Loss of Neurological Disease HSAN-I-Associated Gene <em>SPTLC2</em> Impairs CD8+ T Cell Responses to Infection by Inhibiting T Cell Metabolic Fitness</a>)</p><p>Immmunity, 2019.03</p><a id="more"></a><p>SPTLC2(serine palmitoyltransferase subunit)</p><p>SPTLC2 mutations are associated with the neurological disorder HSAN-I, in which patients get frequent infections, attributed to loss of pain sensation and failure to seek treatment for minor injuries. Wu et al. show that protective CD8+ T cell responses are defective in HSAN-I patients and that CD8+ T cells require SPTLC2-mediated sphingolipid synthesis to promote T cell metabolic fitness.</p><p><em>Sptlc2</em> deficiency reduced <strong>sphingolipid biosynthetic flux and led to prolonged activation of the mechanistic target of rapamycin complex 1 (mTORC1), endoplasmic reticulum (ER) stress, and CD8 + T cell death</strong>. Protective CD8 + T cell responses in HSAN-I patient PBMCs and <em>Sptlc2</em>-deficient mice were restored by supplementing with sphingolipids and pharmacologically inhibiting ER stress-induced cell death. Therefore, SPTLC2 underpins protective immunity by translating extracellular stimuli into intracellular anabolic signals and antagonizes ER stress to promote T cell metabolic fitness.</p><p><img src="https://i.loli.net/2019/04/12/5cb073b2d43d4.jpg" alt></p><h2 id="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募"><a href="#角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募" class="headerlink" title="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募"></a>角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Keratinocyte-Mediated Activation of the Cytokine TGF-β Maintains Skin Recirculating Memory CD8+ T Cells</a>)</p><p>Regulated activation of the cytokine TGF-β by integrins α vβ 6 and α vβ 8 expressed on keratinocytes is required for residence of epidermal-resident memory T cells, but whether skin-derived signals also affect recirculating memory cells in the skin remains unclear. Here, we show that <strong>after resolution of skin vaccinia virus (VV) infection, antigen-specific circulating memory CD8 + T cells migrated into skin</strong>. In mice lacking α vβ 6 and α vβ 8 integrins ( <em>Itgb6</em> −/− <em>Itgb8</em> fl/fl <em>-</em>K14-cre), the absence of epidermal-activated TGF-β resulted in a gradual loss of E- or P-selectin-binding central and peripheral memory populations, which were rescued when skin entry was inhibited. Skin recirculating memory cells were required for optimal host defense against skin VV infection. These data demonstrate that skin migration can persist after resolution of local skin infection and that the cytokine environment within this nonlymphoid tissue shapes the differentiation state and persistence of the central and peripheral memory-T-cell pool.</p><p><img src="https://i.loli.net/2019/04/12/5cb07f58b3da3.jpg" alt></p><h2 id="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"><a href="#cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染" class="headerlink" title="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"></a>cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">A Subset of Type I Conventional Dendritic Cells Controls Cutaneous Bacterial Infections through VEGFα-Mediated Recruitment of Neutrophils</a>)</p><p>皮肤常规树突细胞（cDC）有两种不同的子集cDC1和cDC2存在，从而维持对病原体的免疫和对自身微生物群耐受的平衡。本文作者检测了皮肤cDC1s和cDC2s在细菌尤其是痤疮丙酸杆菌感染期间的作用。 cDC1s，而不是cDC2s，通过控制炎症部位的中性粒细胞募集及其存活和功能来调节对真皮中痤疮丙酸杆菌的免疫应答的程度。单细胞mRNA测序显示，该调节依赖于由一小部分活化的<font color="#F08080"><strong>EpCAM + CD59 + Ly-6D + cDC1s</strong></font>细胞分泌的细胞因子<font color="#F08080"><strong>VEGF-α</strong></font>。在金黄色葡萄球菌，卡介苗或大肠杆菌感染期间以及在人皮肤中的细菌损伤模型中也观察到真皮cDC1对中性粒细胞的募集作用。因此，皮肤cDC1是皮肤免疫中先天反应的必需调节剂，并且具有超出经典抗原呈递的作用。</p><p>In the skin, two subsets of ontogenetically distinct and functionally specialized conventional DCs (cDCs) exist: cDC1s, identified in mice as expressing <font color="#F08080"><strong>CD103 (integrin aE) and XCR1</strong></font>; and cDC2s, expressing <font color="#F08080"><strong>CD11b (integrin aM) and SIRPa</strong></font></p>]]></content>
     
@@ -213,76 +470,6 @@
     
     
       <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>singleR</title>
-    <link href="http://yoursite.com/2019/04/01/singleR/"/>
-    <id>http://yoursite.com/2019/04/01/singleR/</id>
-    <published>2019-04-01T05:28:15.000Z</published>
-    <updated>2019-04-27T05:55:08.919Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1038/s41590-018-0276-y" target="_blank" rel="noopener">Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</a></p><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Reference-data-sets-enhance-annotation-of-scRNA-seq"><a href="#Reference-data-sets-enhance-annotation-of-scRNA-seq" class="headerlink" title="Reference data sets enhance annotation of scRNA-seq"></a>Reference data sets enhance annotation of scRNA-seq</h3><h4 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h4><p>The SingleR pipeline is based on correlating reference <strong>bulk transcriptomic data sets of pure cell types</strong> with single-cell gene expression.In the first step of the SingleR pipeline, a <strong>Spearman coefficient</strong> was calculated for single-cell gene expression with each of the samples in the reference data set, <strong>using only the variable genes in the reference data set</strong>. Using only variable genes among the cell types increased the ability to distinguish closely related cell types. This process was performed iteratively using only the top cell types from the previous step and the variable genes among them until only one cell type remaine</p><p><img src="https://i.loli.net/2019/03/31/5ca058a40ec09.jpg" alt="Pipeline of singleR"></p><a id="more"></a><h4 id="Validate-SingleR"><a href="#Validate-SingleR" class="headerlink" title="Validate SingleR"></a>Validate SingleR</h4><p>Using SingleR to analyze a published study of scRNA-seq of mouse bone marrow-derived dendritic cells (BMDC) and fibroblasts. When applied to the ImmGen database as a reference library, SingleR identified 33 of the 48 cells thought in the study to be BMDCs as macrophages</p><p><img src="https://i.loli.net/2019/03/31/5ca06b69ebecd.jpg" alt></p><p>原文中用GM-CSF培养细胞，然后sorting CD11c+ 的细胞。这个protocol已被证明无法获得纯的DC细胞，会混进表达marcrophage markers的细胞。</p><h3 id="SingleR-identifies-a-transitional-macrophage-in-fibrosis"><a href="#SingleR-identifies-a-transitional-macrophage-in-fibrosis" class="headerlink" title="SingleR identifies a transitional macrophage in fibrosis"></a>SingleR identifies a transitional macrophage in fibrosis</h3><p>applied SingleR to enhance annotation of a lung scRNA-seq data set obtained from whole lungs of adult, male mice (10–12 weeks age) dissociated into single-cell suspension and flow sorted on live cells, using 6 steady-state mice and 3 mice 14 days after a single tracheal instillation of bleomycin, the fibrotic phase of the injury model.</p><p>  <img src="https://i.loli.net/2019/04/01/5ca1a1e0bff7b.jpg" alt></p><p><strong>conclusion:</strong> The number of lung macrophages was higher in the bleomycin-treated condition than at steady state</p><p>Macrophages and dendritic cells have similar transcriptomic profiles. So the authors repeated SingleR analysis using published RNA-seq data sets of mouse lung macrophages and dendritic cells to isolate the macrophages in the pooled bleomycin-injured and steady-state samples. Finally, singleR identified two subtypes of macrophages: alveolar and interstitial macrophages</p><p>Similarity analysis by comparison of each cell to mouse RNA-seq data sets of alveolar and interstitial macrophages indicated a gradient of cellular identity in the macrophage cluster between alveolar and interstitial macrophages</p><p>Deconvolution analysis in was performed using the DeconRNA-seq package using the average expression of AM samples and average expression of IM3 samples from GSE94135</p><p><img src="https://i.loli.net/2019/04/01/5ca1a243a8188.jpg" alt></p><p>Then, the full range of SingleR correlation scores for each cell with reference to ImmGen was used for unsupervised hierarchical clustering of the macrophages from the lung scRNA-seq data set. This analysis identified three distinct subclusters (C1, C2, and C3), all three detected at varying levels in both steady-state and bleomycin-treated mice.45% of cluster C2 cells (but only 7.3% of cluster C1 cells and 4.7% of cluster C3 cells) expressed at least 33% of cluster C1 genes and at least 33% of cluster C3 genes, suggesting that cluster C2 was intermediate in gene expression between C1 and C3</p><p><img src="https://i.loli.net/2019/04/01/5ca1a2ee98ae4.jpg" alt="Hierarchical clustering by reference annotation reveals a transitional macrophage in fibrosis"></p><p><strong>conclusion:</strong>cluster C1 was equally present in steady-state lung and bleomycin injury and corresponded to the cells that were annotated as alveolar macrophages by the lung-specific data sets; clusters C2 and C3 were enriched in cells isolated from mice with bleomycin-induced fibrosis and expressed Cx3cr1, Ccr2, Mafb, and MHCII genes, consistent with monocytic origin</p><p>Clustering in Fig. 3a was performed using <strong>Ward’s hierarchical agglomerative clustering method</strong> based on the SingleR scores across all cell types</p><h3 id="Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models"><a href="#Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models" class="headerlink" title="Cluster C2 and C3 markers are found in alternate lung fibrosis models"></a>Cluster C2 and C3 markers are found in alternate lung fibrosis models</h3><p>To test the relevance of the identified gene expression pat-tern to other models of fibrosis, the authors used a mouse model of lung fibrosis induced by epithelial telomere dysfunction</p><p><img src="https://i.loli.net/2019/04/01/5ca1a38c303d7.jpg" alt="Markers of macrophages identified by scRNA-seq are found in multiple fibrosis models"></p><p>用human芯片数据验证，发现在小鼠中得出的结论也使用与人.immunofluorescence of lung tissue indicated the expression of <strong>MAFB</strong>, a marker detected specifically in clusters C2 and C3, in CD68+  macrophages from patients with idiopathic lung fibrosis compared with healthy controls(Figc)</p><h3 id="Cluster-C2-macrophages-localize-to-the-fibrotic-niche"><a href="#Cluster-C2-macrophages-localize-to-the-fibrotic-niche" class="headerlink" title="Cluster C2 macrophages localize to the fibrotic niche"></a>Cluster C2 macrophages localize to the fibrotic niche</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a510967d7.jpg" alt="transitional macrophages expressing CX3CR1, MHCII, and SiglecF localize to sites of fibroblast accumulation after lung injury"></p><p><strong>Conclusion:</strong> macrophage cluster C2 localizes to the fibrotic niche</p><h3 id="CX3CR1-expressing-macrophages-drive-lung-fibrosis"><a href="#CX3CR1-expressing-macrophages-drive-lung-fibrosis" class="headerlink" title="CX3CR1-expressing macrophages drive lung fibrosis"></a>CX3CR1-expressing macrophages drive lung fibrosis</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a56682dfe.jpg" alt="Pdgf-aa is a macrophage-derived trophic factor for fibroblasts"></p><p><strong>Conclusion：</strong>during fibrogenesis, CX3CR1+ SiglecF+ macrophages localize to sites of Pdgfra+ and Pdgfrb+ fibroblast accumulation after bleomycin-induced injury in the lung. Deletion of these macrophages during the fibrotic period (days 8–21) eliminated Pdgfra+ or Pdgfrb+ fibroblasts and decreased total lung collagen. Mechanistic studies indicated that fibroblast migration and proliferation were dependent on secretion of Pdgf-aa by SiglecF+ CD11c+ MHCIIhi and CX3CR1+ cells, respectively, suggesting that paracrine interactions between these macrophages and fibroblasts sustain the fibroblast compartment and tissue fibrosis.</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41590-018-0276-y&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Results&quot;&gt;&lt;a href=&quot;#Results&quot; class=&quot;headerlink&quot; title=&quot;Results&quot;&gt;&lt;/a&gt;Results&lt;/h2&gt;&lt;h3 id=&quot;Reference-data-sets-enhance-annotation-of-scRNA-seq&quot;&gt;&lt;a href=&quot;#Reference-data-sets-enhance-annotation-of-scRNA-seq&quot; class=&quot;headerlink&quot; title=&quot;Reference data sets enhance annotation of scRNA-seq&quot;&gt;&lt;/a&gt;Reference data sets enhance annotation of scRNA-seq&lt;/h3&gt;&lt;h4 id=&quot;Pipeline&quot;&gt;&lt;a href=&quot;#Pipeline&quot; class=&quot;headerlink&quot; title=&quot;Pipeline&quot;&gt;&lt;/a&gt;Pipeline&lt;/h4&gt;&lt;p&gt;The SingleR pipeline is based on correlating reference &lt;strong&gt;bulk transcriptomic data sets of pure cell types&lt;/strong&gt; with single-cell gene expression.In the first step of the SingleR pipeline, a &lt;strong&gt;Spearman coefficient&lt;/strong&gt; was calculated for single-cell gene expression with each of the samples in the reference data set, &lt;strong&gt;using only the variable genes in the reference data set&lt;/strong&gt;. Using only variable genes among the cell types increased the ability to distinguish closely related cell types. This process was performed iteratively using only the top cell types from the previous step and the variable genes among them until only one cell type remaine&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/03/31/5ca058a40ec09.jpg&quot; alt=&quot;Pipeline of singleR&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="methods" scheme="http://yoursite.com/tags/methods/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Neoantigen-directed immune escape in lung cancer evolution</title>
-    <link href="http://yoursite.com/2019/03/30/Neoantigen-directed-immune-escape-in-lung-cancer-evolution/"/>
-    <id>http://yoursite.com/2019/03/30/Neoantigen-directed-immune-escape-in-lung-cancer-evolution/</id>
-    <published>2019-03-30T12:39:32.000Z</published>
-    <updated>2019-04-27T05:53:52.194Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1038/s41586-019-1032-7" target="_blank" rel="noopener">Neoantigen-directed immune escape in lung cancer evolution</a></p><h1 id="Topic"><a href="#Topic" class="headerlink" title="Topic"></a>Topic</h1><p>To determine immune infiltration in untreated non-small-cell lung cancer (NSCLC), assess how this infiltration varies between and within tumours, and characterize immune-evasion mechanisms and their associations with clinical outcome.</p><a id="more"></a><h1 id="Sample"><a href="#Sample" class="headerlink" title="Sample"></a>Sample</h1><p>Integrated 164 RNA-sequencing (RNA-seq) samples from 64 tumours and 234 tumour-infiltrating lymphocyte (TIL) histopathology estimates (hereafter, pathology TIL estimates) from 83 tumours to produce a combined cohort of 258 tumour regions from 88 prospectively acquired tumours within the ‘Tracking Non-Small-Cell Lung Cancer Evolution through Therapy’(TRACERx) 100 cohort</p><h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="Heterogeneity-of-immune-infiltration"><a href="#Heterogeneity-of-immune-infiltration" class="headerlink" title="Heterogeneity of immune infiltration"></a>Heterogeneity of immune infiltration</h2><h3 id="benchmarked-published-in-silico-immune-deconvolution-tools"><a href="#benchmarked-published-in-silico-immune-deconvolution-tools" class="headerlink" title="benchmarked published in silico immune deconvolution tools"></a>benchmarked published in silico immune deconvolution tools</h3><p>The genes used in each one of the immune-estimation approaches were tested to see whether they fit two criteria: (1) having a negative relationship with tumour purity, as genes that define immune subtypes are expressed in infiltrating immune cells and (2) not showing a positive correlation with tumour copy number at the gene locus (a positive correlation may indicate that the gene is expressed by the tumour cell, which would confound immune estimates) </p><p> <img src="https://upload-images.jianshu.io/upload_images/10636424-5b0dc8936c1251fc.png?imageMogr2/auto-orient/" alt="Determination of robust immune infiltration approach "></p><p>for each method, the immune estimates themselves were compared against independent ground-truth measures </p><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553955582218.png" alt></p><p>&nbsp;</p><p><strong>conclusion</strong>: Compared to other transcriptomic approaches, the <strong>Danaher et al. immune signature</strong> optimally estimated immune infiltrates in NSCLC </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41586-019-1032-7&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Neoantigen-directed immune escape in lung cancer evolution&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;Topic&quot;&gt;&lt;a href=&quot;#Topic&quot; class=&quot;headerlink&quot; title=&quot;Topic&quot;&gt;&lt;/a&gt;Topic&lt;/h1&gt;&lt;p&gt;To determine immune infiltration in untreated non-small-cell lung cancer (NSCLC), assess how this infiltration varies between and within tumours, and characterize immune-evasion mechanisms and their associations with clinical outcome.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="cancer" scheme="http://yoursite.com/tags/cancer/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SCENIC</title>
-    <link href="http://yoursite.com/2019/03/30/SCENIC/"/>
-    <id>http://yoursite.com/2019/03/30/SCENIC/</id>
-    <published>2019-03-30T12:31:24.000Z</published>
-    <updated>2019-04-27T05:54:11.607Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.nature.com/articles/nmeth.4463" target="_blank" rel="noopener">SCENIC: Single-cell regulatory network inference and clustering</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>SCENIC can be use to demonstrate <strong>genomic regulatory code</strong> which can be exploited to guide the identification of transcription factors and cell states.</p><a id="more"></a><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The transcriptional state of a cell emerges from an underlying gene regulatory network (GRN) in which a limited number of transcription factors and co-factors regulate each other and their downstream target genes.</p><p>One challenge of single cell transcriptome profile analysis is that at the single cell level, gene expression may be partially disconnected from the dynamics of transcription factor inputs due to stochastic variation of gene expression consecutive to, for example, transcriptional bursting<br>(基因的表达式动态的，不稳定的)</p><blockquote><p>Transcriptional bursting, also known as transcriptional pulsing, is a fundamental property of genes in which transcription from DNA to RNA can occur in “bursts” or “pulses”, which has been observed in diverse organisms, from bacteria to mammals<br>(from wikipedia)</p></blockquote><p>SCENIC link genomic regulatory code to single-cell gene expression variation to overcome drop-outs and technical variation, and could optimize the discovery and characterization of cellular states</p><p>The SCENIC workflow consists of three steps</p><h2 id="Use-GENIE3-to-identify-sets-of-genes-that-are-co-expressed-with-transcription-factors"><a href="#Use-GENIE3-to-identify-sets-of-genes-that-are-co-expressed-with-transcription-factors" class="headerlink" title="Use GENIE3 to identify sets of genes that are co-expressed with transcription factors"></a>Use <em>GENIE3</em> to identify sets of genes that are co-expressed with transcription factors</h2><p> (<em>GRNboost</em> was also provided to build the co-expression network on bigger datasets)</p><p>In brief, it trains <strong>random forest models</strong> predicting the expression of each gene in the dataset, using as input the expression of the transcription factors.The different models are then used to <strong>derive weights</strong> for the transcription factors, measuring their respective relevance for the prediction of the expression of each target gene. The highest weights can be translated into TF-target regulatory links.</p><p><strong>Input</strong><br>The preferred expression values are gene-summarized counts (which might or might not use unique molecular identifiers, UMI). Other measurements, such as counts or transcripts per million (TPM) and FPKM/RPKM, are also accepted as input. However, note that some authors recommend <strong>avoiding within sample normalization (i.e. TPM) for co-expression analysis because they may induce artificial co-variation</strong></p><p><strong>output</strong><br>The output of GENIE3 is a table with the genes, the potential regulators, and their<br>“importance measure” (IM), which represents the weight that the transcription factor (input gene) has in the prediction of the target.<br> Each gene-set was then split into positive- and negative- correlated targets (i.e. Spearman correlation between the TF and the potential target) to separate likely activated and repressed targets. Finally, only the gene-sets (TF co-expression modules) with <strong>at least 20 genes</strong> were kept for the following step</p><p>Being based only on co-expression, these modules may include many false positives and indirect targets. So <em>RcisTarge</em> was used.</p><h2 id="Use-RcisTarge-to-identify-putative-direct-binding-targets-from-co-expression-module"><a href="#Use-RcisTarge-to-identify-putative-direct-binding-targets-from-co-expression-module" class="headerlink" title="Use RcisTarge to identify putative direct-binding targets from co-expression module"></a>Use <em>RcisTarge</em> to identify putative direct-binding targets from co-expression module</h2><p>Only modules with significant motif enrichment of the correct upstream regulator are retained, and pruned to remove indirect target genes without motif support.<br>Reson:</p><p><strong>Step1</strong><br>It selects DNA motifs that are significantly over-represented in the surroundings of the transcription start site (TSS) of the genes in the gene-set.The motifs that are annotated to the corresponding TF and obtain a Normalized Enrichment Score (NES) &gt; 3.0 are retained. For each species,  two gene-motif rankings (10kb around the TSS or 500bp upstream the TSS), which determine the search space around the transcription start site were used.</p><p><strong>Step2</strong><br>For each motif and gene-set, RcisTarget predicts candidate target genes (i.e. genes in the gene-set that are ranked above the leading edge).</p><blockquote><p>However, in the datasets we analyzed, these modules were less numerous and showed very low motif enrichment, suggesting that these are lower quality modules. For this reason, we finally decided to exclude the detection of direct repression from the workflow, and <strong>continue only with the positive-correlated targets</strong>. </p></blockquote><h2 id="Score-the-activity-of-each-of-these-regulons-in-each-cell-with-AUCell"><a href="#Score-the-activity-of-each-of-these-regulons-in-each-cell-with-AUCell" class="headerlink" title="Score the activity of each of these regulons in each cell with AUCell"></a>Score the activity of each of these regulons in each cell with <em>AUCell</em></h2><p>The relative scores of each regulon across the cells allow identifying which cells have a significantly high sub-network activity. The resulting binary activity matrix can be used as a biological dimensionality reduction for downstream analyses. Since the regulon is scored as a whole, instead of only the TF or individual genes, this approach is robust against drop-outs.</p><p>The input to AUCell is a gene set, and the output the gene set “activity” (AUC) in each cell.</p><p>AUCell calculates the enrichment of the regulon as an area under the recovery curve (AUC) across the ranking of all genes in a particular cell, whereby genes are ranked by their expression value. This method is therefore <strong>independent of the gene expression units and the normalization procedure</strong></p><h2 id="Cell-clustering-based-on-GRNs"><a href="#Cell-clustering-based-on-GRNs" class="headerlink" title="Cell clustering based on GRNs"></a>Cell clustering based on GRNs</h2><p>2 matrix<br>The cell-regulon activity is summarized in a matrix in which the columns represent the cells and the rows the regulons. In the binary <strong>regulon activity matrix</strong>, the coordinates of the matrix that correspond to active regulons in a given cell will contain a “1”, and “0” otherwise.</p><p>The <strong>equivalent matrix</strong>, containing the continuous AUC values for each cell- regulon, is normally referred to as the AUC activity matrix.</p><p>The binary activity matrix tends to highlight higher-order similarities across cells (and therefore, highly reduces batch effects and technical biases), on the other hand, the AUC matrix allows to observe more subtle changes.</p><h2 id="Gene-filtering"><a href="#Gene-filtering" class="headerlink" title="Gene filtering"></a>Gene filtering</h2><p><strong>first filter</strong><br>The total number of reads per gene, is meant to remove genes that are most likely unreliable and provide only noise. The specific value depends on the dataset.</p><p><strong>second filter</strong><br>The number of cells in which the gene is detected (e.g. &gt;0 UMI, or &gt;1 log2(TPM)), is to avoid that genes that are only expressed in one, or very few cells, gain a lot of weight if they happen to coincide in a given cell. In the workflow, we recommend to set a percentage lower than the smallest population of cells to be detected</p><p><img src="https://upload-images.jianshu.io/upload_images/10636424-8f13717bcb851399.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The SCENIC workflow and its application"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.nature.com/articles/nmeth.4463&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SCENIC: Single-cell regulatory network inference and clustering&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract&quot;&gt;&lt;/a&gt;Abstract&lt;/h2&gt;&lt;p&gt;SCENIC can be use to demonstrate &lt;strong&gt;genomic regulatory code&lt;/strong&gt; which can be exploited to guide the identification of transcription factors and cell states.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="methods" scheme="http://yoursite.com/tags/methods/"/>
     
   </entry>
   
