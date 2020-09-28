@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="keep exceeding" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效Title: Peripheral T cell expansion predicts tumor  infiltration and clinical response Nature, 2020 ​       Abstract测序平台：10X 样本:  来自14个未经治疗的肿瘤病人，每个病人都取了肿瘤组织和癌旁组织，其中4个病人额外取了外周">
+<meta property="og:type" content="article">
+<meta property="og:title" content="keep exceeding">
+<meta property="og:url" content="http://yoursite.com/2020/03/24/单细胞测序/Nature--外周T细胞扩增预测肿瘤浸润和临床疗效/index.html">
+<meta property="og:site_name" content="keep exceeding">
+<meta property="og:description" content="Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效Title: Peripheral T cell expansion predicts tumor  infiltration and clinical response Nature, 2020 ​       Abstract测序平台：10X 样本:  来自14个未经治疗的肿瘤病人，每个病人都取了肿瘤组织和癌旁组织，其中4个病人额外取了外周">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2020/03/22/er7iUpG93ZvfMCw.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/23/C2Tp3Ber7wlPzYh.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/23/MLfEV4DeK5WHY7S.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/23/sjL1YX5nkVMhW6q.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/24/7vLUmYSJytWrDkI.png">
+<meta property="og:image" content="https://i.loli.net/2020/03/24/j4iWSrg6Yn9lyQL.png">
+<meta property="og:updated_time" content="2020-03-24T04:17:07.446Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="keep exceeding">
+<meta name="twitter:description" content="Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效Title: Peripheral T cell expansion predicts tumor  infiltration and clinical response Nature, 2020 ​       Abstract测序平台：10X 样本:  来自14个未经治疗的肿瘤病人，每个病人都取了肿瘤组织和癌旁组织，其中4个病人额外取了外周">
+<meta name="twitter:image" content="https://i.loli.net/2020/03/22/er7iUpG93ZvfMCw.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/03/24/单细胞测序/Nature--外周T细胞扩增预测肿瘤浸润和临床疗效/">
+
+
+
+
+
+  <title> | keep exceeding</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">keep exceeding</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/24/单细胞测序/Nature--外周T细胞扩增预测肿瘤浸润和临床疗效/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-24T12:14:03+08:00">
+                2020-03-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Nature-外周T细胞扩增预测肿瘤浸润和临床疗效"><a href="#Nature-外周T细胞扩增预测肿瘤浸润和临床疗效" class="headerlink" title="Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效"></a>Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效</h1><p>Title: Peripheral T cell expansion predicts tumor  infiltration and clinical response</p>
+<p><a href="https://doi.org/10.1038/s41586-020-2056-8" target="_blank" rel="noopener">Nature, 2020</a></p>
+<p>​      </p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>测序平台</strong>：10X</p>
+<p><strong>样本</strong>: </p>
+<p>来自14个未经治疗的肿瘤病人，每个病人都取了肿瘤组织和癌旁组织，其中4个病人额外取了外周血        </p>
+<p>14个病人分属于4种不同的肿瘤: 非小细胞肺癌(lung)，子宫内膜腺癌(endo), 大肠腺癌(colon), 肾透明腺癌（renal）</p>
+<p>样本信息：</p>
+<p><img src="https://i.loli.net/2020/03/22/er7iUpG93ZvfMCw.png" alt="snipaste20200322_205305.png"></p>
+<p><strong>细胞量</strong>：测序200,626个免疫细胞, 总测序量：541,863,094 mRNA transcripts(其中141,623个Tcell)</p>
+<p><strong>重点发现</strong>：</p>
+<ul>
+<li>在肿瘤组织和癌旁组织中都存在克隆扩增的效应性Tcell</li>
+<li>具有这种克隆扩增基因特征的患者对anti-PDL1治疗反应最好。</li>
+<li>在肿瘤和癌旁邻近组织中发现的克隆型扩增的效应性Tcell也可以在外周血中检测到，说明这种Tcell有潜力成为筛选anti-PDL1响应病人的新指标</li>
+<li>肿瘤浸润Tcell（尤其是anti-PDL1效果良好的病人中）从肿瘤外的部位补充新鲜的，未耗竭的Tcell。这表明这部分病人肿瘤免疫循环持续活跃      </li>
+</ul>
+<p>​          </p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
+<li><p><strong>单细胞建库：</strong>10x，Chromium Single Cell 5′ Library， scRNA+scTCR</p>
+</li>
+<li><p><strong>数据分析</strong>：</p>
+<p>主要使用Seurat 3.0.2</p>
+<ul>
+<li>使用Seurat中的<code>SCTransform</code>进行校正</li>
+<li>使用<code>IntegrationAnchors</code>和<code>IntegrateData</code>整合不同批次的数据（dimensions：30）</li>
+<li>聚类降维：<code>FindNeighbours</code>和<code>FindClusters</code>(resolution: 1.6)</li>
+<li>寻找每个cluster的biomarker：<code>FindMarker</code>(logfc.threshold默认的参数是0.25，由于这个阈值，某些cluster找到的marker少于20个，所以调整到0.10)</li>
+</ul>
+</li>
+<li><p><strong>类的注释</strong>：常规marker + <code>FindMarkers</code>+singleR</p>
+<p>CD3E表达量和TCR clonotype均高的认为是Tcell, 两者都低的认为是non-Tcell</p>
+</li>
+<li><p><strong>寻找差异基因：</strong></p>
+<ul>
+<li>寻找每个cluster的biomarker：函数<code>FindMarkers</code> (logfc.threshold默认的参数是0.25，由于这个阈值，某些cluster找到的marker少于20个，所以调整到0.10)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>下游分析：</strong>（针对转录组数据的分析主要在附件里，本文的重点在于TCR分析）</p>
+<ul>
+<li><p>GSEA</p>
+</li>
+<li><p>与已有数据做对比: R包singleR， 从已发表的数据中提取基因集作为参照</p>
+<ul>
+<li><p>​    Guo, X. et al. Global characterization of T cells in non-small-cell lung cancer by single-<br>cell sequencing. Nat. Med. 24, 978–985 (2018).</p>
+</li>
+<li><p>​    Zhang, L. et al. Lineage tracking reveals dynamic relationships of T cells in colorectal<br>cancer. Nature 564, 268–272 (2018).</p>
+</li>
+<li><p>​    Yost, K. E. et al. Clonal replacement of tumor-specific T cells following PD-1 blockade.<br>Nat. Med. 25, 1251–1259 (2019).</p>
+</li>
+</ul>
+</li>
+<li><p>resident memory T cells， terminal versus stem-like exhaustion Tcell的区分：</p>
+<p>文献中使用的marker与自己的数据overlap后，计算基因集的zscore</p>
+</li>
+<li><p>整合转录组和TCR数据</p>
+</li>
+<li><p>临床实验数据分析，计算clone与预后的关系</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Extended-Data-Fig-2"><a href="#Extended-Data-Fig-2" class="headerlink" title="Extended Data Fig. 2"></a>Extended Data Fig. 2</h3><p><strong>a</strong>: 很多clonotype在肿瘤和癌旁组织（NAT）中共享</p>
+<p>dual-expanded clones: 既在肿瘤中，又在NAT中表达的clone</p>
+<p>singletons：只在一个细胞上表达的clone</p>
+<p>tumor multiples: 至少在两个细胞上表达， 但只在肿瘤中表达的clone</p>
+<p>NAT multiples：至少在两个细胞上表达， 但只在癌旁组织中表达的clone</p>
+<p><strong>b</strong>: 大部分clonotypes属于singletons</p>
+<p>9-18%的clonotypes属于multiples和dual-expanded clones</p>
+<p><strong>c</strong>: dual-expanded clones在某些组织中是主要的克隆类型</p>
+<p><strong>d</strong>: 通过对NAT和肿瘤样本中克隆细胞的计数分析，发现不同患者的克隆扩增行为不同</p>
+<p>在一些患者,比如Colon1，dual-expanded clones沿着主对角线排列，即在肿瘤和NAT中双扩增克隆的细胞比例近似相等，提示由类似的克隆类型导致的肿瘤和NAT间的协调或平行过程，相反，在其他患者中，双扩增克隆从主对角线上分散，表明每个克隆在肿瘤和NAT室中具有独立的扩增、迁移或消耗模式。</p>
+<p><strong>e</strong>: 根据克隆在组织和血液中的扩增程度对克隆进行分类 （对应Fig1b）</p>
+<p>​        </p>
+<p><img src="https://i.loli.net/2020/03/23/C2Tp3Ber7wlPzYh.png" alt="snipaste20200323_100611.png"></p>
+<p>​         </p>
+<h3 id="Fig1"><a href="#Fig1" class="headerlink" title="Fig1"></a>Fig1</h3><p><strong>a</strong>: 4个有blood测序数据的病人的克隆扩增散点图</p>
+<p>点的大小表示血液克隆的大小</p>
+<p>颜色代表不同的组织扩增模式</p>
+<p><strong>b</strong>：克隆扩增模式图解：</p>
+<p>血液中的single称为blood non-expanded, multiple称为 blood-expanded</p>
+<p>不在血液中表达的clone称为blood-independent</p>
+<p><strong>c &amp; d</strong> : 在具有双扩增克隆比例较多的患者中，组织中的双扩增克隆在血液中也存在扩增</p>
+<p><strong>f-i</strong>: 外周血中的扩增与肿瘤浸润具有正相关</p>
+<p><img src="https://i.loli.net/2020/03/23/MLfEV4DeK5WHY7S.png" alt="snipaste20200323_102756.png"></p>
+<p>​          </p>
+<h3 id="Fig2"><a href="#Fig2" class="headerlink" title="Fig2:"></a>Fig2:</h3><p><strong>a</strong>：转录组数据聚类降维umap图</p>
+<p><strong>b</strong>：转录组分群对应的克隆表达模式</p>
+<ul>
+<li>CD4和CD8表达不同的克隆模式</li>
+<li>细胞亚群8.1、8.2和8.3 的克隆大部分是双扩增型</li>
+</ul>
+<p><strong>c</strong>：将细胞亚群映射到血液样本的克隆数据中发现许多在NAT和肿瘤中表现出一致的克隆（parallel dual expansion）主要来源于8.1-Teff细胞,8.3b-Trm也存在少量parallel dual expansion.</p>
+<p><strong>d</strong>: 8.1-Teff是唯一在blood expansion和dual-expanded的clone size间有统计学显著关系的克隆，表明它们在外周克隆扩增和肿瘤浸润中起主导作用。</p>
+<p><img src="https://i.loli.net/2020/03/23/sjL1YX5nkVMhW6q.png" alt="snipaste20200323_212503.png"></p>
+<p>​       </p>
+<h3 id="Fig3"><a href="#Fig3" class="headerlink" title="Fig3"></a>Fig3</h3><p>由于本文数据只获取了静态的数据，不能反映动态变化的过程。所以本文作者分析了已发表的基底细胞癌的免疫治疗前后的Tcell数据</p>
+<p><strong>a</strong>: 肿瘤和血液中clone size相关性</p>
+<p>结论：在novel CD8中，治疗后的克隆大小和治疗前血液中的转录数显著相关，说明部分治疗后新出现的CD8 clone来源于外周血</p>
+<p><strong>b</strong>: 血液克隆多样性与novel克隆和novel cells的关系</p>
+<p>尽管不同患者在新克隆的数量方面存在显著差异，但这些差异与外周血克隆多样性程度有关，进一步支持了外周血和肿瘤内克隆扩增之间的关系</p>
+<p><strong>c</strong>: 耗竭性Tcell和非耗竭性Tcell的克隆特征</p>
+<p>根据肿瘤克隆在治疗前是否与血液共享TCR序列，进一步分类,分为区分血液独立型（blood-independent）克隆和血液相关型（blood-associated）克隆。在两个具有最大血液克隆多样性的患者中，血液clone size和衰竭表型之间具有相关性： non-exhausted clones更可能与blood-associated clone相关，而 exhausted clones更有可能与blood-independent clone相关。此外，与血液相关的未耗尽克隆在治疗后肿瘤中的克隆大小显著大于非血液相关克隆。由此推测可能存在的两种克隆扩增的model（1）独立于血液的局部扩增产生耗竭性T细胞；（2）来自相对较新血液的浸润过程将新的、未耗尽的克隆体引入肿瘤。</p>
+<p><img src="https://i.loli.net/2020/03/24/7vLUmYSJytWrDkI.png" alt="snipaste20200324_113626.png"></p>
+<p>​       </p>
+<h3 id="Fig4"><a href="#Fig4" class="headerlink" title="Fig4"></a>Fig4</h3><p><strong>a</strong>: 肿瘤多发性和双重扩增的基因特征与更好的PFS相关</p>
+<p><strong>b</strong>: 考虑CD8表达量的不同，使用CD8A表达和tissue expansion signature score进行双变量分析</p>
+<p><img src="https://i.loli.net/2020/03/24/j4iWSrg6Yn9lyQL.png" alt="snipaste20200324_114034.png"></p>
+<p>​        </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本文最重要的发现是：来自外周血的未耗竭T细胞和耗竭性T细胞克隆可能是解释癌症免疫治疗疗效异质性的关键因素。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/16/单细胞测序/Immunity--TCF1决定CD8 T细胞命运/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/06/PDL1抑制剂抗癌机制总结/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">FlorenceXie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">38</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nature-外周T细胞扩增预测肿瘤浸润和临床疗效"><span class="nav-number">1.</span> <span class="nav-text">Nature | 外周T细胞扩增预测肿瘤浸润和临床疗效</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Abstract"><span class="nav-number">1.1.</span> <span class="nav-text">Abstract</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Methods"><span class="nav-number">1.2.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Results"><span class="nav-number">1.3.</span> <span class="nav-text">Results</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Extended-Data-Fig-2"><span class="nav-number">1.3.1.</span> <span class="nav-text">Extended Data Fig. 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fig1"><span class="nav-number">1.3.2.</span> <span class="nav-text">Fig1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fig2"><span class="nav-number">1.3.3.</span> <span class="nav-text">Fig2:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fig3"><span class="nav-number">1.3.4.</span> <span class="nav-text">Fig3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fig4"><span class="nav-number">1.3.5.</span> <span class="nav-text">Fig4</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">1.4.</span> <span class="nav-text">Summary</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FlorenceXie</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
