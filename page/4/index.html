@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/r-按每列的平均数删除重复行/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Serine-Metabolism-Supports-Macrophage-IL-1b-production/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -250,7 +250,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/r-按每列的平均数删除重复行/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Serine-Metabolism-Supports-Macrophage-IL-1b-production/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -262,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -301,10 +301,15 @@
 
       
         
-          
-            <h2 id="r-按每列的平均数删除重复行"><a href="#r-按每列的平均数删除重复行" class="headerlink" title="r-按每列的平均数删除重复行"></a>r-按每列的平均数删除重复行</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">suppressMessages(<span class="keyword">library</span>(dplyr))</span><br><span class="line"></span><br><span class="line">myMatrix2 &lt;- myMatrix %&gt;%</span><br><span class="line">    group_by(Gene.Symbol) %&gt;%</span><br><span class="line">    summarise_all(mean)</span><br></pre></td></tr></table></figure>
-
-          
+          <p>#<br>title: Serine Metabolism Supports Macrophage IL-1b production<br>date: 2019-04-12 16:02:30<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1016/j.cmet.2019.01.014" target="_blank" rel="noopener">Serine Metabolism Supports Macrophage IL-1b Production </a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/Serine-Metabolism-Supports-Macrophage-IL-1b-production/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -351,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/Rtsne/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/cDC2的亚群可以prime CD4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -370,7 +375,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/Rtsne/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/cDC2的亚群可以prime CD4/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -382,7 +387,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -422,389 +427,517 @@
       
         
           
-            <h1 id="Rtsne"><a href="#Rtsne" class="headerlink" title="Rtsne"></a>Rtsne</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
-<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
-<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
-<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
-<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
-<p>&nbsp;</p>
-<p><strong>按照factor配色</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/Rstudio不能安装bioconductor中R包问题解决/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Rstudio不能安装bioconductor中R包问题解决"><a href="#Rstudio不能安装bioconductor中R包问题解决" class="headerlink" title="Rstudio不能安装bioconductor中R包问题解决"></a>Rstudio不能安装bioconductor中R包问题解决</h1><p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
-<p>尝试tools-global options-packages更改镜像未成功</p>
-<p>最终解决方案：</p>
-<p>更改为</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/Rstudio安装R包失败后，可以用本地安装。先下载安装包，然后在R中打开/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/Rstudio安装R包失败后，可以用本地安装。先下载安装包，然后在R中打开/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Rstudio安装R包失败后，可以用本地安装。先下载安装包，然后在R中打开</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R 教程  CellChat：细胞间相互作用分析利器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/R 教程  CellChat：细胞间相互作用分析利器/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R-教程-CellChat：细胞间相互作用分析利器"><a href="#R-教程-CellChat：细胞间相互作用分析利器" class="headerlink" title="R 教程 | CellChat：细胞间相互作用分析利器"></a>R 教程 | CellChat：细胞间相互作用分析利器</h1><ul>
-<li>它能够分析细胞与细胞间的通讯，以获得细胞发展轨迹上的连续状态。</li>
-<li>该方法结合社会网络分析、模式识别和多种学习方法，可以定量地描述和比较推断出的细胞间通信网络。</li>
-<li>它提供了一个易于使用的工具来提取和可视化推断网络信息。例如，它可以随时预测所有细胞群的主要信号输入和输出，以及这些细胞群和信号如何协调在一起实现功能。</li>
-<li>它提供了几个可视化输出，以方便用户引导的直观数据解释。</li>
-</ul>
+            <p>#<br>title: cDC2的亚群可以prime CD4<br>date: 2019-05-24 09:19:46<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1016/j.cell.2019.02.005" target="_blank" rel="noopener">Unleashing Type-2 Dendritic Cells to Drive Protective Antitumor CD4+ T Cell Immunity</a></p>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>目前，免疫抑制剂治疗疗效不佳的原因之一是因为存在dysfunction或exhausted的T。而且这种耗竭的状态无法被免疫检查点抑制剂逆转</p>
+<p>antitumor中，CD4的作用：</p>
 <ul>
-<li></li>
-<li></li>
+<li>Effector CD4+ Tconv can augment immunity by licensing dendritic cells (DC) and stimulating pro-inflammatory myeloid cell programs</li>
+<li>Effective anti- CTLA-4 therapy generates <strong>ICOS+PD-1lo </strong>CD4+ T helper 1-like (Th1-like) effector CD4+ Tconv critical for an antitumor response</li>
+<li>Presence of PD-1hi CD4+ Tconv cells, correlated with high tumor burden and likely T cell exhaustion, is a negative prognostic indicator for ICB</li>
 </ul>
+<p>在浸润肿瘤前，T细胞现在肿瘤引流淋巴结（tumor-draining lymph node (tdLN)）中由cDC激活</p>
+<p>cDC：</p>
+<ul>
+<li>cDC can be divided into cDC1 and cDC2 populations that are either LN resident or migrate to the LN from peripheral tissues</li>
+<li>cDC1 are critical for directing CD8+ T cell immunity to various pathogens</li>
+<li>cDC2, a heterogeneous population, preferentially initiate CD4+ Tconv responses in several conditions</li>
+</ul>
+<h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="Myeloid-Heterogeneity-at-Single-Cell-Resolution"><a href="#Myeloid-Heterogeneity-at-Single-Cell-Resolution" class="headerlink" title="Myeloid Heterogeneity at Single-Cell Resolution"></a>Myeloid Heterogeneity at Single-Cell Resolution</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Treg中HPGD发挥免疫抑制功能（通过pparg通路）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Treg中HPGD发挥免疫抑制功能（通过pparg通路）/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: Treg中HPGD发挥免疫抑制功能（通过pparg通路）<br>date: 2019-04-25 14:21:16<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1016/j.immuni.2019.03.014" target="_blank" rel="noopener">Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/Treg中HPGD发挥免疫抑制功能（通过pparg通路）/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/TGF-β--肿瘤免疫/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/TGF-β--肿瘤免疫/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#<br>title: TGF-β–肿瘤免疫<br>date: 2019-05-17 16:12:22<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><p>TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。</p>
+<p>晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-β水平升高便可以<strong>阻断未成熟的T细胞向Th1细胞分化，促进其向Treg亚群的转化，并抑制树突状细胞的抗原递呈功能</strong>，从而导致肿瘤细胞的免疫逃逸。随着肿瘤的发展，肿瘤细胞内TGF-β受体或其下游的<em>Smad</em>基因突变积累，其抑制作用减弱。并且<strong>TGF-β信号促进上皮细胞间质转型</strong>（Epithelial-Mesenchymal Transition, EMT），这个过程使具有极性的上皮细胞转化为具有活动能力的间质细胞，从而获得侵袭和迁移的能力，这个转化过程在肿瘤的发生、恶化及转移中非常重要。肿瘤转移是导致癌症病人死亡的一个非常重要的原因，实体瘤患者中高达90%的患者死于肿瘤转移。</p>
+<h1 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h1><h2 id="TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis"><a href="#TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis" class="headerlink" title="TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis"></a>TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: pancreatic CAF associated papers<br>date: 2019-05-15 10:44:13<br>categories: paper<br>tags: cancer</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/" target="_blank" rel="noopener">Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer</a></p>
+<p>PNAS, 2013</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/中性粒细胞在肿瘤中的作用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/中性粒细胞在肿瘤中的作用/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p># </p>
+<h2 id="CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity"><a href="#CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity" class="headerlink" title="CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity"></a>CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity</h2><p>Immunity, 2020</p>
+<p>Neutrophils are the only cell type able to undergo a peculiar form of cell death called NETosis, as a<br>result of which the nuclear DNA of the neutrophil is extruded and projected into the tissular surroundings, where it can exert bactericidal properties. The majority of reports attribute pro-tumorigenic roles to neutrophils, including angiogenesis promotion and immunosuppressive<br>effects. Such extracellular DNA conjugated to neutrophil proteins is termed neutrophil extracellular traps(NETs), since it can entrap microorganisms.  Tumors may cunningly pervert NETosis in their own interest. The tumor microenvironment is in fact very rich in factors that can induce NET extrusion from infiltrating neutrophils or GR-MDSCs. In this paper, the study documents the ability of tumors producing ELR+ CXCL chemokines to induce NETs in a manner dependent on CXCR1 and/or CXCR2. CXCR1 is definitely involved in the process, as verified with a specific neutralizing mAb. No specific blocking antibody against CXCR2 was available. Complete blockade with a CXCR1 agent does not exclude a role for CXCR2, since the biology of this receptor is complex and is known to form heterodimers with CXCR1. This study also showed that NETs might coat and shield tumor cells against cytotoxicity, as mediated by CD8+T cells and NK lymphocytes. Such a protective mechanism that results in armored tumor cells was lost when extracellular DNA was digested and involved less frequent cytotoxic contact between effector and target cells. In their experiments, pharmacological NETosis inhibition synergizes with the most potent immunotherapy strategy in the clinic combining anti-PD-1 and anti-CTLA-4 mAbs. The mechanism is envisioned to involve NET inhibition of the ensuing<br>cytotoxic effector T cell response following checkpoint inhibition.</p>
 
           
         
@@ -853,7 +986,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R Debug  moving to final location failed/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/单细胞测序发现保守的肺癌髓系细胞群/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -872,7 +1005,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/R Debug  moving to final location failed/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/单细胞测序发现保守的肺癌髓系细胞群/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -884,7 +1017,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -924,15 +1057,155 @@
       
         
           
-            <h1 id="R-Debug-moving-to-final-location-failed"><a href="#R-Debug-moving-to-final-location-failed" class="headerlink" title="R Debug | moving to final location failed"></a>R Debug | moving to final location failed</h1><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv: cannot move <span class="string">'XXXX'</span> to <span class="string">'XXXXX'</span>: Permission denied</span><br><span class="line">ERROR:   moving to final location failed</span><br></pre></td></tr></table></figure>
-<p>原因：</p>
-<blockquote>
-<p>The current implementation of package installation by default backs up the old installation of the package by moving it into a per-library 00LOCK directory (or per-package 00LOCK-pkgname). The installation is performed directly into the final directory pkgname in the library. If it fails, it is by default cleaned up and the old version is moved back; otherwise, if it succeeds, the old version is deleted. If the lock directory already exists when the installation is requested, the installation fails with an error and one typically would delete the directory manually. During parallel install, the per package locking is used (00LOCK-pkgname). This locking mechanism works for backing-up and recovering previous versions of packages in case of error, but it does not prevent access to partially installed packages</p>
-</blockquote>
-<p>默认情况下，软件包安装的实现通过将软件包的旧安装移动到每个库00LOCK目录（或每个软件包00LOCK-pkgname）中来备份该软件包的旧安装。安装直接在库中的最终目录pkgname中执行。<br>如果失败，则默认情况下将其清除，并将旧版本移回；如果成功，将删除旧版本。<br>如果在请求安装时锁定目录已经存在，则安装将失败并显示错误，并且通常会手动删除该目录。<br>在并行安装期间，将使用每个软件包锁定（00LOCK-pkgname）。<br>此锁定机制适用于在发生错误的情况下备份和恢复软件包的先前版本，但是它不能防止访问部分安装的软件包</p>
-<p>解决：</p>
-<p>安装前运行：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Sys.setenv(R_INSTALL_STAGED = <span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
+            <p>#<br>title: 单细胞测序发现保守的肺癌髓系细胞群<br>date: 2019-05-26 11:25:14<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1><p>文章标题</p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>写完笔记之后最后填，概述文章的内容，以后查阅笔记的时候先看这一段。</p>
+<h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><p>作者的研究目标。</p>
+<h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><p>问题陈述，要解决什么问题？</p>
+<h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><p>解决问题的方法/算法是什么？</p>
+<h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><p>作者如何评估自己的方法，有没有问题或者可以借鉴的地方。</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>作者给了哪些strong conclusion, 又给了哪些weak conclusion?</p>
+<h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#<br>title: 李梢–单细胞转录组发现早期胃癌特异标记基因<br>date: 2019-05-12 16:42:05<br>categories: paper<br>tags: cancer</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul>
+<li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p>
+</li>
+<li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p>
+</li>
+<li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p>
+</li>
+</ul>
+<h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p>
+<ul>
+<li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li>
+<li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li>
+<li>proliferative cells (PCs)  MKI67 and BRIC5</li>
+<li>cancer cells  CEACAM5 and CEACAM6</li>
+<li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li>
+<li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li>
+<li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li>
+</ul>
+<p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p>
+<h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>
 
           
         
@@ -981,7 +1254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/pandas drop()不识别columns关键字/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/越来越多证据表明/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1000,7 +1273,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/pandas drop()不识别columns关键字/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/越来越多证据表明/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -1012,7 +1285,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -1052,9 +1325,9 @@
       
         
           
-            <h1 id="pandas-drop-不识别columns关键字"><a href="#pandas-drop-不识别columns关键字" class="headerlink" title="pandas drop()不识别columns关键字"></a>pandas drop()不识别columns关键字</h1><p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
-<p>解决：</p>
-<p>升级pandas</p>
+            <p># </p>
+<p>Increasing evidence over recent years supports</p>
+<p>A growing body of evidence shows that</p>
 
           
         
@@ -1103,7 +1376,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/OSError Unable to open file/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/肿瘤免疫逃逸机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1122,7 +1395,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/OSError Unable to open file/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/肿瘤免疫逃逸机制/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -1134,7 +1407,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -1174,250 +1447,8 @@
       
         
           
-            <h1 id="OSError-Unable-to-open-file-unable-to-lock-file"><a href="#OSError-Unable-to-open-file-unable-to-lock-file" class="headerlink" title="OSError: Unable to open file(unable to lock file)"></a>OSError: Unable to open file(unable to lock file)</h1><p><code>Seurat</code>中保存了loom后, 在<code>Scanpy</code>中无法读入</p>
-<p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
-<p>解决方案：</p>
-<p>将保存loom的kernel shutdown，解除文件占用</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/linux安装R包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/linux安装R包/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/KM生存曲线计算HR/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/KM生存曲线计算HR/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="KM生存曲线计算HR"><a href="#KM生存曲线计算HR" class="headerlink" title="KM生存曲线计算HR"></a>KM生存曲线计算HR</h1><p><a href="http://www.bio-info-trainee.com/5458.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/5458.html</a></p>
+            <p># </p>
+<p><strong>SIRP- α</strong>: As in blood, signal regulatory protein α (SIRP- α), which is used by CD47-expressing tumor cells to inhibit phagocytosis by antigen-presenting cells, was expressed by all TA-DCs except cDC1.</p>
 
           
         
@@ -1457,7 +1488,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1503,7 +1534,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1514,7 +1545,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -1525,7 +1556,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

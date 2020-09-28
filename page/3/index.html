@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/创建数据集/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Gal1-inhibit-PDAC-via-tumor-stroma-crosstalk-PNAS-2017/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -250,7 +250,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/创建数据集/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Gal1-inhibit-PDAC-via-tumor-stroma-crosstalk-PNAS-2017/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -262,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:53+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -301,46 +301,15 @@
 
       
         
-          
-            <h1 id="数据集"><a href="#数据集" class="headerlink" title="数据集"></a>数据集</h1><p>由数据组成的矩形数组，行表示观测，列表示变量。</p>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>对象：可以赋值给变量的任何事物</p>
-<p>对象都具有某种模式以及某个类</p>
-<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量 ：存储数值，字符，逻辑数据的数组</p>
-<p>标量是只有一个元素的向量</p>
-<p>一个向量中只能有一个数据类型</p>
-<p>用函数<strong><em>c（）</em></strong>创建向量</p>
-<p>用[]里加数字，来表示字符的位置</p>
-<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是二维数组，数组中的每个元素具有相同的模式</p>
-<p><strong><em>byrow</em></strong>表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默认是按列填充。</p>
-<p>用函数matrix（）来创建矩阵。</p>
-<p>矩阵下标：</p>
-<p>X[2,] 表示第二行</p>
-<p>X[,2] 表示第二列</p>
-<p>矩阵中也只能有一种数据类型</p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>与矩阵类似，但是维度可以大于2</p>
-<p>数组通过<strong><em>array（）</em></strong>创建</p>
-<p>数组也只能有一种数据类型</p>
-<h2 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h2><p>R 中最常使用的数据结构</p>
-<p>数据框用函数<strong><em>data.frame()</em></strong>构建</p>
-<p>可以有多种数据类型。但是每一列只能有一种。</p>
-<h4 id="attach-detach-和with"><a href="#attach-detach-和with" class="headerlink" title="attach detach 和with"></a>attach detach 和with</h4><p>attach() :将数据框添加到R的搜索路径中   </p>
-<p>detach() ：将数据框从搜索路径中移除</p>
-<p>attach 和 detach 的局限：如果有变量重名。先出现的变量将会取得优先权。 ====&gt;报错：某个对象已被屏蔽（masked）</p>
-<p>with() ：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">with（mtcars,&#123;</span><br><span class="line">    print (summary(mpg))</span><br><span class="line">    plot (mpg,disp)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>with：花括号内的赋值，只在内部起效</p>
-<p>想要花括号内赋值在外面也能用，将赋值符号 &lt;- 改成 &lt;&lt;-</p>
-<h4 id="实例标识符"><a href="#实例标识符" class="headerlink" title="实例标识符"></a>实例标识符</h4><p>可以用row.names来指定实例标识符</p>
-<p>比如病人的id</p>
-<h2 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h2><p>变量：名义型   有序型  连续型</p>
-<p>名义型：没有顺序之分的类别变量</p>
-<p><strong><em>名义型和有序型统称为因子（factor）</em></strong></p>
-<p> 函数factor()以整数向量的形式存储类别值</p>
-<p><strong><em>要表示有序型变量，需要为函数factor()指定参数order=TRUE</em></strong></p>
-<p>对于字符型变量，factor默认的排序方式是按照字母顺序排列。可以指定levels选项来覆盖默认的排序。</p>
-<p>数值型变量，<strong><em>用levels和labels来编码因子</em></strong></p>
-
-          
+          <p>#<br>title: Gal1 inhibit PDAC via tumor-stroma crosstalk(PNAS_2017)<br>date: 2019-04-30 10:00:48<br>categories: paper<br>tags: cancer</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5910865/" target="_blank" rel="noopener">Targeting galectin-1 inhibits pancreatic cancer progression by modulating tumor–stroma crosstalk</a></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/Gal1-inhibit-PDAC-via-tumor-stroma-crosstalk-PNAS-2017/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -387,7 +356,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/处理缺失数据的高级方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Immunity--TCF1决定CD8 T细胞命运/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -406,7 +375,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/R语言/处理缺失数据的高级方法/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Immunity--TCF1决定CD8 T细胞命运/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -418,7 +387,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:53+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
                 2020-09-28
               </time>
             
@@ -458,1170 +427,1223 @@
       
         
           
-            <h1 id="处理缺失数据的高级方法"><a href="#处理缺失数据的高级方法" class="headerlink" title="处理缺失数据的高级方法"></a>处理缺失数据的高级方法</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1 识别</p>
-<p>2 找原因</p>
-<p>3 合适的处理</p>
-<p>&nbsp;</p>
-<h2 id="缺失数据的分类"><a href="#缺失数据的分类" class="headerlink" title="缺失数据的分类"></a>缺失数据的分类</h2><p><strong>完全随机缺失</strong>（MCAR）：与其他变量都不相关。可以认为完整数据是对整体数据集的随机抽样</p>
-<p><strong>随机缺失</strong>（MAR）：与其他观测变量有关，但与自己的未观测值无关   </p>
-<p>如： 体重较小的动物其做梦时长的缺失较大，可能是因为体重小的动物难以观测。而此缺失与动物的做梦时长本身没有关系</p>
-<p><strong>非随机缺失</strong> （NMAR）</p>
-<p><strong><em>大部分的缺失值处理方法都假定缺失数据是MCAR或MAR</em></strong></p>
-<p>&nbsp;</p>
-<h2 id="图形探究缺失数据"><a href="#图形探究缺失数据" class="headerlink" title="图形探究缺失数据"></a>图形探究缺失数据</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matrixplot(sleep, xlab = colnames(sleep))</span><br></pre></td></tr></table></figure>
-<p><code>md.pattern()</code>生成一个以矩阵或数据框展示的缺失值的模式表格</p>
-<p><code>aggr()</code>绘制每个变量的缺失值数，和组合变量的缺失值数</p>
-<p><code>matrixplot</code></p>
-<p><code>marginplot()</code>生成一个散点图</p>
-<p>&nbsp;</p>
-<h2 id="用相关性探究缺失数据"><a href="#用相关性探究缺失数据" class="headerlink" title="用相关性探究缺失数据"></a>用相关性探究缺失数据</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- as.data.frame(abs(is.na(sleep))) <span class="comment">##有缺失的值为1 无缺失为0</span></span><br><span class="line">head(sleep, n=<span class="number">5</span>)</span><br><span class="line">head(x, n=<span class="number">5</span>)</span><br><span class="line">y &lt;- x[which(apply(x,<span class="number">2</span>,sum)&gt;<span class="number">0</span>)] <span class="comment">##提取含缺失值的变量</span></span><br><span class="line">cor(y)  <span class="comment">##计算缺失变量之间的相关性</span></span><br><span class="line">cor(sleep, y, use=<span class="string">"pairwise.complete.obs"</span>) <span class="comment">##计算缺失与不缺失之间的相关性</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/13/5b9a1b80b4e62.jpg" alt></p>
-<p>&nbsp;</p>
-<h2 id="缺失值的常用处理方法"><a href="#缺失值的常用处理方法" class="headerlink" title="缺失值的常用处理方法"></a>缺失值的常用处理方法</h2><p><strong>行删除法（大部分软件默认）</strong></p>
-<p><code>complete.cases()</code>   <code>na.omit</code></p>
-<p>&nbsp;</p>
-<p><strong>推理法</strong></p>
-<p>&nbsp;</p>
-<p><strong>多重插补</strong></p>
-<p>原理：多值插补的思想来源于贝叶斯估计，认为待插补的值是随机的，它的值来自于已观测到的值。具体实践上通常是估计出待插补的值，然后再加上不同的噪声，形成多组可选插补值。根据某种选择依据，选取最合适的插补值。缺失值通过蒙特卡洛方法填补。</p>
-<p><img src="https://i.loli.net/2018/09/13/5b9a2011dd285.jpg" alt></p>
-<p>&nbsp;</p>
-<p><strong><em>蒙特卡洛基本思想</em></strong>：当所求解问题是某种随机事件出现的概率，或者是某个随机变量的期望值时，通过某种“实验”的方法，以这种事件出现的频率估计这一随机事件的概率，或者得到这个随机变量的某些数字特征，并将其作为问题的解。</p>
-<p>工作过程</p>
-<p>蒙特卡罗方法的解题过程可以归结为三个主要步骤：构造或描述概率过程；实现从已知概率分布抽样；建立各种估计量。</p>
-<p>缺失值的插补通过Gibbs抽样完成。可以自主选择预测模型。</p>
-<p>&nbsp;</p>
-<p>使用<code>mice()</code>函数</p>
-<p><img src="https://pic2.zhimg.com/v2-561283772be13543dee88df86a1afb85_1200x500.jpg" alt="å¤çç¼ºå¤±å¼ä¹å¤éæè¡¥ï¼Multiple Imputationï¼"></p>
-<p>&nbsp;</p>
-<p>函数mice()首先从一个包含缺失数据的数据框开始，然后返回一个包含多个（默认为5个）完<br>整数据集的对象。每个完整数据集都是通过对原始数据框中的缺失数据进行插补而生成的。由于插<br>补有随机的成分，因此每个完整数据集都略有不同。然后，with()函数可依次对每个完整数据集<br>应用统计模型（如线性模型或广义线性模型），最 后 ，pool()函数将这些单独的分析结果整合为一<br>组结果。最终模型的标准误和p值都将准确地反映出由于缺失值和多重插补而产生的不确定性。</p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">options(digits=<span class="number">3</span>)</span><br><span class="line"><span class="keyword">library</span>(mice)</span><br><span class="line">data(sleep, package=<span class="string">"VIM"</span>)</span><br><span class="line">imp &lt;- mice(sleep, seed=<span class="number">1234</span>)  <span class="comment">##m默认值为5，指有5个填补缺失值的预测值</span></span><br><span class="line">fit &lt;- with(imp, lm(Dream ~ Span + Gest)) <span class="comment">#对5个数据集都做统计分析</span></span><br><span class="line">pooled &lt;- pool(fit) <span class="comment">#将分析结果整合为一组</span></span><br><span class="line">summary(pooled)</span><br><span class="line">imp</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp$imp$Dream   <span class="comment">##提取imp对象的子成分，可以观测到实际的观测值</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
- <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">complete(imp, action=n) <span class="comment">##指定m个完整数据集中的一个来展示</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h2 id="成对删除、简单插补"><a href="#成对删除、简单插补" class="headerlink" title="成对删除、简单插补"></a>成对删除、简单插补</h2><p>建议不要使用</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/主成分分析和因子分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/主成分分析和因子分析/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:53+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="主成分与因子分析"><a href="#主成分与因子分析" class="headerlink" title="主成分与因子分析"></a>主成分与因子分析</h1><h2 id="常用步骤"><a href="#常用步骤" class="headerlink" title="常用步骤"></a>常用步骤</h2><ol>
-<li>数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值</li>
-<li>选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构）</li>
-<li>判断选择的主成分或因子的数目</li>
-<li>选择主成分或因子</li>
-<li>旋转</li>
-<li>解释结果</li>
-<li>计算主成分或因子得分</li>
-</ol>
-<p>&nbsp;</p>
-<h2 id="主成分分析"><a href="#主成分分析" class="headerlink" title="主成分分析"></a>主成分分析</h2><p>PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信<br>息，这些推导所得的变量称为主成分，它们是观测变量的线性组合。如第一主成分为：</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f57b8b86be.jpg" alt></p>
-<p>它是k个观测变量的加权组合，对初始变量集的方差解释性最大。第二主成分也是初始变量<br>的线性组合，对方差的解释性排第二，同时与第一主成分正交（不相关）。后面每一个主成分都<br>最大化它对方差的解释程度，同时与之前所有的主成分都正交 。</p>
-<p>&nbsp;</p>
-<h3 id="判断主成分的个数"><a href="#判断主成分的个数" class="headerlink" title="判断主成分的个数"></a>判断主成分的个数</h3><p>利用<code>fa.parallel()</code>同时对三种特征值判别准则进行评价 </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa.parallel(USJudgeRatings[, -<span class="number">1</span>], fa=<span class="string">"pc"</span>, n.iter=<span class="number">100</span>,</span><br><span class="line">             show.legend=<span class="literal">FALSE</span>, main=<span class="string">"Scree plot with parallel analysis"</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/17/5b9f59c0e6b81.jpg" alt></p>
-<p>三个准则：</p>
-<ol>
-<li>特征值大于1</li>
-<li>大于随机数据矩阵推导出的特征值平均值（虚线）</li>
-<li>Cattle碎石检验，图形变化最大处以上均可保留</li>
-</ol>
-<p>&nbsp;</p>
-<h3 id="提取主成分"><a href="#提取主成分" class="headerlink" title="提取主成分"></a>提取主成分</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(psych)</span><br><span class="line">pc &lt;- principal(r, nfactors=, rotate=, scores=)</span><br><span class="line"><span class="comment">## r:相关系数矩阵或者原始矩阵</span></span><br><span class="line"><span class="comment">## nfactors：设定主成分数</span></span><br><span class="line"><span class="comment">## rotate：是否旋转</span></span><br><span class="line"><span class="comment">## scores：主成分得分</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/17/5b9f75ad0810e.jpg" alt></p>
-<p>&nbsp;</p>
-<p>PC1栏包含了成分载荷，指观测变量与主成分的相关系数 。成分载荷（ component loadings）可用来解释主成分的含义 。第一主成分（ PC1）与每个变量都高度相关，也就是说，它是一个可用来进行一般性评价的维度。 </p>
-<p>&nbsp;</p>
-<p>h2栏指成分公因子方差——主成分对每个变量的方差解释度 </p>
-<p>u2栏指成分唯一性——方差无法被主成分解释的比例（ 1-h2） </p>
-<p>&nbsp;</p>
-<h3 id="主成分旋转"><a href="#主成分旋转" class="headerlink" title="主成分旋转"></a>主成分旋转</h3><p>旋转方法有两种：使选择的成分保持不相关（ 正交旋转），和让它们变得相关（ 斜交旋转）。 最流行的正交旋转是方差极大旋转 </p>
-<p>&nbsp;</p>
-<p>方差极大旋转：它试图对载荷阵的列进行去噪，使得每个成分只是由一组有限的变量来解释（即载荷阵每列只有少数几个很大的载荷，其他都是很小的载荷） </p>
-<p>&nbsp;</p>
-<h3 id="获取主成分得分"><a href="#获取主成分得分" class="headerlink" title="获取主成分得分"></a>获取主成分得分</h3><p>设置<code>score</code>等于TRUE</p>
-<p>当主成分分析基于相关系数矩阵时，原始数据便不可用了，也不可能获取每个观测的主成分得分，但是可以得到用来计算主成分得分的系数 </p>
-<p>&nbsp;</p>
-<h2 id="探索性因子得分"><a href="#探索性因子得分" class="headerlink" title="探索性因子得分"></a>探索性因子得分</h2><p>协方差矩阵 需要用<code>cov2cor()</code>将其转化为相关系数矩阵 </p>
-<p>&nbsp;</p>
-<h3 id="判断公共因子数"><a href="#判断公共因子数" class="headerlink" title="判断公共因子数"></a>判断公共因子数</h3><p>类似主成分判断</p>
-<p>使用<code>fa.parallel</code></p>
-<p>&nbsp;</p>
-<h3 id="提取公共因子"><a href="#提取公共因子" class="headerlink" title="提取公共因子"></a>提取公共因子</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa(r, nfactors, n.obs=, rotate=, scores=, fm=)  <span class="comment">### 使用相关性矩阵时，要设置n.obs</span></span><br><span class="line"><span class="comment">### fm:设定因子化方法（默认极小残差法）</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>统计学家青睐使用最大似然法，因为它有良好的统计性质。不过有时候最大似然法不会收敛，此时使用主轴迭代法效果会很好 .</p>
-<p>最大似然法（ ml）</p>
-<p>主轴迭代法（ pa）</p>
-<p>加权最小二乘法（ wls）</p>
-<p>广义加权最小二乘法（ gls）</p>
-<p>最小残差法（ minres） </p>
-<h3 id="因子旋转"><a href="#因子旋转" class="headerlink" title="因子旋转"></a>因子旋转</h3><p>正交旋转和斜交旋转</p>
-<p>正交</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.varimax &lt;- fa(correlations, nfactors=<span class="number">2</span>, rotate=<span class="string">"varimax"</span>, fm=<span class="string">"pa"</span>)</span><br></pre></td></tr></table></figure>
-<p>使用正交旋转将人为地强制两个因子不相关。</p>
-<p>斜交：</p>
-<p><code>fa.promax &lt;- fa(correlations, nfactors=2, rotate=&quot;promax&quot;, fm=&quot;pa&quot;)</code> </p>
-<p>&nbsp;</p>
-<p>对于正交旋转，因子分析的重点在于因子结构矩阵（变量与因子的相关系数），而对于斜交旋转，因子分析会考虑三个矩阵：因子结构矩阵、因子模式矩阵和因子关联矩阵。<br>因子模式矩阵即标准化的回归系数矩阵。它列出了因子预测变量的权重。 因子关联矩阵即因子相关系数矩阵。</p>
-<p>&nbsp;</p>
-<p>与正交旋转所得因子载荷阵相比，斜交的载荷阵列（因子结构矩阵）的噪音比较大，这是因为之前你允许潜在因子相关。虽然斜交方法更为复杂，但模型将更符合真实数据。 </p>
-<p>&nbsp;</p>
-<p>使用<code>factor.plot()</code>或<code>fa.diagram()</code>函数，可以绘制正交或者斜交结果的图形 </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">factor.plot(fa.promax, labels=rownames(fa.promax$loadings))</span><br></pre></td></tr></table></figure>
-<p> &nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f730cddd73.jpg" alt></p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.diagram(fa.promax, simple=<span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
-<p>若使simple = TRUE，那么将仅显示每个因子下最大的载荷，以及因子间的相关系数 </p>
-<p>&nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f739014f81.jpg" alt></p>
-<p>&nbsp;</p>
-<h2 id="步骤图"><a href="#步骤图" class="headerlink" title="步骤图"></a>步骤图</h2><p><img src="https://i.loli.net/2018/09/17/5b9f74abcc36c.jpg" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/try/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/try/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:45+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R异常值和错误处理"><a href="#R异常值和错误处理" class="headerlink" title="R异常值和错误处理"></a>R异常值和错误处理</h1><h2 id="try-错误识别"><a href="#try-错误识别" class="headerlink" title="try() 错误识别"></a>try() 错误识别</h2><p>1.将可能会报错的命令行放到try()函数中，并将其赋值到一个变量名fit（可以是任意变量名）中<br>2.如果有错误，将fit将称为一个类型为“try-error”的变量<br>3.可以用R ‘try-error’ %in% class(fit)放置在if()函数中进行判断<br>4.try() 函数一般与next 和 break 进行联用，next跳过本次循环，break跳出循环</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">library(ConsensusClusterPlus)</span><br><span class="line">i &lt;- 10 </span><br><span class="line">while(i &gt; 3)&#123;</span><br><span class="line">  maxk &lt;- min(i, ncol(distan_matrix)-1)</span><br><span class="line">  i &lt;- i-1</span><br><span class="line">  title &lt;- &quot;./&quot;</span><br><span class="line">  fit &lt;- try(ConsensusClusterPlus(distan_matrix, maxK = maxk, reps = 10, pItem = 0.8, title=title,pFeature = 1, clusterAlg=&quot;kmdist&quot;, seed=1234, plot=&quot;png&quot;))</span><br><span class="line">  if(&quot;try-error&quot; %in% class(fit))</span><br><span class="line">  &#123;</span><br><span class="line">    next</span><br><span class="line">  &#125;else</span><br><span class="line">  &#123;</span><br><span class="line">    Consensus_result = fit</span><br><span class="line">    break</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>原文链接：<a href="https://blog.csdn.net/YJJ18636810884/article/details/83176190" target="_blank" rel="noopener">https://blog.csdn.net/YJJ18636810884/article/details/83176190</a></p>
-<p>&nbsp;</p>
-<h2 id="使用tryCatch进行简单的错误处理"><a href="#使用tryCatch进行简单的错误处理" class="headerlink" title="使用tryCatch进行简单的错误处理"></a>使用tryCatch进行简单的错误处理</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="keyword">tryCatch</span>(&#123;</span><br><span class="line">    expr</span><br><span class="line">&#125;, <span class="keyword">warning</span> = <span class="keyword">function</span>(w) &#123;</span><br><span class="line">    <span class="keyword">warning</span>-handler-code</span><br><span class="line">&#125;, error = <span class="keyword">function</span>(e) &#123;</span><br><span class="line">    error-handler-code</span><br><span class="line">&#125;, finally = &#123;</span><br><span class="line">    cleanup-code</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/SCENIC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/SCENIC/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="SCENIC"><a href="#SCENIC" class="headerlink" title="SCENIC"></a>SCENIC</h1><h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
-<li><p><strong><em>GENIE3</em></strong> to infer the co-expression network</p>
+            <p># </p>
+<p>Title: TCF-1-Centered Transcriptional Network Drives an Effector versus Exhausted CD8 T Cell-Fate Decision</p>
+<p>Immunity, 2019.09    <a href="https://doi.org/10.1016/j.immuni.2019.09.013" target="_blank" rel="noopener">https://doi.org/10.1016/j.immuni.2019.09.013</a></p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>测序平台</strong>：10X</p>
+<p><strong>样本</strong>: </p>
+<p>来源于LCMV感染小鼠的初始T细胞(naive T)， 效应T细胞(Teff), 早期耗竭T细胞（Tex）</p>
+<p><img src="https://i.loli.net/2020/03/15/SRFeVxXMir9zCYl.png" alt="snipaste20200315_232129.png"></p>
+<p><strong>细胞量</strong>：5*10^3</p>
+<p><strong>重点发现</strong>：</p>
+<ul>
+<li>小鼠慢性感染和肿瘤发生早期，存在着耗竭性T细胞前体和类效应性T细胞的二元分化机制</li>
+<li>TCF1促进耗竭性T细胞前体分化， 抑制效应T细胞分化</li>
+<li>PD-1维持TCF1+Tex前体细胞的数量</li>
+<li>TCF1的作用机制是上调下游Eomes和c-Myb的表达</li>
+</ul>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><ul>
+<li><strong>单细胞建库：</strong> 10X</li>
+<li><strong>质控：</strong><ul>
+<li>删除所有线粒体基因</li>
+<li>保留表达基因数大于1000的细胞</li>
+</ul>
 </li>
-<li><p><strong><em>RcisTarget</em></strong> for the analysis of transcription factor binding motifs</p>
+<li><strong>normalization</strong> ：R包 <code>Scran</code></li>
+<li><strong>数据分析</strong>：<ul>
+<li><code>MAST</code>: 进行细胞群间差异基因分析</li>
+<li><code>Monocle-2</code>,<code>TSCAN</code>, <code>STIP</code>:假时序分析</li>
+</ul>
 </li>
-<li><p><strong><em>AUCell</em></strong> to identify cells with active gene sets (gene-network) in scRNA-seq data</p>
+<li><strong>下游分析：</strong><ul>
+<li>假时序分析</li>
+<li>ATAC-Seq</li>
+<li>GO分析：挑选每群top100的基因。工具：DAVID网站</li>
+</ul>
 </li>
 </ul>
-<h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h2><ul>
-<li>Identify potential targets for each TF based on co-expression</li>
-<li>Select potential direct-binding targets (regulons) based on DNA-motif analysis </li>
-<li>Analyzing the network activity in each individual cell (<em>AUCell</em>)</li>
-<li>Identify stable cell states based on their gene regulatory network activity (cell clustering) and exploring the results</li>
+<p>​       </p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><ul>
+<li>在急性感染或疫苗接种过程中，初始CD8 T细胞被激活并分化为一个效应T细胞池，其中含有KlRG1hi终末效应（Teff）细胞和KlRG1LoCD127Hi记忆前体（Tmp）细胞。Teff细胞数量一般是Tmp的5-20倍。KlRG1hi终末效应细胞在几周内迅速耗竭， 而Tmp细胞则转化为长效记忆细胞</li>
+<li>在慢性感染和肿瘤中，主要为 KLRG1Lo 耗竭性CD8细胞</li>
+<li>谱系追踪显示，慢性感染过程中KLRG1HiTeff生存能力差，无法转化为Tex</li>
 </ul>
-<h2 id="Input-expression-matrix"><a href="#Input-expression-matrix" class="headerlink" title="Input: expression matrix"></a>Input: expression matrix</h2><ul>
-<li>column: sample (cell)    row: gene</li>
-<li><strong>gene-symbol</strong> as rownames</li>
-<li>Expression <strong>units</strong>: gene-summarized counts   TPM and FPKM/RPKM are also accepted</li>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Negative Co-stimulation 控制T细胞分化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Negative Co-stimulation 控制T细胞分化/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: Negative Co-stimulation 控制T细胞分化<br>date: 2019-04-18 13:33:41<br>tags: immunity<br>categories: daily</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1016/j.immuni.2019.03.004" target="_blank" rel="noopener">Negative Co-stimulation Constrains T Cell Differentiation by Imposing Boundaries on Possible Cell States</a></p>
+<p>Immunity, 201904</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/Negative Co-stimulation 控制T细胞分化/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/fibroblast-in-cancer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/fibroblast-in-cancer/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: fibroblast in cancer<br>date: 2019-04-09 14:53:51<br>categories: paper<br>tags: cancer</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="doi:10.1038/nrc1877" target="_blank" rel="noopener">Fibroblasts in cancer</a></p>
+<p>The important functions of fibroblasts include the deposition of extracellular matrix (ECM), regulation of epithelial differentiation, regulation of inflammation, and involvement in wound healing</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/fibroblast-in-cancer/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Nature--外周T细胞扩增预测肿瘤浸润和临床疗效/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Nature--外周T细胞扩增预测肿瘤浸润和临床疗效/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p># </p>
+<p>Title: Peripheral T cell expansion predicts tumor  infiltration and clinical response</p>
+<p><a href="https://doi.org/10.1038/s41586-020-2056-8" target="_blank" rel="noopener">Nature, 2020</a></p>
+<p>​      </p>
+<h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p><strong>测序平台</strong>：10X</p>
+<p><strong>样本</strong>: </p>
+<p>来自14个未经治疗的肿瘤病人，每个病人都取了肿瘤组织和癌旁组织，其中4个病人额外取了外周血        </p>
+<p>14个病人分属于4种不同的肿瘤: 非小细胞肺癌(lung)，子宫内膜腺癌(endo), 大肠腺癌(colon), 肾透明腺癌（renal）</p>
+<p>样本信息：</p>
+<p><img src="https://i.loli.net/2020/03/22/er7iUpG93ZvfMCw.png" alt="snipaste20200322_205305.png"></p>
+<p><strong>细胞量</strong>：测序200,626个免疫细胞, 总测序量：541,863,094 mRNA transcripts(其中141,623个Tcell)</p>
+<p><strong>重点发现</strong>：</p>
+<ul>
+<li>在肿瘤组织和癌旁组织中都存在克隆扩增的效应性Tcell</li>
+<li>具有这种克隆扩增基因特征的患者对anti-PDL1治疗反应最好。</li>
+<li>在肿瘤和癌旁邻近组织中发现的克隆型扩增的效应性Tcell也可以在外周血中检测到，说明这种Tcell有潜力成为筛选anti-PDL1响应病人的新指标</li>
+<li>肿瘤浸润Tcell（尤其是anti-PDL1效果良好的病人中）从肿瘤外的部位补充新鲜的，未耗竭的Tcell。这表明这部分病人肿瘤免疫循环持续活跃      </li>
 </ul>
-<blockquote>
-<p><font color="#DC143C"> some authors recommend avoiding within sample normalization (i.e. TPM) for co-expression analysis (first step of SCENIC) because they may induce artificial co-variation (<em>Crow et al. (2016)</em>)</font>we have applied SCENIC to datasets using raw (logged) UMI counts, normalized UMI counts, and TPM and all of them provided reliable results (see <em>Aibar et al. (2017)</em>). <font color="#DC143C">The remaining steps of the workflow should not be affected by the expression units/normalization</font>, as the expression is not taken into account for the motif analysis, and AUCell is within-cell ranking-based (wich works as an implicit normalization).</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/Scanpy教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/Scanpy教程/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Scanpy"><a href="#Scanpy" class="headerlink" title="Scanpy"></a>Scanpy</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata</span><br></pre></td></tr></table></figure>
-<p>借鉴了知名R包scater的一个函数：<code>plotHighestExprs</code>，绘图用的是python里面的<code>seaborn</code>和<code>matplotlib</code>库。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">current_palette = seaborn.color_palette(<span class="string">"dark"</span>)</span><br><span class="line">seaborn.palplot(current_palette)</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h3 id="subset-clust"><a href="#subset-clust" class="headerlink" title="subset clust"></a>subset clust</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro = adata[adata.obs[<span class="string">'leiden'</span>].isin([<span class="string">'2'</span>, <span class="string">'33'</span>, <span class="string">'9'</span>, <span class="string">'3'</span>, <span class="string">'20'</span>, <span class="string">'17'</span>, <span class="string">'0'</span>, <span class="string">'28'</span>])]</span><br></pre></td></tr></table></figure>
-<p>​        </p>
-<h3 id="rename-subclusters"><a href="#rename-subclusters" class="headerlink" title="rename subclusters"></a>rename subclusters</h3> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">old_to_new = &#123;<span class="number">3</span> :<span class="string">'Fibro1'</span>,</span><br><span class="line">    <span class="number">11</span>: <span class="string">'Fibro2'</span>, <span class="number">20</span>:<span class="string">'Fibro2'</span>,</span><br><span class="line">    <span class="number">12</span>:<span class="string">'Fibro3'</span>, <span class="number">17</span>:<span class="string">'Fibro4'</span>,<span class="number">26</span>:<span class="string">'Fibro4'</span>,</span><br><span class="line">    <span class="number">24</span> : <span class="string">'Fibro3'</span>&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'int'</span>)  </span><br><span class="line"><span class="comment">## 将leiden的cluster号类型转化为int</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'new_clusters'</span>] = (</span><br><span class="line">    adata_fibro.obs[<span class="string">'leiden'</span>]</span><br><span class="line">    .map(old_to_new)</span><br><span class="line">    .astype(<span class="string">'category'</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'category'</span>) </span><br><span class="line"><span class="comment">## 改回来</span></span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h3 id="delet-MT-genes"><a href="#delet-MT-genes" class="headerlink" title="delet ^MT- genes"></a>delet ^MT- genes</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_mt</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> bool(re.match(<span class="string">'MT-'</span>, n))</span><br><span class="line"></span><br><span class="line">Fibro_top20_selected = [x <span class="keyword">for</span> x <span class="keyword">in</span> Fibro_top20_list <span class="keyword">if</span> <span class="keyword">not</span> bool(re.match(<span class="string">'MT-'</span>, x, flags=<span class="number">0</span>))]</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R做图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/R做图/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R-做图"><a href="#R-做图" class="headerlink" title="R 做图"></a>R 做图</h1><p>The “whiskers” of the box (the vertical lines extending above and below the box) relate to the range<br> parameter of boxplot, which we let default to the value 1.5 used by R. The height of the box is the<br> interquartile range, the difference between the 75th and 25th quantiles. In this case that difference<br> is 2.8. The whiskers are drawn to be a length of range*2.8 or 1.5*2.8. This shows us roughly how many,<br> if any, data points are outliers, that is, beyond this range of values.</p>
-<p><code>abline</code> &lt;=======&gt; adds one or more straight lines through the current plot.</p>
-<p><code>rug()</code>  添加灰度条. It automatically adjusted its pocket size to that of the last plot plotted.</p>
-<p>rug之后，可以用high和low查看分布</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hist(ppm, col = <span class="string">"green"</span>, breaks = <span class="number">100</span>) <span class="comment">###breaks:the number of buckets to split the data into</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(v = median(ppm), col = <span class="string">"magenta"</span>, lwd = <span class="number">4</span>)  <span class="comment">##设置线的位置，宽度和颜色</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barplot(reg, col = &quot;wheat&quot;, main = &quot;Number of Counties in Each Region&quot;) ###main表格的标题</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">with(pollution, plot(latitude, pm25))</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(h=<span class="number">12</span>,lwd=<span class="number">2</span>, lty=<span class="number">2</span>)   <span class="comment">### h:水平线高度 lwd宽度   lty虚线还是实线</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main = <span class="string">"Old Faithful Geyser data"</span>)  <span class="comment">### 添加标题</span></span><br></pre></td></tr></table></figure>
-<p>两种图形设备：向量设备和位图设备</p>
-<p>向量设备：用于线条图，以及使用纯色，点较少的图 pdf svg</p>
-<p>位图设备：适用于有大量的点，风景，以及基于网络的图形</p>
-<p>lattice包很容易实现单变量或多变量的数据可视化，生成的图形为栅栏图。在一个或多个其它变量的条件下，栅栏图可展示某个变量的分布或与其他变量间的关系。 lattice包提供了丰富的图形函数，可生成单变量图形(点图、核密度图、直方图、柱形图和箱线图)、双变量图(散点图、带状图和平行箱线图)和多变量图形(三维图和散点图矩阵)。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(Life.Exp ~ Income | region, data = state, layout = c(<span class="number">4</span>,<span class="number">1</span>)) <span class="comment">###plotting life expectancy as it depends on income for each region</span></span><br></pre></td></tr></table></figure>
-<h2 id="R-base做图"><a href="#R-base做图" class="headerlink" title="R base做图"></a>R base做图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">range(airquality$Ozone, na.rm = TRUE)</span><br></pre></td></tr></table></figure>
-<p>boxplot不会自动添加标题和坐标轴标签</p>
-<p>hist会自动添加</p>
-<p><code>par()$pin</code>   Plot dimensions in inches   图的尺寸</p>
-<p><code>par()$fg</code> specifies foreground color</p>
-<p><code>par()$bg</code> background color</p>
-<p><code>pch</code>: plot character   1代表开环</p>
-<p><code>par()$lwd</code> line width</p>
-<p><code>par()$lty</code>line type  </p>
-<h2 id="Lattice"><a href="#Lattice" class="headerlink" title="Lattice"></a>Lattice</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(y ~ x | f * g, data)  <span class="comment">##The f and g represent the optional conditioning variables. The * represents interaction between them</span></span><br></pre></td></tr></table></figure>
-<p>Lattice适合多变量做图</p>
-<p>str函数  紧凑的显示数据内部结构，即对象的内容</p>
-<p><code>source</code>  调用函数</p>
-<p><code>myedit</code>  查看内容</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sample(colors(), <span class="number">10</span>)  <span class="comment">###查看colors中随机的10个</span></span><br></pre></td></tr></table></figure>
-<h2 id="ggplot"><a href="#ggplot" class="headerlink" title="ggplot"></a>ggplot</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy, data =mpg, color = drv, geom = c(<span class="string">"point"</span>, <span class="string">"smooth"</span>))</span><br></pre></td></tr></table></figure>
-<p><code>geom</code>画出趋势线</p>
-<p><img src="C:\Users\feng\AppData\Local\Temp\1536550364017.png" alt="1536550364017"></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(drv, hwy, data=mpg, geom=<span class="string">"boxplot"</span>, color=manufacturers)  <span class="comment">##第一个参数，用来切分数据  第二个参数，想要测量的数据</span></span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\feng\AppData\Local\Temp\1536550506739.png" alt="1536550506739"></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy,data=mpg, facets=.~drv)  <span class="comment">##~左边代表行数，右边代表列</span></span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R转义/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/R转义/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R转义"><a href="#R转义" class="headerlink" title="R转义"></a>R转义</h1><p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
-<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
-<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R语言︱数据去重/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/R语言︱数据去重/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R语言︱数据去重"><a href="#R语言︱数据去重" class="headerlink" title="R语言︱数据去重"></a>R语言︱数据去重</h1><p>向量 ：unique函数</p>
-<p>数据框： duplicated函数</p>
-<h1 id="R语言-合并不等长矩阵"><a href="#R语言-合并不等长矩阵" class="headerlink" title="R语言| 合并不等长矩阵"></a>R语言| 合并不等长矩阵</h1><p>merge(df1, df2, by=col1,all=T)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/R语言 -- list/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/R语言/R语言 -- list/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:40+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="R语言-list"><a href="#R语言-list" class="headerlink" title="R语言|list"></a>R语言|list</h1><h2 id="list追加元素"><a href="#list追加元素" class="headerlink" title="list追加元素"></a>list追加元素</h2><p>list也是用c追加元素的</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">aa &lt;- list()</span><br><span class="line">bb &lt;- c(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">cc &lt;- c(aa, list(bb))</span><br></pre></td></tr></table></figure>
-<p>追加的元素必须也是list</p>
-<p>[出处][<a href="https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]" target="_blank" rel="noopener">https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]</a></p>
 <p>​          </p>
-<h2 id="合并list中多个matrix"><a href="#合并list中多个matrix" class="headerlink" title="合并list中多个matrix"></a>合并list中多个matrix</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">do.call(rbind,list)</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Reduce(rbind, l)</span><br></pre></td></tr></table></figure>
-<p>if you have <code>data.frame</code> and not <code>matrix</code> , is to use <code>rbindlist</code> from <code>data.table</code> package.</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbindlist(lapply(l,as.data.frame))</span><br></pre></td></tr></table></figure>
-<p>[出处][<a href="https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]" target="_blank" rel="noopener">https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]</a></p>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><ul>
+<li><p><strong>单细胞建库：</strong>10x，Chromium Single Cell 5′ Library， scRNA+scTCR</p>
+</li>
+<li><p><strong>数据分析</strong>：</p>
+<p>主要使用Seurat 3.0.2</p>
+<ul>
+<li>使用Seurat中的<code>SCTransform</code>进行校正</li>
+<li>使用<code>IntegrationAnchors</code>和<code>IntegrateData</code>整合不同批次的数据（dimensions：30）</li>
+<li>聚类降维：<code>FindNeighbours</code>和<code>FindClusters</code>(resolution: 1.6)</li>
+<li>寻找每个cluster的biomarker：<code>FindMarker</code>(logfc.threshold默认的参数是0.25，由于这个阈值，某些cluster找到的marker少于20个，所以调整到0.10)</li>
+</ul>
+</li>
+<li><p><strong>类的注释</strong>：常规marker + <code>FindMarkers</code>+singleR</p>
+<p>CD3E表达量和TCR clonotype均高的认为是Tcell, 两者都低的认为是non-Tcell</p>
+</li>
+<li><p><strong>寻找差异基因：</strong></p>
+<ul>
+<li>寻找每个cluster的biomarker：函数<code>FindMarkers</code> (logfc.threshold默认的参数是0.25，由于这个阈值，某些cluster找到的marker少于20个，所以调整到0.10)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>下游分析：</strong>（针对转录组数据的分析主要在附件里，本文的重点在于TCR分析）</p>
+<ul>
+<li><p>GSEA</p>
+</li>
+<li><p>与已有数据做对比: R包singleR， 从已发表的数据中提取基因集作为参照</p>
+<ul>
+<li><p>​    Guo, X. et al. Global characterization of T cells in non-small-cell lung cancer by single-<br>cell sequencing. Nat. Med. 24, 978–985 (2018).</p>
+</li>
+<li><p>​    Zhang, L. et al. Lineage tracking reveals dynamic relationships of T cells in colorectal<br>cancer. Nature 564, 268–272 (2018).</p>
+</li>
+<li><p>​    Yost, K. E. et al. Clonal replacement of tumor-specific T cells following PD-1 blockade.<br>Nat. Med. 25, 1251–1259 (2019).</p>
+</li>
+</ul>
+</li>
+<li><p>resident memory T cells， terminal versus stem-like exhaustion Tcell的区分：</p>
+<p>文献中使用的marker与自己的数据overlap后，计算基因集的zscore</p>
+</li>
+<li><p>整合转录组和TCR数据</p>
+</li>
+<li><p>临床实验数据分析，计算clone与预后的关系</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Extended-Data-Fig-2"><a href="#Extended-Data-Fig-2" class="headerlink" title="Extended Data Fig. 2"></a>Extended Data Fig. 2</h3><p><strong>a</strong>: 很多clonotype在肿瘤和癌旁组织（NAT）中共享</p>
+<p>dual-expanded clones: 既在肿瘤中，又在NAT中表达的clone</p>
+<p>singletons：只在一个细胞上表达的clone</p>
+<p>tumor multiples: 至少在两个细胞上表达， 但只在肿瘤中表达的clone</p>
+<p>NAT multiples：至少在两个细胞上表达， 但只在癌旁组织中表达的clone</p>
+<p><strong>b</strong>: 大部分clonotypes属于singletons</p>
+<p>9-18%的clonotypes属于multiples和dual-expanded clones</p>
+<p><strong>c</strong>: dual-expanded clones在某些组织中是主要的克隆类型</p>
+<p><strong>d</strong>: 通过对NAT和肿瘤样本中克隆细胞的计数分析，发现不同患者的克隆扩增行为不同</p>
+<p>在一些患者,比如Colon1，dual-expanded clones沿着主对角线排列，即在肿瘤和NAT中双扩增克隆的细胞比例近似相等，提示由类似的克隆类型导致的肿瘤和NAT间的协调或平行过程，相反，在其他患者中，双扩增克隆从主对角线上分散，表明每个克隆在肿瘤和NAT室中具有独立的扩增、迁移或消耗模式。</p>
+<p><strong>e</strong>: 根据克隆在组织和血液中的扩增程度对克隆进行分类 （对应Fig1b）</p>
+<p>​        </p>
+<p><img src="https://i.loli.net/2020/03/23/C2Tp3Ber7wlPzYh.png" alt="snipaste20200323_100611.png"></p>
+<p>​         </p>
+<h3 id="Fig1"><a href="#Fig1" class="headerlink" title="Fig1"></a>Fig1</h3><p><strong>a</strong>: 4个有blood测序数据的病人的克隆扩增散点图</p>
+<p>点的大小表示血液克隆的大小</p>
+<p>颜色代表不同的组织扩增模式</p>
+<p><strong>b</strong>：克隆扩增模式图解：</p>
+<p>血液中的single称为blood non-expanded, multiple称为 blood-expanded</p>
+<p>不在血液中表达的clone称为blood-independent</p>
+<p><strong>c &amp; d</strong> : 在具有双扩增克隆比例较多的患者中，组织中的双扩增克隆在血液中也存在扩增</p>
+<p><strong>f-i</strong>: 外周血中的扩增与肿瘤浸润具有正相关</p>
+<p><img src="https://i.loli.net/2020/03/23/MLfEV4DeK5WHY7S.png" alt="snipaste20200323_102756.png"></p>
+<p>​          </p>
+<h3 id="Fig2"><a href="#Fig2" class="headerlink" title="Fig2:"></a>Fig2:</h3><p><strong>a</strong>：转录组数据聚类降维umap图</p>
+<p><strong>b</strong>：转录组分群对应的克隆表达模式</p>
+<ul>
+<li>CD4和CD8表达不同的克隆模式</li>
+<li>细胞亚群8.1、8.2和8.3 的克隆大部分是双扩增型</li>
+</ul>
+<p><strong>c</strong>：将细胞亚群映射到血液样本的克隆数据中发现许多在NAT和肿瘤中表现出一致的克隆（parallel dual expansion）主要来源于8.1-Teff细胞,8.3b-Trm也存在少量parallel dual expansion.</p>
+<p><strong>d</strong>: 8.1-Teff是唯一在blood expansion和dual-expanded的clone size间有统计学显著关系的克隆，表明它们在外周克隆扩增和肿瘤浸润中起主导作用。</p>
+<p><img src="https://i.loli.net/2020/03/23/sjL1YX5nkVMhW6q.png" alt="snipaste20200323_212503.png"></p>
+<p>​       </p>
+<h3 id="Fig3"><a href="#Fig3" class="headerlink" title="Fig3"></a>Fig3</h3><p>由于本文数据只获取了静态的数据，不能反映动态变化的过程。所以本文作者分析了已发表的基底细胞癌的免疫治疗前后的Tcell数据</p>
+<p><strong>a</strong>: 肿瘤和血液中clone size相关性</p>
+<p>结论：在novel CD8中，治疗后的克隆大小和治疗前血液中的转录数显著相关，说明部分治疗后新出现的CD8 clone来源于外周血</p>
+<p><strong>b</strong>: 血液克隆多样性与novel克隆和novel cells的关系</p>
+<p>尽管不同患者在新克隆的数量方面存在显著差异，但这些差异与外周血克隆多样性程度有关，进一步支持了外周血和肿瘤内克隆扩增之间的关系</p>
+<p><strong>c</strong>: 耗竭性Tcell和非耗竭性Tcell的克隆特征</p>
+<p>根据肿瘤克隆在治疗前是否与血液共享TCR序列，进一步分类,分为区分血液独立型（blood-independent）克隆和血液相关型（blood-associated）克隆。在两个具有最大血液克隆多样性的患者中，血液clone size和衰竭表型之间具有相关性： non-exhausted clones更可能与blood-associated clone相关，而 exhausted clones更有可能与blood-independent clone相关。此外，与血液相关的未耗尽克隆在治疗后肿瘤中的克隆大小显著大于非血液相关克隆。由此推测可能存在的两种克隆扩增的model（1）独立于血液的局部扩增产生耗竭性T细胞；（2）来自相对较新血液的浸润过程将新的、未耗尽的克隆体引入肿瘤。</p>
+<p><img src="https://i.loli.net/2020/03/24/7vLUmYSJytWrDkI.png" alt="snipaste20200324_113626.png"></p>
+<p>​       </p>
+<h3 id="Fig4"><a href="#Fig4" class="headerlink" title="Fig4"></a>Fig4</h3><p><strong>a</strong>: 肿瘤多发性和双重扩增的基因特征与更好的PFS相关</p>
+<p><strong>b</strong>: 考虑CD8表达量的不同，使用CD8A表达和tissue expansion signature score进行双变量分析</p>
+<p><img src="https://i.loli.net/2020/03/24/j4iWSrg6Yn9lyQL.png" alt="snipaste20200324_114034.png"></p>
+<p>​        </p>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>本文最重要的发现是：来自外周血的未耗竭T细胞和耗竭性T细胞克隆可能是解释癌症免疫治疗疗效异质性的关键因素。</p>
 
           
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Neoantigen-directed-immune-escape-in-lung-cancer-evolution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Neoantigen-directed-immune-escape-in-lung-cancer-evolution/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: Neoantigen-directed immune escape in lung cancer evolution<br>date: 2019-03-30 20:39:32<br>categories: paper<br>tags: cancer</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://doi.org/10.1038/s41586-019-1032-7" target="_blank" rel="noopener">Neoantigen-directed immune escape in lung cancer evolution</a></p>
+<h1 id="Topic"><a href="#Topic" class="headerlink" title="Topic"></a>Topic</h1><p>To determine immune infiltration in untreated non-small-cell lung cancer (NSCLC), assess how this infiltration varies between and within tumours, and characterize immune-evasion mechanisms and their associations with clinical outcome.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/Neoantigen-directed-immune-escape-in-lung-cancer-evolution/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/PD-1治疗需要CXCR3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/PD-1治疗需要CXCR3/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: PD-1治疗需要CXCR3<br>date: 2019-05-20 09:36:46<br>categories: paper<br>tags: immunity</p>
+<h2 id="toc-true"><a href="#toc-true" class="headerlink" title="toc: true"></a>toc: true</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Intratumoral Activity of the CXCR3 Chemokine System Is Required for the Efficacy of Anti-PD-1 Therapy</a>30190-6?rss=yes)</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/PD-1治疗需要CXCR3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/PDL1抑制剂抗癌机制总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/PDL1抑制剂抗癌机制总结/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p># </p>
+<h2 id="2020-PDL1抑制剂提高DC激活Tcell的能力"><a href="#2020-PDL1抑制剂提高DC激活Tcell的能力" class="headerlink" title="2020| PDL1抑制剂提高DC激活Tcell的能力"></a>2020| PDL1抑制剂提高DC激活Tcell的能力</h2><p>Mayoux M, Roller A, Pulko V, et al. Dendritic cells dictate responses to PD-L1 blockade cancer immunotherapy[J]. Science Translational Medicine, 2020</p>
+<p>​      </p>
+<p>肿瘤中的树突状细胞（DC）可能是PD-L1抗体治疗的关键之一<strong>。</strong>PD-L1抗体与DC表面的PD-L1结合，让原本与PD-L1结合的共刺激分子B7.1暴露了出来，使得DC能更好地激活T细胞，杀伤肿瘤</p>
+<p>临床数据也显示，PD-L1抗体阿替利珠单抗的治疗效果跟肿瘤中的DC丰度高度相关<strong>。</strong>肿瘤中DC较高的非小细胞肺癌患者，在接受阿替利珠单抗治疗后，死亡风险比肿瘤DC丰度低的患者低了46%，中位总生存期延长了8个月。尤其是在PD-L1表达超过5%的患者中，肿瘤里高丰度的DC与接受阿替利珠单抗治疗后死亡风险降低75%相关</p>
+<p>​       </p>
+<p>在2007年，哈佛大学的Manish J. Butte等人曾发现，<strong>除了跟PD-1结合外，PD-L1还可以与B7.1分子结合</strong>。这个<strong>B7.1是一种共刺激分子，表达于呈递抗原的树突状细胞表面，可以与T细胞上的CD28分子结合从而激活T细胞</strong>。</p>
+<p>​       </p>
+<p><img src="https://i.loli.net/2020/04/06/X3BrUQOzDS69M4m.jpg" alt="微信图片_20200406233115.jpg"></p>
+<p><strong>肿瘤中的树突状细胞常处于功能缺陷状态</strong>，会不会就是它表面的B7.1被PD-L1结合了，没法去刺激T细胞？<strong>特别是树突状细胞自己本就表达有PD-L1分子，可以跟自己身上的B7.1相互作用</strong>。而<strong>PD-L1单抗，其实可能解救的是这些被PD-L1抑制的树突状细胞</strong>。</p>
+<p>​       </p>
+<p>研究发现，<strong>肿瘤中和外周血里的DC，都高表达PD-L1分子，而B7.1分子只出现在肿瘤相关的DC表面</strong></p>
+<p>​       </p>
+<p>数量上，<strong>肿瘤相关树突状细胞表面，无论是哪个树突状细胞亚群，PD-L1分子都远远多于B7.1分子</strong>。再加上<strong>PD-L1和B7.1的结合力本就比CD28强3倍，树突状细胞表面的B7.1几乎全会被PD-L1结合，不可能去结合CD28，激活T细胞</strong></p>
+<p>​        </p>
+<p>体外试验也发现，<strong>树突状细胞和T细胞形成免疫突触时，树突状细胞上的B7.1几乎不能与T细胞上的CD28结合</strong>。而<strong>加入PD-L1抗体封闭PD-L1后，B7.1和CD28的相互作用大大增强</strong>。</p>
+<p>​       </p>
+<p>在T细胞和树突状细胞共存时，使用PD-1抗体封闭T细胞上的PD-1大约增强了32%。而<strong>在PD-1已经被封闭，排除了PD-1和PD-L1之间的相互作用后吗，再向其中加入PD-L1抗体，又进一步让CD28信号的增强幅度从32%升高到了52%</strong>。</p>
+<p>​       </p>
+<p>此外，<strong>PD-L1还可以直接激活幼稚的树突状细胞，使其具有刺激T细胞增殖、增加CD8+ T细胞杀伤能量的作用</strong>。</p>
+<p><a href="https://mp.weixin.qq.com/s/uR3kgZ8EMTXQBJgTJ-JtAg" target="_blank" rel="noopener">https://mp.weixin.qq.com/s/uR3kgZ8EMTXQBJgTJ-JtAg</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/Review_Cancer-associated fibroblasts in gastrointestinal cancer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/Review_Cancer-associated fibroblasts in gastrointestinal cancer/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p># </p>
+<p>Nature reviews | GastroenteroloGy &amp; HepatoloGy</p>
+<p>2019</p>
+<h2 id="Heterogeneity-of-CAFs"><a href="#Heterogeneity-of-CAFs" class="headerlink" title="Heterogeneity of CAFs"></a>Heterogeneity of CAFs</h2><h3 id="Marker-heterogeneity"><a href="#Marker-heterogeneity" class="headerlink" title="Marker heterogeneity"></a>Marker heterogeneity</h3><ul>
+<li><p>Representative CAF markers include but are not limited to : αSMA ,FAP, FSP1(S100A4), PDGFRα, PDGFRβ</p>
+</li>
+<li><p>αSMA fails to distinguish all CAFs in the TME </p>
+</li>
+<li><p>none of these CAF markers are specific to CAFs, as they are also expressed in other cell types and healthy tissues </p>
+</li>
+<li><p>FAP+CD45+ cells also correspond to a subset of tumor-associated macrophages </p>
+</li>
+<li><p>FSP1 also mark epithelial cells undergoing EMT and inflammatory macrophages </p>
+<p>​      </p>
+</li>
+</ul>
+<p>tumor-promoting CAFs (pCAFs), tumor-retarding CAFs (rCAFs) and neutral CAFs (nCAFs) </p>
+<p>rCAFs, pCAFs, secretory CAFs, inflammatory CAFs and myofibroblastic CAFs </p>
+<h4 id="single-cell-RNA-sequencing-analyses-from-human-CRC-samples"><a href="#single-cell-RNA-sequencing-analyses-from-human-CRC-samples" class="headerlink" title="single-cell RNA sequencing analyses from human CRC samples"></a>single-cell RNA sequencing analyses from human CRC samples</h4><p>two major subtypes :</p>
+<ul>
+<li><p>CAF-As : MMP2, DCN, FAP, COL1A2</p>
+</li>
+<li><p>CAF-Bs:  characterized by high expression of myofibroblastic markers such as αSMA, transgelin(TAGLN) and PDGFα </p>
+</li>
+</ul>
+<h3 id="Functional-heterogeneity"><a href="#Functional-heterogeneity" class="headerlink" title="Functional heterogeneity"></a>Functional heterogeneity</h3><ul>
+<li><p>CAFs co-injected into mice with human breast cancer cells promote tumor growth and angiogenesis more than normal fibroblasts through secretion of CXC-chemokine ligand 12 (CXCL12; also known as SDF1) </p>
+</li>
+<li><p>IκB kinase-β (IKKβ)-mediated nuclear factor-κB (NF-κB) activation in CAFs is responsible for inducing tumor-promoting inflammation in a mouse model of skin carcinogenesis </p>
+</li>
+<li><p>the genetic deletion of IKKβ in collagen type VI (COLVI)+ fibroblasts resulted in reduced tumor growth and immune cell infiltration in a mouse model of colitis-associated cancer (CAC) via decreased IL-6 production by IKKβ-deficient CAFs </p>
+</li>
+<li><p>genetic deletion of IKKβ in a larger population of COL1A2+ fibroblasts in a similar CAC model unexpectedly accelerated tumor growth through enhanced hepatocyte growth factor (HGF) secretion</p>
+</li>
+<li>FAP knockout impaired development of PDAC in KPC mice and subcutaneously injected colon cancer in mice  FAP has a tumour-promoting function. In humans, elevated expression of FAP in the stroma of CRC and PDAC has been shown to correlate with poor patient prognosis <strong>FAP could be a candidate marker for pCAFs</strong> </li>
+</ul>
+<p>​            </p>
+<h3 id="Intratumoural-heterogeneity"><a href="#Intratumoural-heterogeneity" class="headerlink" title="Intratumoural heterogeneity"></a>Intratumoural heterogeneity</h3><ul>
+<li>PDAC :<ul>
+<li><font color="#DC143C"><strong>αSMAhiIL-6low myofibroblastic CAFs</strong></font>:  marked by expression of myofibroblast genes and<br>TGFβ-responsive genes such as <strong>ACTA2, CTGF (also known as CCN2) and COL1A1 &amp; located adjacent to cancer cells</strong> </li>
+<li><font color="#DC143C"><strong>αSMAlowIL-6hi inflammatory CAFs</strong>  </font>: secrete inflammatory cytokines and chemokines such as <strong>IL-6, IL-11, CXCL1 and leukaemia inhibitory factor (LIF) &amp; located distantly from cancer cells</strong> </li>
+<li>TGFβ signalling and IL-1–JAK–STAT signalling are responsible for inducing differentiation of pancreatic stellate cells, which serve as precursors for CAFs as they transition into myofibroblastic CAFs and inflammatory CAFs, respectively  <strong>TGFβ信号和STAT信号介导CAF分化</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="Origin-of-CAFs"><a href="#Origin-of-CAFs" class="headerlink" title="Origin of CAFs"></a>Origin of CAFs</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1576313414345.png" alt="1576313414345"></p>
+<p>&nbsp;</p>
+<h2 id="Function-of-CAFs"><a href="#Function-of-CAFs" class="headerlink" title="Function of CAFs"></a>Function of CAFs</h2><h3 id="Stromal-and-epithelial-interactions"><a href="#Stromal-and-epithelial-interactions" class="headerlink" title="Stromal and epithelial interactions"></a>Stromal and epithelial interactions</h3><p>CAFs directly confer growth advantages to cancer cells </p>
+<p>&nbsp;</p>
+<h4 id="Paracrine-signalling"><a href="#Paracrine-signalling" class="headerlink" title="Paracrine signalling"></a>Paracrine signalling</h4>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/SPTLC2 +  TGF-β活化&记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/SPTLC2 +  TGF-β活化&记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募/" itemprop="url">Untitled</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>#<br>title: SPTLC2 +  TGF-β活化&amp;记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募<br>date: 2019-04-12 21:34:49<br>tags:</p>
+<ul>
+<li>immunity<br>categories:</li>
+<li>paper<br>toc: true</li>
+</ul>
+<hr>
+<h2 id="HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应"><a href="#HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应" class="headerlink" title="HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应"></a>HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Loss of Neurological Disease HSAN-I-Associated Gene <em>SPTLC2</em> Impairs CD8+ T Cell Responses to Infection by Inhibiting T Cell Metabolic Fitness</a>)</p>
+<p>Immmunity, 2019.03</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/SPTLC2 +  TGF-β活化&记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1659,7 +1681,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1705,7 +1727,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1716,7 +1738,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -1727,7 +1749,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
