@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="keep exceeding" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="主成分与因子分析常用步骤 数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值 选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构） 判断选择的主成分或因子的数目 选择主成分或因子 旋转 解释结果 计算主成分或因子得分  &amp;nbsp; 主成分分析PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信息，这些推导所得的变量称为主成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="keep exceeding">
+<meta property="og:url" content="http://yoursite.com/2020/09/28/R语言/主成分分析和因子分析/index.html">
+<meta property="og:site_name" content="keep exceeding">
+<meta property="og:description" content="主成分与因子分析常用步骤 数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值 选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构） 判断选择的主成分或因子的数目 选择主成分或因子 旋转 解释结果 计算主成分或因子得分  &amp;nbsp; 主成分分析PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信息，这些推导所得的变量称为主成">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f57b8b86be.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f59c0e6b81.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f75ad0810e.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f730cddd73.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f739014f81.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/09/17/5b9f74abcc36c.jpg">
+<meta property="og:updated_time" content="2018-09-17T09:36:49.596Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="keep exceeding">
+<meta name="twitter:description" content="主成分与因子分析常用步骤 数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值 选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构） 判断选择的主成分或因子的数目 选择主成分或因子 旋转 解释结果 计算主成分或因子得分  &amp;nbsp; 主成分分析PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信息，这些推导所得的变量称为主成">
+<meta name="twitter:image" content="https://i.loli.net/2018/09/17/5b9f57b8b86be.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/09/28/R语言/主成分分析和因子分析/">
+
+
+
+
+
+  <title> | keep exceeding</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">keep exceeding</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/R语言/主成分分析和因子分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T10:35:53+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="主成分与因子分析"><a href="#主成分与因子分析" class="headerlink" title="主成分与因子分析"></a>主成分与因子分析</h1><h2 id="常用步骤"><a href="#常用步骤" class="headerlink" title="常用步骤"></a>常用步骤</h2><ol>
+<li>数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值</li>
+<li>选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构）</li>
+<li>判断选择的主成分或因子的数目</li>
+<li>选择主成分或因子</li>
+<li>旋转</li>
+<li>解释结果</li>
+<li>计算主成分或因子得分</li>
+</ol>
+<p>&nbsp;</p>
+<h2 id="主成分分析"><a href="#主成分分析" class="headerlink" title="主成分分析"></a>主成分分析</h2><p>PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信<br>息，这些推导所得的变量称为主成分，它们是观测变量的线性组合。如第一主成分为：</p>
+<p><img src="https://i.loli.net/2018/09/17/5b9f57b8b86be.jpg" alt></p>
+<p>它是k个观测变量的加权组合，对初始变量集的方差解释性最大。第二主成分也是初始变量<br>的线性组合，对方差的解释性排第二，同时与第一主成分正交（不相关）。后面每一个主成分都<br>最大化它对方差的解释程度，同时与之前所有的主成分都正交 。</p>
+<p>&nbsp;</p>
+<h3 id="判断主成分的个数"><a href="#判断主成分的个数" class="headerlink" title="判断主成分的个数"></a>判断主成分的个数</h3><p>利用<code>fa.parallel()</code>同时对三种特征值判别准则进行评价 </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa.parallel(USJudgeRatings[, -<span class="number">1</span>], fa=<span class="string">"pc"</span>, n.iter=<span class="number">100</span>,</span><br><span class="line">             show.legend=<span class="literal">FALSE</span>, main=<span class="string">"Scree plot with parallel analysis"</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/09/17/5b9f59c0e6b81.jpg" alt></p>
+<p>三个准则：</p>
+<ol>
+<li>特征值大于1</li>
+<li>大于随机数据矩阵推导出的特征值平均值（虚线）</li>
+<li>Cattle碎石检验，图形变化最大处以上均可保留</li>
+</ol>
+<p>&nbsp;</p>
+<h3 id="提取主成分"><a href="#提取主成分" class="headerlink" title="提取主成分"></a>提取主成分</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(psych)</span><br><span class="line">pc &lt;- principal(r, nfactors=, rotate=, scores=)</span><br><span class="line"><span class="comment">## r:相关系数矩阵或者原始矩阵</span></span><br><span class="line"><span class="comment">## nfactors：设定主成分数</span></span><br><span class="line"><span class="comment">## rotate：是否旋转</span></span><br><span class="line"><span class="comment">## scores：主成分得分</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2018/09/17/5b9f75ad0810e.jpg" alt></p>
+<p>&nbsp;</p>
+<p>PC1栏包含了成分载荷，指观测变量与主成分的相关系数 。成分载荷（ component loadings）可用来解释主成分的含义 。第一主成分（ PC1）与每个变量都高度相关，也就是说，它是一个可用来进行一般性评价的维度。 </p>
+<p>&nbsp;</p>
+<p>h2栏指成分公因子方差——主成分对每个变量的方差解释度 </p>
+<p>u2栏指成分唯一性——方差无法被主成分解释的比例（ 1-h2） </p>
+<p>&nbsp;</p>
+<h3 id="主成分旋转"><a href="#主成分旋转" class="headerlink" title="主成分旋转"></a>主成分旋转</h3><p>旋转方法有两种：使选择的成分保持不相关（ 正交旋转），和让它们变得相关（ 斜交旋转）。 最流行的正交旋转是方差极大旋转 </p>
+<p>&nbsp;</p>
+<p>方差极大旋转：它试图对载荷阵的列进行去噪，使得每个成分只是由一组有限的变量来解释（即载荷阵每列只有少数几个很大的载荷，其他都是很小的载荷） </p>
+<p>&nbsp;</p>
+<h3 id="获取主成分得分"><a href="#获取主成分得分" class="headerlink" title="获取主成分得分"></a>获取主成分得分</h3><p>设置<code>score</code>等于TRUE</p>
+<p>当主成分分析基于相关系数矩阵时，原始数据便不可用了，也不可能获取每个观测的主成分得分，但是可以得到用来计算主成分得分的系数 </p>
+<p>&nbsp;</p>
+<h2 id="探索性因子得分"><a href="#探索性因子得分" class="headerlink" title="探索性因子得分"></a>探索性因子得分</h2><p>协方差矩阵 需要用<code>cov2cor()</code>将其转化为相关系数矩阵 </p>
+<p>&nbsp;</p>
+<h3 id="判断公共因子数"><a href="#判断公共因子数" class="headerlink" title="判断公共因子数"></a>判断公共因子数</h3><p>类似主成分判断</p>
+<p>使用<code>fa.parallel</code></p>
+<p>&nbsp;</p>
+<h3 id="提取公共因子"><a href="#提取公共因子" class="headerlink" title="提取公共因子"></a>提取公共因子</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa(r, nfactors, n.obs=, rotate=, scores=, fm=)  <span class="comment">### 使用相关性矩阵时，要设置n.obs</span></span><br><span class="line"><span class="comment">### fm:设定因子化方法（默认极小残差法）</span></span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>统计学家青睐使用最大似然法，因为它有良好的统计性质。不过有时候最大似然法不会收敛，此时使用主轴迭代法效果会很好 .</p>
+<p>最大似然法（ ml）</p>
+<p>主轴迭代法（ pa）</p>
+<p>加权最小二乘法（ wls）</p>
+<p>广义加权最小二乘法（ gls）</p>
+<p>最小残差法（ minres） </p>
+<h3 id="因子旋转"><a href="#因子旋转" class="headerlink" title="因子旋转"></a>因子旋转</h3><p>正交旋转和斜交旋转</p>
+<p>正交</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.varimax &lt;- fa(correlations, nfactors=<span class="number">2</span>, rotate=<span class="string">"varimax"</span>, fm=<span class="string">"pa"</span>)</span><br></pre></td></tr></table></figure>
+<p>使用正交旋转将人为地强制两个因子不相关。</p>
+<p>斜交：</p>
+<p><code>fa.promax &lt;- fa(correlations, nfactors=2, rotate=&quot;promax&quot;, fm=&quot;pa&quot;)</code> </p>
+<p>&nbsp;</p>
+<p>对于正交旋转，因子分析的重点在于因子结构矩阵（变量与因子的相关系数），而对于斜交旋转，因子分析会考虑三个矩阵：因子结构矩阵、因子模式矩阵和因子关联矩阵。<br>因子模式矩阵即标准化的回归系数矩阵。它列出了因子预测变量的权重。 因子关联矩阵即因子相关系数矩阵。</p>
+<p>&nbsp;</p>
+<p>与正交旋转所得因子载荷阵相比，斜交的载荷阵列（因子结构矩阵）的噪音比较大，这是因为之前你允许潜在因子相关。虽然斜交方法更为复杂，但模型将更符合真实数据。 </p>
+<p>&nbsp;</p>
+<p>使用<code>factor.plot()</code>或<code>fa.diagram()</code>函数，可以绘制正交或者斜交结果的图形 </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">factor.plot(fa.promax, labels=rownames(fa.promax$loadings))</span><br></pre></td></tr></table></figure>
+<p> &nbsp;</p>
+<p><img src="https://i.loli.net/2018/09/17/5b9f730cddd73.jpg" alt></p>
+<p>&nbsp;</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.diagram(fa.promax, simple=<span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
+<p>若使simple = TRUE，那么将仅显示每个因子下最大的载荷，以及因子间的相关系数 </p>
+<p>&nbsp;</p>
+<p><img src="https://i.loli.net/2018/09/17/5b9f739014f81.jpg" alt></p>
+<p>&nbsp;</p>
+<h2 id="步骤图"><a href="#步骤图" class="headerlink" title="步骤图"></a>步骤图</h2><p><img src="https://i.loli.net/2018/09/17/5b9f74abcc36c.jpg" alt></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/28/R语言/try/" rel="next" title>
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/28/R语言/处理缺失数据的高级方法/" rel="prev" title>
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">FlorenceXie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">102</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#主成分与因子分析"><span class="nav-number">1.</span> <span class="nav-text">主成分与因子分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用步骤"><span class="nav-number">1.1.</span> <span class="nav-text">常用步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主成分分析"><span class="nav-number">1.2.</span> <span class="nav-text">主成分分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断主成分的个数"><span class="nav-number">1.2.1.</span> <span class="nav-text">判断主成分的个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取主成分"><span class="nav-number">1.2.2.</span> <span class="nav-text">提取主成分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主成分旋转"><span class="nav-number">1.2.3.</span> <span class="nav-text">主成分旋转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取主成分得分"><span class="nav-number">1.2.4.</span> <span class="nav-text">获取主成分得分</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#探索性因子得分"><span class="nav-number">1.3.</span> <span class="nav-text">探索性因子得分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#判断公共因子数"><span class="nav-number">1.3.1.</span> <span class="nav-text">判断公共因子数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取公共因子"><span class="nav-number">1.3.2.</span> <span class="nav-text">提取公共因子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#因子旋转"><span class="nav-number">1.3.3.</span> <span class="nav-text">因子旋转</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤图"><span class="nav-number">1.4.</span> <span class="nav-text">步骤图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FlorenceXie</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
