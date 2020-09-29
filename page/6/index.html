@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
         
 
         <div class="post-meta">
@@ -322,16 +322,11 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
-<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
-<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
-<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
-<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
-<p>&nbsp;</p>
-<p><strong>按照factor配色</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
+            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
+<p>尝试tools-global options-packages更改镜像未成功</p>
+<p>最终解决方案：</p>
+<p>更改为</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -535,7 +530,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -554,7 +549,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
         
 
         <div class="post-meta">
@@ -606,11 +601,16 @@
       
         
           
-            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
-<p>尝试tools-global options-packages更改镜像未成功</p>
-<p>最终解决方案：</p>
-<p>更改为</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
+<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
+<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
+<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
+<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
+<p>&nbsp;</p>
+<p><strong>按照factor配色</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
 
           
         
@@ -740,128 +740,6 @@
 <p>if you have <code>data.frame</code> and not <code>matrix</code> , is to use <code>rbindlist</code> from <code>data.table</code> package.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbindlist(lapply(l,as.data.frame))</span><br></pre></td></tr></table></figure>
 <p>[出处][<a href="https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]" target="_blank" rel="noopener">https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R转义/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/R转义/" itemprop="url">R转义</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
-<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
-<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
 
           
         
@@ -1051,7 +929,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R转义/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1070,7 +948,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/ggplot2修改网格线和背景色/" itemprop="url">ggplot2修改网格线和背景色</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/R转义/" itemprop="url">R转义</a></h1>
         
 
         <div class="post-meta">
@@ -1122,11 +1000,9 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(fraction.dis, aes(fraction)) + </span><br><span class="line">   geom_histogram(position = <span class="string">"identity"</span>, fill = <span class="string">"#0000FF"</span>) + theme_bw() +</span><br><span class="line">    theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(), </span><br><span class="line">          axis.line = element_line(colour = <span class="string">"black"</span>)) +</span><br><span class="line">geom_vline(aes(xintercept=<span class="number">0.035</span>), colour=<span class="string">"#BB0000"</span>, linetype=<span class="string">"dashed"</span>)</span><br></pre></td></tr></table></figure>
-<p><code>theme_bw()</code> : 去掉背景</p>
-<p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
-<p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
-<p><code>geom_vline</code> : 添加线条</p>
+            <p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
+<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
+<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
 
           
         
@@ -1247,6 +1123,130 @@
         
           
             <p>sweep(x, MARGIN, STATS, FUN=”-“, …) 对矩阵进行运算。MARGIN为1，表示行的方向上进行运算，为2表示列的方向上运算。STATS是运算的参数。FUN为运算函数，默认是减法</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/ggplot2修改网格线和背景色/" itemprop="url">ggplot2修改网格线和背景色</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(fraction.dis, aes(fraction)) + </span><br><span class="line">   geom_histogram(position = <span class="string">"identity"</span>, fill = <span class="string">"#0000FF"</span>) + theme_bw() +</span><br><span class="line">    theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(), </span><br><span class="line">          axis.line = element_line(colour = <span class="string">"black"</span>)) +</span><br><span class="line">geom_vline(aes(xintercept=<span class="number">0.035</span>), colour=<span class="string">"#BB0000"</span>, linetype=<span class="string">"dashed"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>theme_bw()</code> : 去掉背景</p>
+<p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
+<p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
+<p><code>geom_vline</code> : 添加线条</p>
 
           
         

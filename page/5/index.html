@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/R语言.合并不等长矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/pandas drop()不识别columns关键字/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,151 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/python学习/R语言.合并不等长矩阵/" itemprop="url">R语言.合并不等长矩阵</a></h1>
+                <a class="post-title-link" href="/2020/09/27/python学习/pandas drop()不识别columns关键字/" itemprop="url">pandas drop()不识别columns关键字</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
+<p>解决：</p>
+<p>升级pandas</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/" itemprop="url">Debug R  Package fontconfig was not found in the pkg-config search path</a></h1>
         
 
         <div class="post-meta">
@@ -322,7 +466,10 @@
       
         
           
-            <p>merge(df1, df2, by=col1,all=T)</p>
+            <h2 id="找到pkgconfig位置"><a href="#找到pkgconfig位置" class="headerlink" title="找到pkgconfig位置"></a>找到pkgconfig位置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-file search fontconfig.pc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> libfontconfig1-dev: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc</span><br></pre></td></tr></table></figure>
+<p>​      </p>
+<h2 id="添加到PKG路径中"><a href="#添加到PKG路径中" class="headerlink" title="添加到PKG路径中"></a>添加到PKG路径中</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 加上$PKG_CONFIG_PATH后续添加新的PKG路径时不会被覆盖</span><br></pre></td></tr></table></figure>
+<h2 id="检查是否添加成功"><a href="#检查是否添加成功" class="headerlink" title="检查是否添加成功"></a>检查是否添加成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ls $PKG_CONFIG_PATH | grep fontconfig.pc</span><br></pre></td></tr></table></figure>
 
           
         
@@ -497,7 +644,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/基本统计分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Convert/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -516,7 +663,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/基本统计分析/" itemprop="url">基本统计分析</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Convert/" itemprop="url">Convert</a></h1>
         
 
         <div class="post-meta">
@@ -568,193 +715,8 @@
       
         
           
-            <h2 id="描述性统计分析"><a href="#描述性统计分析" class="headerlink" title="描述性统计分析"></a>描述性统计分析</h2><p><strong>summary()</strong>   提供最小值，最大值，四分位数，平均值，频数</p>
-<p>apply</p>
-<p><strong>sapply (x, FUN, options)</strong>   FUN是任意函数，如果指定了options，它们将被传递给FUN  (options可以是自己写的函数)</p>
-<p>求偏度：</p>
-<p>sum((x - mean)^3/sd^3)/n</p>
-<p>求峰值:</p>
-<p>sum((x - mean)^4/sd^4)/n -3</p>
-<h4 id="通过Hmisc包中describe（）计算"><a href="#通过Hmisc包中describe（）计算" class="headerlink" title="通过Hmisc包中describe（）计算"></a>通过Hmisc包中describe（）计算</h4><p>返回变量，观测值数量，缺失值和唯一值的数量，平均值，四分位数。五个最大值和五个最小值</p>
-<h4 id="pastecs包中stat-desc"><a href="#pastecs包中stat-desc" class="headerlink" title="pastecs包中stat.desc()"></a>pastecs包中stat.desc()</h4><p>计算种类繁多的统计量</p>
-<h4 id="psych包中的describe（）"><a href="#psych包中的describe（）" class="headerlink" title="psych包中的describe（）"></a>psych包中的describe（）</h4><p>psych 和 Hmisc中拥有相同的函数。这个时候，以后载入的包为准</p>
-<p>比如先载入Hmisc，若想调用Hmisc的describe()  可使用：   Hmisc::describe</p>
-<h2 id="分组计算描述性统计量"><a href="#分组计算描述性统计量" class="headerlink" title="分组计算描述性统计量"></a>分组计算描述性统计量</h2><p><em>aggregate(x, by, FUN)</em>   :  FUN只支持平均数和方差</p>
-<p><em>by(data，INDICES，FUN)</em> ：INDICES定义了分组</p>
-<h2 id="频数表和列联表"><a href="#频数表和列联表" class="headerlink" title="频数表和列联表"></a>频数表和列联表</h2><p>table()  生成简单的频数统计表</p>
-<p>prop.table() 将频数转化比例值</p>
-<p>prop.table()*100 转化为百分比</p>
-<h3 id="二维列联表"><a href="#二维列联表" class="headerlink" title="二维列联表"></a>二维列联表</h3><p>mytable &lt;- table(A, B)</p>
-<p>mytable &lt;- xtabs(~A+B, data = mydata)  </p>
-<p>margin.table()  和 prop.table() 分别生成边际频数和比例</p>
-<p>addmargins()添加边际和</p>
-<h3 id="多维列联表"><a href="#多维列联表" class="headerlink" title="多维列联表"></a>多维列联表</h3><p>以上都可以</p>
-<p>ftable可以创建更紧凑的列联表</p>
-<h2 id="独立性检验"><a href="#独立性检验" class="headerlink" title="独立性检验"></a>独立性检验</h2><h3 id="卡方检验"><a href="#卡方检验" class="headerlink" title="卡方检验"></a>卡方检验</h3><p>chisq.test()</p>
-<h3 id="Fisher精确检验"><a href="#Fisher精确检验" class="headerlink" title="Fisher精确检验"></a>Fisher精确检验</h3><p>fisher.test()</p>
-<h3 id="cochran-Mantel-Haenszel"><a href="#cochran-Mantel-Haenszel" class="headerlink" title="cochran-Mantel-Haenszel"></a>cochran-Mantel-Haenszel</h3><p>mantelhaen.test()</p>
-<h3 id="相关性的度量"><a href="#相关性的度量" class="headerlink" title="相关性的度量"></a>相关性的度量</h3><p><strong><em>vcd包中的assocstats()  可以计算列联表的phi系数，列联系数，cramer‘s V系数</em></strong></p>
-<p>值越小，相关性越小。&lt;0.3表示相关性弱，&gt;0.6表示具有较强的相关性</p>
-<p>kappa()函数：可用来评估混淆矩阵的kappa值和加权kappa    </p>
-<h2 id="相关"><a href="#相关" class="headerlink" title="相关"></a>相关</h2><p><strong>相关系数的性质如下：</strong></p>
-<ol>
-<li><p>相关系数的值介于-1与+1之间，即-1≤r≤+1。</p>
-<p>当r&gt;0时，表示两变量正相关，当r&lt;0时，表示两变量为负相关。当|r|=1时，表示两变量为完全线性相关即函数关系。当r=1时，称为完全正相关，而当r=-1时，称为完全负相关。当r=0时，表示两变量间无线性相关关系。</p>
-</li>
-<li><p>r具有对称性。X与y之间的相关系数rxy和y与x之间的相关系数ryx相等。</p>
-</li>
-<li>r数值大小与x和y的数据原点及计量尺度无关。改变x和y的数据原点和计量尺度，并不改变r数值的大小。</li>
-<li>r仅仅是x与y 之间线性关系的一个度量，它不能用于描述非线性关系。</li>
-<li><p>r虽然是两个变量之间线性关系的一个度量，却不一定意味着x与y一定有因果关系。</p>
-<p>6.当︱r︱≥0.8时，可视为高度相关；当0.5≤︱r︱&lt;0.8时，可视为中度相关；当0.3≤︱r︱&lt;0.5时，视为低度相关；当︱r︱&lt;0.3时，说明两个变量之间的相关程度极弱。</p>
-</li>
-</ol>
-<p><strong>person积差相关系数衡量两个定量变量之间的线性相关程度</strong></p>
-<p><strong>Spearman等级相关系数衡量分级定序变量之间的相关程度</strong></p>
-<p><strong>Kendall’s Tau相关系数也是分级变量的相关程度</strong></p>
-<p><strong>cor() 可以计算以上三种相关系数</strong></p>
-<p><strong>cov()可以计算协方差</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cor(x,use,menthod)  <span class="comment">##x:矩阵或数据框   use：处理缺失值的方法  method：选择相关系数</span></span><br></pre></td></tr></table></figure>
-<h3 id="偏相关"><a href="#偏相关" class="headerlink" title="偏相关"></a>偏相关</h3><p>控制一个或多个变量时，另外两个变量之间的相互关系</p>
-<p>用<strong><em>ggm包</em></strong>中的<strong><em>pcor函数</em></strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(<span class="string">"ggm"</span>)</span><br><span class="line">pcor(c(), cov())  <span class="comment">##前两个数表示要求的两个变量   后几个数表示要排除的变量</span></span><br></pre></td></tr></table></figure>
-<h2 id="相关性的显著分析"><a href="#相关性的显著分析" class="headerlink" title="相关性的显著分析"></a>相关性的显著分析</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cor.test(x,y,use,method)  <span class="comment">## 对单一相关系数显著性检验，每次只能检测一种相关关系</span></span><br></pre></td></tr></table></figure>
-<p><strong><em>corr.test()</em></strong>   可以计算多种     <strong><em>psych包</em></strong></p>
-<p>偏相关系数的显著性检验：pcor.test  <strong><em>psych包</em></strong></p>
-<h2 id="t检验"><a href="#t检验" class="headerlink" title="t检验"></a>t检验</h2><h3 id="独立样本的t检验"><a href="#独立样本的t检验" class="headerlink" title="独立样本的t检验"></a>独立样本的t检验</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t.test(y~x, data)  <span class="comment">##y是一个数值型向量   x表示一个二分变量</span></span><br></pre></td></tr></table></figure>
-<p>  默认是方差不齐。调参数var.equal = TRUE</p>
-<h4 id="非独立样本的t检验"><a href="#非独立样本的t检验" class="headerlink" title="非独立样本的t检验"></a>非独立样本的t检验</h4><p>非独立样本的t检验假定组间差异呈正态分布</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">t.test(y1, y2, paired = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="组间差异的非参数检验"><a href="#组间差异的非参数检验" class="headerlink" title="组间差异的非参数检验"></a>组间差异的非参数检验</h2><h3 id="两组"><a href="#两组" class="headerlink" title="两组"></a>两组</h3><p>无法满足t检验或ANOVA的参数假设，可以转而使用非参数方法</p>
-<p>Wilcoxon秩和检验</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wilcoxon(y~x, data）</span><br><span class="line">wilcoxon(y1,y2)</span><br></pre></td></tr></table></figure>
-<p>可以设置：alternative = “less” 或“greater”进行有方向的秩和检验</p>
-<p><strong><em>在假设合理时，t检验更能发现差异。非参数检验在参数非常不合理时适用</em></strong></p>
-<h3 id="多于两组"><a href="#多于两组" class="headerlink" title="多于两组"></a>多于两组</h3><p>用Kruskal.test 和friedman.test(两组不独立时，用这个更适用)</p>
-<p>多组之间成对比较，可以用函数wmc() &lt;========需要网上下载脚本，source(“网址”)</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/" itemprop="url">Debug R  Package fontconfig was not found in the pkg-config search path</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="找到pkgconfig位置"><a href="#找到pkgconfig位置" class="headerlink" title="找到pkgconfig位置"></a>找到pkgconfig位置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-file search fontconfig.pc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> libfontconfig1-dev: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc</span><br></pre></td></tr></table></figure>
-<p>​      </p>
-<h2 id="添加到PKG路径中"><a href="#添加到PKG路径中" class="headerlink" title="添加到PKG路径中"></a>添加到PKG路径中</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 加上$PKG_CONFIG_PATH后续添加新的PKG路径时不会被覆盖</span><br></pre></td></tr></table></figure>
-<h2 id="检查是否添加成功"><a href="#检查是否添加成功" class="headerlink" title="检查是否添加成功"></a>检查是否添加成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ls $PKG_CONFIG_PATH | grep fontconfig.pc</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (from, to, filename, chunk.dims = <span class="string">"auto"</span>, chunk.size = <span class="number">1000</span>, </span><br><span class="line">    overwrite = <span class="literal">FALSE</span>, display.progress = <span class="literal">TRUE</span>, anndata.raw = <span class="string">"raw.data"</span>, </span><br><span class="line">    anndata.X = <span class="string">"data"</span>, <span class="keyword">...</span>) </span><br><span class="line">&#123;</span><br><span class="line">    object.to &lt;- <span class="keyword">switch</span>(EXPR = to, loom = &#123;</span><br><span class="line">        <span class="keyword">stop</span>(<span class="string">"Converting to and from loom files is currently unavailable; we are working on restoring this functionality"</span>)</span><br><span class="line">    &#125;, anndata = &#123;</span><br><span class="line">        .Defunct(new = <span class="string">"WriteH5AD"</span>, msg = <span class="string">"Use WriteH5AD to store Seurat objects as h5ad"</span>)</span><br><span class="line">    &#125;, <span class="keyword">stop</span>(paste0(<span class="string">"Cannot convert Seurat objects to class '"</span>, </span><br><span class="line">        to, <span class="string">"'"</span>)))</span><br><span class="line">    <span class="keyword">return</span>(object.to)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/04/03/5ca49d43bf3eb.jpg" alt></p>
 
           
         
@@ -879,129 +841,6 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line">Computing <span class="number">2000</span> integration features</span><br><span class="line">Scaling features <span class="keyword">for</span> provided objects</span><br><span class="line">Finding all pairwise anchors</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">3008</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">958</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">4567</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">889</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">3038</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">530</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">3558</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">791</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">2700</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">625</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">3636</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">955</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">1211</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">737</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">1184</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">705</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">1213</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">763</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">1206</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">	Retained <span class="number">709</span> anchors</span><br><span class="line">Extracting within-dataset neighbors!</span><br><span class="line">Running CCA</span><br><span class="line">Merging objects</span><br><span class="line">Finding neighborhoods</span><br><span class="line">Finding mutual nearest neighborhoods</span><br><span class="line">	Found <span class="number">395</span> anchors</span><br><span class="line">Filtering Anchors</span><br><span class="line">Error <span class="keyword">in</span> nn2(data = cn.data2[nn.cells2, ], query = cn.data1[nn.cells1, : Cannot find more nearest neighbours than there are points</span><br><span class="line">Traceback:</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> FindIntegrationAnchors(object.list = pancreas.list, dims = <span class="number">1</span>:<span class="number">10</span>, </span><br><span class="line"> .     k.filter = <span class="number">100</span>)</span><br><span class="line"><span class="number">2.</span> my.lapply(X = <span class="number">1</span>:nrow(x = combinations), FUN = <span class="keyword">function</span>(row) &#123;</span><br><span class="line"> .     i &lt;- combinations[row, <span class="number">1</span>]</span><br><span class="line"> .     j &lt;- combinations[row, <span class="number">2</span>]</span><br><span class="line"> .     object.1 &lt;- object.list[[i]]</span><br><span class="line"> .     object.2 &lt;- object.list[[j]]</span><br><span class="line"> .     object.pair &lt;- RunCCA(object1 = object.1, object2 = object.2, </span><br><span class="line"> .         assay1 = assay[i], assay2 = assay[j], features = anchor.features, </span><br><span class="line"> .         num.cc = max(dims), renormalize = <span class="literal">FALSE</span>, rescale = <span class="literal">FALSE</span>, </span><br><span class="line"> .         verbose = verbose)</span><br><span class="line"> .     <span class="keyword">if</span> (l2.norm) &#123;</span><br><span class="line"> .         object.pair &lt;- L2Dim(object = object.pair, reduction = reduction)</span><br><span class="line"> .         reduction &lt;- paste0(reduction, <span class="string">".l2"</span>)</span><br><span class="line"> .     &#125;</span><br><span class="line"> .     anchors &lt;- FindAnchors(object.pair = object.pair, assay = c(assay[i], </span><br><span class="line"> .         assay[j]), cells1 = colnames(x = object.1), cells2 = colnames(x = object.2), </span><br><span class="line"> .         reduction = reduction, dims = dims, k.anchor = k.anchor, </span><br><span class="line"> .         k.filter = k.filter, k.score = k.score, max.features = max.features, </span><br><span class="line"> .         eps = eps, verbose = verbose)</span><br><span class="line"> .     anchors[, <span class="number">1</span>] &lt;- anchors[, <span class="number">1</span>] + offsets[i]</span><br><span class="line"> .     anchors[, <span class="number">2</span>] &lt;- anchors[, <span class="number">2</span>] + offsets[j]</span><br><span class="line"> .     <span class="keyword">return</span>(anchors)</span><br><span class="line"> . &#125;)</span><br><span class="line"><span class="number">3.</span> lapply(X, FUN, <span class="keyword">...</span>)</span><br><span class="line"><span class="number">4.</span> FUN(X[[i]], <span class="keyword">...</span>)</span><br><span class="line"><span class="number">5.</span> FindAnchors(object.pair = object.pair, assay = c(assay[i], assay[j]), </span><br><span class="line"> .     cells1 = colnames(x = object.1), cells2 = colnames(x = object.2), </span><br><span class="line"> .     reduction = reduction, dims = dims, k.anchor = k.anchor, </span><br><span class="line"> .     k.filter = k.filter, k.score = k.score, max.features = max.features, </span><br><span class="line"> .     eps = eps, verbose = verbose)</span><br><span class="line"><span class="number">6.</span> FilterAnchors(object = object.pair, assay = assay, integration.name = <span class="string">"integrated"</span>, </span><br><span class="line"> .     features = top.features, k.filter = k.filter, eps = eps, </span><br><span class="line"> .     verbose = verbose)</span><br><span class="line"><span class="number">7.</span> nn2(data = cn.data2[nn.cells2, ], query = cn.data1[nn.cells1, </span><br><span class="line"> .     ], k = k.filter, eps = eps)</span><br><span class="line"><span class="number">8.</span> <span class="keyword">stop</span>(<span class="string">"Cannot find more nearest neighbours than there are points"</span>)</span><br></pre></td></tr></table></figure>
 <p>Github解决方案：</p>
 <p>将参数<code>k.filter</code>调小</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
-<p>暂时解决：</p>
-<p><code>nbin</code> 调低</p>
-<p>？？？？nbin的意义是什么</p>
 
           
         
@@ -1246,6 +1085,129 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
 <p>解决方案：</p>
 <p>将保存loom的kernel shutdown，解除文件占用</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
+<p>暂时解决：</p>
+<p><code>nbin</code> 调低</p>
+<p>？？？？nbin的意义是什么</p>
 
           
         
