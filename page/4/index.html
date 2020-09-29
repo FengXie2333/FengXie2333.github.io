@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -95,7 +95,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -625,136 +625,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/图形初阶/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/图形初阶/" itemprop="url">图形初阶</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par(no.readonly=<span class="literal">TRUE</span>) <span class="comment"># make a copy of current settings</span></span><br></pre></td></tr></table></figure>
-<p><code>abline</code> 添加参考线</p>
-<p><code>text</code>  <code>mtext</code>  添加文本标注</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">legend(<span class="string">"topleft"</span>, inset=<span class="number">.05</span>, title=<span class="string">"Drug Type"</span>, c(<span class="string">"A"</span>,<span class="string">"B"</span>),</span><br><span class="line">       lty=c(<span class="number">1</span>, <span class="number">2</span>), pch=c(<span class="number">15</span>, <span class="number">17</span>), col=c(<span class="string">"red"</span>, <span class="string">"blue"</span>))</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 按行填充2行2列</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">attach</span>(mtcars)</span><br><span class="line">layout(matrix(c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>), <span class="number">2</span>, <span class="number">2</span>, byrow = <span class="literal">TRUE</span>), widths=c(<span class="number">3</span>, <span class="number">1</span>), heights=c(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">hist(wt)</span><br><span class="line">hist(mpg)</span><br><span class="line">hist(disp)</span><br><span class="line"><span class="keyword">detach</span>(mtcars)  <span class="comment">###第一个图占一行</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main,sub,col.main,col.sub)</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>)  <span class="comment">###同时输出点和线</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(lty=<span class="number">2</span>, pch=<span class="number">17</span>)            <span class="comment"># change line type and symbol</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adding text, lines, and symbols  添加文本，自定义坐标轴</span></span><br><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>,  </span><br><span class="line">     col=<span class="string">"red"</span>, lty=<span class="number">2</span>, pch=<span class="number">2</span>, lwd=<span class="number">2</span>,</span><br><span class="line">     main=<span class="string">"Clinical Trials for Drug A"</span>, </span><br><span class="line">     sub=<span class="string">"This is hypothetical data"</span>, </span><br><span class="line">     xlab=<span class="string">"Dosage"</span>, ylab=<span class="string">"Drug Response"</span>,</span><br><span class="line">     xlim=c(<span class="number">0</span>, <span class="number">60</span>), ylim=c(<span class="number">0</span>, <span class="number">70</span>))</span><br></pre></td></tr></table></figure>
-<p><code>ann=FALSE</code>禁用默认标题 或者用 <code>main=&quot;&quot;</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/气泡图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -882,7 +752,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/基本数据管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -901,7 +771,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/基本数据管理/" itemprop="url">基本数据管理</a></h1>
         
 
         <div class="post-meta">
@@ -953,13 +823,176 @@
       
         
           
-            <p>使用安装包安装github包</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
-<p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
-<p>解决：</p>
-<p>删掉src文件夹中的*.o和*.so</p>
-<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
+            <h2 id="创建新变量"><a href="#创建新变量" class="headerlink" title="创建新变量"></a>创建新变量</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mydata &lt;- transform(mydata,</span><br><span class="line">			       mean = (x1 + x2)/<span class="number">2</span></span><br><span class="line">				   sum = x1 + x2)</span><br></pre></td></tr></table></figure>
+<h2 id="变量的重编程"><a href="#变量的重编程" class="headerlink" title="变量的重编程"></a>变量的重编程</h2><p><strong><em>within与with相同，但是它允许对数据框进行修改</em></strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable[condition] &lt;- expression <span class="comment">###在条件为真时，进行赋值</span></span><br></pre></td></tr></table></figure>
+<h2 id="变量的重命名"><a href="#变量的重命名" class="headerlink" title="变量的重命名"></a>变量的重命名</h2><p>1   </p>
+<p>使用fix()   调出一个交互式编辑器</p>
+<p>2  </p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name(数据框名)[需要修改的名字位置] &lt;- <span class="string">"newname"</span></span><br></pre></td></tr></table></figure>
+<p>3</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(plyr)</span><br><span class="line">leadership &lt;- rename(leadership,c(oldname=<span class="string">"newname"</span>))</span><br></pre></td></tr></table></figure>
+<h2 id="缺失值"><a href="#缺失值" class="headerlink" title="缺失值"></a>缺失值</h2><p>NA</p>
+<p>使用函数<strong><em>is.na()</em></strong>来判断是否存在缺失值</p>
+<p>缺失值不能拿来比较</p>
+<p>R不把不可能出现的数值或者无限的数设置为缺失值。正无穷，负无穷表示方法：Inf或者-Inf。 不可能的值，如sin(Inf),标记为NaN。判断方法：is.infinite() 或者is.nan()</p>
+<h3 id="在分析中排除缺失值"><a href="#在分析中排除缺失值" class="headerlink" title="在分析中排除缺失值"></a>在分析中排除缺失值</h3><p>多数的数值函数，可以用<strong><em>na.rm = TRUE</em></strong>来移除缺失值</p>
+<p><strong><em>na.omit()</em></strong>移除含有缺失值的行</p>
+<h2 id="日期值"><a href="#日期值" class="headerlink" title="日期值"></a>日期值</h2><p>日期值在R中，先以字符串的形式输入，然后转化为数值</p>
+<p>执行这一操作的是：<strong><em>as.Date(x, “Input_format”)</em></strong></p>
+<p><strong><em>Sys.Date()</em></strong> 返回当天的时间</p>
+<p><strong><em>date()</em></strong> 返回当天的日期和时间</p>
+<p><strong><em>format(x, format = “Output_format”) :输出指定格式的日期值</em></strong></p>
+<p>日期值可以进行计算</p>
+<p>可使用<strong><em>difftime()</em></strong> 计算日期间隔</p>
+<p>可以用<strong><em>as.character()</em></strong>将日期值转化为字符</p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><strong><em>is.datatype()</em></strong>  这样的函数，将判断参数的类型</p>
+<p><strong><em>as.datatype()</em></strong> 将参数转换为对应的类型</p>
+<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p><strong><em>order()</em></strong> 进行排序</p>
+<p>默认顺序是升序</p>
+<p>需要降序时，就在排序变量前加负号</p>
+<h2 id="数据集的合并"><a href="#数据集的合并" class="headerlink" title="数据集的合并"></a>数据集的合并</h2><h3 id="向数据集添加列"><a href="#向数据集添加列" class="headerlink" title="向数据集添加列"></a>向数据集添加列</h3><p>横向合并两个数据框，用函数<strong><em>merge()</em></strong>(通过内部联结)</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- merge(dataframeA,  dataframeB, by=<span class="string">"ID"</span>)</span><br></pre></td></tr></table></figure>
+<p>如果不指定公共索引，可用cbind合并</p>
+<h3 id="向数据集添加行"><a href="#向数据集添加行" class="headerlink" title="向数据集添加行"></a>向数据集添加行</h3><p>rbind</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- rbind(dataframeA,  dataframeB)</span><br></pre></td></tr></table></figure>
+<p>在合并前，要先保证两者有相同的变量</p>
+<h2 id="数据集提取子集"><a href="#数据集提取子集" class="headerlink" title="数据集提取子集"></a>数据集提取子集</h2><h3 id="选入-保留-变量消息称"><a href="#选入-保留-变量消息称" class="headerlink" title="选入(保留)变量消息称"></a>选入(保留)变量消息称</h3><h3 id="剔除（丢弃）变量"><a href="#剔除（丢弃）变量" class="headerlink" title="剔除（丢弃）变量"></a>剔除（丢弃）变量</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myvars &lt;- names(leadership) %<span class="keyword">in</span>% c(q3，q4)</span><br><span class="line">newdata &lt;-  leadership[!myvars]</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership &lt;- leadership[c(-<span class="number">8</span>,-<span class="number">9</span>)] <span class="comment">##在要去除的项前面加负号</span></span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership$q3 &lt;- leadership$q4 &lt;- <span class="literal">NULL</span></span><br></pre></td></tr></table></figure>
+<h3 id="选入观测"><a href="#选入观测" class="headerlink" title="选入观测"></a>选入观测</h3><p>使用行下标</p>
+<p>或者用条件判断的方式</p>
+<h3 id="subset"><a href="#subset" class="headerlink" title="subset"></a>subset</h3><p>选择变量和观测最简单的方法</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- subset(leadership,age &gt;=<span class="number">35</span>| age &lt;<span class="number">24</span>, </span><br><span class="line">				selectc =c(q1:q4))</span><br></pre></td></tr></table></figure>
+<p>subset   select</p>
+<h3 id="随机抽样"><a href="#随机抽样" class="headerlink" title="随机抽样"></a>随机抽样</h3><p>sample()</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysample &lt;- leadership[sample(<span class="number">1</span>:nrow(leadership), <span class="number">3</span>, replace = False)]</span><br></pre></td></tr></table></figure>
+<p>1:nrow(leadership)  :选择范围</p>
+<p>3  ：选取3个元素</p>
+<p>replace = False   无放回的</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Convert/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Convert/" itemprop="url">Convert</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (from, to, filename, chunk.dims = <span class="string">"auto"</span>, chunk.size = <span class="number">1000</span>, </span><br><span class="line">    overwrite = <span class="literal">FALSE</span>, display.progress = <span class="literal">TRUE</span>, anndata.raw = <span class="string">"raw.data"</span>, </span><br><span class="line">    anndata.X = <span class="string">"data"</span>, <span class="keyword">...</span>) </span><br><span class="line">&#123;</span><br><span class="line">    object.to &lt;- <span class="keyword">switch</span>(EXPR = to, loom = &#123;</span><br><span class="line">        <span class="keyword">stop</span>(<span class="string">"Converting to and from loom files is currently unavailable; we are working on restoring this functionality"</span>)</span><br><span class="line">    &#125;, anndata = &#123;</span><br><span class="line">        .Defunct(new = <span class="string">"WriteH5AD"</span>, msg = <span class="string">"Use WriteH5AD to store Seurat objects as h5ad"</span>)</span><br><span class="line">    &#125;, <span class="keyword">stop</span>(paste0(<span class="string">"Cannot convert Seurat objects to class '"</span>, </span><br><span class="line">        to, <span class="string">"'"</span>)))</span><br><span class="line">    <span class="keyword">return</span>(object.to)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://i.loli.net/2019/04/03/5ca49d43bf3eb.jpg" alt></p>
 
           
         
@@ -1465,7 +1498,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/R语言.合并不等长矩阵/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/pandas drop()不识别columns关键字/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1484,7 +1517,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/python学习/R语言.合并不等长矩阵/" itemprop="url">R语言.合并不等长矩阵</a></h1>
+                <a class="post-title-link" href="/2020/09/27/python学习/pandas drop()不识别columns关键字/" itemprop="url">pandas drop()不识别columns关键字</a></h1>
         
 
         <div class="post-meta">
@@ -1506,6 +1539,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1536,7 +1591,9 @@
       
         
           
-            <p>merge(df1, df2, by=col1,all=T)</p>
+            <p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
+<p>解决：</p>
+<p>升级pandas</p>
 
           
         
@@ -1706,7 +1763,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
 
@@ -1805,6 +1862,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
