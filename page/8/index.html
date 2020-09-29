@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/20/免疫学原理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/高级数据管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/04/20/免疫学原理/" itemprop="url">免疫学原理</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/高级数据管理/" itemprop="url">高级数据管理</a></h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-20T20:14:05+08:00">
-                2019-04-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
               </time>
             
 
@@ -305,8 +305,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/basic/" itemprop="url" rel="index">
-                    <span itemprop="name">basic</span>
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
                   </a>
                 </span>
 
@@ -344,10 +344,1412 @@
       
         
           
-            <p>非淋巴细胞和固有淋巴细胞  <a href="https://mubu.com/doc/dwcLe46HQw" target="_blank" rel="noopener">https://mubu.com/doc/dwcLe46HQw</a></p>
-<p>免疫原与免疫球蛋白 <a href="https://mubu.com/doc/mpILeMq500" target="_blank" rel="noopener">https://mubu.com/doc/mpILeMq500</a></p>
-<p>主要组织相容性抗原 <a href="https://mubu.com/doc/kcgK6-1kE0" target="_blank" rel="noopener">https://mubu.com/doc/kcgK6-1kE0</a></p>
-<p>固有免疫 <a href="https://mubu.com/doc/gklhh9gUi0" target="_blank" rel="noopener">https://mubu.com/doc/gklhh9gUi0</a></p>
+            <h2 id="字符处理函数"><a href="#字符处理函数" class="headerlink" title="字符处理函数"></a>字符处理函数</h2><p>nchar() 计算字符数量</p>
+<p>substr(x, start, stop)  提取或替换字符串中的一个子串</p>
+<p>grep() 搜素某种模式</p>
+<p>sub(pattern, replacement,x,ignore.case=FALSE,fixed=FALSE)</p>
+<p>搜索pattern，并用replacement替换</p>
+<p>strsplit(x, split,fixed=FALISE)  在split分隔符处分割字符串</p>
+<p>paste(x,sep= “”) 连接字符，用分隔符sep</p>
+<p>toupper   转大写</p>
+<p>tolower 小写转化</p>
+<h2 id="数值处理函数"><a href="#数值处理函数" class="headerlink" title="数值处理函数"></a>数值处理函数</h2><p>1、数学函数</p>
+<p>2、统计函数</p>
+<p>mean median sd </p>
+<p>var()–方差</p>
+<p>mad–绝对中位数</p>
+<p>quantile–求分位数</p>
+<p>range–求值域</p>
+<p>sum</p>
+<p>diff</p>
+<p>min max scale()—-标准化</p>
+<h2 id="数据的标准化"><a href="#数据的标准化" class="headerlink" title="数据的标准化"></a>数据的标准化</h2><p><strong><em>scale()</em></strong> 对指定列进行均值为0，标准差为1的标准化</p>
+<p>对每一列进行标准化</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- scale(mydata)*SD + M</span><br></pre></td></tr></table></figure>
+<p>对指定列进行标准化</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- transform(mydata, myvar = scale(myvar)*SD + M)</span><br></pre></td></tr></table></figure>
+<h2 id="概率函数"><a href="#概率函数" class="headerlink" title="概率函数"></a>概率函数</h2><p><strong><em>set.seed()</em></strong>  显式指定种子，让结果再现</p>
+<p><strong><em>runif()</em></strong> 生成从0-1区间上服从均匀分布的伪随机数</p>
+<h2 id="其他实用函数"><a href="#其他实用函数" class="headerlink" title="其他实用函数"></a>其他实用函数</h2><p>length()  长度</p>
+<p>seq(from,to,by) 生成序列</p>
+<p>rep(x,n)  重复</p>
+<p>cut() 将连续型数值分割为有n个水平的因子</p>
+<p>pretty()  </p>
+<p>cat(…,file,append = FALSE) 输出内容到文件file</p>
+<p>举例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">options(digits=<span class="number">2</span>)  <span class="comment">###限定小数点的显示位数</span></span><br><span class="line">Student &lt;- c(<span class="string">"John Davis"</span>, <span class="string">"Angela Williams"</span>, <span class="string">"Bullwinkle Moose"</span>,</span><br><span class="line">             <span class="string">"David Jones"</span>, <span class="string">"Janice Markhammer"</span>, <span class="string">"Cheryl Cushing"</span>,</span><br><span class="line">             <span class="string">"Reuven Ytzrhak"</span>, <span class="string">"Greg Knox"</span>, <span class="string">"Joel England"</span>,</span><br><span class="line">             <span class="string">"Mary Rayburn"</span>)</span><br><span class="line">Math &lt;- c(<span class="number">502</span>, <span class="number">600</span>, <span class="number">412</span>, <span class="number">358</span>, <span class="number">495</span>, <span class="number">512</span>, <span class="number">410</span>, <span class="number">625</span>, <span class="number">573</span>, <span class="number">522</span>)</span><br><span class="line">Science &lt;- c(<span class="number">95</span>, <span class="number">99</span>, <span class="number">80</span>, <span class="number">82</span>, <span class="number">75</span>, <span class="number">85</span>, <span class="number">80</span>, <span class="number">95</span>, <span class="number">89</span>, <span class="number">86</span>)</span><br><span class="line">English &lt;- c(<span class="number">25</span>, <span class="number">22</span>, <span class="number">18</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">28</span>, <span class="number">15</span>, <span class="number">30</span>, <span class="number">27</span>, <span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">roster &lt;- data.frame(Student, Math, Science, English,</span><br><span class="line">                     stringsAsFactors=<span class="literal">FALSE</span>)</span><br><span class="line"></span><br><span class="line">z &lt;- scale(roster[,<span class="number">2</span>:<span class="number">4</span>])</span><br><span class="line">score &lt;- apply(z, <span class="number">1</span>, mean)</span><br><span class="line">roster &lt;- cbind(roster, score)</span><br><span class="line"></span><br><span class="line">y &lt;- quantile(score, c(<span class="number">.8</span>,<span class="number">.6</span>,<span class="number">.4</span>,<span class="number">.2</span>))</span><br><span class="line">roster$grade[score &gt;= y[<span class="number">1</span>]] &lt;- <span class="string">"A"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">1</span>] &amp; score &gt;= y[<span class="number">2</span>]] &lt;- <span class="string">"B"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">2</span>] &amp; score &gt;= y[<span class="number">3</span>]] &lt;- <span class="string">"C"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">3</span>] &amp; score &gt;= y[<span class="number">4</span>]] &lt;- <span class="string">"D"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">4</span>]] &lt;- <span class="string">"F"</span></span><br><span class="line"></span><br><span class="line">name &lt;- strsplit((roster$Student), <span class="string">" "</span>)</span><br><span class="line">Lastname &lt;- sapply(name, <span class="string">"["</span>, <span class="number">2</span>)  <span class="comment">#"[" 提取某个对象的一部分</span></span><br><span class="line">Firstname &lt;- sapply(name, <span class="string">"["</span>, <span class="number">1</span>)</span><br><span class="line">roster &lt;- cbind(Firstname,Lastname, roster[,-<span class="number">1</span>])</span><br><span class="line">roster &lt;- roster[order(Lastname,Firstname),]</span><br><span class="line"></span><br><span class="line">roster</span><br></pre></td></tr></table></figure>
+<p>sapply()   提取列表中元素</p>
+<p>apply的用法</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply(data, MARGIN, FUN) <span class="comment">##MARGIN=1 表示行，=2表示列</span></span><br></pre></td></tr></table></figure>
+<h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><p>while </p>
+<p>if</p>
+<p>ifelse (cond,statement1,statement2)</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">feelings &lt;- c(<span class="string">"sad"</span>, <span class="string">"afraid"</span>)</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> feelings)</span><br><span class="line">  print(</span><br><span class="line">    <span class="keyword">switch</span>(i,</span><br><span class="line">           happy  = <span class="string">"I am glad you are happy"</span>,</span><br><span class="line">           afraid = <span class="string">"There is nothing to fear"</span>,</span><br><span class="line">           sad    = <span class="string">"Cheer up"</span>,</span><br><span class="line">           angry  = <span class="string">"Calm down now"</span></span><br><span class="line">    )</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<h2 id="整合与重构"><a href="#整合与重构" class="headerlink" title="整合与重构"></a>整合与重构</h2><h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>t()</p>
+<h2 id="整合"><a href="#整合" class="headerlink" title="整合"></a>整合</h2><p>aggregate（归类）</p>
+<h2 id="reshape2包"><a href="#reshape2包" class="headerlink" title="reshape2包"></a>reshape2包</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using the reshape2 package</span></span><br><span class="line"><span class="keyword">library</span>(reshape2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># input data</span></span><br><span class="line">mydata &lt;- read.table(header=<span class="literal">TRUE</span>, sep=<span class="string">" "</span>, text=<span class="string">"</span></span><br><span class="line"><span class="string">ID Time X1 X2</span></span><br><span class="line"><span class="string">1 1 5 6</span></span><br><span class="line"><span class="string">1 2 3 5</span></span><br><span class="line"><span class="string">2 1 6 1</span></span><br><span class="line"><span class="string">2 2 2 4</span></span><br><span class="line"><span class="string">"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># melt data</span></span><br><span class="line">md &lt;- melt(mydata, id=c(<span class="string">"ID"</span>, <span class="string">"Time"</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># reshaping with aggregation</span></span><br><span class="line">dcast(md, ID~variable, mean)</span><br><span class="line">dcast(md, Time~variable, mean)</span><br><span class="line">dcast(md, ID~Time, mean)</span><br><span class="line"></span><br><span class="line"><span class="comment"># reshaping without aggregation</span></span><br><span class="line">dcast(md, ID+Time~variable)</span><br><span class="line">dcast(md, ID+variable~Time)</span><br><span class="line">dcast(md, ID~variable+Time)</span><br></pre></td></tr></table></figure>
+<p><code>melt</code> 和 <code>dcast</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/SCENIC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/SCENIC/" itemprop="url">SCENIC</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><ul>
+<li><p><strong><em>GENIE3</em></strong> to infer the co-expression network</p>
+</li>
+<li><p><strong><em>RcisTarget</em></strong> for the analysis of transcription factor binding motifs</p>
+</li>
+<li><p><strong><em>AUCell</em></strong> to identify cells with active gene sets (gene-network) in scRNA-seq data</p>
+</li>
+</ul>
+<h2 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h2><ul>
+<li>Identify potential targets for each TF based on co-expression</li>
+<li>Select potential direct-binding targets (regulons) based on DNA-motif analysis </li>
+<li>Analyzing the network activity in each individual cell (<em>AUCell</em>)</li>
+<li>Identify stable cell states based on their gene regulatory network activity (cell clustering) and exploring the results</li>
+</ul>
+<h2 id="Input-expression-matrix"><a href="#Input-expression-matrix" class="headerlink" title="Input: expression matrix"></a>Input: expression matrix</h2><ul>
+<li>column: sample (cell)    row: gene</li>
+<li><strong>gene-symbol</strong> as rownames</li>
+<li>Expression <strong>units</strong>: gene-summarized counts   TPM and FPKM/RPKM are also accepted</li>
+</ul>
+<blockquote>
+<p><font color="#DC143C"> some authors recommend avoiding within sample normalization (i.e. TPM) for co-expression analysis (first step of SCENIC) because they may induce artificial co-variation (<em>Crow et al. (2016)</em>)</font>we have applied SCENIC to datasets using raw (logged) UMI counts, normalized UMI counts, and TPM and all of them provided reliable results (see <em>Aibar et al. (2017)</em>). <font color="#DC143C">The remaining steps of the workflow should not be affected by the expression units/normalization</font>, as the expression is not taken into account for the motif analysis, and AUCell is within-cell ranking-based (wich works as an implicit normalization).</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R转义/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R转义/" itemprop="url">R转义</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
+<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
+<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R语言.合并不等长矩阵/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R语言.合并不等长矩阵/" itemprop="url">R语言.合并不等长矩阵</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>merge(df1, df2, by=col1,all=T)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R语言︱数据去重/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R语言︱数据去重/" itemprop="url">R语言.数据去重</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>向量 ：unique函数</p>
+<p>数据框： duplicated函数</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R语言 -- list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R语言 -- list/" itemprop="url">R语言.list</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="list追加元素"><a href="#list追加元素" class="headerlink" title="list追加元素"></a>list追加元素</h2><p>list也是用c追加元素的</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">aa &lt;- list()</span><br><span class="line">bb &lt;- c(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">cc &lt;- c(aa, list(bb))</span><br></pre></td></tr></table></figure>
+<p>追加的元素必须也是list</p>
+<p>[出处][<a href="https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]" target="_blank" rel="noopener">https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]</a></p>
+<p>​          </p>
+<h2 id="合并list中多个matrix"><a href="#合并list中多个matrix" class="headerlink" title="合并list中多个matrix"></a>合并list中多个matrix</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">do.call(rbind,list)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Reduce(rbind, l)</span><br></pre></td></tr></table></figure>
+<p>if you have <code>data.frame</code> and not <code>matrix</code> , is to use <code>rbindlist</code> from <code>data.table</code> package.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbindlist(lapply(l,as.data.frame))</span><br></pre></td></tr></table></figure>
+<p>[出处][<a href="https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]" target="_blank" rel="noopener">https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R做图/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R做图/" itemprop="url">R做图</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>The “whiskers” of the box (the vertical lines extending above and below the box) relate to the range<br> parameter of boxplot, which we let default to the value 1.5 used by R. The height of the box is the<br> interquartile range, the difference between the 75th and 25th quantiles. In this case that difference<br> is 2.8. The whiskers are drawn to be a length of range*2.8 or 1.5*2.8. This shows us roughly how many,<br> if any, data points are outliers, that is, beyond this range of values.</p>
+<p><code>abline</code> &lt;=======&gt; adds one or more straight lines through the current plot.</p>
+<p><code>rug()</code>  添加灰度条. It automatically adjusted its pocket size to that of the last plot plotted.</p>
+<p>rug之后，可以用high和low查看分布</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hist(ppm, col = <span class="string">"green"</span>, breaks = <span class="number">100</span>) <span class="comment">###breaks:the number of buckets to split the data into</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(v = median(ppm), col = <span class="string">"magenta"</span>, lwd = <span class="number">4</span>)  <span class="comment">##设置线的位置，宽度和颜色</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barplot(reg, col = &quot;wheat&quot;, main = &quot;Number of Counties in Each Region&quot;) ###main表格的标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">with(pollution, plot(latitude, pm25))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(h=<span class="number">12</span>,lwd=<span class="number">2</span>, lty=<span class="number">2</span>)   <span class="comment">### h:水平线高度 lwd宽度   lty虚线还是实线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main = <span class="string">"Old Faithful Geyser data"</span>)  <span class="comment">### 添加标题</span></span><br></pre></td></tr></table></figure>
+<p>两种图形设备：向量设备和位图设备</p>
+<p>向量设备：用于线条图，以及使用纯色，点较少的图 pdf svg</p>
+<p>位图设备：适用于有大量的点，风景，以及基于网络的图形</p>
+<p>lattice包很容易实现单变量或多变量的数据可视化，生成的图形为栅栏图。在一个或多个其它变量的条件下，栅栏图可展示某个变量的分布或与其他变量间的关系。 lattice包提供了丰富的图形函数，可生成单变量图形(点图、核密度图、直方图、柱形图和箱线图)、双变量图(散点图、带状图和平行箱线图)和多变量图形(三维图和散点图矩阵)。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(Life.Exp ~ Income | region, data = state, layout = c(<span class="number">4</span>,<span class="number">1</span>)) <span class="comment">###plotting life expectancy as it depends on income for each region</span></span><br></pre></td></tr></table></figure>
+<h2 id="R-base做图"><a href="#R-base做图" class="headerlink" title="R base做图"></a>R base做图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">range(airquality$Ozone, na.rm = TRUE)</span><br></pre></td></tr></table></figure>
+<p>boxplot不会自动添加标题和坐标轴标签</p>
+<p>hist会自动添加</p>
+<p><code>par()$pin</code>   Plot dimensions in inches   图的尺寸</p>
+<p><code>par()$fg</code> specifies foreground color</p>
+<p><code>par()$bg</code> background color</p>
+<p><code>pch</code>: plot character   1代表开环</p>
+<p><code>par()$lwd</code> line width</p>
+<p><code>par()$lty</code>line type  </p>
+<h2 id="Lattice"><a href="#Lattice" class="headerlink" title="Lattice"></a>Lattice</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(y ~ x | f * g, data)  <span class="comment">##The f and g represent the optional conditioning variables. The * represents interaction between them</span></span><br></pre></td></tr></table></figure>
+<p>Lattice适合多变量做图</p>
+<p>str函数  紧凑的显示数据内部结构，即对象的内容</p>
+<p><code>source</code>  调用函数</p>
+<p><code>myedit</code>  查看内容</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sample(colors(), <span class="number">10</span>)  <span class="comment">###查看colors中随机的10个</span></span><br></pre></td></tr></table></figure>
+<h2 id="ggplot"><a href="#ggplot" class="headerlink" title="ggplot"></a>ggplot</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy, data =mpg, color = drv, geom = c(<span class="string">"point"</span>, <span class="string">"smooth"</span>))</span><br></pre></td></tr></table></figure>
+<p><code>geom</code>画出趋势线</p>
+<p><img src="C:\Users\feng\AppData\Local\Temp\1536550364017.png" alt="1536550364017"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(drv, hwy, data=mpg, geom=<span class="string">"boxplot"</span>, color=manufacturers)  <span class="comment">##第一个参数，用来切分数据  第二个参数，想要测量的数据</span></span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\feng\AppData\Local\Temp\1536550506739.png" alt="1536550506739"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy,data=mpg, facets=.~drv)  <span class="comment">##~左边代表行数，右边代表列</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
+<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
+<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
+<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
+<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
+<p>&nbsp;</p>
+<p><strong>按照factor配色</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
+<p>尝试tools-global options-packages更改镜像未成功</p>
+<p>最终解决方案：</p>
+<p>更改为</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/" itemprop="url">Error in dyn.load</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>R: Error in dyn.load(file, DLLpath = DLLpath, …)</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Re-installing the package was enough to getting it working again.</span><br><span class="line">$ sudo R</span><br><span class="line">&gt; install.packages(<span class="string">"rgdal"</span>)</span><br><span class="line">&gt; quit()</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath" target="_blank" rel="noopener">https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath</a></p>
 
           
         
@@ -387,7 +1789,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span>
+    <a class="extend prev" rel="prev" href="/page/7/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/9/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -433,7 +1835,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">93</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -444,7 +1846,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -455,7 +1857,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
