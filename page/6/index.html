@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -250,7 +250,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
         
 
         <div class="post-meta">
@@ -302,16 +302,140 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
-<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
-<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
-<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
-<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
-<p>&nbsp;</p>
-<p><strong>按照factor配色</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
+            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
+<p>尝试tools-global options-packages更改镜像未成功</p>
+<p>最终解决方案：</p>
+<p>更改为</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R语言 -- list/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R语言 -- list/" itemprop="url">R语言.list</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="list追加元素"><a href="#list追加元素" class="headerlink" title="list追加元素"></a>list追加元素</h2><p>list也是用c追加元素的</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">aa &lt;- list()</span><br><span class="line">bb &lt;- c(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">cc &lt;- c(aa, list(bb))</span><br></pre></td></tr></table></figure>
+<p>追加的元素必须也是list</p>
+<p>[出处][<a href="https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]" target="_blank" rel="noopener">https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]</a></p>
+<p>​          </p>
+<h2 id="合并list中多个matrix"><a href="#合并list中多个matrix" class="headerlink" title="合并list中多个matrix"></a>合并list中多个matrix</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">do.call(rbind,list)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Reduce(rbind, l)</span><br></pre></td></tr></table></figure>
+<p>if you have <code>data.frame</code> and not <code>matrix</code> , is to use <code>rbindlist</code> from <code>data.table</code> package.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbindlist(lapply(l,as.data.frame))</span><br></pre></td></tr></table></figure>
+<p>[出处][<a href="https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]" target="_blank" rel="noopener">https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]</a></p>
 
           
         
@@ -515,7 +639,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R语言 -- list/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R转义/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -534,7 +658,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/R语言 -- list/" itemprop="url">R语言.list</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/R转义/" itemprop="url">R转义</a></h1>
         
 
         <div class="post-meta">
@@ -586,16 +710,9 @@
       
         
           
-            <h2 id="list追加元素"><a href="#list追加元素" class="headerlink" title="list追加元素"></a>list追加元素</h2><p>list也是用c追加元素的</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">aa &lt;- list()</span><br><span class="line">bb &lt;- c(<span class="number">2</span>,<span class="number">3</span>)</span><br><span class="line">cc &lt;- c(aa, list(bb))</span><br></pre></td></tr></table></figure>
-<p>追加的元素必须也是list</p>
-<p>[出处][<a href="https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]" target="_blank" rel="noopener">https://bbs.csdn.net/topics/391953669?depth_1-utm_source=distribute.pc_relevant.none-task&amp;utm_source=distribute.pc_relevant.none-task]</a></p>
-<p>​          </p>
-<h2 id="合并list中多个matrix"><a href="#合并list中多个matrix" class="headerlink" title="合并list中多个matrix"></a>合并list中多个matrix</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">do.call(rbind,list)</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Reduce(rbind, l)</span><br></pre></td></tr></table></figure>
-<p>if you have <code>data.frame</code> and not <code>matrix</code> , is to use <code>rbindlist</code> from <code>data.table</code> package.</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rbindlist(lapply(l,as.data.frame))</span><br></pre></td></tr></table></figure>
-<p>[出处][<a href="https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]" target="_blank" rel="noopener">https://stackoverflow.com/questions/16110553/combine-a-list-of-matrices-to-a-single-matrix-by-rows]</a></p>
+            <p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
+<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
+<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
 
           
         
@@ -785,128 +902,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R转义/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/R转义/" itemprop="url">R转义</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>正则表达式中有一些是特殊字符，比如说刚才的顿号，因此为了匹配这些特殊字符，我们需要对其转义。在Linux命令行里，转义用的是<code>\</code>, 所以可以直接用<code>\.</code>.</p>
-<p>但是R<code>\</code> 在字符里被用作转义符号。然后我们需要先把<code>\</code>转义成字符，然后才能进一步转义,<code>\\.</code></p>
-<p>如果要匹配<code>\</code> ,就需要<code>\\\\</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -983,6 +978,126 @@
 <p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
 <p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
 <p><code>geom_vline</code> : 添加线条</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1155,6 +1270,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/代码记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/代码记录/" itemprop="url">代码记录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cor=pbmc@dr$tsne@cell.embeddings</span><br><span class="line">tsne=as.data.frame(pbmc@ident)</span><br><span class="line">table(tsne)</span><br></pre></td></tr></table></figure>
+<p><code>table(variable)</code>  可以显示每个变量出现的次数</p>
+<p><code>df[row,col]</code> 取数据框的子集</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[d$pi&gt;<span class="number">3</span>,]与d[which(d$pi&gt;<span class="number">3</span>),] <span class="comment">##功能相同</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/songzhilian22/article/details/49006391/" target="_blank" rel="noopener">ggplot学习笔记之标度scale</a></p>
+<p><code>cut</code>的使用</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c0=c(<span class="number">2.3</span>,<span class="number">3</span>,<span class="number">1.5</span>,<span class="number">4.8</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9.5</span>)  <span class="comment">#被划分的对象</span></span><br><span class="line">cuttime=c(<span class="number">0</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">10</span>)                 ＃分割点</span><br><span class="line">cut(c0,cuttime,labels = <span class="literal">F</span>,right = <span class="literal">F</span>,include.lowest=<span class="literal">T</span>)  </span><br><span class="line"><span class="comment">#right＝F：每个区间左闭右开，否则默认左开右闭</span></span><br><span class="line"><span class="comment">#include.lowest:第一个区间包含左端点／最后一个区间包含右端点</span></span><br><span class="line"><span class="comment">#label=F:只返回在第几个区间,否则会显示具体的区间</span></span><br></pre></td></tr></table></figure>
+<p>linux 复制文件到多个文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo /home/xgj/test/ /home/xgj/tmp | xargs -n 1 cp -v /home/xgj/bin/sys_info.sh</span><br></pre></td></tr></table></figure>
+<p>字符串替代：gsub()负责搜索字符串的特定表达式，并用新的内容加以替代。sub()函数是类似的，但只替代第一个发现结果</p>
+<p>字符串匹配：grep()负责搜索给定字符串对象中特定表达式 ，并返回其位置索引。grepl()函数与之类似，但其后面的”l”则意味着返回的将是逻辑值。</p>
+<p><code>as</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">as(object, Class, strict=<span class="literal">TRUE</span>, ext)</span><br><span class="line">as(object, Class) &lt;- value</span><br></pre></td></tr></table></figure>
+<p><code>as(object)</code> returns the version of this object coerced to be the given <code>Class</code>. When used in the replacement form on the left of an assignment, the portion of the object corresponding to <code>Class</code> is replaced by <code>value</code>.</p>
+<p><code>as.image()</code>  保存工作空间映像</p>
+<p>然后用<code>load</code>载入空间映像</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/sweep/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1262,324 +1512,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/主成分分析和因子分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/主成分分析和因子分析/" itemprop="url">主成分分析和因子分析</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="常用步骤"><a href="#常用步骤" class="headerlink" title="常用步骤"></a>常用步骤</h2><ol>
-<li>数据预处理   输入可以是原始矩阵或者相关系数矩阵  原始矩阵要确保没有缺失值</li>
-<li>选择因子模型  判断是使用PCA（数据降维）还是EFA（发现潜在结构）</li>
-<li>判断选择的主成分或因子的数目</li>
-<li>选择主成分或因子</li>
-<li>旋转</li>
-<li>解释结果</li>
-<li>计算主成分或因子得分</li>
-</ol>
-<p>&nbsp;</p>
-<h2 id="主成分分析"><a href="#主成分分析" class="headerlink" title="主成分分析"></a>主成分分析</h2><p>PCA的目标是用一组较少的不相关变量代替大量相关变量，同时尽可能保留初始变量的信<br>息，这些推导所得的变量称为主成分，它们是观测变量的线性组合。如第一主成分为：</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f57b8b86be.jpg" alt></p>
-<p>它是k个观测变量的加权组合，对初始变量集的方差解释性最大。第二主成分也是初始变量<br>的线性组合，对方差的解释性排第二，同时与第一主成分正交（不相关）。后面每一个主成分都<br>最大化它对方差的解释程度，同时与之前所有的主成分都正交 。</p>
-<p>&nbsp;</p>
-<h3 id="判断主成分的个数"><a href="#判断主成分的个数" class="headerlink" title="判断主成分的个数"></a>判断主成分的个数</h3><p>利用<code>fa.parallel()</code>同时对三种特征值判别准则进行评价 </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa.parallel(USJudgeRatings[, -<span class="number">1</span>], fa=<span class="string">"pc"</span>, n.iter=<span class="number">100</span>,</span><br><span class="line">             show.legend=<span class="literal">FALSE</span>, main=<span class="string">"Scree plot with parallel analysis"</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/17/5b9f59c0e6b81.jpg" alt></p>
-<p>三个准则：</p>
-<ol>
-<li>特征值大于1</li>
-<li>大于随机数据矩阵推导出的特征值平均值（虚线）</li>
-<li>Cattle碎石检验，图形变化最大处以上均可保留</li>
-</ol>
-<p>&nbsp;</p>
-<h3 id="提取主成分"><a href="#提取主成分" class="headerlink" title="提取主成分"></a>提取主成分</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(psych)</span><br><span class="line">pc &lt;- principal(r, nfactors=, rotate=, scores=)</span><br><span class="line"><span class="comment">## r:相关系数矩阵或者原始矩阵</span></span><br><span class="line"><span class="comment">## nfactors：设定主成分数</span></span><br><span class="line"><span class="comment">## rotate：是否旋转</span></span><br><span class="line"><span class="comment">## scores：主成分得分</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/17/5b9f75ad0810e.jpg" alt></p>
-<p>&nbsp;</p>
-<p>PC1栏包含了成分载荷，指观测变量与主成分的相关系数 。成分载荷（ component loadings）可用来解释主成分的含义 。第一主成分（ PC1）与每个变量都高度相关，也就是说，它是一个可用来进行一般性评价的维度。 </p>
-<p>&nbsp;</p>
-<p>h2栏指成分公因子方差——主成分对每个变量的方差解释度 </p>
-<p>u2栏指成分唯一性——方差无法被主成分解释的比例（ 1-h2） </p>
-<p>&nbsp;</p>
-<h3 id="主成分旋转"><a href="#主成分旋转" class="headerlink" title="主成分旋转"></a>主成分旋转</h3><p>旋转方法有两种：使选择的成分保持不相关（ 正交旋转），和让它们变得相关（ 斜交旋转）。 最流行的正交旋转是方差极大旋转 </p>
-<p>&nbsp;</p>
-<p>方差极大旋转：它试图对载荷阵的列进行去噪，使得每个成分只是由一组有限的变量来解释（即载荷阵每列只有少数几个很大的载荷，其他都是很小的载荷） </p>
-<p>&nbsp;</p>
-<h3 id="获取主成分得分"><a href="#获取主成分得分" class="headerlink" title="获取主成分得分"></a>获取主成分得分</h3><p>设置<code>score</code>等于TRUE</p>
-<p>当主成分分析基于相关系数矩阵时，原始数据便不可用了，也不可能获取每个观测的主成分得分，但是可以得到用来计算主成分得分的系数 </p>
-<p>&nbsp;</p>
-<h2 id="探索性因子得分"><a href="#探索性因子得分" class="headerlink" title="探索性因子得分"></a>探索性因子得分</h2><p>协方差矩阵 需要用<code>cov2cor()</code>将其转化为相关系数矩阵 </p>
-<p>&nbsp;</p>
-<h3 id="判断公共因子数"><a href="#判断公共因子数" class="headerlink" title="判断公共因子数"></a>判断公共因子数</h3><p>类似主成分判断</p>
-<p>使用<code>fa.parallel</code></p>
-<p>&nbsp;</p>
-<h3 id="提取公共因子"><a href="#提取公共因子" class="headerlink" title="提取公共因子"></a>提取公共因子</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fa(r, nfactors, n.obs=, rotate=, scores=, fm=)  <span class="comment">### 使用相关性矩阵时，要设置n.obs</span></span><br><span class="line"><span class="comment">### fm:设定因子化方法（默认极小残差法）</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>统计学家青睐使用最大似然法，因为它有良好的统计性质。不过有时候最大似然法不会收敛，此时使用主轴迭代法效果会很好 .</p>
-<p>最大似然法（ ml）</p>
-<p>主轴迭代法（ pa）</p>
-<p>加权最小二乘法（ wls）</p>
-<p>广义加权最小二乘法（ gls）</p>
-<p>最小残差法（ minres） </p>
-<h3 id="因子旋转"><a href="#因子旋转" class="headerlink" title="因子旋转"></a>因子旋转</h3><p>正交旋转和斜交旋转</p>
-<p>正交</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.varimax &lt;- fa(correlations, nfactors=<span class="number">2</span>, rotate=<span class="string">"varimax"</span>, fm=<span class="string">"pa"</span>)</span><br></pre></td></tr></table></figure>
-<p>使用正交旋转将人为地强制两个因子不相关。</p>
-<p>斜交：</p>
-<p><code>fa.promax &lt;- fa(correlations, nfactors=2, rotate=&quot;promax&quot;, fm=&quot;pa&quot;)</code> </p>
-<p>&nbsp;</p>
-<p>对于正交旋转，因子分析的重点在于因子结构矩阵（变量与因子的相关系数），而对于斜交旋转，因子分析会考虑三个矩阵：因子结构矩阵、因子模式矩阵和因子关联矩阵。<br>因子模式矩阵即标准化的回归系数矩阵。它列出了因子预测变量的权重。 因子关联矩阵即因子相关系数矩阵。</p>
-<p>&nbsp;</p>
-<p>与正交旋转所得因子载荷阵相比，斜交的载荷阵列（因子结构矩阵）的噪音比较大，这是因为之前你允许潜在因子相关。虽然斜交方法更为复杂，但模型将更符合真实数据。 </p>
-<p>&nbsp;</p>
-<p>使用<code>factor.plot()</code>或<code>fa.diagram()</code>函数，可以绘制正交或者斜交结果的图形 </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">factor.plot(fa.promax, labels=rownames(fa.promax$loadings))</span><br></pre></td></tr></table></figure>
-<p> &nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f730cddd73.jpg" alt></p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fa.diagram(fa.promax, simple=<span class="literal">FALSE</span>)</span><br></pre></td></tr></table></figure>
-<p>若使simple = TRUE，那么将仅显示每个因子下最大的载荷，以及因子间的相关系数 </p>
-<p>&nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/17/5b9f739014f81.jpg" alt></p>
-<p>&nbsp;</p>
-<h2 id="步骤图"><a href="#步骤图" class="headerlink" title="步骤图"></a>步骤图</h2><p><img src="https://i.loli.net/2018/09/17/5b9f74abcc36c.jpg" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1625,7 +1562,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1636,7 +1573,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -1647,7 +1584,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
