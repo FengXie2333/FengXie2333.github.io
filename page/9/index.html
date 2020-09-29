@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/" itemprop="url">R install packages returns “failed to create lock directory</a></h1>
         
 
         <div class="post-meta">
@@ -344,11 +344,300 @@
       
         
           
-            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
-<p>尝试tools-global options-packages更改镜像未成功</p>
-<p>最终解决方案：</p>
-<p>更改为</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">it was related to multiple distributed R processes spread over SGE cluster trying to interact with the package index files <span class="keyword">in</span> LIB_PATH and the latency of cleaning up lock file on NFS file system</span><br><span class="line">install.packages(<span class="string">"Rcpp"</span>, dependencies=<span class="literal">TRUE</span>, INSTALL_opts = c(<span class="string">'--no-lock'</span>))</span><br></pre></td></tr></table></figure>
+<p>This happens when your last package installation has interrupted abnormally. to fix this you should remove the locked file</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlink(<span class="string">"/home/me/src/Rlibs/00LOCK-Rcpp"</span>, recursive = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory" target="_blank" rel="noopener">https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/" itemprop="url">Error in dyn.load</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>R: Error in dyn.load(file, DLLpath = DLLpath, …)</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Re-installing the package was enough to getting it working again.</span><br><span class="line">$ sudo R</span><br><span class="line">&gt; install.packages(<span class="string">"rgdal"</span>)</span><br><span class="line">&gt; quit()</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath" target="_blank" rel="noopener">https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/OSError Unable to open file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/OSError Unable to open file/" itemprop="url">OSError Unable to open file</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>Seurat</code>中保存了loom后, 在<code>Scanpy</code>中无法读入</p>
+<p>报错：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
+<p>解决方案：</p>
+<p>将保存loom的kernel shutdown，解除文件占用</p>
 
           
         
@@ -547,7 +836,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -566,7 +855,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/" itemprop="url">Error in dyn.load</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
         
 
         <div class="post-meta">
@@ -640,9 +929,10 @@
       
         
           
-            <p>R: Error in dyn.load(file, DLLpath = DLLpath, …)</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Re-installing the package was enough to getting it working again.</span><br><span class="line">$ sudo R</span><br><span class="line">&gt; install.packages(<span class="string">"rgdal"</span>)</span><br><span class="line">&gt; quit()</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
-<p><a href="https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath" target="_blank" rel="noopener">https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath</a></p>
+            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
+<p>暂时解决：</p>
+<p><code>nbin</code> 调低</p>
+<p>？？？？nbin的意义是什么</p>
 
           
         
@@ -979,7 +1269,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/OSError Unable to open file/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -998,7 +1288,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/OSError Unable to open file/" itemprop="url">OSError Unable to open file</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
         
 
         <div class="post-meta">
@@ -1072,11 +1362,13 @@
       
         
           
-            <p><code>Seurat</code>中保存了loom后, 在<code>Scanpy</code>中无法读入</p>
+            <p>使用安装包安装github包</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
 <p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
-<p>解决方案：</p>
-<p>将保存loom的kernel shutdown，解除文件占用</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
+<p>解决：</p>
+<p>删掉src文件夹中的*.o和*.so</p>
+<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
 
           
         
@@ -1125,7 +1417,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1144,7 +1436,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/" itemprop="url">Debug R  Package fontconfig was not found in the pkg-config search path</a></h1>
         
 
         <div class="post-meta">
@@ -1218,10 +1510,10 @@
       
         
           
-            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
-<p>暂时解决：</p>
-<p><code>nbin</code> 调低</p>
-<p>？？？？nbin的意义是什么</p>
+            <h2 id="找到pkgconfig位置"><a href="#找到pkgconfig位置" class="headerlink" title="找到pkgconfig位置"></a>找到pkgconfig位置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-file search fontconfig.pc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> libfontconfig1-dev: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc</span><br></pre></td></tr></table></figure>
+<p>​      </p>
+<h2 id="添加到PKG路径中"><a href="#添加到PKG路径中" class="headerlink" title="添加到PKG路径中"></a>添加到PKG路径中</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 加上$PKG_CONFIG_PATH后续添加新的PKG路径时不会被覆盖</span><br></pre></td></tr></table></figure>
+<h2 id="检查是否添加成功"><a href="#检查是否添加成功" class="headerlink" title="检查是否添加成功"></a>检查是否添加成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ls $PKG_CONFIG_PATH | grep fontconfig.pc</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1365,298 +1657,6 @@
           
             <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (from, to, filename, chunk.dims = <span class="string">"auto"</span>, chunk.size = <span class="number">1000</span>, </span><br><span class="line">    overwrite = <span class="literal">FALSE</span>, display.progress = <span class="literal">TRUE</span>, anndata.raw = <span class="string">"raw.data"</span>, </span><br><span class="line">    anndata.X = <span class="string">"data"</span>, <span class="keyword">...</span>) </span><br><span class="line">&#123;</span><br><span class="line">    object.to &lt;- <span class="keyword">switch</span>(EXPR = to, loom = &#123;</span><br><span class="line">        <span class="keyword">stop</span>(<span class="string">"Converting to and from loom files is currently unavailable; we are working on restoring this functionality"</span>)</span><br><span class="line">    &#125;, anndata = &#123;</span><br><span class="line">        .Defunct(new = <span class="string">"WriteH5AD"</span>, msg = <span class="string">"Use WriteH5AD to store Seurat objects as h5ad"</span>)</span><br><span class="line">    &#125;, <span class="keyword">stop</span>(paste0(<span class="string">"Cannot convert Seurat objects to class '"</span>, </span><br><span class="line">        to, <span class="string">"'"</span>)))</span><br><span class="line">    <span class="keyword">return</span>(object.to)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/04/03/5ca49d43bf3eb.jpg" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Clusterprofile/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Clusterprofile/" itemprop="url">Clusterprofile</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(clusterProfiler)</span><br><span class="line">data(gcSample)</span><br><span class="line">x &lt;- compareCluster(gcSample, <span class="string">'enrichDO'</span>)</span><br><span class="line">p &lt;- dotplot(x, showCategory=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
-<p>gcSample: 是差异基因的list</p>
-<p><img src="https://i.loli.net/2019/09/24/BrdwUJVtPhWzei5.jpg" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用安装包安装github包</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
-<p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
-<p>解决：</p>
-<p>删掉src文件夹中的*.o和*.so</p>
-<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
 
           
         

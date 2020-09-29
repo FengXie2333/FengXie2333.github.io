@@ -251,374 +251,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/基本数据管理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/基本数据管理/" itemprop="url">基本数据管理</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="创建新变量"><a href="#创建新变量" class="headerlink" title="创建新变量"></a>创建新变量</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mydata &lt;- transform(mydata,</span><br><span class="line">			       mean = (x1 + x2)/<span class="number">2</span></span><br><span class="line">				   sum = x1 + x2)</span><br></pre></td></tr></table></figure>
-<h2 id="变量的重编程"><a href="#变量的重编程" class="headerlink" title="变量的重编程"></a>变量的重编程</h2><p><strong><em>within与with相同，但是它允许对数据框进行修改</em></strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable[condition] &lt;- expression <span class="comment">###在条件为真时，进行赋值</span></span><br></pre></td></tr></table></figure>
-<h2 id="变量的重命名"><a href="#变量的重命名" class="headerlink" title="变量的重命名"></a>变量的重命名</h2><p>1   </p>
-<p>使用fix()   调出一个交互式编辑器</p>
-<p>2  </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name(数据框名)[需要修改的名字位置] &lt;- <span class="string">"newname"</span></span><br></pre></td></tr></table></figure>
-<p>3</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(plyr)</span><br><span class="line">leadership &lt;- rename(leadership,c(oldname=<span class="string">"newname"</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="缺失值"><a href="#缺失值" class="headerlink" title="缺失值"></a>缺失值</h2><p>NA</p>
-<p>使用函数<strong><em>is.na()</em></strong>来判断是否存在缺失值</p>
-<p>缺失值不能拿来比较</p>
-<p>R不把不可能出现的数值或者无限的数设置为缺失值。正无穷，负无穷表示方法：Inf或者-Inf。 不可能的值，如sin(Inf),标记为NaN。判断方法：is.infinite() 或者is.nan()</p>
-<h3 id="在分析中排除缺失值"><a href="#在分析中排除缺失值" class="headerlink" title="在分析中排除缺失值"></a>在分析中排除缺失值</h3><p>多数的数值函数，可以用<strong><em>na.rm = TRUE</em></strong>来移除缺失值</p>
-<p><strong><em>na.omit()</em></strong>移除含有缺失值的行</p>
-<h2 id="日期值"><a href="#日期值" class="headerlink" title="日期值"></a>日期值</h2><p>日期值在R中，先以字符串的形式输入，然后转化为数值</p>
-<p>执行这一操作的是：<strong><em>as.Date(x, “Input_format”)</em></strong></p>
-<p><strong><em>Sys.Date()</em></strong> 返回当天的时间</p>
-<p><strong><em>date()</em></strong> 返回当天的日期和时间</p>
-<p><strong><em>format(x, format = “Output_format”) :输出指定格式的日期值</em></strong></p>
-<p>日期值可以进行计算</p>
-<p>可使用<strong><em>difftime()</em></strong> 计算日期间隔</p>
-<p>可以用<strong><em>as.character()</em></strong>将日期值转化为字符</p>
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><strong><em>is.datatype()</em></strong>  这样的函数，将判断参数的类型</p>
-<p><strong><em>as.datatype()</em></strong> 将参数转换为对应的类型</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p><strong><em>order()</em></strong> 进行排序</p>
-<p>默认顺序是升序</p>
-<p>需要降序时，就在排序变量前加负号</p>
-<h2 id="数据集的合并"><a href="#数据集的合并" class="headerlink" title="数据集的合并"></a>数据集的合并</h2><h3 id="向数据集添加列"><a href="#向数据集添加列" class="headerlink" title="向数据集添加列"></a>向数据集添加列</h3><p>横向合并两个数据框，用函数<strong><em>merge()</em></strong>(通过内部联结)</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- merge(dataframeA,  dataframeB, by=<span class="string">"ID"</span>)</span><br></pre></td></tr></table></figure>
-<p>如果不指定公共索引，可用cbind合并</p>
-<h3 id="向数据集添加行"><a href="#向数据集添加行" class="headerlink" title="向数据集添加行"></a>向数据集添加行</h3><p>rbind</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- rbind(dataframeA,  dataframeB)</span><br></pre></td></tr></table></figure>
-<p>在合并前，要先保证两者有相同的变量</p>
-<h2 id="数据集提取子集"><a href="#数据集提取子集" class="headerlink" title="数据集提取子集"></a>数据集提取子集</h2><h3 id="选入-保留-变量消息称"><a href="#选入-保留-变量消息称" class="headerlink" title="选入(保留)变量消息称"></a>选入(保留)变量消息称</h3><h3 id="剔除（丢弃）变量"><a href="#剔除（丢弃）变量" class="headerlink" title="剔除（丢弃）变量"></a>剔除（丢弃）变量</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myvars &lt;- names(leadership) %<span class="keyword">in</span>% c(q3，q4)</span><br><span class="line">newdata &lt;-  leadership[!myvars]</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership &lt;- leadership[c(-<span class="number">8</span>,-<span class="number">9</span>)] <span class="comment">##在要去除的项前面加负号</span></span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership$q3 &lt;- leadership$q4 &lt;- <span class="literal">NULL</span></span><br></pre></td></tr></table></figure>
-<h3 id="选入观测"><a href="#选入观测" class="headerlink" title="选入观测"></a>选入观测</h3><p>使用行下标</p>
-<p>或者用条件判断的方式</p>
-<h3 id="subset"><a href="#subset" class="headerlink" title="subset"></a>subset</h3><p>选择变量和观测最简单的方法</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- subset(leadership,age &gt;=<span class="number">35</span>| age &lt;<span class="number">24</span>, </span><br><span class="line">				selectc =c(q1:q4))</span><br></pre></td></tr></table></figure>
-<p>subset   select</p>
-<h3 id="随机抽样"><a href="#随机抽样" class="headerlink" title="随机抽样"></a>随机抽样</h3><p>sample()</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysample &lt;- leadership[sample(<span class="number">1</span>:nrow(leadership), <span class="number">3</span>, replace = False)]</span><br></pre></td></tr></table></figure>
-<p>1:nrow(leadership)  :选择范围</p>
-<p>3  ：选取3个元素</p>
-<p>replace = False   无放回的</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/创建数据集/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/创建数据集/" itemprop="url">创建数据集</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>由数据组成的矩形数组，行表示观测，列表示变量。</p>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>对象：可以赋值给变量的任何事物</p>
-<p>对象都具有某种模式以及某个类</p>
-<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量 ：存储数值，字符，逻辑数据的数组</p>
-<p>标量是只有一个元素的向量</p>
-<p>一个向量中只能有一个数据类型</p>
-<p>用函数<strong><em>c（）</em></strong>创建向量</p>
-<p>用[]里加数字，来表示字符的位置</p>
-<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是二维数组，数组中的每个元素具有相同的模式</p>
-<p><strong><em>byrow</em></strong>表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默认是按列填充。</p>
-<p>用函数matrix（）来创建矩阵。</p>
-<p>矩阵下标：</p>
-<p>X[2,] 表示第二行</p>
-<p>X[,2] 表示第二列</p>
-<p>矩阵中也只能有一种数据类型</p>
-<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>与矩阵类似，但是维度可以大于2</p>
-<p>数组通过<strong><em>array（）</em></strong>创建</p>
-<p>数组也只能有一种数据类型</p>
-<h2 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h2><p>R 中最常使用的数据结构</p>
-<p>数据框用函数<strong><em>data.frame()</em></strong>构建</p>
-<p>可以有多种数据类型。但是每一列只能有一种。</p>
-<h4 id="attach-detach-和with"><a href="#attach-detach-和with" class="headerlink" title="attach detach 和with"></a>attach detach 和with</h4><p>attach() :将数据框添加到R的搜索路径中   </p>
-<p>detach() ：将数据框从搜索路径中移除</p>
-<p>attach 和 detach 的局限：如果有变量重名。先出现的变量将会取得优先权。 ====&gt;报错：某个对象已被屏蔽（masked）</p>
-<p>with() ：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">with（mtcars,&#123;</span><br><span class="line">    print (summary(mpg))</span><br><span class="line">    plot (mpg,disp)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>with：花括号内的赋值，只在内部起效</p>
-<p>想要花括号内赋值在外面也能用，将赋值符号 &lt;- 改成 &lt;&lt;-</p>
-<h4 id="实例标识符"><a href="#实例标识符" class="headerlink" title="实例标识符"></a>实例标识符</h4><p>可以用row.names来指定实例标识符</p>
-<p>比如病人的id</p>
-<h2 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h2><p>变量：名义型   有序型  连续型</p>
-<p>名义型：没有顺序之分的类别变量</p>
-<p><strong><em>名义型和有序型统称为因子（factor）</em></strong></p>
-<p> 函数factor()以整数向量的形式存储类别值</p>
-<p><strong><em>要表示有序型变量，需要为函数factor()指定参数order=TRUE</em></strong></p>
-<p>对于字符型变量，factor默认的排序方式是按照字母顺序排列。可以指定levels选项来覆盖默认的排序。</p>
-<p>数值型变量，<strong><em>用levels和labels来编码因子</em></strong></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/在Jupyter中安装R内核/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -714,6 +346,148 @@
           
             <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">'IRkernel'</span>)</span><br><span class="line">IRkernel::installspec()  <span class="comment"># to register the kernel in the current R installation</span></span><br></pre></td></tr></table></figure>
 <p>重启jupyter</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/利用安装包安装R包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/利用安装包安装R包/" itemprop="url">利用安装包安装R包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"/home/jiang/Downloads/GEOquery_2.54.1.tar.gz"</span>,repos=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -919,7 +693,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/利用安装包安装R包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/图形初阶/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -938,7 +712,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/利用安装包安装R包/" itemprop="url">利用安装包安装R包</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/图形初阶/" itemprop="url">图形初阶</a></h1>
         
 
         <div class="post-meta">
@@ -1012,7 +786,195 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"/home/jiang/Downloads/GEOquery_2.54.1.tar.gz"</span>,repos=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par(no.readonly=<span class="literal">TRUE</span>) <span class="comment"># make a copy of current settings</span></span><br></pre></td></tr></table></figure>
+<p><code>abline</code> 添加参考线</p>
+<p><code>text</code>  <code>mtext</code>  添加文本标注</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">legend(<span class="string">"topleft"</span>, inset=<span class="number">.05</span>, title=<span class="string">"Drug Type"</span>, c(<span class="string">"A"</span>,<span class="string">"B"</span>),</span><br><span class="line">       lty=c(<span class="number">1</span>, <span class="number">2</span>), pch=c(<span class="number">15</span>, <span class="number">17</span>), col=c(<span class="string">"red"</span>, <span class="string">"blue"</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 按行填充2行2列</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">attach</span>(mtcars)</span><br><span class="line">layout(matrix(c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>), <span class="number">2</span>, <span class="number">2</span>, byrow = <span class="literal">TRUE</span>), widths=c(<span class="number">3</span>, <span class="number">1</span>), heights=c(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">hist(wt)</span><br><span class="line">hist(mpg)</span><br><span class="line">hist(disp)</span><br><span class="line"><span class="keyword">detach</span>(mtcars)  <span class="comment">###第一个图占一行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main,sub,col.main,col.sub)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>)  <span class="comment">###同时输出点和线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(lty=<span class="number">2</span>, pch=<span class="number">17</span>)            <span class="comment"># change line type and symbol</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adding text, lines, and symbols  添加文本，自定义坐标轴</span></span><br><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>,  </span><br><span class="line">     col=<span class="string">"red"</span>, lty=<span class="number">2</span>, pch=<span class="number">2</span>, lwd=<span class="number">2</span>,</span><br><span class="line">     main=<span class="string">"Clinical Trials for Drug A"</span>, </span><br><span class="line">     sub=<span class="string">"This is hypothetical data"</span>, </span><br><span class="line">     xlab=<span class="string">"Dosage"</span>, ylab=<span class="string">"Drug Response"</span>,</span><br><span class="line">     xlim=c(<span class="number">0</span>, <span class="number">60</span>), ylim=c(<span class="number">0</span>, <span class="number">70</span>))</span><br></pre></td></tr></table></figure>
+<p><code>ann=FALSE</code>禁用默认标题 或者用 <code>main=&quot;&quot;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/创建数据集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/创建数据集/" itemprop="url">创建数据集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>由数据组成的矩形数组，行表示观测，列表示变量。</p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>对象：可以赋值给变量的任何事物</p>
+<p>对象都具有某种模式以及某个类</p>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量 ：存储数值，字符，逻辑数据的数组</p>
+<p>标量是只有一个元素的向量</p>
+<p>一个向量中只能有一个数据类型</p>
+<p>用函数<strong><em>c（）</em></strong>创建向量</p>
+<p>用[]里加数字，来表示字符的位置</p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是二维数组，数组中的每个元素具有相同的模式</p>
+<p><strong><em>byrow</em></strong>表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默认是按列填充。</p>
+<p>用函数matrix（）来创建矩阵。</p>
+<p>矩阵下标：</p>
+<p>X[2,] 表示第二行</p>
+<p>X[,2] 表示第二列</p>
+<p>矩阵中也只能有一种数据类型</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>与矩阵类似，但是维度可以大于2</p>
+<p>数组通过<strong><em>array（）</em></strong>创建</p>
+<p>数组也只能有一种数据类型</p>
+<h2 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h2><p>R 中最常使用的数据结构</p>
+<p>数据框用函数<strong><em>data.frame()</em></strong>构建</p>
+<p>可以有多种数据类型。但是每一列只能有一种。</p>
+<h4 id="attach-detach-和with"><a href="#attach-detach-和with" class="headerlink" title="attach detach 和with"></a>attach detach 和with</h4><p>attach() :将数据框添加到R的搜索路径中   </p>
+<p>detach() ：将数据框从搜索路径中移除</p>
+<p>attach 和 detach 的局限：如果有变量重名。先出现的变量将会取得优先权。 ====&gt;报错：某个对象已被屏蔽（masked）</p>
+<p>with() ：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">with（mtcars,&#123;</span><br><span class="line">    print (summary(mpg))</span><br><span class="line">    plot (mpg,disp)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>with：花括号内的赋值，只在内部起效</p>
+<p>想要花括号内赋值在外面也能用，将赋值符号 &lt;- 改成 &lt;&lt;-</p>
+<h4 id="实例标识符"><a href="#实例标识符" class="headerlink" title="实例标识符"></a>实例标识符</h4><p>可以用row.names来指定实例标识符</p>
+<p>比如病人的id</p>
+<h2 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h2><p>变量：名义型   有序型  连续型</p>
+<p>名义型：没有顺序之分的类别变量</p>
+<p><strong><em>名义型和有序型统称为因子（factor）</em></strong></p>
+<p> 函数factor()以整数向量的形式存储类别值</p>
+<p><strong><em>要表示有序型变量，需要为函数factor()指定参数order=TRUE</em></strong></p>
+<p>对于字符型变量，factor默认的排序方式是按照字母顺序排列。可以指定levels选项来覆盖默认的排序。</p>
+<p>数值型变量，<strong><em>用levels和labels来编码因子</em></strong></p>
 
           
         
@@ -1276,7 +1238,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/r-按每列的平均数删除重复行/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1295,7 +1257,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/r-按每列的平均数删除重复行/" itemprop="url">r-按每列的平均数删除重复行</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
         
 
         <div class="post-meta">
@@ -1369,7 +1331,7 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">suppressMessages(<span class="keyword">library</span>(dplyr))</span><br><span class="line"></span><br><span class="line">myMatrix2 &lt;- myMatrix %&gt;%</span><br><span class="line">    group_by(Gene.Symbol) %&gt;%</span><br><span class="line">    summarise_all(mean)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1560,6 +1522,152 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/ggplot2修改网格线和背景色/" itemprop="url">ggplot2修改网格线和背景色</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(fraction.dis, aes(fraction)) + </span><br><span class="line">   geom_histogram(position = <span class="string">"identity"</span>, fill = <span class="string">"#0000FF"</span>) + theme_bw() +</span><br><span class="line">    theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(), </span><br><span class="line">          axis.line = element_line(colour = <span class="string">"black"</span>)) +</span><br><span class="line">geom_vline(aes(xintercept=<span class="number">0.035</span>), colour=<span class="string">"#BB0000"</span>, linetype=<span class="string">"dashed"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>theme_bw()</code> : 去掉背景</p>
+<p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
+<p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
+<p><code>geom_vline</code> : 添加线条</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/try/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1658,148 +1766,6 @@
 <p>原文链接：<a href="https://blog.csdn.net/YJJ18636810884/article/details/83176190" target="_blank" rel="noopener">https://blog.csdn.net/YJJ18636810884/article/details/83176190</a></p>
 <p>&nbsp;</p>
 <h2 id="使用tryCatch进行简单的错误处理"><a href="#使用tryCatch进行简单的错误处理" class="headerlink" title="使用tryCatch进行简单的错误处理"></a>使用tryCatch进行简单的错误处理</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="keyword">tryCatch</span>(&#123;</span><br><span class="line">    expr</span><br><span class="line">&#125;, <span class="keyword">warning</span> = <span class="keyword">function</span>(w) &#123;</span><br><span class="line">    <span class="keyword">warning</span>-handler-code</span><br><span class="line">&#125;, error = <span class="keyword">function</span>(e) &#123;</span><br><span class="line">    error-handler-code</span><br><span class="line">&#125;, finally = &#123;</span><br><span class="line">    cleanup-code</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
 
           
         

@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Clusterprofile/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/" itemprop="url">Debug R  Package fontconfig was not found in the pkg-config search path</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Clusterprofile/" itemprop="url">Clusterprofile</a></h1>
         
 
         <div class="post-meta">
@@ -344,10 +344,9 @@
       
         
           
-            <h2 id="找到pkgconfig位置"><a href="#找到pkgconfig位置" class="headerlink" title="找到pkgconfig位置"></a>找到pkgconfig位置</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apt-file search fontconfig.pc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> libfontconfig1-dev: /usr/lib/x86_64-linux-gnu/pkgconfig/fontconfig.pc</span><br></pre></td></tr></table></figure>
-<p>​      </p>
-<h2 id="添加到PKG路径中"><a href="#添加到PKG路径中" class="headerlink" title="添加到PKG路径中"></a>添加到PKG路径中</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 加上$PKG_CONFIG_PATH后续添加新的PKG路径时不会被覆盖</span><br></pre></td></tr></table></figure>
-<h2 id="检查是否添加成功"><a href="#检查是否添加成功" class="headerlink" title="检查是否添加成功"></a>检查是否添加成功</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ls $PKG_CONFIG_PATH | grep fontconfig.pc</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(clusterProfiler)</span><br><span class="line">data(gcSample)</span><br><span class="line">x &lt;- compareCluster(gcSample, <span class="string">'enrichDO'</span>)</span><br><span class="line">p &lt;- dotplot(x, showCategory=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p>gcSample: 是差异基因的list</p>
+<p><img src="https://i.loli.net/2019/09/24/BrdwUJVtPhWzei5.jpg" alt></p>
 
           
         
