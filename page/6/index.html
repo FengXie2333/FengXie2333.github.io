@@ -547,7 +547,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/气泡图/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/高级数据管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -566,7 +566,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/气泡图/" itemprop="url">气泡图</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/高级数据管理/" itemprop="url">高级数据管理</a></h1>
         
 
         <div class="post-meta">
@@ -640,158 +640,51 @@
       
         
           
-            <h3 id="create-a-simulated-grouping-variable"><a href="#create-a-simulated-grouping-variable" class="headerlink" title="create a simulated grouping variable"></a>create a simulated grouping variable</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbmc@meta.data$orig.ident &lt;- c(rep(<span class="string">"TAO"</span>, <span class="number">1044</span>), rep(<span class="string">"NC"</span>, <span class="number">5801</span>))</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="translate-cluster-numbers-to-cell-names"><a href="#translate-cluster-numbers-to-cell-names" class="headerlink" title="translate cluster numbers to cell names"></a>translate cluster numbers to cell names</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">current.cluster.ids &lt;- c(c(<span class="number">0</span>,<span class="number">13</span>),c(<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>),c(<span class="number">2</span>),c(<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">11</span>),c(<span class="number">9</span>,<span class="number">10</span>),c(<span class="number">12</span>),c(<span class="number">5</span>))</span><br><span class="line">new.cluster.ids &lt;-c(rep(<span class="string">"adipocyte"</span>,<span class="number">2</span>),rep(<span class="string">"fibroblast"</span>,<span class="number">3</span>),<span class="string">"myocyte"</span>,rep(<span class="string">"APC"</span>,<span class="number">4</span>),rep(<span class="string">"lymphocytes"</span>,<span class="number">2</span>),<span class="string">"neutrophil"</span>,<span class="string">"epithelial"</span>)</span><br><span class="line">pbmc@ident &lt;- plyr::mapvalues(x = pbmc@ident, from = current.cluster.ids, to = new.cluster.ids)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="remove-clusters-that-are-not-of-interest"><a href="#remove-clusters-that-are-not-of-interest" class="headerlink" title="remove clusters that are not of interest"></a>remove clusters that are not of interest</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbmc_rm &lt;- SubsetData(pbmc, ident.remove = c(<span class="string">"myocyte"</span>,<span class="string">"neutrophil"</span>))</span><br></pre></td></tr></table></figure>
-<h6 id="Seurat对象，不能直接用subset取子集"><a href="#Seurat对象，不能直接用subset取子集" class="headerlink" title="Seurat对象，不能直接用subset取子集"></a>Seurat对象，不能直接用subset取子集</h6><p>&nbsp;</p>
-<h3 id="SplitDotPlotGG"><a href="#SplitDotPlotGG" class="headerlink" title="SplitDotPlotGG"></a>SplitDotPlotGG</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">markers.to.plot &lt;- c(<span class="string">"CD3D"</span>,<span class="string">"CD19"</span>,<span class="string">"CD27"</span>,<span class="string">"TBX21"</span>,<span class="string">"STAT1"</span>,<span class="string">"GATA3"</span>,<span class="string">"STAT6"</span>,<span class="string">"RORA"</span>,<span class="string">"STAT3"</span>,<span class="string">"AHR"</span>,<span class="string">"IL2RA"</span>,<span class="string">"BCL6"</span>,<span class="string">"SPI1"</span>,<span class="string">"CD14"</span>,<span class="string">"CD68"</span>,<span class="string">"CD1C"</span>,<span class="string">"THBD"</span>,<span class="string">"NCAM1"</span>,<span class="string">"FCGR3A"</span>,<span class="string">"PECAM1"</span>,<span class="string">"MCAM"</span>,<span class="string">"CD34"</span>,<span class="string">"COL1A1"</span>)</span><br><span class="line"></span><br><span class="line">sdp &lt;- SplitDotPlotGG(object=pbmc_rm, grouping.var = <span class="string">"orig.ident"</span>, genes.plot = rev(markers.to.plot), cols.use = c(<span class="string">"blue"</span>, <span class="string">"red"</span>), x.lab.rot = <span class="literal">T</span>, plot.legend = <span class="literal">T</span>, dot.scale = <span class="number">8</span>, do.return = <span class="literal">T</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/22/5bcd81f459509.png" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/pandas drop()不识别columns关键字/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/python学习/pandas drop()不识别columns关键字/" itemprop="url">pandas drop()不识别columns关键字</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
-<p>解决：</p>
-<p>升级pandas</p>
+            <h2 id="字符处理函数"><a href="#字符处理函数" class="headerlink" title="字符处理函数"></a>字符处理函数</h2><p>nchar() 计算字符数量</p>
+<p>substr(x, start, stop)  提取或替换字符串中的一个子串</p>
+<p>grep() 搜素某种模式</p>
+<p>sub(pattern, replacement,x,ignore.case=FALSE,fixed=FALSE)</p>
+<p>搜索pattern，并用replacement替换</p>
+<p>strsplit(x, split,fixed=FALISE)  在split分隔符处分割字符串</p>
+<p>paste(x,sep= “”) 连接字符，用分隔符sep</p>
+<p>toupper   转大写</p>
+<p>tolower 小写转化</p>
+<h2 id="数值处理函数"><a href="#数值处理函数" class="headerlink" title="数值处理函数"></a>数值处理函数</h2><p>1、数学函数</p>
+<p>2、统计函数</p>
+<p>mean median sd </p>
+<p>var()–方差</p>
+<p>mad–绝对中位数</p>
+<p>quantile–求分位数</p>
+<p>range–求值域</p>
+<p>sum</p>
+<p>diff</p>
+<p>min max scale()—-标准化</p>
+<h2 id="数据的标准化"><a href="#数据的标准化" class="headerlink" title="数据的标准化"></a>数据的标准化</h2><p><strong><em>scale()</em></strong> 对指定列进行均值为0，标准差为1的标准化</p>
+<p>对每一列进行标准化</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- scale(mydata)*SD + M</span><br></pre></td></tr></table></figure>
+<p>对指定列进行标准化</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- transform(mydata, myvar = scale(myvar)*SD + M)</span><br></pre></td></tr></table></figure>
+<h2 id="概率函数"><a href="#概率函数" class="headerlink" title="概率函数"></a>概率函数</h2><p><strong><em>set.seed()</em></strong>  显式指定种子，让结果再现</p>
+<p><strong><em>runif()</em></strong> 生成从0-1区间上服从均匀分布的伪随机数</p>
+<h2 id="其他实用函数"><a href="#其他实用函数" class="headerlink" title="其他实用函数"></a>其他实用函数</h2><p>length()  长度</p>
+<p>seq(from,to,by) 生成序列</p>
+<p>rep(x,n)  重复</p>
+<p>cut() 将连续型数值分割为有n个水平的因子</p>
+<p>pretty()  </p>
+<p>cat(…,file,append = FALSE) 输出内容到文件file</p>
+<p>举例：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">options(digits=<span class="number">2</span>)  <span class="comment">###限定小数点的显示位数</span></span><br><span class="line">Student &lt;- c(<span class="string">"John Davis"</span>, <span class="string">"Angela Williams"</span>, <span class="string">"Bullwinkle Moose"</span>,</span><br><span class="line">             <span class="string">"David Jones"</span>, <span class="string">"Janice Markhammer"</span>, <span class="string">"Cheryl Cushing"</span>,</span><br><span class="line">             <span class="string">"Reuven Ytzrhak"</span>, <span class="string">"Greg Knox"</span>, <span class="string">"Joel England"</span>,</span><br><span class="line">             <span class="string">"Mary Rayburn"</span>)</span><br><span class="line">Math &lt;- c(<span class="number">502</span>, <span class="number">600</span>, <span class="number">412</span>, <span class="number">358</span>, <span class="number">495</span>, <span class="number">512</span>, <span class="number">410</span>, <span class="number">625</span>, <span class="number">573</span>, <span class="number">522</span>)</span><br><span class="line">Science &lt;- c(<span class="number">95</span>, <span class="number">99</span>, <span class="number">80</span>, <span class="number">82</span>, <span class="number">75</span>, <span class="number">85</span>, <span class="number">80</span>, <span class="number">95</span>, <span class="number">89</span>, <span class="number">86</span>)</span><br><span class="line">English &lt;- c(<span class="number">25</span>, <span class="number">22</span>, <span class="number">18</span>, <span class="number">15</span>, <span class="number">20</span>, <span class="number">28</span>, <span class="number">15</span>, <span class="number">30</span>, <span class="number">27</span>, <span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">roster &lt;- data.frame(Student, Math, Science, English,</span><br><span class="line">                     stringsAsFactors=<span class="literal">FALSE</span>)</span><br><span class="line"></span><br><span class="line">z &lt;- scale(roster[,<span class="number">2</span>:<span class="number">4</span>])</span><br><span class="line">score &lt;- apply(z, <span class="number">1</span>, mean)</span><br><span class="line">roster &lt;- cbind(roster, score)</span><br><span class="line"></span><br><span class="line">y &lt;- quantile(score, c(<span class="number">.8</span>,<span class="number">.6</span>,<span class="number">.4</span>,<span class="number">.2</span>))</span><br><span class="line">roster$grade[score &gt;= y[<span class="number">1</span>]] &lt;- <span class="string">"A"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">1</span>] &amp; score &gt;= y[<span class="number">2</span>]] &lt;- <span class="string">"B"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">2</span>] &amp; score &gt;= y[<span class="number">3</span>]] &lt;- <span class="string">"C"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">3</span>] &amp; score &gt;= y[<span class="number">4</span>]] &lt;- <span class="string">"D"</span></span><br><span class="line">roster$grade[score &lt; y[<span class="number">4</span>]] &lt;- <span class="string">"F"</span></span><br><span class="line"></span><br><span class="line">name &lt;- strsplit((roster$Student), <span class="string">" "</span>)</span><br><span class="line">Lastname &lt;- sapply(name, <span class="string">"["</span>, <span class="number">2</span>)  <span class="comment">#"[" 提取某个对象的一部分</span></span><br><span class="line">Firstname &lt;- sapply(name, <span class="string">"["</span>, <span class="number">1</span>)</span><br><span class="line">roster &lt;- cbind(Firstname,Lastname, roster[,-<span class="number">1</span>])</span><br><span class="line">roster &lt;- roster[order(Lastname,Firstname),]</span><br><span class="line"></span><br><span class="line">roster</span><br></pre></td></tr></table></figure>
+<p>sapply()   提取列表中元素</p>
+<p>apply的用法</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply(data, MARGIN, FUN) <span class="comment">##MARGIN=1 表示行，=2表示列</span></span><br></pre></td></tr></table></figure>
+<h2 id="控制流"><a href="#控制流" class="headerlink" title="控制流"></a>控制流</h2><p>while </p>
+<p>if</p>
+<p>ifelse (cond,statement1,statement2)</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">feelings &lt;- c(<span class="string">"sad"</span>, <span class="string">"afraid"</span>)</span><br><span class="line"><span class="keyword">for</span> (i <span class="keyword">in</span> feelings)</span><br><span class="line">  print(</span><br><span class="line">    <span class="keyword">switch</span>(i,</span><br><span class="line">           happy  = <span class="string">"I am glad you are happy"</span>,</span><br><span class="line">           afraid = <span class="string">"There is nothing to fear"</span>,</span><br><span class="line">           sad    = <span class="string">"Cheer up"</span>,</span><br><span class="line">           angry  = <span class="string">"Calm down now"</span></span><br><span class="line">    )</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+<h2 id="整合与重构"><a href="#整合与重构" class="headerlink" title="整合与重构"></a>整合与重构</h2><h3 id="转置"><a href="#转置" class="headerlink" title="转置"></a>转置</h3><p>t()</p>
+<h2 id="整合"><a href="#整合" class="headerlink" title="整合"></a>整合</h2><p>aggregate（归类）</p>
+<h2 id="reshape2包"><a href="#reshape2包" class="headerlink" title="reshape2包"></a>reshape2包</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Using the reshape2 package</span></span><br><span class="line"><span class="keyword">library</span>(reshape2)</span><br><span class="line"></span><br><span class="line"><span class="comment"># input data</span></span><br><span class="line">mydata &lt;- read.table(header=<span class="literal">TRUE</span>, sep=<span class="string">" "</span>, text=<span class="string">"</span></span><br><span class="line"><span class="string">ID Time X1 X2</span></span><br><span class="line"><span class="string">1 1 5 6</span></span><br><span class="line"><span class="string">1 2 3 5</span></span><br><span class="line"><span class="string">2 1 6 1</span></span><br><span class="line"><span class="string">2 2 2 4</span></span><br><span class="line"><span class="string">"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># melt data</span></span><br><span class="line">md &lt;- melt(mydata, id=c(<span class="string">"ID"</span>, <span class="string">"Time"</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># reshaping with aggregation</span></span><br><span class="line">dcast(md, ID~variable, mean)</span><br><span class="line">dcast(md, Time~variable, mean)</span><br><span class="line">dcast(md, ID~Time, mean)</span><br><span class="line"></span><br><span class="line"><span class="comment"># reshaping without aggregation</span></span><br><span class="line">dcast(md, ID+Time~variable)</span><br><span class="line">dcast(md, ID+variable~Time)</span><br><span class="line">dcast(md, ID~variable+Time)</span><br></pre></td></tr></table></figure>
+<p><code>melt</code> 和 <code>dcast</code></p>
 
           
         
@@ -1026,6 +919,303 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/pandas drop()不识别columns关键字/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/python学习/pandas drop()不识别columns关键字/" itemprop="url">pandas drop()不识别columns关键字</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
+<p>解决：</p>
+<p>升级pandas</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/Scanpy教程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/python学习/Scanpy教程/" itemprop="url">Scanpy教程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata</span><br></pre></td></tr></table></figure>
+<p>借鉴了知名R包scater的一个函数：<code>plotHighestExprs</code>，绘图用的是python里面的<code>seaborn</code>和<code>matplotlib</code>库。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">current_palette = seaborn.color_palette(<span class="string">"dark"</span>)</span><br><span class="line">seaborn.palplot(current_palette)</span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h3 id="subset-clust"><a href="#subset-clust" class="headerlink" title="subset clust"></a>subset clust</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro = adata[adata.obs[<span class="string">'leiden'</span>].isin([<span class="string">'2'</span>, <span class="string">'33'</span>, <span class="string">'9'</span>, <span class="string">'3'</span>, <span class="string">'20'</span>, <span class="string">'17'</span>, <span class="string">'0'</span>, <span class="string">'28'</span>])]</span><br></pre></td></tr></table></figure>
+<p>​        </p>
+<h3 id="rename-subclusters"><a href="#rename-subclusters" class="headerlink" title="rename subclusters"></a>rename subclusters</h3> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">old_to_new = &#123;<span class="number">3</span> :<span class="string">'Fibro1'</span>,</span><br><span class="line">    <span class="number">11</span>: <span class="string">'Fibro2'</span>, <span class="number">20</span>:<span class="string">'Fibro2'</span>,</span><br><span class="line">    <span class="number">12</span>:<span class="string">'Fibro3'</span>, <span class="number">17</span>:<span class="string">'Fibro4'</span>,<span class="number">26</span>:<span class="string">'Fibro4'</span>,</span><br><span class="line">    <span class="number">24</span> : <span class="string">'Fibro3'</span>&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'int'</span>)  </span><br><span class="line"><span class="comment">## 将leiden的cluster号类型转化为int</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'new_clusters'</span>] = (</span><br><span class="line">    adata_fibro.obs[<span class="string">'leiden'</span>]</span><br><span class="line">    .map(old_to_new)</span><br><span class="line">    .astype(<span class="string">'category'</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'category'</span>) </span><br><span class="line"><span class="comment">## 改回来</span></span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<h3 id="delet-MT-genes"><a href="#delet-MT-genes" class="headerlink" title="delet ^MT- genes"></a>delet ^MT- genes</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_mt</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> bool(re.match(<span class="string">'MT-'</span>, n))</span><br><span class="line"></span><br><span class="line">Fibro_top20_selected = [x <span class="keyword">for</span> x <span class="keyword">in</span> Fibro_top20_list <span class="keyword">if</span> <span class="keyword">not</span> bool(re.match(<span class="string">'MT-'</span>, x, flags=<span class="number">0</span>))]</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/基本统计分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1183,6 +1373,148 @@
 <p><strong><em>在假设合理时，t检验更能发现差异。非参数检验在参数非常不合理时适用</em></strong></p>
 <h3 id="多于两组"><a href="#多于两组" class="headerlink" title="多于两组"></a>多于两组</h3><p>用Kruskal.test 和friedman.test(两组不独立时，用这个更适用)</p>
 <p>多组之间成对比较，可以用函数wmc() &lt;========需要网上下载脚本，source(“网址”)</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/利用安装包安装R包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/利用安装包安装R包/" itemprop="url">利用安装包安装R包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"/home/jiang/Downloads/GEOquery_2.54.1.tar.gz"</span>,repos=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1505,311 +1837,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/Scanpy教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/python学习/Scanpy教程/" itemprop="url">Scanpy教程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata</span><br></pre></td></tr></table></figure>
-<p>借鉴了知名R包scater的一个函数：<code>plotHighestExprs</code>，绘图用的是python里面的<code>seaborn</code>和<code>matplotlib</code>库。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">current_palette = seaborn.color_palette(<span class="string">"dark"</span>)</span><br><span class="line">seaborn.palplot(current_palette)</span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h3 id="subset-clust"><a href="#subset-clust" class="headerlink" title="subset clust"></a>subset clust</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro = adata[adata.obs[<span class="string">'leiden'</span>].isin([<span class="string">'2'</span>, <span class="string">'33'</span>, <span class="string">'9'</span>, <span class="string">'3'</span>, <span class="string">'20'</span>, <span class="string">'17'</span>, <span class="string">'0'</span>, <span class="string">'28'</span>])]</span><br></pre></td></tr></table></figure>
-<p>​        </p>
-<h3 id="rename-subclusters"><a href="#rename-subclusters" class="headerlink" title="rename subclusters"></a>rename subclusters</h3> <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">old_to_new = &#123;<span class="number">3</span> :<span class="string">'Fibro1'</span>,</span><br><span class="line">    <span class="number">11</span>: <span class="string">'Fibro2'</span>, <span class="number">20</span>:<span class="string">'Fibro2'</span>,</span><br><span class="line">    <span class="number">12</span>:<span class="string">'Fibro3'</span>, <span class="number">17</span>:<span class="string">'Fibro4'</span>,<span class="number">26</span>:<span class="string">'Fibro4'</span>,</span><br><span class="line">    <span class="number">24</span> : <span class="string">'Fibro3'</span>&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'int'</span>)  </span><br><span class="line"><span class="comment">## 将leiden的cluster号类型转化为int</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'new_clusters'</span>] = (</span><br><span class="line">    adata_fibro.obs[<span class="string">'leiden'</span>]</span><br><span class="line">    .map(old_to_new)</span><br><span class="line">    .astype(<span class="string">'category'</span>)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adata_fibro.obs[<span class="string">'leiden'</span>] = adata_fibro.obs[<span class="string">'leiden'</span>].astype(<span class="string">'category'</span>) </span><br><span class="line"><span class="comment">## 改回来</span></span><br></pre></td></tr></table></figure>
-<p>​    </p>
-<h3 id="delet-MT-genes"><a href="#delet-MT-genes" class="headerlink" title="delet ^MT- genes"></a>delet ^MT- genes</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_mt</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> bool(re.match(<span class="string">'MT-'</span>, n))</span><br><span class="line"></span><br><span class="line">Fibro_top20_selected = [x <span class="keyword">for</span> x <span class="keyword">in</span> Fibro_top20_list <span class="keyword">if</span> <span class="keyword">not</span> bool(re.match(<span class="string">'MT-'</span>, x, flags=<span class="number">0</span>))]</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/图形初阶/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/图形初阶/" itemprop="url">图形初阶</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par(no.readonly=<span class="literal">TRUE</span>) <span class="comment"># make a copy of current settings</span></span><br></pre></td></tr></table></figure>
-<p><code>abline</code> 添加参考线</p>
-<p><code>text</code>  <code>mtext</code>  添加文本标注</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">legend(<span class="string">"topleft"</span>, inset=<span class="number">.05</span>, title=<span class="string">"Drug Type"</span>, c(<span class="string">"A"</span>,<span class="string">"B"</span>),</span><br><span class="line">       lty=c(<span class="number">1</span>, <span class="number">2</span>), pch=c(<span class="number">15</span>, <span class="number">17</span>), col=c(<span class="string">"red"</span>, <span class="string">"blue"</span>))</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 按行填充2行2列</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">attach</span>(mtcars)</span><br><span class="line">layout(matrix(c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>), <span class="number">2</span>, <span class="number">2</span>, byrow = <span class="literal">TRUE</span>), widths=c(<span class="number">3</span>, <span class="number">1</span>), heights=c(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">hist(wt)</span><br><span class="line">hist(mpg)</span><br><span class="line">hist(disp)</span><br><span class="line"><span class="keyword">detach</span>(mtcars)  <span class="comment">###第一个图占一行</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main,sub,col.main,col.sub)</span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>)  <span class="comment">###同时输出点和线</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(lty=<span class="number">2</span>, pch=<span class="number">17</span>)            <span class="comment"># change line type and symbol</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adding text, lines, and symbols  添加文本，自定义坐标轴</span></span><br><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>,  </span><br><span class="line">     col=<span class="string">"red"</span>, lty=<span class="number">2</span>, pch=<span class="number">2</span>, lwd=<span class="number">2</span>,</span><br><span class="line">     main=<span class="string">"Clinical Trials for Drug A"</span>, </span><br><span class="line">     sub=<span class="string">"This is hypothetical data"</span>, </span><br><span class="line">     xlab=<span class="string">"Dosage"</span>, ylab=<span class="string">"Drug Response"</span>,</span><br><span class="line">     xlim=c(<span class="number">0</span>, <span class="number">60</span>), ylim=c(<span class="number">0</span>, <span class="number">70</span>))</span><br></pre></td></tr></table></figure>
-<p><code>ann=FALSE</code>禁用默认标题 或者用 <code>main=&quot;&quot;</code></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1905,6 +1932,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/u/cee880e84d21" title="简书" target="_blank">简书</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           

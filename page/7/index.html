@@ -441,7 +441,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/利用安装包安装R包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/代码记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -460,7 +460,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/利用安装包安装R包/" itemprop="url">利用安装包安装R包</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/代码记录/" itemprop="url">代码记录</a></h1>
         
 
         <div class="post-meta">
@@ -534,7 +534,22 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"/home/jiang/Downloads/GEOquery_2.54.1.tar.gz"</span>,repos=<span class="literal">NULL</span>)</span><br></pre></td></tr></table></figure>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cor=pbmc@dr$tsne@cell.embeddings</span><br><span class="line">tsne=as.data.frame(pbmc@ident)</span><br><span class="line">table(tsne)</span><br></pre></td></tr></table></figure>
+<p><code>table(variable)</code>  可以显示每个变量出现的次数</p>
+<p><code>df[row,col]</code> 取数据框的子集</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[d$pi&gt;<span class="number">3</span>,]与d[which(d$pi&gt;<span class="number">3</span>),] <span class="comment">##功能相同</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://blog.csdn.net/songzhilian22/article/details/49006391/" target="_blank" rel="noopener">ggplot学习笔记之标度scale</a></p>
+<p><code>cut</code>的使用</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c0=c(<span class="number">2.3</span>,<span class="number">3</span>,<span class="number">1.5</span>,<span class="number">4.8</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9.5</span>)  <span class="comment">#被划分的对象</span></span><br><span class="line">cuttime=c(<span class="number">0</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">10</span>)                 ＃分割点</span><br><span class="line">cut(c0,cuttime,labels = <span class="literal">F</span>,right = <span class="literal">F</span>,include.lowest=<span class="literal">T</span>)  </span><br><span class="line"><span class="comment">#right＝F：每个区间左闭右开，否则默认左开右闭</span></span><br><span class="line"><span class="comment">#include.lowest:第一个区间包含左端点／最后一个区间包含右端点</span></span><br><span class="line"><span class="comment">#label=F:只返回在第几个区间,否则会显示具体的区间</span></span><br></pre></td></tr></table></figure>
+<p>linux 复制文件到多个文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo /home/xgj/test/ /home/xgj/tmp | xargs -n 1 cp -v /home/xgj/bin/sys_info.sh</span><br></pre></td></tr></table></figure>
+<p>字符串替代：gsub()负责搜索字符串的特定表达式，并用新的内容加以替代。sub()函数是类似的，但只替代第一个发现结果</p>
+<p>字符串匹配：grep()负责搜索给定字符串对象中特定表达式 ，并返回其位置索引。grepl()函数与之类似，但其后面的”l”则意味着返回的将是逻辑值。</p>
+<p><code>as</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">as(object, Class, strict=<span class="literal">TRUE</span>, ext)</span><br><span class="line">as(object, Class) &lt;- value</span><br></pre></td></tr></table></figure>
+<p><code>as(object)</code> returns the version of this object coerced to be the given <code>Class</code>. When used in the replacement form on the left of an assignment, the portion of the object corresponding to <code>Class</code> is replaced by <code>value</code>.</p>
+<p><code>as.image()</code>  保存工作空间映像</p>
+<p>然后用<code>load</code>载入空间映像</p>
 
           
         
@@ -761,7 +776,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/代码记录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/图形初阶/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -780,7 +795,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/代码记录/" itemprop="url">代码记录</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/图形初阶/" itemprop="url">图形初阶</a></h1>
         
 
         <div class="post-meta">
@@ -854,22 +869,163 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cor=pbmc@dr$tsne@cell.embeddings</span><br><span class="line">tsne=as.data.frame(pbmc@ident)</span><br><span class="line">table(tsne)</span><br></pre></td></tr></table></figure>
-<p><code>table(variable)</code>  可以显示每个变量出现的次数</p>
-<p><code>df[row,col]</code> 取数据框的子集</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">d[d$pi&gt;<span class="number">3</span>,]与d[which(d$pi&gt;<span class="number">3</span>),] <span class="comment">##功能相同</span></span><br></pre></td></tr></table></figure>
-<p><a href="https://blog.csdn.net/songzhilian22/article/details/49006391/" target="_blank" rel="noopener">ggplot学习笔记之标度scale</a></p>
-<p><code>cut</code>的使用</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">c0=c(<span class="number">2.3</span>,<span class="number">3</span>,<span class="number">1.5</span>,<span class="number">4.8</span>,<span class="number">9</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9.5</span>)  <span class="comment">#被划分的对象</span></span><br><span class="line">cuttime=c(<span class="number">0</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">9</span>,<span class="number">10</span>)                 ＃分割点</span><br><span class="line">cut(c0,cuttime,labels = <span class="literal">F</span>,right = <span class="literal">F</span>,include.lowest=<span class="literal">T</span>)  </span><br><span class="line"><span class="comment">#right＝F：每个区间左闭右开，否则默认左开右闭</span></span><br><span class="line"><span class="comment">#include.lowest:第一个区间包含左端点／最后一个区间包含右端点</span></span><br><span class="line"><span class="comment">#label=F:只返回在第几个区间,否则会显示具体的区间</span></span><br></pre></td></tr></table></figure>
-<p>linux 复制文件到多个文件夹</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo /home/xgj/test/ /home/xgj/tmp | xargs -n 1 cp -v /home/xgj/bin/sys_info.sh</span><br></pre></td></tr></table></figure>
-<p>字符串替代：gsub()负责搜索字符串的特定表达式，并用新的内容加以替代。sub()函数是类似的，但只替代第一个发现结果</p>
-<p>字符串匹配：grep()负责搜索给定字符串对象中特定表达式 ，并返回其位置索引。grepl()函数与之类似，但其后面的”l”则意味着返回的将是逻辑值。</p>
-<p><code>as</code></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">as(object, Class, strict=<span class="literal">TRUE</span>, ext)</span><br><span class="line">as(object, Class) &lt;- value</span><br></pre></td></tr></table></figure>
-<p><code>as(object)</code> returns the version of this object coerced to be the given <code>Class</code>. When used in the replacement form on the left of an assignment, the portion of the object corresponding to <code>Class</code> is replaced by <code>value</code>.</p>
-<p><code>as.image()</code>  保存工作空间映像</p>
-<p>然后用<code>load</code>载入空间映像</p>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par(no.readonly=<span class="literal">TRUE</span>) <span class="comment"># make a copy of current settings</span></span><br></pre></td></tr></table></figure>
+<p><code>abline</code> 添加参考线</p>
+<p><code>text</code>  <code>mtext</code>  添加文本标注</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">legend(<span class="string">"topleft"</span>, inset=<span class="number">.05</span>, title=<span class="string">"Drug Type"</span>, c(<span class="string">"A"</span>,<span class="string">"B"</span>),</span><br><span class="line">       lty=c(<span class="number">1</span>, <span class="number">2</span>), pch=c(<span class="number">15</span>, <span class="number">17</span>), col=c(<span class="string">"red"</span>, <span class="string">"blue"</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 按行填充2行2列</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">attach</span>(mtcars)</span><br><span class="line">layout(matrix(c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>), <span class="number">2</span>, <span class="number">2</span>, byrow = <span class="literal">TRUE</span>), widths=c(<span class="number">3</span>, <span class="number">1</span>), heights=c(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">hist(wt)</span><br><span class="line">hist(mpg)</span><br><span class="line">hist(disp)</span><br><span class="line"><span class="keyword">detach</span>(mtcars)  <span class="comment">###第一个图占一行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main,sub,col.main,col.sub)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>)  <span class="comment">###同时输出点和线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(lty=<span class="number">2</span>, pch=<span class="number">17</span>)            <span class="comment"># change line type and symbol</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adding text, lines, and symbols  添加文本，自定义坐标轴</span></span><br><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>,  </span><br><span class="line">     col=<span class="string">"red"</span>, lty=<span class="number">2</span>, pch=<span class="number">2</span>, lwd=<span class="number">2</span>,</span><br><span class="line">     main=<span class="string">"Clinical Trials for Drug A"</span>, </span><br><span class="line">     sub=<span class="string">"This is hypothetical data"</span>, </span><br><span class="line">     xlab=<span class="string">"Dosage"</span>, ylab=<span class="string">"Drug Response"</span>,</span><br><span class="line">     xlim=c(<span class="number">0</span>, <span class="number">60</span>), ylim=c(<span class="number">0</span>, <span class="number">70</span>))</span><br></pre></td></tr></table></figure>
+<p><code>ann=FALSE</code>禁用默认标题 或者用 <code>main=&quot;&quot;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/try/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/try/" itemprop="url">try</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="try-错误识别"><a href="#try-错误识别" class="headerlink" title="try() 错误识别"></a>try() 错误识别</h2><p>1.将可能会报错的命令行放到try()函数中，并将其赋值到一个变量名fit（可以是任意变量名）中<br>2.如果有错误，将fit将称为一个类型为“try-error”的变量<br>3.可以用R ‘try-error’ %in% class(fit)放置在if()函数中进行判断<br>4.try() 函数一般与next 和 break 进行联用，next跳过本次循环，break跳出循环</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">library(ConsensusClusterPlus)</span><br><span class="line">i &lt;- 10 </span><br><span class="line">while(i &gt; 3)&#123;</span><br><span class="line">  maxk &lt;- min(i, ncol(distan_matrix)-1)</span><br><span class="line">  i &lt;- i-1</span><br><span class="line">  title &lt;- &quot;./&quot;</span><br><span class="line">  fit &lt;- try(ConsensusClusterPlus(distan_matrix, maxK = maxk, reps = 10, pItem = 0.8, title=title,pFeature = 1, clusterAlg=&quot;kmdist&quot;, seed=1234, plot=&quot;png&quot;))</span><br><span class="line">  if(&quot;try-error&quot; %in% class(fit))</span><br><span class="line">  &#123;</span><br><span class="line">    next</span><br><span class="line">  &#125;else</span><br><span class="line">  &#123;</span><br><span class="line">    Consensus_result = fit</span><br><span class="line">    break</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>原文链接：<a href="https://blog.csdn.net/YJJ18636810884/article/details/83176190" target="_blank" rel="noopener">https://blog.csdn.net/YJJ18636810884/article/details/83176190</a></p>
+<p>&nbsp;</p>
+<h2 id="使用tryCatch进行简单的错误处理"><a href="#使用tryCatch进行简单的错误处理" class="headerlink" title="使用tryCatch进行简单的错误处理"></a>使用tryCatch进行简单的错误处理</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">result = <span class="keyword">tryCatch</span>(&#123;</span><br><span class="line">    expr</span><br><span class="line">&#125;, <span class="keyword">warning</span> = <span class="keyword">function</span>(w) &#123;</span><br><span class="line">    <span class="keyword">warning</span>-handler-code</span><br><span class="line">&#125;, error = <span class="keyword">function</span>(e) &#123;</span><br><span class="line">    error-handler-code</span><br><span class="line">&#125;, finally = &#123;</span><br><span class="line">    cleanup-code</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1133,148 +1289,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/sweep/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1417,7 +1431,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/下载cBioPortal中的文章相关数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1436,7 +1450,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/ggplot2修改网格线和背景色/" itemprop="url">ggplot2修改网格线和背景色</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/下载cBioPortal中的文章相关数据/" itemprop="url">下载cBioPortal中的文章相关数据</a></h1>
         
 
         <div class="post-meta">
@@ -1510,11 +1524,7 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(fraction.dis, aes(fraction)) + </span><br><span class="line">   geom_histogram(position = <span class="string">"identity"</span>, fill = <span class="string">"#0000FF"</span>) + theme_bw() +</span><br><span class="line">    theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(), </span><br><span class="line">          axis.line = element_line(colour = <span class="string">"black"</span>)) +</span><br><span class="line">geom_vline(aes(xintercept=<span class="number">0.035</span>), colour=<span class="string">"#BB0000"</span>, linetype=<span class="string">"dashed"</span>)</span><br></pre></td></tr></table></figure>
-<p><code>theme_bw()</code> : 去掉背景</p>
-<p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
-<p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
-<p><code>geom_vline</code> : 添加线条</p>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(cgdsr)</span><br><span class="line"></span><br><span class="line">mycgds = CGDS(<span class="string">"http://www.cbioportal.org/"</span>)</span><br><span class="line"></span><br><span class="line">class(mycgds)</span><br><span class="line"></span><br><span class="line">tt &lt;- getCancerStudies(mycgds)</span><br><span class="line"></span><br><span class="line">tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),]</span><br><span class="line"></span><br><span class="line">study_id &lt;- tt[which(tt$name == <span class="string">'Breast Invasive Carcinoma (TCGA, PanCancer Atlas)'</span>),][,c(<span class="number">1</span>,<span class="number">2</span>)]</span><br><span class="line"></span><br><span class="line">profiles &lt;- getGeneticProfiles(mycgds, study_id$cancer_study_id)</span><br><span class="line"></span><br><span class="line">cases &lt;- getCaseLists(mycgds, study_id$cancer_study_id)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1705,7 +1715,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/聚类分析/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/ggplot2修改网格线和背景色/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1724,7 +1734,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/聚类分析/" itemprop="url">聚类分析</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/ggplot2修改网格线和背景色/" itemprop="url">ggplot2修改网格线和背景色</a></h1>
         
 
         <div class="post-meta">
@@ -1798,49 +1808,11 @@
       
         
           
-            <h2 id="聚类分析的一般步骤"><a href="#聚类分析的一般步骤" class="headerlink" title="聚类分析的一般步骤"></a>聚类分析的一般步骤</h2><p>(1) 选择合适的变量 </p>
-<p>(2) 缩放数据 </p>
-<p>最常用的方法是将每个变量标准化为均值为0和标准差为1的变量。其他的替代方法包括每个变量被其最大值相除或该变量减去它的平均值并除以变量的平均绝对偏差。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df1 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x-mean(x))/sd(x)&#125;)</span><br><span class="line">df2 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;x/max(x)&#125;)</span><br><span class="line">df3 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x – mean(x))/mad(x)&#125;)</span><br></pre></td></tr></table></figure>
-<p><code>scale</code>与df1效果相当</p>
-<p>(3) 寻找异常点 </p>
-<p>(4) 计算距离  两个观测值之间最常用的距离量度是欧几里得距离 </p>
-<p>(5) 选择聚类算法  层次聚类/划分聚类</p>
-<p>(6) 获得一种或多种聚类方法 </p>
-<p>(7) 确定类的数目 </p>
-<p>(8) 获得最终的聚类解决方案 </p>
-<p>(9) 结果可视化 </p>
-<p>(10) 解读类 </p>
-<p>(11) 验证结果 </p>
-<p>&nbsp;</p>
-<h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><p><img src="https://i.loli.net/2018/09/20/5ba336cbd341c.jpg" alt></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d &lt;- dist(nutrient) <span class="comment">###计算距离，默认是欧式距离 结果为一个下三角矩阵</span></span><br><span class="line">as.matrix(d)[<span class="number">1</span>:<span class="number">4</span>,<span class="number">1</span>:<span class="number">4</span>] <span class="comment">###转化为matrix</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h2 id="层次聚类"><a href="#层次聚类" class="headerlink" title="层次聚类"></a>层次聚类</h2><p>(1) 定义每个观测值（行或单元）为一类； </p>
-<p>(2) 计算每类和其他各类的距离；</p>
-<p>(3) 把距离最短的两类合并成一类，这样类的个数就减少一个；</p>
-<p>(4) 重复步骤(2)和步骤(3)，直到包含所有观测值的类合并成单个的类为止 </p>
-<p>&nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/20/5ba337bd9cfc1.jpg" alt></p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data(nutrient, package=<span class="string">"flexclust"</span>)</span><br><span class="line">row.names(nutrient) &lt;- tolower(row.names(nutrient)) <span class="comment">##标签转化为小写</span></span><br><span class="line">nutrient.scaled &lt;- scale(nutrient) </span><br><span class="line">d &lt;- dist(nutrient.scaled)</span><br><span class="line">fit.average &lt;- hclust(d, method=<span class="string">"average"</span>)</span><br><span class="line">plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering"</span>)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>层次聚类实现: <code>hclust</code></p>
-<p>&nbsp;</p>
-<h3 id="选择聚类的个数"><a href="#选择聚类的个数" class="headerlink" title="选择聚类的个数"></a>选择聚类的个数</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">library</span>(NbClust)</span><br><span class="line">&gt; devAskNewPage(ask=<span class="literal">TRUE</span>)</span><br><span class="line">&gt; nc &lt;- NbClust(nutrient.scaled, distance=<span class="string">"euclidean"</span>, min.nc=<span class="number">2</span>, max.nc=<span class="number">15</span>,    method=<span class="string">"average"</span>) <span class="comment">##distance 计算距离的方法  euclidean欧式距离</span></span><br><span class="line">&gt; table(nc$Best.n[<span class="number">1</span>,])</span><br><span class="line">	<span class="comment">#0 2 3 4 5 9 10 13 14 15</span></span><br><span class="line">	<span class="comment">#2 4 4 3 4 1 1 2 1 4</span></span><br><span class="line">&gt; barplot(table(nc$Best.n[<span class="number">1</span>,]), xlab=<span class="string">"Numer of Clusters"</span>, ylab=<span class="string">"Number of Criteria"</span>,</span><br><span class="line">main=<span class="string">"Number of Clusters Chosen by 26 Criteria"</span>)<span class="comment"># 获取最终的聚类方案</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="获取最终的聚类方案"><a href="#获取最终的聚类方案" class="headerlink" title="获取最终的聚类方案"></a>获取最终的聚类方案</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; clusters &lt;- cutree(fit.average, k=<span class="number">5</span>)</span><br><span class="line">&gt; table(clusters)</span><br><span class="line">clusters</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">7</span> <span class="number">16</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span></span><br><span class="line">&gt; aggregate(nutrient, by=list(cluster=clusters), median) <span class="comment">##描述聚类</span></span><br><span class="line">&gt; plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering\n5 Cluster Solution"</span>)</span><br><span class="line">&gt; rect.hclust(fit.average, k=<span class="number">5</span>) <span class="comment">## 结果绘图</span></span><br></pre></td></tr></table></figure>
-<p><code>aggregate</code>  Splits the data into subsets, computes summary statistics for each, and returns the result in a convenient form</p>
-<p>&nbsp;</p>
-<h2 id="划分聚类分析"><a href="#划分聚类分析" class="headerlink" title="划分聚类分析"></a>划分聚类分析</h2><p> K均值和基于中心点的划分（ PAM）</p>
-<h3 id="K-均值聚类"><a href="#K-均值聚类" class="headerlink" title="K 均值聚类"></a>K 均值聚类</h3><p>(1) 选择K个中心点（随机选择K行）；</p>
-<p>(2) 把每个数据点分配到离它最近的中心点；</p>
-<p>(3) 重新计算每类中的点到该类中心点距离的平均值（也就说，得到长度为p的均值向量，这<br>里的p是变量的个数）；</p>
-<p>(4) 分配每个数据到它最近的中心点； </p>
-<p>(5) 重复步骤(3)和步骤(4)直到所有的观测值不再被分配或是达到最大的迭代次数（ R把10次<br>作为默认迭代次数）。 </p>
-<p>&nbsp;</p>
-<p>K均值聚类能处理比层次聚类更大的数据集。另外，观测值不会永远被分到一类中。当我们<br>提高整体解决方案时，聚类方案也会改动。但是均值的使用意味着所有的变量必须是连续的，并<br>且这个方法很有可能被异常值影响。它在非凸聚类（例如U型）情况下也会变得很差。 </p>
-<p> &nbsp;</p>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ggplot(fraction.dis, aes(fraction)) + </span><br><span class="line">   geom_histogram(position = <span class="string">"identity"</span>, fill = <span class="string">"#0000FF"</span>) + theme_bw() +</span><br><span class="line">    theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank(), </span><br><span class="line">          axis.line = element_line(colour = <span class="string">"black"</span>)) +</span><br><span class="line">geom_vline(aes(xintercept=<span class="number">0.035</span>), colour=<span class="string">"#BB0000"</span>, linetype=<span class="string">"dashed"</span>)</span><br></pre></td></tr></table></figure>
+<p><code>theme_bw()</code> : 去掉背景</p>
+<p><code>theme(panel.grid.major=element_blank(),panel.grid.minor=element_blank())</code>: 去掉网格线      <code>panel.grid.major</code>: 大网格,  <code>panel.grid.minor</code>：小网格</p>
+<p><code>axis.line = element_line(colour = &quot;black&quot;)</code> : 坐标轴颜色</p>
+<p><code>geom_vline</code> : 添加线条</p>
 
           
         
@@ -1971,6 +1943,20 @@
           
 
           
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jianshu.com/u/cee880e84d21" title="简书" target="_blank">简书</a>
+                  </li>
+                
+              </ul>
+            </div>
           
 
           
