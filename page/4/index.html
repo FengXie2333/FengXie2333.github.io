@@ -189,6 +189,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -217,6 +237,130 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/CAF-associated-papers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/CAF-associated-papers/" itemprop="url">CAF associated papers</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Fibroblasts-in-cancer"><a href="#Fibroblasts-in-cancer" class="headerlink" title="Fibroblasts in cancer"></a>Fibroblasts in cancer</h1><p>The important functions of fibroblasts include the deposition of extracellular matrix (ECM), regulation of epithelial differentiation, regulation of inflammation, and involvement in wound healing</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/28/文献笔记/CAF-associated-papers/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -481,7 +625,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/基本数据管理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/图形初阶/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -500,7 +644,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/基本数据管理/" itemprop="url">基本数据管理</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/图形初阶/" itemprop="url">图形初阶</a></h1>
         
 
         <div class="post-meta">
@@ -552,217 +696,17 @@
       
         
           
-            <h2 id="创建新变量"><a href="#创建新变量" class="headerlink" title="创建新变量"></a>创建新变量</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mydata &lt;- transform(mydata,</span><br><span class="line">			       mean = (x1 + x2)/<span class="number">2</span></span><br><span class="line">				   sum = x1 + x2)</span><br></pre></td></tr></table></figure>
-<h2 id="变量的重编程"><a href="#变量的重编程" class="headerlink" title="变量的重编程"></a>变量的重编程</h2><p><strong><em>within与with相同，但是它允许对数据框进行修改</em></strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">variable[condition] &lt;- expression <span class="comment">###在条件为真时，进行赋值</span></span><br></pre></td></tr></table></figure>
-<h2 id="变量的重命名"><a href="#变量的重命名" class="headerlink" title="变量的重命名"></a>变量的重命名</h2><p>1   </p>
-<p>使用fix()   调出一个交互式编辑器</p>
-<p>2  </p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name(数据框名)[需要修改的名字位置] &lt;- <span class="string">"newname"</span></span><br></pre></td></tr></table></figure>
-<p>3</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(plyr)</span><br><span class="line">leadership &lt;- rename(leadership,c(oldname=<span class="string">"newname"</span>))</span><br></pre></td></tr></table></figure>
-<h2 id="缺失值"><a href="#缺失值" class="headerlink" title="缺失值"></a>缺失值</h2><p>NA</p>
-<p>使用函数<strong><em>is.na()</em></strong>来判断是否存在缺失值</p>
-<p>缺失值不能拿来比较</p>
-<p>R不把不可能出现的数值或者无限的数设置为缺失值。正无穷，负无穷表示方法：Inf或者-Inf。 不可能的值，如sin(Inf),标记为NaN。判断方法：is.infinite() 或者is.nan()</p>
-<h3 id="在分析中排除缺失值"><a href="#在分析中排除缺失值" class="headerlink" title="在分析中排除缺失值"></a>在分析中排除缺失值</h3><p>多数的数值函数，可以用<strong><em>na.rm = TRUE</em></strong>来移除缺失值</p>
-<p><strong><em>na.omit()</em></strong>移除含有缺失值的行</p>
-<h2 id="日期值"><a href="#日期值" class="headerlink" title="日期值"></a>日期值</h2><p>日期值在R中，先以字符串的形式输入，然后转化为数值</p>
-<p>执行这一操作的是：<strong><em>as.Date(x, “Input_format”)</em></strong></p>
-<p><strong><em>Sys.Date()</em></strong> 返回当天的时间</p>
-<p><strong><em>date()</em></strong> 返回当天的日期和时间</p>
-<p><strong><em>format(x, format = “Output_format”) :输出指定格式的日期值</em></strong></p>
-<p>日期值可以进行计算</p>
-<p>可使用<strong><em>difftime()</em></strong> 计算日期间隔</p>
-<p>可以用<strong><em>as.character()</em></strong>将日期值转化为字符</p>
-<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><strong><em>is.datatype()</em></strong>  这样的函数，将判断参数的类型</p>
-<p><strong><em>as.datatype()</em></strong> 将参数转换为对应的类型</p>
-<h2 id="数据排序"><a href="#数据排序" class="headerlink" title="数据排序"></a>数据排序</h2><p><strong><em>order()</em></strong> 进行排序</p>
-<p>默认顺序是升序</p>
-<p>需要降序时，就在排序变量前加负号</p>
-<h2 id="数据集的合并"><a href="#数据集的合并" class="headerlink" title="数据集的合并"></a>数据集的合并</h2><h3 id="向数据集添加列"><a href="#向数据集添加列" class="headerlink" title="向数据集添加列"></a>向数据集添加列</h3><p>横向合并两个数据框，用函数<strong><em>merge()</em></strong>(通过内部联结)</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- merge(dataframeA,  dataframeB, by=<span class="string">"ID"</span>)</span><br></pre></td></tr></table></figure>
-<p>如果不指定公共索引，可用cbind合并</p>
-<h3 id="向数据集添加行"><a href="#向数据集添加行" class="headerlink" title="向数据集添加行"></a>向数据集添加行</h3><p>rbind</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total &lt;- rbind(dataframeA,  dataframeB)</span><br></pre></td></tr></table></figure>
-<p>在合并前，要先保证两者有相同的变量</p>
-<h2 id="数据集提取子集"><a href="#数据集提取子集" class="headerlink" title="数据集提取子集"></a>数据集提取子集</h2><h3 id="选入-保留-变量消息称"><a href="#选入-保留-变量消息称" class="headerlink" title="选入(保留)变量消息称"></a>选入(保留)变量消息称</h3><h3 id="剔除（丢弃）变量"><a href="#剔除（丢弃）变量" class="headerlink" title="剔除（丢弃）变量"></a>剔除（丢弃）变量</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">myvars &lt;- names(leadership) %<span class="keyword">in</span>% c(q3，q4)</span><br><span class="line">newdata &lt;-  leadership[!myvars]</span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership &lt;- leadership[c(-<span class="number">8</span>,-<span class="number">9</span>)] <span class="comment">##在要去除的项前面加负号</span></span><br></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">leadership$q3 &lt;- leadership$q4 &lt;- <span class="literal">NULL</span></span><br></pre></td></tr></table></figure>
-<h3 id="选入观测"><a href="#选入观测" class="headerlink" title="选入观测"></a>选入观测</h3><p>使用行下标</p>
-<p>或者用条件判断的方式</p>
-<h3 id="subset"><a href="#subset" class="headerlink" title="subset"></a>subset</h3><p>选择变量和观测最简单的方法</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">newdata &lt;- subset(leadership,age &gt;=<span class="number">35</span>| age &lt;<span class="number">24</span>, </span><br><span class="line">				selectc =c(q1:q4))</span><br></pre></td></tr></table></figure>
-<p>subset   select</p>
-<h3 id="随机抽样"><a href="#随机抽样" class="headerlink" title="随机抽样"></a>随机抽样</h3><p>sample()</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysample &lt;- leadership[sample(<span class="number">1</span>:nrow(leadership), <span class="number">3</span>, replace = False)]</span><br></pre></td></tr></table></figure>
-<p>1:nrow(leadership)  :选择范围</p>
-<p>3  ：选取3个元素</p>
-<p>replace = False   无放回的</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/聚类分析/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/聚类分析/" itemprop="url">聚类分析</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="聚类分析的一般步骤"><a href="#聚类分析的一般步骤" class="headerlink" title="聚类分析的一般步骤"></a>聚类分析的一般步骤</h2><p>(1) 选择合适的变量 </p>
-<p>(2) 缩放数据 </p>
-<p>最常用的方法是将每个变量标准化为均值为0和标准差为1的变量。其他的替代方法包括每个变量被其最大值相除或该变量减去它的平均值并除以变量的平均绝对偏差。</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df1 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x-mean(x))/sd(x)&#125;)</span><br><span class="line">df2 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;x/max(x)&#125;)</span><br><span class="line">df3 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x – mean(x))/mad(x)&#125;)</span><br></pre></td></tr></table></figure>
-<p><code>scale</code>与df1效果相当</p>
-<p>(3) 寻找异常点 </p>
-<p>(4) 计算距离  两个观测值之间最常用的距离量度是欧几里得距离 </p>
-<p>(5) 选择聚类算法  层次聚类/划分聚类</p>
-<p>(6) 获得一种或多种聚类方法 </p>
-<p>(7) 确定类的数目 </p>
-<p>(8) 获得最终的聚类解决方案 </p>
-<p>(9) 结果可视化 </p>
-<p>(10) 解读类 </p>
-<p>(11) 验证结果 </p>
-<p>&nbsp;</p>
-<h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><p><img src="https://i.loli.net/2018/09/20/5ba336cbd341c.jpg" alt></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d &lt;- dist(nutrient) <span class="comment">###计算距离，默认是欧式距离 结果为一个下三角矩阵</span></span><br><span class="line">as.matrix(d)[<span class="number">1</span>:<span class="number">4</span>,<span class="number">1</span>:<span class="number">4</span>] <span class="comment">###转化为matrix</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h2 id="层次聚类"><a href="#层次聚类" class="headerlink" title="层次聚类"></a>层次聚类</h2><p>(1) 定义每个观测值（行或单元）为一类； </p>
-<p>(2) 计算每类和其他各类的距离；</p>
-<p>(3) 把距离最短的两类合并成一类，这样类的个数就减少一个；</p>
-<p>(4) 重复步骤(2)和步骤(3)，直到包含所有观测值的类合并成单个的类为止 </p>
-<p>&nbsp;</p>
-<p><img src="https://i.loli.net/2018/09/20/5ba337bd9cfc1.jpg" alt></p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data(nutrient, package=<span class="string">"flexclust"</span>)</span><br><span class="line">row.names(nutrient) &lt;- tolower(row.names(nutrient)) <span class="comment">##标签转化为小写</span></span><br><span class="line">nutrient.scaled &lt;- scale(nutrient) </span><br><span class="line">d &lt;- dist(nutrient.scaled)</span><br><span class="line">fit.average &lt;- hclust(d, method=<span class="string">"average"</span>)</span><br><span class="line">plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering"</span>)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>层次聚类实现: <code>hclust</code></p>
-<p>&nbsp;</p>
-<h3 id="选择聚类的个数"><a href="#选择聚类的个数" class="headerlink" title="选择聚类的个数"></a>选择聚类的个数</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">library</span>(NbClust)</span><br><span class="line">&gt; devAskNewPage(ask=<span class="literal">TRUE</span>)</span><br><span class="line">&gt; nc &lt;- NbClust(nutrient.scaled, distance=<span class="string">"euclidean"</span>, min.nc=<span class="number">2</span>, max.nc=<span class="number">15</span>,    method=<span class="string">"average"</span>) <span class="comment">##distance 计算距离的方法  euclidean欧式距离</span></span><br><span class="line">&gt; table(nc$Best.n[<span class="number">1</span>,])</span><br><span class="line">	<span class="comment">#0 2 3 4 5 9 10 13 14 15</span></span><br><span class="line">	<span class="comment">#2 4 4 3 4 1 1 2 1 4</span></span><br><span class="line">&gt; barplot(table(nc$Best.n[<span class="number">1</span>,]), xlab=<span class="string">"Numer of Clusters"</span>, ylab=<span class="string">"Number of Criteria"</span>,</span><br><span class="line">main=<span class="string">"Number of Clusters Chosen by 26 Criteria"</span>)<span class="comment"># 获取最终的聚类方案</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="获取最终的聚类方案"><a href="#获取最终的聚类方案" class="headerlink" title="获取最终的聚类方案"></a>获取最终的聚类方案</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; clusters &lt;- cutree(fit.average, k=<span class="number">5</span>)</span><br><span class="line">&gt; table(clusters)</span><br><span class="line">clusters</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">7</span> <span class="number">16</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span></span><br><span class="line">&gt; aggregate(nutrient, by=list(cluster=clusters), median) <span class="comment">##描述聚类</span></span><br><span class="line">&gt; plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering\n5 Cluster Solution"</span>)</span><br><span class="line">&gt; rect.hclust(fit.average, k=<span class="number">5</span>) <span class="comment">## 结果绘图</span></span><br></pre></td></tr></table></figure>
-<p><code>aggregate</code>  Splits the data into subsets, computes summary statistics for each, and returns the result in a convenient form</p>
-<p>&nbsp;</p>
-<h2 id="划分聚类分析"><a href="#划分聚类分析" class="headerlink" title="划分聚类分析"></a>划分聚类分析</h2><p> K均值和基于中心点的划分（ PAM）</p>
-<h3 id="K-均值聚类"><a href="#K-均值聚类" class="headerlink" title="K 均值聚类"></a>K 均值聚类</h3><p>(1) 选择K个中心点（随机选择K行）；</p>
-<p>(2) 把每个数据点分配到离它最近的中心点；</p>
-<p>(3) 重新计算每类中的点到该类中心点距离的平均值（也就说，得到长度为p的均值向量，这<br>里的p是变量的个数）；</p>
-<p>(4) 分配每个数据到它最近的中心点； </p>
-<p>(5) 重复步骤(3)和步骤(4)直到所有的观测值不再被分配或是达到最大的迭代次数（ R把10次<br>作为默认迭代次数）。 </p>
-<p>&nbsp;</p>
-<p>K均值聚类能处理比层次聚类更大的数据集。另外，观测值不会永远被分到一类中。当我们<br>提高整体解决方案时，聚类方案也会改动。但是均值的使用意味着所有的变量必须是连续的，并<br>且这个方法很有可能被异常值影响。它在非凸聚类（例如U型）情况下也会变得很差。 </p>
-<p> &nbsp;</p>
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">opar &lt;- par(no.readonly=<span class="literal">TRUE</span>) <span class="comment"># make a copy of current settings</span></span><br></pre></td></tr></table></figure>
+<p><code>abline</code> 添加参考线</p>
+<p><code>text</code>  <code>mtext</code>  添加文本标注</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">legend(<span class="string">"topleft"</span>, inset=<span class="number">.05</span>, title=<span class="string">"Drug Type"</span>, c(<span class="string">"A"</span>,<span class="string">"B"</span>),</span><br><span class="line">       lty=c(<span class="number">1</span>, <span class="number">2</span>), pch=c(<span class="number">15</span>, <span class="number">17</span>), col=c(<span class="string">"red"</span>, <span class="string">"blue"</span>))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(mfrow=c(<span class="number">2</span>,<span class="number">2</span>)) <span class="comment"># 按行填充2行2列</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">attach</span>(mtcars)</span><br><span class="line">layout(matrix(c(<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>), <span class="number">2</span>, <span class="number">2</span>, byrow = <span class="literal">TRUE</span>), widths=c(<span class="number">3</span>, <span class="number">1</span>), heights=c(<span class="number">1</span>, <span class="number">2</span>))</span><br><span class="line">hist(wt)</span><br><span class="line">hist(mpg)</span><br><span class="line">hist(disp)</span><br><span class="line"><span class="keyword">detach</span>(mtcars)  <span class="comment">###第一个图占一行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main,sub,col.main,col.sub)</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>)  <span class="comment">###同时输出点和线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">par(lty=<span class="number">2</span>, pch=<span class="number">17</span>)            <span class="comment"># change line type and symbol</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Adding text, lines, and symbols  添加文本，自定义坐标轴</span></span><br><span class="line">plot(dose, drugA, type=<span class="string">"b"</span>,  </span><br><span class="line">     col=<span class="string">"red"</span>, lty=<span class="number">2</span>, pch=<span class="number">2</span>, lwd=<span class="number">2</span>,</span><br><span class="line">     main=<span class="string">"Clinical Trials for Drug A"</span>, </span><br><span class="line">     sub=<span class="string">"This is hypothetical data"</span>, </span><br><span class="line">     xlab=<span class="string">"Dosage"</span>, ylab=<span class="string">"Drug Response"</span>,</span><br><span class="line">     xlim=c(<span class="number">0</span>, <span class="number">60</span>), ylim=c(<span class="number">0</span>, <span class="number">70</span>))</span><br></pre></td></tr></table></figure>
+<p><code>ann=FALSE</code>禁用默认标题 或者用 <code>main=&quot;&quot;</code></p>
 
           
         
@@ -938,7 +882,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/处理缺失数据的高级方法/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -957,7 +901,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/处理缺失数据的高级方法/" itemprop="url">处理缺失数据的高级方法</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
         
 
         <div class="post-meta">
@@ -1009,51 +953,175 @@
       
         
           
-            <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>1 识别</p>
-<p>2 找原因</p>
-<p>3 合适的处理</p>
+            <p>使用安装包安装github包</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
+<p>解决：</p>
+<p>删掉src文件夹中的*.o和*.so</p>
+<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/聚类分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/聚类分析/" itemprop="url">聚类分析</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="聚类分析的一般步骤"><a href="#聚类分析的一般步骤" class="headerlink" title="聚类分析的一般步骤"></a>聚类分析的一般步骤</h2><p>(1) 选择合适的变量 </p>
+<p>(2) 缩放数据 </p>
+<p>最常用的方法是将每个变量标准化为均值为0和标准差为1的变量。其他的替代方法包括每个变量被其最大值相除或该变量减去它的平均值并除以变量的平均绝对偏差。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df1 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x-mean(x))/sd(x)&#125;)</span><br><span class="line">df2 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;x/max(x)&#125;)</span><br><span class="line">df3 &lt;- apply(mydata, <span class="number">2</span>, <span class="keyword">function</span>(x)&#123;(x – mean(x))/mad(x)&#125;)</span><br></pre></td></tr></table></figure>
+<p><code>scale</code>与df1效果相当</p>
+<p>(3) 寻找异常点 </p>
+<p>(4) 计算距离  两个观测值之间最常用的距离量度是欧几里得距离 </p>
+<p>(5) 选择聚类算法  层次聚类/划分聚类</p>
+<p>(6) 获得一种或多种聚类方法 </p>
+<p>(7) 确定类的数目 </p>
+<p>(8) 获得最终的聚类解决方案 </p>
+<p>(9) 结果可视化 </p>
+<p>(10) 解读类 </p>
+<p>(11) 验证结果 </p>
 <p>&nbsp;</p>
-<h2 id="缺失数据的分类"><a href="#缺失数据的分类" class="headerlink" title="缺失数据的分类"></a>缺失数据的分类</h2><p><strong>完全随机缺失</strong>（MCAR）：与其他变量都不相关。可以认为完整数据是对整体数据集的随机抽样</p>
-<p><strong>随机缺失</strong>（MAR）：与其他观测变量有关，但与自己的未观测值无关   </p>
-<p>如： 体重较小的动物其做梦时长的缺失较大，可能是因为体重小的动物难以观测。而此缺失与动物的做梦时长本身没有关系</p>
-<p><strong>非随机缺失</strong> （NMAR）</p>
-<p><strong><em>大部分的缺失值处理方法都假定缺失数据是MCAR或MAR</em></strong></p>
+<h2 id="计算距离"><a href="#计算距离" class="headerlink" title="计算距离"></a>计算距离</h2><p><img src="https://i.loli.net/2018/09/20/5ba336cbd341c.jpg" alt></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">d &lt;- dist(nutrient) <span class="comment">###计算距离，默认是欧式距离 结果为一个下三角矩阵</span></span><br><span class="line">as.matrix(d)[<span class="number">1</span>:<span class="number">4</span>,<span class="number">1</span>:<span class="number">4</span>] <span class="comment">###转化为matrix</span></span><br></pre></td></tr></table></figure>
 <p>&nbsp;</p>
-<h2 id="图形探究缺失数据"><a href="#图形探究缺失数据" class="headerlink" title="图形探究缺失数据"></a>图形探究缺失数据</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">matrixplot(sleep, xlab = colnames(sleep))</span><br></pre></td></tr></table></figure>
-<p><code>md.pattern()</code>生成一个以矩阵或数据框展示的缺失值的模式表格</p>
-<p><code>aggr()</code>绘制每个变量的缺失值数，和组合变量的缺失值数</p>
-<p><code>matrixplot</code></p>
-<p><code>marginplot()</code>生成一个散点图</p>
+<h2 id="层次聚类"><a href="#层次聚类" class="headerlink" title="层次聚类"></a>层次聚类</h2><p>(1) 定义每个观测值（行或单元）为一类； </p>
+<p>(2) 计算每类和其他各类的距离；</p>
+<p>(3) 把距离最短的两类合并成一类，这样类的个数就减少一个；</p>
+<p>(4) 重复步骤(2)和步骤(3)，直到包含所有观测值的类合并成单个的类为止 </p>
 <p>&nbsp;</p>
-<h2 id="用相关性探究缺失数据"><a href="#用相关性探究缺失数据" class="headerlink" title="用相关性探究缺失数据"></a>用相关性探究缺失数据</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x &lt;- as.data.frame(abs(is.na(sleep))) <span class="comment">##有缺失的值为1 无缺失为0</span></span><br><span class="line">head(sleep, n=<span class="number">5</span>)</span><br><span class="line">head(x, n=<span class="number">5</span>)</span><br><span class="line">y &lt;- x[which(apply(x,<span class="number">2</span>,sum)&gt;<span class="number">0</span>)] <span class="comment">##提取含缺失值的变量</span></span><br><span class="line">cor(y)  <span class="comment">##计算缺失变量之间的相关性</span></span><br><span class="line">cor(sleep, y, use=<span class="string">"pairwise.complete.obs"</span>) <span class="comment">##计算缺失与不缺失之间的相关性</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/09/13/5b9a1b80b4e62.jpg" alt></p>
+<p><img src="https://i.loli.net/2018/09/20/5ba337bd9cfc1.jpg" alt></p>
 <p>&nbsp;</p>
-<h2 id="缺失值的常用处理方法"><a href="#缺失值的常用处理方法" class="headerlink" title="缺失值的常用处理方法"></a>缺失值的常用处理方法</h2><p><strong>行删除法（大部分软件默认）</strong></p>
-<p><code>complete.cases()</code>   <code>na.omit</code></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data(nutrient, package=<span class="string">"flexclust"</span>)</span><br><span class="line">row.names(nutrient) &lt;- tolower(row.names(nutrient)) <span class="comment">##标签转化为小写</span></span><br><span class="line">nutrient.scaled &lt;- scale(nutrient) </span><br><span class="line">d &lt;- dist(nutrient.scaled)</span><br><span class="line">fit.average &lt;- hclust(d, method=<span class="string">"average"</span>)</span><br><span class="line">plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering"</span>)</span><br></pre></td></tr></table></figure>
 <p>&nbsp;</p>
-<p><strong>推理法</strong></p>
+<p>层次聚类实现: <code>hclust</code></p>
 <p>&nbsp;</p>
-<p><strong>多重插补</strong></p>
-<p>原理：多值插补的思想来源于贝叶斯估计，认为待插补的值是随机的，它的值来自于已观测到的值。具体实践上通常是估计出待插补的值，然后再加上不同的噪声，形成多组可选插补值。根据某种选择依据，选取最合适的插补值。缺失值通过蒙特卡洛方法填补。</p>
-<p><img src="https://i.loli.net/2018/09/13/5b9a2011dd285.jpg" alt></p>
+<h3 id="选择聚类的个数"><a href="#选择聚类的个数" class="headerlink" title="选择聚类的个数"></a>选择聚类的个数</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="keyword">library</span>(NbClust)</span><br><span class="line">&gt; devAskNewPage(ask=<span class="literal">TRUE</span>)</span><br><span class="line">&gt; nc &lt;- NbClust(nutrient.scaled, distance=<span class="string">"euclidean"</span>, min.nc=<span class="number">2</span>, max.nc=<span class="number">15</span>,    method=<span class="string">"average"</span>) <span class="comment">##distance 计算距离的方法  euclidean欧式距离</span></span><br><span class="line">&gt; table(nc$Best.n[<span class="number">1</span>,])</span><br><span class="line">	<span class="comment">#0 2 3 4 5 9 10 13 14 15</span></span><br><span class="line">	<span class="comment">#2 4 4 3 4 1 1 2 1 4</span></span><br><span class="line">&gt; barplot(table(nc$Best.n[<span class="number">1</span>,]), xlab=<span class="string">"Numer of Clusters"</span>, ylab=<span class="string">"Number of Criteria"</span>,</span><br><span class="line">main=<span class="string">"Number of Clusters Chosen by 26 Criteria"</span>)<span class="comment"># 获取最终的聚类方案</span></span><br></pre></td></tr></table></figure>
 <p>&nbsp;</p>
-<p><strong><em>蒙特卡洛基本思想</em></strong>：当所求解问题是某种随机事件出现的概率，或者是某个随机变量的期望值时，通过某种“实验”的方法，以这种事件出现的频率估计这一随机事件的概率，或者得到这个随机变量的某些数字特征，并将其作为问题的解。</p>
-<p>工作过程</p>
-<p>蒙特卡罗方法的解题过程可以归结为三个主要步骤：构造或描述概率过程；实现从已知概率分布抽样；建立各种估计量。</p>
-<p>缺失值的插补通过Gibbs抽样完成。可以自主选择预测模型。</p>
+<h3 id="获取最终的聚类方案"><a href="#获取最终的聚类方案" class="headerlink" title="获取最终的聚类方案"></a>获取最终的聚类方案</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; clusters &lt;- cutree(fit.average, k=<span class="number">5</span>)</span><br><span class="line">&gt; table(clusters)</span><br><span class="line">clusters</span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span></span><br><span class="line"><span class="number">7</span> <span class="number">16</span> <span class="number">1</span> <span class="number">2</span> <span class="number">1</span></span><br><span class="line">&gt; aggregate(nutrient, by=list(cluster=clusters), median) <span class="comment">##描述聚类</span></span><br><span class="line">&gt; plot(fit.average, hang=-<span class="number">1</span>, cex=<span class="number">.8</span>, main=<span class="string">"Average Linkage Clustering\n5 Cluster Solution"</span>)</span><br><span class="line">&gt; rect.hclust(fit.average, k=<span class="number">5</span>) <span class="comment">## 结果绘图</span></span><br></pre></td></tr></table></figure>
+<p><code>aggregate</code>  Splits the data into subsets, computes summary statistics for each, and returns the result in a convenient form</p>
 <p>&nbsp;</p>
-<p>使用<code>mice()</code>函数</p>
-<p><img src="https://pic2.zhimg.com/v2-561283772be13543dee88df86a1afb85_1200x500.jpg" alt="å¤çç¼ºå¤±å¼ä¹å¤éæè¡¥ï¼Multiple Imputationï¼"></p>
+<h2 id="划分聚类分析"><a href="#划分聚类分析" class="headerlink" title="划分聚类分析"></a>划分聚类分析</h2><p> K均值和基于中心点的划分（ PAM）</p>
+<h3 id="K-均值聚类"><a href="#K-均值聚类" class="headerlink" title="K 均值聚类"></a>K 均值聚类</h3><p>(1) 选择K个中心点（随机选择K行）；</p>
+<p>(2) 把每个数据点分配到离它最近的中心点；</p>
+<p>(3) 重新计算每类中的点到该类中心点距离的平均值（也就说，得到长度为p的均值向量，这<br>里的p是变量的个数）；</p>
+<p>(4) 分配每个数据到它最近的中心点； </p>
+<p>(5) 重复步骤(3)和步骤(4)直到所有的观测值不再被分配或是达到最大的迭代次数（ R把10次<br>作为默认迭代次数）。 </p>
 <p>&nbsp;</p>
-<p>函数mice()首先从一个包含缺失数据的数据框开始，然后返回一个包含多个（默认为5个）完<br>整数据集的对象。每个完整数据集都是通过对原始数据框中的缺失数据进行插补而生成的。由于插<br>补有随机的成分，因此每个完整数据集都略有不同。然后，with()函数可依次对每个完整数据集<br>应用统计模型（如线性模型或广义线性模型），最 后 ，pool()函数将这些单独的分析结果整合为一<br>组结果。最终模型的标准误和p值都将准确地反映出由于缺失值和多重插补而产生的不确定性。</p>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">options(digits=<span class="number">3</span>)</span><br><span class="line"><span class="keyword">library</span>(mice)</span><br><span class="line">data(sleep, package=<span class="string">"VIM"</span>)</span><br><span class="line">imp &lt;- mice(sleep, seed=<span class="number">1234</span>)  <span class="comment">##m默认值为5，指有5个填补缺失值的预测值</span></span><br><span class="line">fit &lt;- with(imp, lm(Dream ~ Span + Gest)) <span class="comment">#对5个数据集都做统计分析</span></span><br><span class="line">pooled &lt;- pool(fit) <span class="comment">#将分析结果整合为一组</span></span><br><span class="line">summary(pooled)</span><br><span class="line">imp</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">imp$imp$Dream   <span class="comment">##提取imp对象的子成分，可以观测到实际的观测值</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
- <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">complete(imp, action=n) <span class="comment">##指定m个完整数据集中的一个来展示</span></span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h2 id="成对删除、简单插补"><a href="#成对删除、简单插补" class="headerlink" title="成对删除、简单插补"></a>成对删除、简单插补</h2><p>建议不要使用</p>
+<p>K均值聚类能处理比层次聚类更大的数据集。另外，观测值不会永远被分到一类中。当我们<br>提高整体解决方案时，聚类方案也会改动。但是均值的使用意味着所有的变量必须是连续的，并<br>且这个方法很有可能被异常值影响。它在非凸聚类（例如U型）情况下也会变得很差。 </p>
+<p> &nbsp;</p>
 
           
         
@@ -1504,155 +1572,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/python学习/pandas drop()不识别columns关键字/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/python学习/pandas drop()不识别columns关键字/" itemprop="url">pandas drop()不识别columns关键字</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python/" itemprop="url" rel="index">
-                    <span itemprop="name">Python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>原因是pandas在0.21的版本才加入了columns关键字，在0.20是没有的。</p>
-<p>解决：</p>
-<p>升级pandas</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1698,7 +1622,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-count">71</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1708,10 +1632,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">3</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
-                
+                </a>
               </div>
             
 
@@ -1720,7 +1644,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
