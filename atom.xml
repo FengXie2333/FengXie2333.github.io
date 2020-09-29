@@ -62,19 +62,19 @@
   </entry>
   
   <entry>
-    <title>dict转dataframe</title>
-    <link href="http://yoursite.com/2020/09/28/python%E5%AD%A6%E4%B9%A0/Python%20dict%E8%BD%ACdataframe/"/>
-    <id>http://yoursite.com/2020/09/28/python学习/Python dict转dataframe/</id>
+    <title>匿名函数lambda</title>
+    <link href="http://yoursite.com/2020/09/28/python%E5%AD%A6%E4%B9%A0/Python%20%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0/"/>
+    <id>http://yoursite.com/2020/09/28/python学习/Python 匿名函数/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:00:14.498Z</updated>
+    <updated>2020-09-29T07:02:14.474Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict_data = &#123;<span class="string">'a'</span>: [<span class="number">1</span>,<span class="number">2</span>], <span class="string">'b'</span>: [<span class="number">2</span>,<span class="number">3</span>], <span class="string">'c'</span>: [<span class="number">3</span>,<span class="number">4</span>]&#125;</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">frame = pd.DataFrame.from_dict(dict_data, orient=<span class="string">'index'</span>, columns=[<span class="string">'name1'</span>, <span class="string">'name2'</span>] <span class="comment">## columns后面是对列进行重新命名</span></span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Jerry_1126/article/details/40105135" target="_blank" rel="noopener">https://blog.csdn.net/Jerry_1126/article/details/40105135</a></p><p>在Python,有两种函数，一种是def定义，一种是lambda函数   </p><p>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。</p><p>匿名函数的用途： </p><p>程序一次性使用    </p><p>不用命名函数，避免函数名冲突，节省内存空间   </p><p>​    </p><p>匿名函数的限制:    </p><p>只能有一个表达式，不用写<code>return</code>，返回值就是该表达式的结果。</p><p>​    </p><p>函数的应用：</p><ul><li><p>代码块重复时，考虑用函数，降低程序的冗余度</p></li><li><p>代码块复杂时，考虑用函数，提高程序的可读性</p></li></ul><p>​    </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y,z: x*y*z <span class="comment">## 可以对lambda命名，然后向普通函数一样调用</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="number">24</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y=<span class="number">2</span>: x+y    <span class="comment">#使用了默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>)                    <span class="comment">#不输的话，使用默认值2</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>, <span class="number">12</span>)</span><br><span class="line"><span class="number">22</span></span><br></pre></td></tr></table></figure><p>​    </p><p>lambda嵌套到普通函数中,lambda函数本身做为return的值</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">increment</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x+n</span><br><span class="line">    </span><br><span class="line">f=increment(<span class="number">4</span>) <span class="comment">## x = 4</span></span><br><span class="line">f(<span class="number">2</span>)</span><br></pre></td></tr></table></figure><p>​     </p><p>用def定义函数     </p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(x)</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">say(<span class="string">'Smith!'</span>) <span class="comment">## def函数可以直接调用</span></span><br></pre></td></tr></table></figure><p>用lambda定义函数</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">()</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = <span class="keyword">lambda</span> x : title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">act = say() <span class="comment">### 使用lambda需要先命名</span></span><br><span class="line">act(<span class="string">'Smith!'</span>)</span><br></pre></td></tr></table></figure><h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = (<span class="keyword">lambda</span> x=<span class="string">"Boo"</span>,y=<span class="string">"Too"</span>,z=<span class="string">"Zoo"</span>: x+y+z) <span class="comment">## 设定默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x(<span class="string">"Foo"</span>)</span><br><span class="line"><span class="string">'FooTooZoo'</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="keyword">lambda</span> x:x**<span class="number">2</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">3</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> f <span class="keyword">in</span> L:    <span class="comment">## 调用所有</span></span><br><span class="line">    <span class="keyword">print</span> f(<span class="number">2</span>)</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">16</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> L[<span class="number">0</span>](<span class="number">3</span>) <span class="comment">## 可以选择性调用某一个函数</span></span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum = reduce(<span class="keyword">lambda</span> x,y:x+y,L) <span class="comment">### reduce() 函数会对参数序列中元素进行累积。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+        &lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/Jerry_1126/article/details/40105135&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://blog.csdn.net/Jerry_1126/artic
       
     
     </summary>
@@ -82,32 +82,7 @@
       <category term="Python学习" scheme="http://yoursite.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python Dataframe" scheme="http://yoursite.com/tags/Python-Dataframe/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Hexo中嵌入Jupyter notebook</title>
-    <link href="http://yoursite.com/2020/09/28/Jupyter/%E5%9C%A8Hexo%E4%B8%AD%E5%B5%8C%E5%85%A5Jupyter-notebook/"/>
-    <id>http://yoursite.com/2020/09/28/Jupyter/在Hexo中嵌入Jupyter-notebook/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T09:24:22.006Z</updated>
-    
-    <content type="html"><![CDATA[<iframe src=" ../../../../2_Bioinfomatic/rosalind/Code/Rosalind--python练习.ipynb" width="570" height="2000"></iframe>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;iframe src=&quot; ../../../../2_Bioinfomatic/rosalind/Code/Rosalind--python练习.ipynb&quot; width=&quot;570&quot; height=&quot;2000&quot;&gt;&lt;/iframe&gt;
-      
-    
-    </summary>
-    
-      <category term="电脑技能" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/"/>
-    
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="Python 函数" scheme="http://yoursite.com/tags/Python-%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
@@ -143,31 +118,6 @@
   </entry>
   
   <entry>
-    <title>修改jupyter目录</title>
-    <link href="http://yoursite.com/2020/09/28/Linux/%E4%BF%AE%E6%94%B9jupyter%E7%9B%AE%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/09/28/Linux/修改jupyter目录/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:17:17.086Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p><p>2 用notepad打开</p><p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p><p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p><p>5 重新运行jupyter</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;修改jupyter目录&quot;&gt;&lt;a href=&quot;#修改jupyter目录&quot; class=&quot;headerlink&quot; title=&quot;修改jupyter目录&quot;&gt;&lt;/a&gt;修改jupyter目录&lt;/h1&gt;&lt;p&gt;1 在C:\Users\feng.jupyter中找到jupyter
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="Jupyter" scheme="http://yoursite.com/tags/Jupyter/"/>
-    
-  </entry>
-  
-  <entry>
     <title>setuptools安装</title>
     <link href="http://yoursite.com/2020/09/28/Linux/setuptools%E5%AE%89%E8%A3%85/"/>
     <id>http://yoursite.com/2020/09/28/Linux/setuptools安装/</id>
@@ -190,6 +140,31 @@
     
     
       <category term="Linux报错" scheme="http://yoursite.com/tags/Linux%E6%8A%A5%E9%94%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改jupyter目录</title>
+    <link href="http://yoursite.com/2020/09/28/Linux/%E4%BF%AE%E6%94%B9jupyter%E7%9B%AE%E5%BD%95/"/>
+    <id>http://yoursite.com/2020/09/28/Linux/修改jupyter目录/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:17:17.086Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p><p>2 用notepad打开</p><p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p><p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p><p>5 重新运行jupyter</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;修改jupyter目录&quot;&gt;&lt;a href=&quot;#修改jupyter目录&quot; class=&quot;headerlink&quot; title=&quot;修改jupyter目录&quot;&gt;&lt;/a&gt;修改jupyter目录&lt;/h1&gt;&lt;p&gt;1 在C:\Users\feng.jupyter中找到jupyter
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Jupyter" scheme="http://yoursite.com/tags/Jupyter/"/>
     
   </entry>
   
@@ -268,31 +243,6 @@
   </entry>
   
   <entry>
-    <title>李梢--单细胞转录组发现早期胃癌特异标记基因</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E6%9D%8E%E6%A2%A2-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%8F%91%E7%8E%B0%E6%97%A9%E6%9C%9F%E8%83%83%E7%99%8C%E7%89%B9%E5%BC%82%E6%A0%87%E8%AE%B0%E5%9F%BA%E5%9B%A0/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:26:54.533Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul><li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p></li><li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p></li><li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p></li></ul><h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p><ul><li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li><li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li><li>proliferative cells (PCs)  MKI67 and BRIC5</li><li>cancer cells  CEACAM5 and CEACAM6</li><li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li><li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li><li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li></ul><p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p><h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.celrep.2019.04.052&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dissecting the Single-Cell Transcriptome Network Un
-      
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-  </entry>
-  
-  <entry>
     <title>论文写作语句</title>
     <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E8%AF%81%E6%8D%AE%E8%A1%A8%E6%98%8E/"/>
     <id>http://yoursite.com/2020/09/28/文献笔记/越来越多证据表明/</id>
@@ -318,103 +268,27 @@
   </entry>
   
   <entry>
-    <title>肿瘤免疫逃逸机制总结</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E8%82%BF%E7%98%A4%E5%85%8D%E7%96%AB%E9%80%83%E9%80%B8%E6%9C%BA%E5%88%B6/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/肿瘤免疫逃逸机制/</id>
+    <title>在Hexo中嵌入Jupyter notebook</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%B8%B8%E7%94%A8%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/%E5%9C%A8Hexo%E4%B8%AD%E5%B5%8C%E5%85%A5Jupyter-notebook/"/>
+    <id>http://yoursite.com/2020/09/28/常用电脑技能/在Hexo中嵌入Jupyter-notebook/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:27:24.606Z</updated>
+    <updated>2020-09-29T09:28:56.398Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>SIRP- α</strong>: As in blood, signal regulatory protein α (SIRP- α), which is used by CD47-expressing tumor cells to inhibit phagocytosis by antigen-presenting cells, was expressed by all TA-DCs except cDC1.</p>]]></content>
+    <content type="html"><![CDATA[<iframe src=" ../../../../2_Bioinfomatic/rosalind/Code/Rosalind--python练习.ipynb" width="570" height="2000"></iframe>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;strong&gt;SIRP- α&lt;/strong&gt;: As in blood, signal regulatory protein α (SIRP- α), which is used by CD47-expressing tumor cells to inhibit pha
+        &lt;iframe src=&quot; ../../../../2_Bioinfomatic/rosalind/Code/Rosalind--python练习.ipynb&quot; width=&quot;570&quot; height=&quot;2000&quot;&gt;&lt;/iframe&gt;
       
     
     </summary>
     
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+      <category term="电脑技能" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/"/>
     
     
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>单细胞测序发现保守的肺癌髓系细胞群</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F%E5%8F%91%E7%8E%B0%E4%BF%9D%E5%AE%88%E7%9A%84%E8%82%BA%E7%99%8C%E9%AB%93%E7%B3%BB%E7%BB%86%E8%83%9E%E7%BE%A4/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/单细胞测序发现保守的肺癌髓系细胞群/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:26:39.312Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1><p>文章标题</p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>写完笔记之后最后填，概述文章的内容，以后查阅笔记的时候先看这一段。</p><h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><p>作者的研究目标。</p><h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><p>问题陈述，要解决什么问题？</p><h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><p>解决问题的方法/算法是什么？</p><h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><p>作者如何评估自己的方法，有没有问题或者可以借鉴的地方。</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>作者给了哪些strong conclusion, 又给了哪些weak conclusion?</p><h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Title&quot;&gt;&lt;a href=&quot;#Title&quot; class=&quot;headerlink&quot; title=&quot;Title&quot;&gt;&lt;/a&gt;Title&lt;/h1&gt;&lt;p&gt;文章标题&lt;/p&gt;
-&lt;h2 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;header
-      
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="待完成" scheme="http://yoursite.com/tags/%E5%BE%85%E5%AE%8C%E6%88%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中性粒细胞在肿瘤中作用</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E4%B8%AD%E6%80%A7%E7%B2%92%E7%BB%86%E8%83%9E%E5%9C%A8%E8%82%BF%E7%98%A4%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/中性粒细胞在肿瘤中的作用/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:27:15.444Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity"><a href="#CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity" class="headerlink" title="CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity"></a>CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity</h2><p>Immunity, 2020</p><p>Neutrophils are the only cell type able to undergo a peculiar form of cell death called NETosis, as a<br>result of which the nuclear DNA of the neutrophil is extruded and projected into the tissular surroundings, where it can exert bactericidal properties. The majority of reports attribute pro-tumorigenic roles to neutrophils, including angiogenesis promotion and immunosuppressive<br>effects. Such extracellular DNA conjugated to neutrophil proteins is termed neutrophil extracellular traps(NETs), since it can entrap microorganisms.  Tumors may cunningly pervert NETosis in their own interest. The tumor microenvironment is in fact very rich in factors that can induce NET extrusion from infiltrating neutrophils or GR-MDSCs. In this paper, the study documents the ability of tumors producing ELR+ CXCL chemokines to induce NETs in a manner dependent on CXCR1 and/or CXCR2. CXCR1 is definitely involved in the process, as verified with a specific neutralizing mAb. No specific blocking antibody against CXCR2 was available. Complete blockade with a CXCR1 agent does not exclude a role for CXCR2, since the biology of this receptor is complex and is known to form heterodimers with CXCR1. This study also showed that NETs might coat and shield tumor cells against cytotoxicity, as mediated by CD8+T cells and NK lymphocytes. Such a protective mechanism that results in armored tumor cells was lost when extracellular DNA was digested and involved less frequent cytotoxic contact between effector and target cells. In their experiments, pharmacological NETosis inhibition synergizes with the most potent immunotherapy strategy in the clinic combining anti-PD-1 and anti-CTLA-4 mAbs. The mechanism is envisioned to involve NET inhibition of the ensuing<br>cytotoxic effector T cell response following checkpoint inhibition.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cyto
-      
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pancreatic CAF associated papers</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/pancreatic-CAF-associated-papers/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:24:05.005Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/" target="_blank" rel="noopener">Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer</a></p><p>PNAS, 2013</p><a id="more"></a><p>在胰腺癌中，α-CTLA-4 and α-PD-L1治疗效果不佳。</p><p> ELISpots 显示， 来自肿瘤的CD8 T细胞中 IFN-γ–secreting CD8+ T cells 更多。而且The frequency of IFN-γ–secreting CD8+ T cells was the same when the stimulating tumor cells were from the T-cell donor or from another PDA-bearing mouse</p><p><strong>Conclusion</strong>：PDA荷瘤小鼠对于肿瘤抗原有自发适应性免疫。免疫抑制剂疗效不佳，有别的原因</p><p>FAP+ cells were present in PanIN and both cytokeratin-19+ (CK19+) and CK19− PDA lesions but rarely α-smooth muscle actin (αSMA), whereas FAP+ cells among PDA cells were CD34−and αSMA+ </p><p>All FAP+ cells were PDGF receptor-α+ and CD45−, confirming their mesenchymal origin</p><p>RNAseq 显示胰腺癌中FAP+细胞编码基因与细胞外基质蛋白相关</p><p>Depleting FAP+ cells slowed PDA growth, but not when CD4+ and CD8+ T cells were removed. Combining depletion of FAP+ cells with administration of α-CTLA-4 or α-PD-L1 further diminished tumor growth.</p><p><strong>Conclusion</strong>：FAP+ 细胞介导PDA对于免疫抑制剂的抵抗作用</p><p>DTx- and α-PD-L1–treated mice 中IFN-γ–secreting CD8+ T cells并没有增加。</p><p><strong>Conclusion</strong>：FAP的作用并不是通过诱导CD8细胞</p><p>癌旁缺乏CD3+ T细胞，原因是因为CXCL12。作者发现肿瘤中FAP+ 细胞是CXCL12的唯一来源。但是CXCL12定位在肿瘤细胞上，可能是metabolically stressed cancer cells过表达并分泌HMGB1捕获CXCL12并形成高亲和力的复合物。</p><p>使用CXCR4抑制剂 AMD3100， 证实了CXCL12的作用。Tumor growth was slowed by AMD3100 in a T cell-dependent manner。 CXCR4-mediated exclusion of T cells reflects T-cell apoptosis</p><p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/figure/fig04/" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PNAS, 2013&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="Cancer" scheme="http://yoursite.com/tags/Cancer/"/>
-    
-      <category term="Fibroblast" scheme="http://yoursite.com/tags/Fibroblast/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
@@ -446,19 +320,93 @@
   </entry>
   
   <entry>
-    <title>cDC2的亚群可以prime CD4</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/cDC2%E7%9A%84%E4%BA%9A%E7%BE%A4%E5%8F%AF%E4%BB%A5prime%20CD4/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/cDC2的亚群可以prime CD4/</id>
+    <title>AI-画布大小调整</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%B8%B8%E7%94%A8%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/AI%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    <id>http://yoursite.com/2020/09/28/常用电脑技能/AI使用教程/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:22:08.007Z</updated>
+    <updated>2020-09-29T08:15:30.953Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.cell.2019.02.005" target="_blank" rel="noopener">Unleashing Type-2 Dendritic Cells to Drive Protective Antitumor CD4+ T Cell Immunity</a></p><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>目前，免疫抑制剂治疗疗效不佳的原因之一是因为存在dysfunction或exhausted的T。而且这种耗竭的状态无法被免疫检查点抑制剂逆转</p><p>antitumor中，CD4的作用：</p><ul><li>Effector CD4+ Tconv can augment immunity by licensing dendritic cells (DC) and stimulating pro-inflammatory myeloid cell programs</li><li>Effective anti- CTLA-4 therapy generates <strong>ICOS+PD-1lo </strong>CD4+ T helper 1-like (Th1-like) effector CD4+ Tconv critical for an antitumor response</li><li>Presence of PD-1hi CD4+ Tconv cells, correlated with high tumor burden and likely T cell exhaustion, is a negative prognostic indicator for ICB</li></ul><p>在浸润肿瘤前，T细胞现在肿瘤引流淋巴结（tumor-draining lymph node (tdLN)）中由cDC激活</p><p>cDC：</p><ul><li>cDC can be divided into cDC1 and cDC2 populations that are either LN resident or migrate to the LN from peripheral tissues</li><li>cDC1 are critical for directing CD8+ T cell immunity to various pathogens</li><li>cDC2, a heterogeneous population, preferentially initiate CD4+ Tconv responses in several conditions</li></ul><h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="Myeloid-Heterogeneity-at-Single-Cell-Resolution"><a href="#Myeloid-Heterogeneity-at-Single-Cell-Resolution" class="headerlink" title="Myeloid Heterogeneity at Single-Cell Resolution"></a>Myeloid Heterogeneity at Single-Cell Resolution</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="画布大小调整"><a href="#画布大小调整" class="headerlink" title="画布大小调整"></a>画布大小调整</h2><ul><li><p>使用快捷键Ctrl+Alt+P，或选择菜单栏中的文件—文档设置</p></li><li><p>如果想简单粗暴的，不需要精确的放大缩小，只需要自由按情况扩大或缩小的，直接点击“编辑面板”</p></li><li><p>然后画布周围会出现几个锚点，拖动锚点，就可以自由地调整画布的大小了</p></li><li><p>如果要精确一点的话，通过调整数据，会出现红色的参考线，然后再拖动锚点到红色参考线位置即可</p></li></ul>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.02.005&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Unleashing Type-2 Dendritic Cells to Drive Protective
+        &lt;h2 id=&quot;画布大小调整&quot;&gt;&lt;a href=&quot;#画布大小调整&quot; class=&quot;headerlink&quot; title=&quot;画布大小调整&quot;&gt;&lt;/a&gt;画布大小调整&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;使用快捷键Ctrl+Alt+P，或选择菜单栏中的文件—文档设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li
+      
+    
+    </summary>
+    
+      <category term="电脑技能" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>singleR</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/singleR/"/>
+    <id>http://yoursite.com/2020/09/28/单细胞测序/singleR/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-28T06:10:36.417Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1038/s41590-018-0276-y" target="_blank" rel="noopener">Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage</a></p><h2 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h2><h3 id="Reference-data-sets-enhance-annotation-of-scRNA-seq"><a href="#Reference-data-sets-enhance-annotation-of-scRNA-seq" class="headerlink" title="Reference data sets enhance annotation of scRNA-seq"></a>Reference data sets enhance annotation of scRNA-seq</h3><h4 id="Pipeline"><a href="#Pipeline" class="headerlink" title="Pipeline"></a>Pipeline</h4><p>The SingleR pipeline is based on correlating reference <strong>bulk transcriptomic data sets of pure cell types</strong> with single-cell gene expression.In the first step of the SingleR pipeline, a <strong>Spearman coefficient</strong> was calculated for single-cell gene expression with each of the samples in the reference data set, <strong>using only the variable genes in the reference data set</strong>. Using only variable genes among the cell types increased the ability to distinguish closely related cell types. This process was performed iteratively using only the top cell types from the previous step and the variable genes among them until only one cell type remaine</p><p><img src="https://i.loli.net/2019/03/31/5ca058a40ec09.jpg" alt="Pipeline of singleR"></p><a id="more"></a><h4 id="Validate-SingleR"><a href="#Validate-SingleR" class="headerlink" title="Validate SingleR"></a>Validate SingleR</h4><p>Using SingleR to analyze a published study of scRNA-seq of mouse bone marrow-derived dendritic cells (BMDC) and fibroblasts. When applied to the ImmGen database as a reference library, SingleR identified 33 of the 48 cells thought in the study to be BMDCs as macrophages</p><p><img src="https://i.loli.net/2019/03/31/5ca06b69ebecd.jpg" alt></p><p>原文中用GM-CSF培养细胞，然后sorting CD11c+ 的细胞。这个protocol已被证明无法获得纯的DC细胞，会混进表达marcrophage markers的细胞。</p><h3 id="SingleR-identifies-a-transitional-macrophage-in-fibrosis"><a href="#SingleR-identifies-a-transitional-macrophage-in-fibrosis" class="headerlink" title="SingleR identifies a transitional macrophage in fibrosis"></a>SingleR identifies a transitional macrophage in fibrosis</h3><p>applied SingleR to enhance annotation of a lung scRNA-seq data set obtained from whole lungs of adult, male mice (10–12 weeks age) dissociated into single-cell suspension and flow sorted on live cells, using 6 steady-state mice and 3 mice 14 days after a single tracheal instillation of bleomycin, the fibrotic phase of the injury model.</p><p>  <img src="https://i.loli.net/2019/04/01/5ca1a1e0bff7b.jpg" alt></p><p><strong>conclusion:</strong> The number of lung macrophages was higher in the bleomycin-treated condition than at steady state</p><p>Macrophages and dendritic cells have similar transcriptomic profiles. So the authors repeated SingleR analysis using published RNA-seq data sets of mouse lung macrophages and dendritic cells to isolate the macrophages in the pooled bleomycin-injured and steady-state samples. Finally, singleR identified two subtypes of macrophages: alveolar and interstitial macrophages</p><p>Similarity analysis by comparison of each cell to mouse RNA-seq data sets of alveolar and interstitial macrophages indicated a gradient of cellular identity in the macrophage cluster between alveolar and interstitial macrophages</p><p>Deconvolution analysis in was performed using the DeconRNA-seq package using the average expression of AM samples and average expression of IM3 samples from GSE94135</p><p><img src="https://i.loli.net/2019/04/01/5ca1a243a8188.jpg" alt></p><p>Then, the full range of SingleR correlation scores for each cell with reference to ImmGen was used for unsupervised hierarchical clustering of the macrophages from the lung scRNA-seq data set. This analysis identified three distinct subclusters (C1, C2, and C3), all three detected at varying levels in both steady-state and bleomycin-treated mice.45% of cluster C2 cells (but only 7.3% of cluster C1 cells and 4.7% of cluster C3 cells) expressed at least 33% of cluster C1 genes and at least 33% of cluster C3 genes, suggesting that cluster C2 was intermediate in gene expression between C1 and C3</p><p><img src="https://i.loli.net/2019/04/01/5ca1a2ee98ae4.jpg" alt="Hierarchical clustering by reference annotation reveals a transitional macrophage in fibrosis"></p><p><strong>conclusion:</strong>cluster C1 was equally present in steady-state lung and bleomycin injury and corresponded to the cells that were annotated as alveolar macrophages by the lung-specific data sets; clusters C2 and C3 were enriched in cells isolated from mice with bleomycin-induced fibrosis and expressed Cx3cr1, Ccr2, Mafb, and MHCII genes, consistent with monocytic origin</p><p>Clustering in Fig. 3a was performed using <strong>Ward’s hierarchical agglomerative clustering method</strong> based on the SingleR scores across all cell types</p><h3 id="Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models"><a href="#Cluster-C2-and-C3-markers-are-found-in-alternate-lung-fibrosis-models" class="headerlink" title="Cluster C2 and C3 markers are found in alternate lung fibrosis models"></a>Cluster C2 and C3 markers are found in alternate lung fibrosis models</h3><p>To test the relevance of the identified gene expression pat-tern to other models of fibrosis, the authors used a mouse model of lung fibrosis induced by epithelial telomere dysfunction</p><p><img src="https://i.loli.net/2019/04/01/5ca1a38c303d7.jpg" alt="Markers of macrophages identified by scRNA-seq are found in multiple fibrosis models"></p><p>用human芯片数据验证，发现在小鼠中得出的结论也使用与人.immunofluorescence of lung tissue indicated the expression of <strong>MAFB</strong>, a marker detected specifically in clusters C2 and C3, in CD68+  macrophages from patients with idiopathic lung fibrosis compared with healthy controls(Figc)</p><h3 id="Cluster-C2-macrophages-localize-to-the-fibrotic-niche"><a href="#Cluster-C2-macrophages-localize-to-the-fibrotic-niche" class="headerlink" title="Cluster C2 macrophages localize to the fibrotic niche"></a>Cluster C2 macrophages localize to the fibrotic niche</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a510967d7.jpg" alt="transitional macrophages expressing CX3CR1, MHCII, and SiglecF localize to sites of fibroblast accumulation after lung injury"></p><p><strong>Conclusion:</strong> macrophage cluster C2 localizes to the fibrotic niche</p><h3 id="CX3CR1-expressing-macrophages-drive-lung-fibrosis"><a href="#CX3CR1-expressing-macrophages-drive-lung-fibrosis" class="headerlink" title="CX3CR1-expressing macrophages drive lung fibrosis"></a>CX3CR1-expressing macrophages drive lung fibrosis</h3><p><img src="https://i.loli.net/2019/04/01/5ca1a56682dfe.jpg" alt="Pdgf-aa is a macrophage-derived trophic factor for fibroblasts"></p><p><strong>Conclusion：</strong>during fibrogenesis, CX3CR1+ SiglecF+ macrophages localize to sites of Pdgfra+ and Pdgfrb+ fibroblast accumulation after bleomycin-induced injury in the lung. Deletion of these macrophages during the fibrotic period (days 8–21) eliminated Pdgfra+ or Pdgfrb+ fibroblasts and decreased total lung collagen. Mechanistic studies indicated that fibroblast migration and proliferation were dependent on secretion of Pdgf-aa by SiglecF+ CD11c+ MHCIIhi and CX3CR1+ cells, respectively, suggesting that paracrine interactions between these macrophages and fibroblasts sustain the fibroblast compartment and tissue fibrosis.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1038/s41590-018-0276-y&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Reference-based analysis of lung single-cell sequencing reveals a transitional profibrotic macrophage&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Results&quot;&gt;&lt;a href=&quot;#Results&quot; class=&quot;headerlink&quot; title=&quot;Results&quot;&gt;&lt;/a&gt;Results&lt;/h2&gt;&lt;h3 id=&quot;Reference-data-sets-enhance-annotation-of-scRNA-seq&quot;&gt;&lt;a href=&quot;#Reference-data-sets-enhance-annotation-of-scRNA-seq&quot; class=&quot;headerlink&quot; title=&quot;Reference data sets enhance annotation of scRNA-seq&quot;&gt;&lt;/a&gt;Reference data sets enhance annotation of scRNA-seq&lt;/h3&gt;&lt;h4 id=&quot;Pipeline&quot;&gt;&lt;a href=&quot;#Pipeline&quot; class=&quot;headerlink&quot; title=&quot;Pipeline&quot;&gt;&lt;/a&gt;Pipeline&lt;/h4&gt;&lt;p&gt;The SingleR pipeline is based on correlating reference &lt;strong&gt;bulk transcriptomic data sets of pure cell types&lt;/strong&gt; with single-cell gene expression.In the first step of the SingleR pipeline, a &lt;strong&gt;Spearman coefficient&lt;/strong&gt; was calculated for single-cell gene expression with each of the samples in the reference data set, &lt;strong&gt;using only the variable genes in the reference data set&lt;/strong&gt;. Using only variable genes among the cell types increased the ability to distinguish closely related cell types. This process was performed iteratively using only the top cell types from the previous step and the variable genes among them until only one cell type remaine&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2019/03/31/5ca058a40ec09.jpg&quot; alt=&quot;Pipeline of singleR&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="methods" scheme="http://yoursite.com/tags/methods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tool</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/tool/"/>
+    <id>http://yoursite.com/2020/09/28/单细胞测序/tool/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:18:11.658Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CytoSPADE"><a href="#CytoSPADE" class="headerlink" title="CytoSPADE"></a>CytoSPADE</h2><blockquote><p>A high-performance implementation of an interface for the Spanning-tree Progression Analysis of Density-normalized Events algorithm for tree-based analysis and visualization of this high-dimensional cytometry data</p></blockquote><a id="more"></a><h2 id="PhenoGraph"><a href="#PhenoGraph" class="headerlink" title="PhenoGraph"></a>PhenoGraph</h2><blockquote><p><a href="http://www.cell.com/cell/abstract/S0092-8674(15" target="_blank" rel="noopener">PhenoGraph</a>00637-6) is a clustering method designed for high-dimensional single-cell data. It works by creating a graph (“network”) representing phenotypic similarities between cells and then identifying communities in this graph.</p></blockquote><p><a href="https://www.ncbi.nlm.nih.gov/pubmed/28865188" target="_blank" rel="noopener">PhenoGraph and viSNE facilitate the identification of abnormal T-cell populations in routine clinical flow cytometric data.</a></p><p><a href="https://www.cell.com/cell/fulltext/S0092-8674(15" target="_blank" rel="noopener">Data-Driven Phenotypic Dissection of AML Reveals Progenitor-like Cells that Correlate with Prognosis</a>00637-6&gt;)</p><h2 id="Louvain"><a href="#Louvain" class="headerlink" title="Louvain"></a>Louvain</h2><p><img src="https://i.loli.net/2019/04/18/5cb81b8c5430c.jpg" alt></p><p><a href="https://sites.google.com/site/findcommunities/" target="_blank" rel="noopener">Louvain method: Finding communities in large networks</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;CytoSPADE&quot;&gt;&lt;a href=&quot;#CytoSPADE&quot; class=&quot;headerlink&quot; title=&quot;CytoSPADE&quot;&gt;&lt;/a&gt;CytoSPADE&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;A high-performance implementation of an interface for the Spanning-tree Progression Analysis of Density-normalized Events algorithm for tree-based analysis and visualization of this high-dimensional cytometry data&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="杂记" scheme="http://yoursite.com/tags/%E6%9D%82%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>肿瘤免疫逃逸机制总结</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E8%82%BF%E7%98%A4%E5%85%8D%E7%96%AB%E9%80%83%E9%80%B8%E6%9C%BA%E5%88%B6/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/肿瘤免疫逃逸机制/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:27:24.606Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>SIRP- α</strong>: As in blood, signal regulatory protein α (SIRP- α), which is used by CD47-expressing tumor cells to inhibit phagocytosis by antigen-presenting cells, was expressed by all TA-DCs except cDC1.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;SIRP- α&lt;/strong&gt;: As in blood, signal regulatory protein α (SIRP- α), which is used by CD47-expressing tumor cells to inhibit pha
       
     
     </summary>
@@ -471,46 +419,101 @@
   </entry>
   
   <entry>
-    <title>Treg中HPGD发挥免疫抑制功能（通过pparg通路）</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/Treg%E4%B8%ADHPGD%E5%8F%91%E6%8C%A5%E5%85%8D%E7%96%AB%E6%8A%91%E5%88%B6%E5%8A%9F%E8%83%BD%EF%BC%88%E9%80%9A%E8%BF%87pparg%E9%80%9A%E8%B7%AF%EF%BC%89/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/Treg中HPGD发挥免疫抑制功能（通过pparg通路）/</id>
+    <title>WGCNA</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/WGCNA/"/>
+    <id>http://yoursite.com/2020/09/28/单细胞测序/WGCNA/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:26:20.009Z</updated>
+    <updated>2020-09-29T07:18:28.697Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.immuni.2019.03.014" target="_blank" rel="noopener">Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction</a></p><a id="more"></a><h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><ul><li>HPGD is specifically upregulated in Treg cells and confers suppressive capabilities</li><li>HPGD-induced Tconv cell suppression is in part mediated by PPARγ signaling</li><li>HPGD expression in Treg cells is vital for VAT homeostasis and metabolic regulation</li><li>T2D patients have a reduced Treg cell fraction expressing lower amounts of HPGD</li></ul><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>Regulatory T cells (Treg cells) are important for preventing autoimmunity and maintaining tissue homeostasis, but whether Treg cells can adopt tissue- or immune-context-specific suppressive mechanisms is unclear. Here, we found that the enzyme hydroxyprostaglandin dehydrogenase (HPGD), which catabolizes prostaglandin E 2 (PGE 2) into the metabolite 15-keto PGE 2, was highly expressed in Treg cells, particularly those in visceral adipose tissue (VAT). <strong>Nuclear receptor peroxisome proliferator-activated receptor-γ (PPARγ)-induced HPGD expression in VAT Treg cells, and consequential Treg-cell-mediated generation of 15-keto PGE 2 suppressed conventional T cell activation and proliferation</strong>. Conditional deletion of Hpgd in mouse Treg cells resulted in the accumulation of functionally impaired Treg cells specifically in VAT, causing local inflammation and systemic insulin resistance. Consistent with this mechanism, humans with type 2 diabetes showed decreased HPGD expression in Treg cells. These data indicate that HPGD-mediated suppression is a tissue- and context-dependent suppressive mechanism used by Treg cells to maintain adipose tissue homeostasis.</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a href="https://www.plob.org/article/10682.html" target="_blank" rel="noopener">https://www.plob.org/article/10682.html</a></p><p>WGCNA所分析的数据是芯片数据（需要砸很多芯片，比如若要研究细胞凋亡，那么使用改方法需要实验者提供细胞凋亡各个时期的芯片数据，以了解这一生理过程中细胞内所有基因的表达变化)。</p><p>从方法上来讲，WGCNA分为<strong>表达量聚类分析和表型关联</strong>两部分，主要包括基因之间相关系数计算、基因模块的确定、共表达网络、模块与性状关联四个步骤</p><p>第一步计算任意两个基因之间的相关系数（Person Coefficient）。为了衡量两个基因是否具有相似表达模式，一般需要设置阈值来筛选，高于阈值的则认为是相似的。但是这样如果将阈值设为0.8，那么很难说明0.8和0.79两个是有显著差别的。因此，<strong>WGCNA分析时采用相关系数加权值，即对基因相关系数取N次幂</strong>，使得网络中的基因之间的连接服从<strong>无尺度网络分布(scale-freenetworks)</strong>，这种算法更具生物学意义。</p><p><img src="https://i.loli.net/2018/11/05/5be0059dbceea.jpg" alt></p><p>网络的数学名称是图，在图论中对于每一个节点有一个重要概念，即：度。一个点的度是指图中该点所关联的边数。如下图，如果不加以思考，人们很容易认为生活中常见的网络会是一种random network，即每一个节点的度相对平均。然而第二种图，即scale-free network才是一种更稳定的选择。Scale-free network具有这样的特点，即存在少数节点具有明显高于一般点的度，这些点被称为hub。由少数hub与其它节点关联，最终构成整个网络。这样的网络的节点度数与具有该度数的节点个数间服从power distribution。这为我们寻找最佳参数提供了理论依据。     这里做一点扩展，我认为时非常有必要的。只要我们愿意抽象，Scale-free network大量存在于的生活中。人们的社交网络、生物基因蛋白质的相互作用、计算机网络甚至sexually transmitted diseases均有这层关系。生物体选择scale-free network而不是random network是有它进化上的原因的，显然对于scale-free network，少数关键基因执行着主要功能，这种网络具有非常好的鲁棒性，即只要保证hub的完整性，整个生命体系的基本活动在一定刺激影响下将不会受到太大影响，而random network若受到外界刺激，其受到的伤害程度将直接与刺激强度成正比。</p><p> <a href="https://www.jianshu.com/p/a2790dc1f010" target="_blank" rel="noopener">https://www.jianshu.com/p/a2790dc1f010</a></p><p>第二步通过基因之间的相关系数构建分层聚类树，<strong>聚类树的不同分支代表不同的基因模块</strong>，不同颜色代表不同的模块。基于基因的加权相关系数，将基因按照表达模式进行分类，将模式相似的基因归为一个模块。这样就可以将几万个基因通过基因表达模式被分成了几十个模块，是一个提取归纳信息的过程。</p><p><img src="https://i.loli.net/2018/11/05/5be0062feeae6.jpg" alt></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.immuni.2019.03.014&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Enzymatic Activity of HPGD in Treg Cells Suppresses Tconv Cells to Maintain Adipose Tissue Homeostasis and Prevent Metabolic Dysfunction&lt;/a&gt;&lt;/p&gt;
+      
+      
+        &lt;h2 id=&quot;教程&quot;&gt;&lt;a href=&quot;#教程&quot; class=&quot;headerlink&quot; title=&quot;教程&quot;&gt;&lt;/a&gt;教程&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.plob.org/article/10682.html&quot; target=&quot;_blank&quot; rel=
+      
     
     </summary>
     
       <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
     
     
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
+      <category term="methods" scheme="http://yoursite.com/tags/methods/"/>
     
   </entry>
   
   <entry>
-    <title>Serine Metabolism Supports Macrophage IL-1b production</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/Serine-Metabolism-Supports-Macrophage-IL-1b-production/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/Serine-Metabolism-Supports-Macrophage-IL-1b-production/</id>
+    <title>SENCIC</title>
+    <link href="http://yoursite.com/2020/09/28/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F/SCENIC/"/>
+    <id>http://yoursite.com/2020/09/28/单细胞测序/SCENIC/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:25:05.775Z</updated>
+    <updated>2020-09-29T07:18:13.805Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.cmet.2019.01.014" target="_blank" rel="noopener">Serine Metabolism Supports Macrophage IL-1b Production </a></p><a id="more"></a><p> <img src="https://i.loli.net/2019/04/12/5cb043518e049.jpg" alt></p><p>&nbsp;</p><h2 id="highlight"><a href="#highlight" class="headerlink" title="highlight"></a>highlight</h2><ul><li>Serine deprivation diminishes LPS-induced IL-1b mRNA expression </li><li>LPS stimulates serine generation of glycine for glutathione synthesis</li><li>Glutathione is necessary to maintain LPS induction of IL-1bproduction </li><li>Inhibition of de novo serine synthesis promotes survival of mice exposed to LPS </li></ul><h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><h3 id="Serine-Is-Necessary-for-Optimal-IL-1b-Gene-Expression"><a href="#Serine-Is-Necessary-for-Optimal-IL-1b-Gene-Expression" class="headerlink" title="Serine Is Necessary for Optimal IL-1b Gene Expression"></a>Serine Is Necessary for Optimal IL-1b Gene Expression</h3><p> <img src="https://i.loli.net/2019/04/12/5cb0450d4943f.jpg" alt></p><p>ECAR:胞外产酸能力，间接反映糖酵解水平</p><p>OCR：检测耗氧量</p><p>&nbsp;</p><h3 id="Serine-Metabolism-Supports-LPS-Induction-of-GSH-synthesis-which-Is-Required-for-IL-1b-Gene-Expression"><a href="#Serine-Metabolism-Supports-LPS-Induction-of-GSH-synthesis-which-Is-Required-for-IL-1b-Gene-Expression" class="headerlink" title="Serine Metabolism Supports LPS Induction of GSH synthesis, which Is Required for IL-1b Gene Expression"></a>Serine Metabolism Supports LPS Induction of GSH synthesis, which Is Required for IL-1b Gene Expression</h3><p> <img src="https://i.loli.net/2019/04/12/5cb045235a5a2.jpg" alt></p><p>&nbsp;</p><h3 id="Serine-Deprivation-Diminishes-IL-1b-Gene-Expression-of-BMDMs-without-Altering-Inflammation-Associated-Gene-Networks-or-Inflammasome-Activation"><a href="#Serine-Deprivation-Diminishes-IL-1b-Gene-Expression-of-BMDMs-without-Altering-Inflammation-Associated-Gene-Networks-or-Inflammasome-Activation" class="headerlink" title="Serine Deprivation Diminishes IL-1b Gene Expression of BMDMs without Altering Inflammation-Associated Gene Networks or Inflammasome Activation"></a>Serine Deprivation Diminishes IL-1b Gene Expression of BMDMs without Altering Inflammation-Associated Gene Networks or Inflammasome Activation</h3><p><img src="https://i.loli.net/2019/04/12/5cb044648650a.jpg" alt></p><p>&nbsp;</p><h3 id="De-Novo-Serine-Synthesis-Is-Required-for-LPS-Responses-In-Vivo"><a href="#De-Novo-Serine-Synthesis-Is-Required-for-LPS-Responses-In-Vivo" class="headerlink" title="De Novo Serine Synthesis Is Required for LPS Responses In Vivo"></a>De Novo Serine Synthesis Is Required for LPS Responses In Vivo</h3><p><img src="https://i.loli.net/2019/04/12/5cb044d36de7c.jpg" alt></p><p>&nbsp;</p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.nature.com/articles/nmeth.4463" target="_blank" rel="noopener">SCENIC: Single-cell regulatory network inference and clustering</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><p>SCENIC can be use to demonstrate <strong>genomic regulatory code</strong> which can be exploited to guide the identification of transcription factors and cell states.</p><a id="more"></a><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The transcriptional state of a cell emerges from an underlying gene regulatory network (GRN) in which a limited number of transcription factors and co-factors regulate each other and their downstream target genes.</p><p>One challenge of single cell transcriptome profile analysis is that at the single cell level, gene expression may be partially disconnected from the dynamics of transcription factor inputs due to stochastic variation of gene expression consecutive to, for example, transcriptional bursting<br>(基因的表达式动态的，不稳定的)</p><blockquote><p>Transcriptional bursting, also known as transcriptional pulsing, is a fundamental property of genes in which transcription from DNA to RNA can occur in “bursts” or “pulses”, which has been observed in diverse organisms, from bacteria to mammals<br>(from wikipedia)</p></blockquote><p>SCENIC link genomic regulatory code to single-cell gene expression variation to overcome drop-outs and technical variation, and could optimize the discovery and characterization of cellular states</p><p>The SCENIC workflow consists of three steps</p><h2 id="Use-GENIE3-to-identify-sets-of-genes-that-are-co-expressed-with-transcription-factors"><a href="#Use-GENIE3-to-identify-sets-of-genes-that-are-co-expressed-with-transcription-factors" class="headerlink" title="Use GENIE3 to identify sets of genes that are co-expressed with transcription factors"></a>Use <em>GENIE3</em> to identify sets of genes that are co-expressed with transcription factors</h2><p> (<em>GRNboost</em> was also provided to build the co-expression network on bigger datasets)</p><p>In brief, it trains <strong>random forest models</strong> predicting the expression of each gene in the dataset, using as input the expression of the transcription factors.The different models are then used to <strong>derive weights</strong> for the transcription factors, measuring their respective relevance for the prediction of the expression of each target gene. The highest weights can be translated into TF-target regulatory links.</p><p><strong>Input</strong><br>The preferred expression values are gene-summarized counts (which might or might not use unique molecular identifiers, UMI). Other measurements, such as counts or transcripts per million (TPM) and FPKM/RPKM, are also accepted as input. However, note that some authors recommend <strong>avoiding within sample normalization (i.e. TPM) for co-expression analysis because they may induce artificial co-variation</strong></p><p><strong>output</strong><br>The output of GENIE3 is a table with the genes, the potential regulators, and their<br>“importance measure” (IM), which represents the weight that the transcription factor (input gene) has in the prediction of the target.<br> Each gene-set was then split into positive- and negative- correlated targets (i.e. Spearman correlation between the TF and the potential target) to separate likely activated and repressed targets. Finally, only the gene-sets (TF co-expression modules) with <strong>at least 20 genes</strong> were kept for the following step</p><p>Being based only on co-expression, these modules may include many false positives and indirect targets. So <em>RcisTarge</em> was used.</p><h2 id="Use-RcisTarge-to-identify-putative-direct-binding-targets-from-co-expression-module"><a href="#Use-RcisTarge-to-identify-putative-direct-binding-targets-from-co-expression-module" class="headerlink" title="Use RcisTarge to identify putative direct-binding targets from co-expression module"></a>Use <em>RcisTarge</em> to identify putative direct-binding targets from co-expression module</h2><p>Only modules with significant motif enrichment of the correct upstream regulator are retained, and pruned to remove indirect target genes without motif support.<br>Reson:</p><p><strong>Step1</strong><br>It selects DNA motifs that are significantly over-represented in the surroundings of the transcription start site (TSS) of the genes in the gene-set.The motifs that are annotated to the corresponding TF and obtain a Normalized Enrichment Score (NES) &gt; 3.0 are retained. For each species,  two gene-motif rankings (10kb around the TSS or 500bp upstream the TSS), which determine the search space around the transcription start site were used.</p><p><strong>Step2</strong><br>For each motif and gene-set, RcisTarget predicts candidate target genes (i.e. genes in the gene-set that are ranked above the leading edge).</p><blockquote><p>However, in the datasets we analyzed, these modules were less numerous and showed very low motif enrichment, suggesting that these are lower quality modules. For this reason, we finally decided to exclude the detection of direct repression from the workflow, and <strong>continue only with the positive-correlated targets</strong>. </p></blockquote><h2 id="Score-the-activity-of-each-of-these-regulons-in-each-cell-with-AUCell"><a href="#Score-the-activity-of-each-of-these-regulons-in-each-cell-with-AUCell" class="headerlink" title="Score the activity of each of these regulons in each cell with AUCell"></a>Score the activity of each of these regulons in each cell with <em>AUCell</em></h2><p>The relative scores of each regulon across the cells allow identifying which cells have a significantly high sub-network activity. The resulting binary activity matrix can be used as a biological dimensionality reduction for downstream analyses. Since the regulon is scored as a whole, instead of only the TF or individual genes, this approach is robust against drop-outs.</p><p>The input to AUCell is a gene set, and the output the gene set “activity” (AUC) in each cell.</p><p>AUCell calculates the enrichment of the regulon as an area under the recovery curve (AUC) across the ranking of all genes in a particular cell, whereby genes are ranked by their expression value. This method is therefore <strong>independent of the gene expression units and the normalization procedure</strong></p><h2 id="Cell-clustering-based-on-GRNs"><a href="#Cell-clustering-based-on-GRNs" class="headerlink" title="Cell clustering based on GRNs"></a>Cell clustering based on GRNs</h2><p>2 matrix<br>The cell-regulon activity is summarized in a matrix in which the columns represent the cells and the rows the regulons. In the binary <strong>regulon activity matrix</strong>, the coordinates of the matrix that correspond to active regulons in a given cell will contain a “1”, and “0” otherwise.</p><p>The <strong>equivalent matrix</strong>, containing the continuous AUC values for each cell- regulon, is normally referred to as the AUC activity matrix.</p><p>The binary activity matrix tends to highlight higher-order similarities across cells (and therefore, highly reduces batch effects and technical biases), on the other hand, the AUC matrix allows to observe more subtle changes.</p><h2 id="Gene-filtering"><a href="#Gene-filtering" class="headerlink" title="Gene filtering"></a>Gene filtering</h2><p><strong>first filter</strong><br>The total number of reads per gene, is meant to remove genes that are most likely unreliable and provide only noise. The specific value depends on the dataset.</p><p><strong>second filter</strong><br>The number of cells in which the gene is detected (e.g. &gt;0 UMI, or &gt;1 log2(TPM)), is to avoid that genes that are only expressed in one, or very few cells, gain a lot of weight if they happen to coincide in a given cell. In the workflow, we recommend to set a percentage lower than the smallest population of cells to be detected</p><p><img src="https://upload-images.jianshu.io/upload_images/10636424-8f13717bcb851399.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="The SCENIC workflow and its application"></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.cmet.2019.01.014&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Serine Metabolism Supports Macrophage IL-1b Production &lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;a href=&quot;https://www.nature.com/articles/nmeth.4463&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;SCENIC: Single-cell regulatory network inference and clustering&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Abstract&quot;&gt;&lt;a href=&quot;#Abstract&quot; class=&quot;headerlink&quot; title=&quot;Abstract&quot;&gt;&lt;/a&gt;Abstract&lt;/h2&gt;&lt;p&gt;SCENIC can be use to demonstrate &lt;strong&gt;genomic regulatory code&lt;/strong&gt; which can be exploited to guide the identification of transcription factors and cell states.&lt;/p&gt;
     
     </summary>
     
       <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
     
     
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
+      <category term="methods" scheme="http://yoursite.com/tags/methods/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单细胞测序发现保守的肺癌髓系细胞群</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%8D%95%E7%BB%86%E8%83%9E%E6%B5%8B%E5%BA%8F%E5%8F%91%E7%8E%B0%E4%BF%9D%E5%AE%88%E7%9A%84%E8%82%BA%E7%99%8C%E9%AB%93%E7%B3%BB%E7%BB%86%E8%83%9E%E7%BE%A4/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/单细胞测序发现保守的肺癌髓系细胞群/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:26:39.312Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Title"><a href="#Title" class="headerlink" title="Title"></a>Title</h1><p>文章标题</p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p>写完笔记之后最后填，概述文章的内容，以后查阅笔记的时候先看这一段。</p><h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><p>作者的研究目标。</p><h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><p>问题陈述，要解决什么问题？</p><h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><p>解决问题的方法/算法是什么？</p><h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><p>作者如何评估自己的方法，有没有问题或者可以借鉴的地方。</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>作者给了哪些strong conclusion, 又给了哪些weak conclusion?</p><h2 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Title&quot;&gt;&lt;a href=&quot;#Title&quot; class=&quot;headerlink&quot; title=&quot;Title&quot;&gt;&lt;/a&gt;Title&lt;/h1&gt;&lt;p&gt;文章标题&lt;/p&gt;
+&lt;h2 id=&quot;Summary&quot;&gt;&lt;a href=&quot;#Summary&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="待完成" scheme="http://yoursite.com/tags/%E5%BE%85%E5%AE%8C%E6%88%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>李梢--单细胞转录组发现早期胃癌特异标记基因</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E6%9D%8E%E6%A2%A2-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%8F%91%E7%8E%B0%E6%97%A9%E6%9C%9F%E8%83%83%E7%99%8C%E7%89%B9%E5%BC%82%E6%A0%87%E8%AE%B0%E5%9F%BA%E5%9B%A0/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:26:54.533Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul><li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p></li><li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p></li><li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p></li></ul><h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p><ul><li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li><li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li><li>proliferative cells (PCs)  MKI67 and BRIC5</li><li>cancer cells  CEACAM5 and CEACAM6</li><li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li><li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li><li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li></ul><p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p><h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.celrep.2019.04.052&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dissecting the Single-Cell Transcriptome Network Un
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
   </entry>
   

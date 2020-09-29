@@ -572,7 +572,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python dict转dataframe/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python 匿名函数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -591,7 +591,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/python学习/Python dict转dataframe/" itemprop="url">dict转dataframe</a></h1>
+                <a class="post-title-link" href="/2020/09/28/python学习/Python 匿名函数/" itemprop="url">匿名函数lambda</a></h1>
         
 
         <div class="post-meta">
@@ -665,149 +665,38 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict_data = &#123;<span class="string">'a'</span>: [<span class="number">1</span>,<span class="number">2</span>], <span class="string">'b'</span>: [<span class="number">2</span>,<span class="number">3</span>], <span class="string">'c'</span>: [<span class="number">3</span>,<span class="number">4</span>]&#125;</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">frame = pd.DataFrame.from_dict(dict_data, orient=<span class="string">'index'</span>, columns=[<span class="string">'name1'</span>, <span class="string">'name2'</span>] <span class="comment">## columns后面是对列进行重新命名</span></span><br></pre></td></tr></table></figure>
+            <p><a href="https://blog.csdn.net/Jerry_1126/article/details/40105135" target="_blank" rel="noopener">https://blog.csdn.net/Jerry_1126/article/details/40105135</a></p>
+<p>在Python,有两种函数，一种是def定义，一种是lambda函数   </p>
+<p>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。</p>
+<p>匿名函数的用途： </p>
+<p>程序一次性使用    </p>
+<p>不用命名函数，避免函数名冲突，节省内存空间   </p>
+<p>​    </p>
+<p>匿名函数的限制:    </p>
+<p>只能有一个表达式，不用写<code>return</code>，返回值就是该表达式的结果。</p>
+<p>​    </p>
+<p>函数的应用：</p>
+<ul>
+<li><p>代码块重复时，考虑用函数，降低程序的冗余度</p>
+</li>
+<li><p>代码块复杂时，考虑用函数，提高程序的可读性</p>
+</li>
+</ul>
+<p>​    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y,z: x*y*z <span class="comment">## 可以对lambda命名，然后向普通函数一样调用</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="number">24</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y=<span class="number">2</span>: x+y    <span class="comment">#使用了默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>)                    <span class="comment">#不输的话，使用默认值2</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>, <span class="number">12</span>)</span><br><span class="line"><span class="number">22</span></span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<p>lambda嵌套到普通函数中,lambda函数本身做为return的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">increment</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x+n</span><br><span class="line">    </span><br><span class="line">f=increment(<span class="number">4</span>) <span class="comment">## x = 4</span></span><br><span class="line">f(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>​     </p>
+<p>用def定义函数     </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(x)</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">say(<span class="string">'Smith!'</span>) <span class="comment">## def函数可以直接调用</span></span><br></pre></td></tr></table></figure>
+<p>用lambda定义函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">()</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = <span class="keyword">lambda</span> x : title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">act = say() <span class="comment">### 使用lambda需要先命名</span></span><br><span class="line">act(<span class="string">'Smith!'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = (<span class="keyword">lambda</span> x=<span class="string">"Boo"</span>,y=<span class="string">"Too"</span>,z=<span class="string">"Zoo"</span>: x+y+z) <span class="comment">## 设定默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x(<span class="string">"Foo"</span>)</span><br><span class="line"><span class="string">'FooTooZoo'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="keyword">lambda</span> x:x**<span class="number">2</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">3</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> f <span class="keyword">in</span> L:    <span class="comment">## 调用所有</span></span><br><span class="line">    <span class="keyword">print</span> f(<span class="number">2</span>)</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">16</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> L[<span class="number">0</span>](<span class="number">3</span>) <span class="comment">## 可以选择性调用某一个函数</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum = reduce(<span class="keyword">lambda</span> x,y:x+y,L) <span class="comment">### reduce() 函数会对参数序列中元素进行累积。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/Jupyter/在Hexo中嵌入Jupyter-notebook/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/Jupyter/在Hexo中嵌入Jupyter-notebook/" itemprop="url">在Hexo中嵌入Jupyter notebook</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/电脑技能/" itemprop="url" rel="index">
-                    <span itemprop="name">电脑技能</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <iframe src=" ../../../../2_Bioinfomatic/rosalind/Code/Rosalind--python练习.ipynb" width="570" height="2000"></iframe>
           
         
       
@@ -1081,152 +970,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/Linux/修改jupyter目录/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/Linux/修改jupyter目录/" itemprop="url">修改jupyter目录</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p>
-<p>2 用notepad打开</p>
-<p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p>
-<p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p>
-<p>5 重新运行jupyter</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/Linux/setuptools安装/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1329,6 +1072,152 @@
 <p>3 用everthing找到python.exe的路径</p>
 <p>4 python.exe路径 setup.py install</p>
 <p>5 安装成功后安装easygui（与setuptools相同的过程，注意要下载正确的压缩包）</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/Linux/修改jupyter目录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/Linux/修改jupyter目录/" itemprop="url">修改jupyter目录</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p>
+<p>2 用notepad打开</p>
+<p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p>
+<p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p>
+<p>5 重新运行jupyter</p>
 
           
         
@@ -1771,6 +1660,149 @@
             </a>
           </div>
           <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/文献笔记/越来越多证据表明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/文献笔记/越来越多证据表明/" itemprop="url">论文写作语句</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper/" itemprop="url" rel="index">
+                    <span itemprop="name">paper</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Increasing evidence over recent years supports</p>
+<p>A growing body of evidence shows that</p>
+
+          
         
       
     </div>
