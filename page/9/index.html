@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R做图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -270,7 +270,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/" itemprop="url">R install packages returns “failed to create lock directory</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/R做图/" itemprop="url">R做图</a></h1>
         
 
         <div class="post-meta">
@@ -344,300 +344,42 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">it was related to multiple distributed R processes spread over SGE cluster trying to interact with the package index files <span class="keyword">in</span> LIB_PATH and the latency of cleaning up lock file on NFS file system</span><br><span class="line">install.packages(<span class="string">"Rcpp"</span>, dependencies=<span class="literal">TRUE</span>, INSTALL_opts = c(<span class="string">'--no-lock'</span>))</span><br></pre></td></tr></table></figure>
-<p>This happens when your last package installation has interrupted abnormally. to fix this you should remove the locked file</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlink(<span class="string">"/home/me/src/Rlibs/00LOCK-Rcpp"</span>, recursive = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
-<p><a href="https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory" target="_blank" rel="noopener">https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/" itemprop="url">Error in dyn.load</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>R: Error in dyn.load(file, DLLpath = DLLpath, …)</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Re-installing the package was enough to getting it working again.</span><br><span class="line">$ sudo R</span><br><span class="line">&gt; install.packages(<span class="string">"rgdal"</span>)</span><br><span class="line">&gt; quit()</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
-<p><a href="https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath" target="_blank" rel="noopener">https://stackoverflow.com/questions/38943764/r-error-in-dyn-loadfile-dllpath-dllpath</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/OSError Unable to open file/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/OSError Unable to open file/" itemprop="url">OSError Unable to open file</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><code>Seurat</code>中保存了loom后, 在<code>Scanpy</code>中无法读入</p>
-<p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
-<p>解决方案：</p>
-<p>将保存loom的kernel shutdown，解除文件占用</p>
+            <p>The “whiskers” of the box (the vertical lines extending above and below the box) relate to the range<br> parameter of boxplot, which we let default to the value 1.5 used by R. The height of the box is the<br> interquartile range, the difference between the 75th and 25th quantiles. In this case that difference<br> is 2.8. The whiskers are drawn to be a length of range*2.8 or 1.5*2.8. This shows us roughly how many,<br> if any, data points are outliers, that is, beyond this range of values.</p>
+<p><code>abline</code> &lt;=======&gt; adds one or more straight lines through the current plot.</p>
+<p><code>rug()</code>  添加灰度条. It automatically adjusted its pocket size to that of the last plot plotted.</p>
+<p>rug之后，可以用high和low查看分布</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hist(ppm, col = <span class="string">"green"</span>, breaks = <span class="number">100</span>) <span class="comment">###breaks:the number of buckets to split the data into</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(v = median(ppm), col = <span class="string">"magenta"</span>, lwd = <span class="number">4</span>)  <span class="comment">##设置线的位置，宽度和颜色</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">barplot(reg, col = &quot;wheat&quot;, main = &quot;Number of Counties in Each Region&quot;) ###main表格的标题</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">with(pollution, plot(latitude, pm25))</span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">abline(h=<span class="number">12</span>,lwd=<span class="number">2</span>, lty=<span class="number">2</span>)   <span class="comment">### h:水平线高度 lwd宽度   lty虚线还是实线</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">title(main = <span class="string">"Old Faithful Geyser data"</span>)  <span class="comment">### 添加标题</span></span><br></pre></td></tr></table></figure>
+<p>两种图形设备：向量设备和位图设备</p>
+<p>向量设备：用于线条图，以及使用纯色，点较少的图 pdf svg</p>
+<p>位图设备：适用于有大量的点，风景，以及基于网络的图形</p>
+<p>lattice包很容易实现单变量或多变量的数据可视化，生成的图形为栅栏图。在一个或多个其它变量的条件下，栅栏图可展示某个变量的分布或与其他变量间的关系。 lattice包提供了丰富的图形函数，可生成单变量图形(点图、核密度图、直方图、柱形图和箱线图)、双变量图(散点图、带状图和平行箱线图)和多变量图形(三维图和散点图矩阵)。</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(Life.Exp ~ Income | region, data = state, layout = c(<span class="number">4</span>,<span class="number">1</span>)) <span class="comment">###plotting life expectancy as it depends on income for each region</span></span><br></pre></td></tr></table></figure>
+<h2 id="R-base做图"><a href="#R-base做图" class="headerlink" title="R base做图"></a>R base做图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">range(airquality$Ozone, na.rm = TRUE)</span><br></pre></td></tr></table></figure>
+<p>boxplot不会自动添加标题和坐标轴标签</p>
+<p>hist会自动添加</p>
+<p><code>par()$pin</code>   Plot dimensions in inches   图的尺寸</p>
+<p><code>par()$fg</code> specifies foreground color</p>
+<p><code>par()$bg</code> background color</p>
+<p><code>pch</code>: plot character   1代表开环</p>
+<p><code>par()$lwd</code> line width</p>
+<p><code>par()$lty</code>line type  </p>
+<h2 id="Lattice"><a href="#Lattice" class="headerlink" title="Lattice"></a>Lattice</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xyplot(y ~ x | f * g, data)  <span class="comment">##The f and g represent the optional conditioning variables. The * represents interaction between them</span></span><br></pre></td></tr></table></figure>
+<p>Lattice适合多变量做图</p>
+<p>str函数  紧凑的显示数据内部结构，即对象的内容</p>
+<p><code>source</code>  调用函数</p>
+<p><code>myedit</code>  查看内容</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sample(colors(), <span class="number">10</span>)  <span class="comment">###查看colors中随机的10个</span></span><br></pre></td></tr></table></figure>
+<h2 id="ggplot"><a href="#ggplot" class="headerlink" title="ggplot"></a>ggplot</h2><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy, data =mpg, color = drv, geom = c(<span class="string">"point"</span>, <span class="string">"smooth"</span>))</span><br></pre></td></tr></table></figure>
+<p><code>geom</code>画出趋势线</p>
+<p><img src="C:\Users\feng\AppData\Local\Temp\1536550364017.png" alt="1536550364017"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(drv, hwy, data=mpg, geom=<span class="string">"boxplot"</span>, color=manufacturers)  <span class="comment">##第一个参数，用来切分数据  第二个参数，想要测量的数据</span></span><br></pre></td></tr></table></figure>
+<p><img src="C:\Users\feng\AppData\Local\Temp\1536550506739.png" alt="1536550506739"></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qplot(displ, hwy,data=mpg, facets=.~drv)  <span class="comment">##~左边代表行数，右边代表列</span></span><br></pre></td></tr></table></figure>
 
           
         
@@ -836,7 +578,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -855,7 +597,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
         
 
         <div class="post-meta">
@@ -929,10 +671,307 @@
       
         
           
-            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
-<p>暂时解决：</p>
-<p><code>nbin</code> 调低</p>
-<p>？？？？nbin的意义是什么</p>
+            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
+<p>尝试tools-global options-packages更改镜像未成功</p>
+<p>最终解决方案：</p>
+<p>更改为</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
+<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
+<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
+<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
+<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
+<p>&nbsp;</p>
+<p><strong>按照factor配色</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/R-install-packages-returns-“failed-to-create-lock-directory/" itemprop="url">R install packages returns “failed to create lock directory</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">it was related to multiple distributed R processes spread over SGE cluster trying to interact with the package index files <span class="keyword">in</span> LIB_PATH and the latency of cleaning up lock file on NFS file system</span><br><span class="line">install.packages(<span class="string">"Rcpp"</span>, dependencies=<span class="literal">TRUE</span>, INSTALL_opts = c(<span class="string">'--no-lock'</span>))</span><br></pre></td></tr></table></figure>
+<p>This happens when your last package installation has interrupted abnormally. to fix this you should remove the locked file</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unlink(<span class="string">"/home/me/src/Rlibs/00LOCK-Rcpp"</span>, recursive = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
+<p><a href="https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory" target="_blank" rel="noopener">https://stackoverflow.com/questions/14382209/r-install-packages-returns-failed-to-create-lock-directory</a></p>
 
           
         
@@ -1075,6 +1114,297 @@
         
           
             <p><a href="http://www.bio-info-trainee.com/5458.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/5458.html</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/OSError Unable to open file/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/OSError Unable to open file/" itemprop="url">OSError Unable to open file</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><code>Seurat</code>中保存了loom后, 在<code>Scanpy</code>中无法读入</p>
+<p>报错：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OSError: Unable to open file (unable to lock file, errno = <span class="number">11</span>, error message = <span class="string">'Resource temporarily unavailable'</span>)</span><br></pre></td></tr></table></figure>
+<p>解决方案：</p>
+<p>将保存loom的kernel shutdown，解除文件占用</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
+                    <span itemprop="name">R语言学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
+<p>暂时解决：</p>
+<p><code>nbin</code> 调低</p>
+<p>？？？？nbin的意义是什么</p>
 
           
         
@@ -1269,154 +1599,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>使用安装包安装github包</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
-<p>报错：</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
-<p>解决：</p>
-<p>删掉src文件夹中的*.o和*.so</p>
-<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1549,149 +1731,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Convert/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Convert/" itemprop="url">Convert</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/R语言学习/" itemprop="url" rel="index">
-                    <span itemprop="name">R语言学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (from, to, filename, chunk.dims = <span class="string">"auto"</span>, chunk.size = <span class="number">1000</span>, </span><br><span class="line">    overwrite = <span class="literal">FALSE</span>, display.progress = <span class="literal">TRUE</span>, anndata.raw = <span class="string">"raw.data"</span>, </span><br><span class="line">    anndata.X = <span class="string">"data"</span>, <span class="keyword">...</span>) </span><br><span class="line">&#123;</span><br><span class="line">    object.to &lt;- <span class="keyword">switch</span>(EXPR = to, loom = &#123;</span><br><span class="line">        <span class="keyword">stop</span>(<span class="string">"Converting to and from loom files is currently unavailable; we are working on restoring this functionality"</span>)</span><br><span class="line">    &#125;, anndata = &#123;</span><br><span class="line">        .Defunct(new = <span class="string">"WriteH5AD"</span>, msg = <span class="string">"Use WriteH5AD to store Seurat objects as h5ad"</span>)</span><br><span class="line">    &#125;, <span class="keyword">stop</span>(paste0(<span class="string">"Cannot convert Seurat objects to class '"</span>, </span><br><span class="line">        to, <span class="string">"'"</span>)))</span><br><span class="line">    <span class="keyword">return</span>(object.to)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2019/04/03/5ca49d43bf3eb.jpg" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1742,7 +1781,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

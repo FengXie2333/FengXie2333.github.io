@@ -251,6 +251,167 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/python传参/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/python学习/python传参/" itemprop="url">传参</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h3><p>&nbsp;</p>
+<h3 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h3><p>在调用函数的时候给一些参数指定默认值</p>
+<p>定义默认参数要牢记一点：默认参数必须指向不变对象！</p>
+<p><img src="https://i.loli.net/2018/12/09/5c0d238db31d8.jpg" alt></p>
+<p>&nbsp;</p>
+<h3 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h3><p>即在调用函数时，允许传入多个参数。例如元组，列表</p>
+<p>&nbsp;</p>
+<h3 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h3><p>可变参数允许传入0个～多个参数，而关键字参数允许在调用时以字典形式传入0个或多个参数（注意区别，一个是字典一个是列表）；在传递参数时用等号（=）连接键和值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#用两个星号表示关键字参数</span><br><span class="line">def person_info(name, age, **kw):</span><br><span class="line">    print(&quot;name&quot;, name, &quot;age&quot;, age, &quot;other&quot;, kw)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; person_info(&quot;Xiaoming&quot;, 12)</span><br><span class="line">name Xiaoming age 12 other&#123;&#125;</span><br><span class="line">&gt;&gt;&gt; person_info(&quot;Dahuang&quot;, 35, city = &quot;Beijing&quot;)</span><br><span class="line">name Dahuang age 35 other &#123;&apos;city&apos;:&apos;Beijing&apos;&#125;</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<h3 id="命名关键字参数"><a href="#命名关键字参数" class="headerlink" title="命名关键字参数"></a>命名关键字参数</h3><p>命名关键字参数在关键字参数的基础上限制传入的的关键字的变量名</p>
+<p> 和普通关键字参数不同，命名关键字参数需要一个用来区分的分隔符*，它后面的参数被认为是命名关键字参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#这里星号分割符后面的city、job是命名关键字参数</span><br><span class="line">person_info(name, age, *, city, job):</span><br><span class="line">    print(name, age, city, job)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; person_info(&quot;Alex&quot;, 17, city = &quot;Beijing&quot;, job = &quot;Engineer&quot;)</span><br><span class="line">Alex 17 Beijing Engineer</span><br></pre></td></tr></table></figure>
+<p><strong>如果参数中已经有一个可变参数的话，前面讲的星号分割符就不要写了（其实星号是写给Python解释器看的，如果一个星号也没有的话就无法区分命名关键字参数和位置参数了，而如果有一个星号即使来自变长参数就可以区分开来）</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#args是变长参数，而city和job是命名关键字参数</span><br><span class="line">person_info(name, age, *args, city, job):</span><br><span class="line">    print(name, age, args, city)</span><br><span class="line"></span><br><span class="line">&gt;&gt;&gt; person_info(&quot;Liqiang&quot;, 43, &quot;balabala&quot;, city = &quot;Wuhan&quot;, job = &quot;Coder&quot;)</span><br><span class="line">Liqiang 43 balabala Wuhan Coder</span><br></pre></td></tr></table></figure>
+<p>&nbsp;</p>
+<h3 id="参数组合"><a href="#参数组合" class="headerlink" title="参数组合"></a>参数组合</h3><p>总结一下，在Python中一种可以使用5中传递参数的方式（位置参数、默认参数、变长参数、关键字参数、命名关键字参数）</p>
+<p>注意，这些参数在书写时要遵循一定的顺序即：<strong>位置参数、默认参数、变长参数、关键字参数、命名关键字参数</strong></p>
+<hr>
+<p>作者：吃面包的科学怪人<br>来源：CSDN<br>原文：<a href="https://blog.csdn.net/abc_12366/article/details/79627263" target="_blank" rel="noopener">https://blog.csdn.net/abc_12366/article/details/79627263</a> </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/python - Pandas - 更改因子类型对象的级别顺序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -393,7 +554,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/python 字符串转为布尔值/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/pandas-DataFrame更改列名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -412,7 +573,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/python学习/python 字符串转为布尔值/" itemprop="url">字符串转布尔值</a></h1>
+                <a class="post-title-link" href="/2020/09/28/python学习/pandas-DataFrame更改列名/" itemprop="url">pandas-DataFrame更改列名</a></h1>
         
 
         <div class="post-meta">
@@ -486,8 +647,149 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bool(<span class="string">"False"</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fibro_top20_selected = [x <span class="keyword">for</span> x <span class="keyword">in</span> Fibro_top20_list <span class="keyword">if</span> <span class="keyword">not</span> bool(re.match(<span class="string">'MT-'</span>, x, flags=<span class="number">0</span>))]</span><br></pre></td></tr></table></figure>
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">df.columns.values <span class="comment">## 显示每列的名称</span></span><br><span class="line">df.rename(columns=&#123; df.columns[<span class="number">2</span>]: <span class="string">"new name"</span> &#125;, inplace=<span class="literal">True</span>) <span class="comment">## 将第三列的列名改为'new name'</span></span><br><span class="line">df.columns = [<span class="string">'col_1'</span>, <span class="string">'col_2'</span>, <span class="string">'col_3'</span>]  <span class="comment">## 假如df一共有三列，你想把所有列名依次改为'col_1', 'col_2', 'col_3'</span></span><br><span class="line">df = df.rename(columns=&#123;<span class="string">'col_1'</span>: <span class="string">'col_a'</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python高阶教程：使用Wheel打包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/python学习/Python高阶教程：使用Wheel打包/" itemprop="url">Python高阶教程：使用Wheel打包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://blog.sina.com.cn/s/blog_1318255b00102wbtz.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_1318255b00102wbtz.html</a></p>
 
           
         
@@ -654,6 +956,320 @@
 <li><a href="https://blog.csdn.net/kizgel/article/details/80597954?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf" target="_blank" rel="noopener">https://blog.csdn.net/kizgel/article/details/80597954?utm_medium=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&amp;depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf</a></li>
 <li><a href="https://blog.csdn.net/zhengxiangwen/article/details/55148287" target="_blank" rel="noopener">https://blog.csdn.net/zhengxiangwen/article/details/55148287</a></li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python 匿名函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/python学习/Python 匿名函数/" itemprop="url">匿名函数lambda</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="https://blog.csdn.net/Jerry_1126/article/details/40105135" target="_blank" rel="noopener">https://blog.csdn.net/Jerry_1126/article/details/40105135</a></p>
+<p>在Python,有两种函数，一种是def定义，一种是lambda函数   </p>
+<p>关键字<code>lambda</code>表示匿名函数，冒号前面的<code>x</code>表示函数参数。</p>
+<p>匿名函数的用途： </p>
+<p>程序一次性使用    </p>
+<p>不用命名函数，避免函数名冲突，节省内存空间   </p>
+<p>​    </p>
+<p>匿名函数的限制:    </p>
+<p>只能有一个表达式，不用写<code>return</code>，返回值就是该表达式的结果。</p>
+<p>​    </p>
+<p>函数的应用：</p>
+<ul>
+<li><p>代码块重复时，考虑用函数，降低程序的冗余度</p>
+</li>
+<li><p>代码块复杂时，考虑用函数，提高程序的可读性</p>
+</li>
+</ul>
+<p>​    </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y,z: x*y*z <span class="comment">## 可以对lambda命名，然后向普通函数一样调用</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line"><span class="number">24</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>c = <span class="keyword">lambda</span> x,y=<span class="number">2</span>: x+y    <span class="comment">#使用了默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>)                    <span class="comment">#不输的话，使用默认值2</span></span><br><span class="line"><span class="number">12</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>c(<span class="number">10</span>, <span class="number">12</span>)</span><br><span class="line"><span class="number">22</span></span><br></pre></td></tr></table></figure>
+<p>​    </p>
+<p>lambda嵌套到普通函数中,lambda函数本身做为return的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">increment</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">lambda</span> x: x+n</span><br><span class="line">    </span><br><span class="line">f=increment(<span class="number">4</span>) <span class="comment">## x = 4</span></span><br><span class="line">f(<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<p>​     </p>
+<p>用def定义函数     </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(x)</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">say(<span class="string">'Smith!'</span>) <span class="comment">## def函数可以直接调用</span></span><br></pre></td></tr></table></figure>
+<p>用lambda定义函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">()</span>:</span></span><br><span class="line">    title = <span class="string">'Sir,'</span></span><br><span class="line">    action = <span class="keyword">lambda</span> x : title + x</span><br><span class="line">    <span class="keyword">return</span> action</span><br><span class="line"></span><br><span class="line">act = say() <span class="comment">### 使用lambda需要先命名</span></span><br><span class="line">act(<span class="string">'Smith!'</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>x = (<span class="keyword">lambda</span> x=<span class="string">"Boo"</span>,y=<span class="string">"Too"</span>,z=<span class="string">"Zoo"</span>: x+y+z) <span class="comment">## 设定默认值</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>x(<span class="string">"Foo"</span>)</span><br><span class="line"><span class="string">'FooTooZoo'</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="keyword">lambda</span> x:x**<span class="number">2</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">3</span>,</span><br><span class="line">         <span class="keyword">lambda</span> x:x**<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">for</span> f <span class="keyword">in</span> L:    <span class="comment">## 调用所有</span></span><br><span class="line">    <span class="keyword">print</span> f(<span class="number">2</span>)</span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">8</span></span><br><span class="line"><span class="number">16</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">print</span> L[<span class="number">0</span>](<span class="number">3</span>) <span class="comment">## 可以选择性调用某一个函数</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>L = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum = reduce(<span class="keyword">lambda</span> x,y:x+y,L) <span class="comment">### reduce() 函数会对参数序列中元素进行累积。</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>sum</span><br><span class="line"><span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python Pandas/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/28/python学习/Python Pandas/" itemprop="url">pandas</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
+                2020-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">Python学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="改列名"><a href="#改列名" class="headerlink" title="改列名"></a>改列名</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.DataFrame(np.arange(<span class="number">12</span>), reshape(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改所有列名</span></span><br><span class="line">df.columns = [<span class="string">'A'</span>,<span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"><span class="comment"># 修改部分列名</span></span><br><span class="line">df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;, inplace = <span class="literal">True</span>)</span><br><span class="line">df = df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -880,7 +1496,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python高阶教程：使用Wheel打包/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python 堆积柱状图及百分比柱状图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -899,7 +1515,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/28/python学习/Python高阶教程：使用Wheel打包/" itemprop="url">Python高阶教程：使用Wheel打包</a></h1>
+                <a class="post-title-link" href="/2020/09/28/python学习/Python 堆积柱状图及百分比柱状图/" itemprop="url">堆积柱状图及百分比柱状图</a></h1>
         
 
         <div class="post-meta">
@@ -973,291 +1589,7 @@
       
         
           
-            <p><a href="http://blog.sina.com.cn/s/blog_1318255b00102wbtz.html" target="_blank" rel="noopener">http://blog.sina.com.cn/s/blog_1318255b00102wbtz.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python Pandas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/python学习/Python Pandas/" itemprop="url">pandas</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="改列名"><a href="#改列名" class="headerlink" title="改列名"></a>改列名</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.DataFrame(np.arange(<span class="number">12</span>), reshape(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改所有列名</span></span><br><span class="line">df.columns = [<span class="string">'A'</span>,<span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"><span class="comment"># 修改部分列名</span></span><br><span class="line">df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;, inplace = <span class="literal">True</span>)</span><br><span class="line">df = df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python dict转dataframe/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/python学习/Python dict转dataframe/" itemprop="url">dict转dataframe</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict_data = &#123;<span class="string">'a'</span>: [<span class="number">1</span>,<span class="number">2</span>], <span class="string">'b'</span>: [<span class="number">2</span>,<span class="number">3</span>], <span class="string">'c'</span>: [<span class="number">3</span>,<span class="number">4</span>]&#125;</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">frame = pd.DataFrame.from_dict(dict_data, orient=<span class="string">'index'</span>, columns=[<span class="string">'name1'</span>, <span class="string">'name2'</span>] <span class="comment">## columns后面是对列进行重新命名</span></span><br></pre></td></tr></table></figure>
+            <p><a href="https://blog.csdn.net/weixin_44521703/article/details/101827068?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-101827068.nonecase&amp;utm_term=python%E7%94%BB%E7%99%BE%E5%88%86%E6%AF%94%E5%A0%86%E7%A7%AF%E6%9D%A1%E5%BD%A2%E5%9B%BE" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44521703/article/details/101827068?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-101827068.nonecase&amp;utm_term=python%E7%94%BB%E7%99%BE%E5%88%86%E6%AF%94%E5%A0%86%E7%A7%AF%E6%9D%A1%E5%BD%A2%E5%9B%BE</a></p>
 
           
         
@@ -1453,293 +1785,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python filter/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/python学习/Python filter/" itemprop="url">filter函数</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.runoob.com/python/python-func-filter.html" target="_blank" rel="noopener">https://www.runoob.com/python/python-func-filter.html</a></p>
-<p><strong>filter()</strong> 函数用于过滤序列，过滤掉不符合条件的元素，返回由符合条件元素组成的新列表。</p>
-<p>该接收两个参数，第一个为函数，第二个为序列，序列的每个元素作为参数传递给函数进行判断，然后返回 True 或 False，最后将返回 True 的元素放到新列表中。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_odd</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> n % <span class="number">2</span> == <span class="number">1</span></span><br><span class="line"> </span><br><span class="line">newlist = filter(is_odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line">print(newlist)</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/28/python学习/Python 堆积柱状图及百分比柱状图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/28/python学习/Python 堆积柱状图及百分比柱状图/" itemprop="url">堆积柱状图及百分比柱状图</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-28T00:00:00+08:00">
-                2020-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python学习/" itemprop="url" rel="index">
-                    <span itemprop="name">Python学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://blog.csdn.net/weixin_44521703/article/details/101827068?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-101827068.nonecase&amp;utm_term=python%E7%94%BB%E7%99%BE%E5%88%86%E6%AF%94%E5%A0%86%E7%A7%AF%E6%9D%A1%E5%BD%A2%E5%9B%BE" target="_blank" rel="noopener">https://blog.csdn.net/weixin_44521703/article/details/101827068?utm_medium=distribute.pc_aggpage_search_result.none-task-blog-2~all~first_rank_v2~rank_v25-1-101827068.nonecase&amp;utm_term=python%E7%94%BB%E7%99%BE%E5%88%86%E6%AF%94%E5%A0%86%E7%A7%AF%E6%9D%A1%E5%BD%A2%E5%9B%BE</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1790,7 +1835,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">94</span>
+                  <span class="site-state-item-count">95</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
