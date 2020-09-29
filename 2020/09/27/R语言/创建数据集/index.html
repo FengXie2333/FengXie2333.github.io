@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="R,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="keep exceeding" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="由数据组成的矩形数组，行表示观测，列表示变量。 数据结构对象：可以赋值给变量的任何事物 对象都具有某种模式以及某个类 向量向量 ：存储数值，字符，逻辑数据的数组 标量是只有一个元素的向量 一个向量中只能有一个数据类型 用函数c（）创建向量 用[]里加数字，来表示字符的位置 矩阵矩阵是二维数组，数组中的每个元素具有相同的模式 byrow表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默">
+<meta name="keywords" content="R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="创建数据集">
+<meta property="og:url" content="http://yoursite.com/2020/09/27/R语言/创建数据集/index.html">
+<meta property="og:site_name" content="keep exceeding">
+<meta property="og:description" content="由数据组成的矩形数组，行表示观测，列表示变量。 数据结构对象：可以赋值给变量的任何事物 对象都具有某种模式以及某个类 向量向量 ：存储数值，字符，逻辑数据的数组 标量是只有一个元素的向量 一个向量中只能有一个数据类型 用函数c（）创建向量 用[]里加数字，来表示字符的位置 矩阵矩阵是二维数组，数组中的每个元素具有相同的模式 byrow表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-09-28T06:03:21.127Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="创建数据集">
+<meta name="twitter:description" content="由数据组成的矩形数组，行表示观测，列表示变量。 数据结构对象：可以赋值给变量的任何事物 对象都具有某种模式以及某个类 向量向量 ：存储数值，字符，逻辑数据的数组 标量是只有一个元素的向量 一个向量中只能有一个数据类型 用函数c（）创建向量 用[]里加数字，来表示字符的位置 矩阵矩阵是二维数组，数组中的每个元素具有相同的模式 byrow表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/09/27/R语言/创建数据集/">
+
+
+
+
+
+  <title>创建数据集 | keep exceeding</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">keep exceeding</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/创建数据集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">创建数据集</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>由数据组成的矩形数组，行表示观测，列表示变量。</p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>对象：可以赋值给变量的任何事物</p>
+<p>对象都具有某种模式以及某个类</p>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><p>向量 ：存储数值，字符，逻辑数据的数组</p>
+<p>标量是只有一个元素的向量</p>
+<p>一个向量中只能有一个数据类型</p>
+<p>用函数<strong><em>c（）</em></strong>创建向量</p>
+<p>用[]里加数字，来表示字符的位置</p>
+<h2 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h2><p>矩阵是二维数组，数组中的每个元素具有相同的模式</p>
+<p><strong><em>byrow</em></strong>表明矩阵应该按行填充（byrow = TRUE）还是按列填充。默认是按列填充。</p>
+<p>用函数matrix（）来创建矩阵。</p>
+<p>矩阵下标：</p>
+<p>X[2,] 表示第二行</p>
+<p>X[,2] 表示第二列</p>
+<p>矩阵中也只能有一种数据类型</p>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>与矩阵类似，但是维度可以大于2</p>
+<p>数组通过<strong><em>array（）</em></strong>创建</p>
+<p>数组也只能有一种数据类型</p>
+<h2 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h2><p>R 中最常使用的数据结构</p>
+<p>数据框用函数<strong><em>data.frame()</em></strong>构建</p>
+<p>可以有多种数据类型。但是每一列只能有一种。</p>
+<h4 id="attach-detach-和with"><a href="#attach-detach-和with" class="headerlink" title="attach detach 和with"></a>attach detach 和with</h4><p>attach() :将数据框添加到R的搜索路径中   </p>
+<p>detach() ：将数据框从搜索路径中移除</p>
+<p>attach 和 detach 的局限：如果有变量重名。先出现的变量将会取得优先权。 ====&gt;报错：某个对象已被屏蔽（masked）</p>
+<p>with() ：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">with（mtcars,&#123;</span><br><span class="line">    print (summary(mpg))</span><br><span class="line">    plot (mpg,disp)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>with：花括号内的赋值，只在内部起效</p>
+<p>想要花括号内赋值在外面也能用，将赋值符号 &lt;- 改成 &lt;&lt;-</p>
+<h4 id="实例标识符"><a href="#实例标识符" class="headerlink" title="实例标识符"></a>实例标识符</h4><p>可以用row.names来指定实例标识符</p>
+<p>比如病人的id</p>
+<h2 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h2><p>变量：名义型   有序型  连续型</p>
+<p>名义型：没有顺序之分的类别变量</p>
+<p><strong><em>名义型和有序型统称为因子（factor）</em></strong></p>
+<p> 函数factor()以整数向量的形式存储类别值</p>
+<p><strong><em>要表示有序型变量，需要为函数factor()指定参数order=TRUE</em></strong></p>
+<p>对于字符型变量，factor默认的排序方式是按照字母顺序排列。可以指定levels选项来覆盖默认的排序。</p>
+<p>数值型变量，<strong><em>用levels和labels来编码因子</em></strong></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/R/" rel="tag"># R</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/09/27/R语言/利用安装包安装R包/" rel="next" title="利用安装包安装R包">
+                <i class="fa fa-chevron-left"></i> 利用安装包安装R包
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/27/R语言/代码记录/" rel="prev" title="代码记录">
+                代码记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">FlorenceXie</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">71</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向量"><span class="nav-number">1.1.</span> <span class="nav-text">向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#矩阵"><span class="nav-number">1.2.</span> <span class="nav-text">矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-number">1.3.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据框"><span class="nav-number">1.4.</span> <span class="nav-text">数据框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#attach-detach-和with"><span class="nav-number">1.4.0.1.</span> <span class="nav-text">attach detach 和with</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例标识符"><span class="nav-number">1.4.0.2.</span> <span class="nav-text">实例标识符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#因子"><span class="nav-number">1.5.</span> <span class="nav-text">因子</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FlorenceXie</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
