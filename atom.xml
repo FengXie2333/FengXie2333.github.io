@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-09-28T03:51:42.282Z</updated>
+  <updated>2020-09-29T08:12:58.697Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,33 +17,66 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%85%B3%E8%8A%82%E7%82%8E--%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E4%B8%8E%E8%B4%A8%E8%B0%B1%E6%B5%81%E5%BC%8F/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/关节炎--单细胞转录组与质谱流式/</id>
-    <published>2020-09-28T03:51:42.282Z</published>
-    <updated>2020-09-28T03:51:42.282Z</updated>
+    <title>hexo 常用操作</title>
+    <link href="http://yoursite.com/2020/09/29/%E5%B8%B8%E7%94%A8%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/hexo-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    <id>http://yoursite.com/2020/09/29/常用电脑技能/hexo-常用操作/</id>
+    <published>2020-09-29T07:51:27.000Z</published>
+    <updated>2020-09-29T08:12:58.697Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="给一篇文章添加多个tags"><a href="#给一篇文章添加多个tags" class="headerlink" title="给一篇文章添加多个tags"></a>给一篇文章添加多个tags</h2><p>第一种</p><blockquote><p>tags: [ ‘Perl’, ‘Python’ ]</p></blockquote><p>第二种（注意空格）</p><blockquote><p>tags:</p><p>- hexo</p><p>- disqus</p></blockquote><p>​    </p><h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h2><ol><li>安装主题：</li></ol><p>在根目录下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next.git themes/next</span><br></pre></td></tr></table></figure><ol start="2"><li>修改博客根目录下的 <code>_config.yml</code> 文件，将theme后面内容改成想要更换的主题名</li></ol><blockquote><p>theme: next ## 注意冒号后面有空格</p></blockquote><h2 id="next添加友情链接"><a href="#next添加友情链接" class="headerlink" title="next添加友情链接"></a>next添加友情链接</h2><p>在根目录/theme/next/_cofig.yml中找到Blog rolls：</p><p><img src="https://i.loli.net/2020/09/29/7BGPLloJZTuXWva.png" alt="snipaste20200929_155729.png"></p><p>​    </p><h2 id="切换主题布局"><a href="#切换主题布局" class="headerlink" title="切换主题布局"></a>切换主题布局</h2><p><code>_config.yaml</code>文件中默认是使用的<code>Muse</code>主题</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># Schemes</span></span><br><span class="line"><span class="section">#scheme: Muse</span></span><br><span class="line"><span class="section">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="section">#scheme: Gemini</span></span><br></pre></td></tr></table></figure><p>​    </p><h2 id="categories和tags"><a href="#categories和tags" class="headerlink" title="categories和tags"></a>categories和tags</h2><h3 id="新建-tags-和-categories-页面"><a href="#新建-tags-和-categories-页面" class="headerlink" title="新建 tags 和 categories 页面"></a>新建 tags 和 categories 页面</h3><p>在根目录下</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new page tags</span><br><span class="line">hexo new page categories</span><br></pre></td></tr></table></figure><p>​    </p><p>在index.md中输入</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: tags</span><br><span class="line">date: 2020-09-29</span><br><span class="line">type: "tags"</span><br><span class="line">layout: "tags"   #增加tags的布局</span><br></pre></td></tr></table></figure><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">title: categories</span><br><span class="line">date: 2020-01-10 16:15:43</span><br><span class="line">type: "categories"</span><br><span class="line">layout: "categories"    #增加categories的布局</span><br></pre></td></tr></table></figure><p>​    </p><p>然后打开theme 目录下的主题配置文件_config.yml</p><blockquote><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; menu:</span></span><br><span class="line"><span class="quote">&gt;   home: /|| home #首页</span></span><br><span class="line"><span class="quote">&gt;   #about: /about/ || user</span></span><br><span class="line"><span class="quote">&gt;   tags: /tags/|| tags</span></span><br><span class="line"><span class="quote">&gt;   categories: /categories/|| th</span></span><br><span class="line"><span class="quote">&gt;   archives: /archives/|| archive</span></span><br><span class="line"><span class="quote">&gt;   </span></span><br><span class="line"><span class="quote">&gt;   #必须把/后面的空格得去掉，否则无法打开标签页和分类页</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;给一篇文章添加多个tags&quot;&gt;&lt;a href=&quot;#给一篇文章添加多个tags&quot; class=&quot;headerlink&quot; title=&quot;给一篇文章添加多个tags&quot;&gt;&lt;/a&gt;给一篇文章添加多个tags&lt;/h2&gt;&lt;p&gt;第一种&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ta
+      
+    
+    </summary>
+    
+      <category term="电脑技能" scheme="http://yoursite.com/categories/%E7%94%B5%E8%84%91%E6%8A%80%E8%83%BD/"/>
+    
+    
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关节炎--单细胞转录组与质谱流式</title>
+    <link href="http://yoursite.com/2020/09/29/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E5%85%B3%E8%8A%82%E7%82%8E-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E4%B8%8E%E8%B4%A8%E8%B0%B1%E6%B5%81%E5%BC%8F/"/>
+    <id>http://yoursite.com/2020/09/29/文献笔记/关节炎-单细胞转录组与质谱流式/</id>
+    <published>2020-09-29T07:48:06.000Z</published>
+    <updated>2020-09-29T07:48:58.997Z</updated>
     
     <summary type="html">
     
     </summary>
     
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="待完成" scheme="http://yoursite.com/tags/%E5%BE%85%E5%AE%8C%E6%88%90/"/>
     
   </entry>
   
   <entry>
-    <title>pandas</title>
-    <link href="http://yoursite.com/2020/09/28/python%E5%AD%A6%E4%B9%A0/Python%20Pandas/"/>
-    <id>http://yoursite.com/2020/09/28/python学习/Python Pandas/</id>
+    <title>字典</title>
+    <link href="http://yoursite.com/2020/09/28/python%E5%AD%A6%E4%B9%A0/Python%20%E5%AD%97%E5%85%B8/"/>
+    <id>http://yoursite.com/2020/09/28/python学习/Python 字典/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:01:20.530Z</updated>
+    <updated>2020-09-29T07:02:48.700Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="改列名"><a href="#改列名" class="headerlink" title="改列名"></a>改列名</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df = pd.DataFrame(np.arange(<span class="number">12</span>), reshape(<span class="number">3</span>,<span class="number">4</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改所有列名</span></span><br><span class="line">df.columns = [<span class="string">'A'</span>,<span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>]</span><br><span class="line"><span class="comment"># 修改部分列名</span></span><br><span class="line">df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;, inplace = <span class="literal">True</span>)</span><br><span class="line">df = df.rename(columns=&#123;<span class="string">'a'</span>:<span class="string">'A'</span>&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>python中，字典是一系列键值对</p><p>键和值之间用冒号分隔，而键-值对之间用逗号分隔</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alien_0 = &#123;<span class="string">'color'</span>:<span class="string">'green'</span>, <span class="string">'points'</span>: <span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure><p>​    </p><h2 id="访问字典中的值"><a href="#访问字典中的值" class="headerlink" title="访问字典中的值"></a>访问字典中的值</h2><p>依次指定字典名和放在方括号中的键</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alien_0[<span class="string">'color'</span>]</span><br></pre></td></tr></table></figure><p>​    </p><h2 id="添加键-值对"><a href="#添加键-值对" class="headerlink" title="添加键-值对"></a>添加键-值对</h2><p>字典可随时添加键值对，依次指定字典名，用方括号括起的键，相关联的值</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alien_0[<span class="string">'x_position'</span>] = <span class="number">0</span></span><br></pre></td></tr></table></figure><p>​    </p><h2 id="定义字典"><a href="#定义字典" class="headerlink" title="定义字典"></a>定义字典</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alien_0 = &#123;&#125;</span><br></pre></td></tr></table></figure><p>​    </p><h2 id="修改字典中的值"><a href="#修改字典中的值" class="headerlink" title="修改字典中的值"></a>修改字典中的值</h2><p>​    </p><h2 id="删除键值对"><a href="#删除键值对" class="headerlink" title="删除键值对"></a>删除键值对</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> alien_0[<span class="string">'color'</span>]</span><br></pre></td></tr></table></figure><p>​    </p><h2 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">user_0 = &#123;<span class="string">'username'</span>:[<span class="string">'Florence'</span>, <span class="string">'Joey'</span>],</span><br><span class="line">         <span class="string">'color'</span>:[<span class="string">'green'</span>, <span class="string">'blue'</span>],</span><br><span class="line">         <span class="string">'age'</span>:[<span class="number">44</span>,<span class="number">24</span>]&#125;</span><br></pre></td></tr></table></figure><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> key,value <span class="keyword">in</span> user_0.items():</span><br><span class="line">    print(<span class="string">"\nKey: "</span> + key)</span><br><span class="line">    print(<span class="string">"\nValue"</span> + value)</span><br></pre></td></tr></table></figure><p>遍历字典的for循环，可声明两个变量，用于存储键值对中的键和值，对于这两个变量，可以使用任何名称</p><p>遍历字典时，键值对的返回顺序与储存顺序不同</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;改列名&quot;&gt;&lt;a href=&quot;#改列名&quot; class=&quot;headerlink&quot; title=&quot;改列名&quot;&gt;&lt;/a&gt;改列名&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;
+        &lt;p&gt;python中，字典是一系列键值对&lt;/p&gt;
+&lt;p&gt;键和值之间用冒号分隔，而键-值对之间用逗号分隔&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;lin
       
     
     </summary>
@@ -51,61 +84,7 @@
       <category term="Python学习" scheme="http://yoursite.com/categories/Python%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python Pandas" scheme="http://yoursite.com/tags/Python-Pandas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>好好学习：个人知识管理精进指南</title>
-    <link href="http://yoursite.com/2020/09/28/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0%EF%BC%9A%E4%B8%AA%E4%BA%BA%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E7%B2%BE%E8%BF%9B%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2020/09/28/读书笔记/好好学习：个人知识管理精进指南/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:28:04.083Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="成甲"><a href="#成甲" class="headerlink" title="成甲"></a>成甲</h2><p>◆ 引言 什么是知识？</p><p>>&gt; 只有能够改变你行动的信息才是知识</p><p>>&gt; 衡量你的学习是否有效的重要标准是：学习之后，你解决问题的思路和方法是否得到了改变。</p><p>>&gt; 当你储备的临界知识达到一定量的时候，就会产生惊人的威力（查理·芒格称之为lollapalooza效应，即“叠加放大”效应）</p><p>>&gt; 人们犯下的很多错误，往往源自其漠视一些重要而基本的规律。</p><p>◆ 在海量信息即时获取时代，我们拼什么？</p><p>>&gt; 从2000年开始差不多持续到现在，是知识获取速度构建认知优势的时代。</p><p>>&gt; 第三个阶段，是我认为现在可能已经慢慢到来的、知识深度带来认知优势的时代。</p><p>>&gt; 多数人为了逃避真正的思考愿意做任何事情。”</p><p>◆ 如何提升认知深度？</p><p>>&gt; 1.从形式上看，简单的回答往往是对具体的问题或事情本身做出回答；而深度回答却是在分析具体现象之后找出抽象规律。</p><p>2.从回答的思考方式看，简单的答案往往是根据自己的直观感受、情绪与经验做出回答；而有深度的答案往往依托于有实验验证或者数据分析支持的结论。</p><p>3.从答案的效果上看，简单的答案往往只能用于解决一个特定的问题；而有深度的答案能够更普遍地解决类似问题，启发我们由此及彼、由表及里地思考问题。</p><p>◆ 为什么大多数人的学习层次上不去？</p><p>>&gt; 我们一直把时间花在想办法提升“技术效率”上，而忽略了真正重要的“认知效率”。</p><p>>&gt; 不要用最高级形容词、一般化字眼和陈词滥调。讲事实，但要把事实讲得引人入胜</p><p>>&gt; 如果我们的学习是在了解问题本质，了解解决方案的底层规律，能够让我们认清楚问题表象背后的实质，那我们就是在提升认知效率</p><p>>&gt; 花80%的时间，用在这20%的关键问题上，而不是平均地把时间花在各种知识上。</p><p>◆ 到底哪些知识值得学？</p><p>>&gt; 斜杠青年应该更加深入探索，而不是简单追求多元的结果。</p><p>>&gt; 在今天这个人才高度流动、社会分工不断细化的时代，竞争越来越激烈，你必须在一个领域做到极致，对它的认识足够深刻，才有可能获得真正的话语权。不明白这一点，盲目追求多元学习，兼职变现，表面上看是在提升能力，其实都是肤浅地拿时间直接变现而已</p><p>>&gt; 只不过是自己控制不住虚荣心和金钱诱惑罢了</p><p>>&gt; 一开始就能带来直接利益和诱惑的事情，很可能要拿未来的机会做代价。</p><p>>&gt; 斜杠是提升认知深度的结果，而不是追求多元的结果。</p><p>>&gt; 一个人，活成一支队伍。</p><p>>&gt; 要学习与解决某一类问题相关的所有核心能力。这一点，一定是突破专业限制的。</p><p>>&gt; 一旦你的研究深度达到底层规律的层面，表面上看起来不相干的问题都会在底层盘根错节地联系起来</p><p>>&gt; 我们一生就需要学习三个级别的课程：（1）公共基础课：执行能力；（2）专业必修课：专业能力；（3）通用必修课：结构能力。</p><p>>&gt; 能够打完整战役、解决系统问题的能力</p><p>>&gt; 这种系统解决问题的知识往往是内隐的，需要我们在不断实践、思考的过程中，领悟到跨领域知识交汇的微妙之处，从而灵活地把</p><p>>&gt; 多个学科之间的知识随时调用，打赢一场战役。</p><p>>&gt; 通用必修课，就是要掌握临界知识，认知事物更加底层的结构与规律。我们经营的领域是如何产生的？影响这个领域发展的基本动力是什么？有哪些规律会普遍地影响这些事物？这就像在深刻理解一场战役为什么爆发，会以什么样的脉络发展，其中起决定作用的因素究竟是什么一样。</p><p>◆ 跳出“低水平勤奋陷阱”</p><p>>&gt; 阅读+画线/摘抄的读书方法是把一本书拆分成了一个个孤立的知识点</p><p>>&gt; 事实上，大脑的记忆，靠的是将信息与旧经验联系起来。</p><p>>&gt; 原始的读书方法是：花很多时间去阅读一本新书，去记录新的名言警句，却从不花时间去加工这些信息，将其和已有的知识建立联系</p><p>>&gt; 那些在生活中各个领域起基本而重要作用的规律，也就是本书提到的临界知识</p><p>>&gt; 我的做法是：当我要解决某个问题的时候，主动去寻找可能会讨论这个问题的文章和书籍，去观察——作者用什么样的思路解决问题？在这个解决方案背后，是否有我熟悉的知识？我还能把这个解决方案的原理，应用在什么领域？</p><p>>&gt; 因此读书不在于多少，而在于你有没有通过读书重新认识这个世界，发现临界知识并把它运用到自己的生活当中。</p><p>◆ 学习临界知识需要具备的两个心态</p><p>>&gt; 当我们遇到与过去认知不一致的新观点时，就会触发我们的习惯性防卫。</p><p>>&gt; 当我们感觉到自己的观点、尊严可能会受到挑战的时候，我们第一个反应不是思考对方的挑战和质疑是否合理，而是：有人敢反对我，和他干！这时候，我们的习惯性防卫就产生了</p><p>>&gt; 当一个问题出现在别人身上的时候，我们习惯把这个问题归因于别人，是那个人自身有问题。而当同样的问题发生在自己身上的时候，我们就不这么想了，反而会把问题归因于外部因素。这在心理学中称为“基本归因偏差”。</p><p>>&gt; 习惯性防卫的根源是惧怕暴露出我们想法背后的思维。</p><p>>&gt; 要真正做到绿灯思维却不容易，我们还必须建立一个更基础的认识，那就是：区分“我”和“我的观点/行为”。</p><p>>&gt; 我们之所以会习惯性防卫，还有一个很重要的因素：我们会把别人对我们观点的质疑，理解为对我们自己的否定。</p><p>>&gt; 我特别喜欢和聪明人在一起工作，因为最大的好处是不用考虑他们的尊严。</p><p>>&gt; 真正的尊严是发现改进和成长的机会，成为更好的自己。</p><p>>&gt; 越是快速提升的能力，反而越需要下慢功夫。</p><p>>&gt; 掌握临界知识，首先要在学习新知识时有绿灯思维，而在具体学习时，又要有以慢为快的心态，把慢功夫用在真问题上，比如学习掌握临界知识。</p><p>◆ 提升学习能力的三个底层方法</p><p>>&gt; 学习临界知识最方便的教材，其实是复盘我们每天的生活：复盘每一天的决策都是在什么样的假设下做出的，又产生了什么样的结果。我们要追问问题的过程，而不仅仅是自己事后解释为什么。</p><p>>&gt; 让自己安静，向内求。在每天快结束的时候，静静地坐下来回顾一天：今天，有什么事情，让我开心？为什么？今天，我有什么事情没处理好？为什么？假如我没有这么做会怎样？我还能有其他的做法吗？</p><p>>&gt; 反思、以教为学和刻意练习。</p><p>>&gt; 总结是对结果的好坏进行分析；而反思是对产生结果的原因进行分析。或者，换个说法：反思的实质是对假设进行校正。</p><p>>&gt; 做事的顺序：做出假设——→采取行动——→产生结果</p><p>反思的顺序：观察结果（现象）——→研究原先假设——→反思校正假设</p><p>>&gt; 未经理性思考、面对某种场景就立刻得出的结论，我称之为“跳跃性假设”——跳开理性思考的环节做出的假设。</p><p>>&gt; 如果凡事都以目前的能力来评断能与不能，那么任何新的、困难的事物无论再过多久，也不会有完成的一天。”</p><p>>&gt; 损失规避效应”是指我们面对损失时的痛苦感要大大超过面对获得时的快感。比如你今天丢了1000元钱，会觉得很痛苦</p><p>>&gt; 我过去还遇到过类似的事情吗？我还听说过有其他人犯过类似的错或者有做得更好的吗？有什么相关的方法可以应用到这件事情中吗？</p><p>>&gt; 提前设定一个期望的标准，然后每天反思，与之比较寻找差距！</p><p>>&gt; （1）每日反思对标，其实是一个“打卡”的过程。记录每天对标的结果，让我们能够看到自己的进步，从而更加积极地坚持反思、提升自我，这是一个正反</p><p>>&gt; 馈的过程。</p><p>>&gt; 2）每天反思对标同样的内容，是一个自我催眠的过程。就像心理学中讲的，我们可以通过自说自话来与潜意识对话，影响我们的思考和认知。</p><p>>&gt; “对标——对表——对照”三个步骤，让反思日记在对表环节，更加精细和易于比较。</p><p>>&gt; 想要在关键时刻有更好的表现，我们就应该通过对日常生活中一个个细节的反思来改进提升自己。</p><p>>&gt; 1.答应别人的事情，尽可能第一时间记录下来，避免遗忘。</p><p>2.轻易不给出承诺。确信自己有能力做到，再答应</p><p>>&gt; 记录自己的情绪和思考的过程，而不仅仅记录事情的结果。</p><p>>&gt; 生活就是一本书，我们每天经历的事情，都是一个个埋藏着启发的案例，关键是我们必须有能力解读它。首先，我们要把生活中重要的部分选择出来，然后才能从中发现更有价值的启发。而这个过程，都是在锻炼反思的能力。</p><p>>&gt; 如果我把当时的感受、情绪和思考写下来，而不是单纯地记录事情的结果，或许会好得多。</p><p>>&gt; 将每天的日记分成不同板块，每个板块有一个关键词或小标题。</p><p>>&gt; 晨间日记的奇迹</p><p>>&gt; 反思日记，是把反思这个偶发的行为变成了主动的、持续的行为。</p><p>>&gt; 要教别人，就会督促自己发现知识阻塞，进一步打通已有知识。</p><p>>&gt; 教别人的过程，是一个强化记忆和认识的过程。</p><p>>&gt; 教别人之后，别人提出疑问、质疑和新想法，会增强我们的认识。</p><p>>&gt; 刻意练习的核心假设是：尽管专家级</p><p>>&gt; 水平是逐渐练出来的，但是关键在于受训者必须通过训练掌握更高级的心理表征，才能真正有突飞猛进的进步。</p><p>>&gt; 元认知是对我们的思考过程的思考。</p><p>>&gt; 有意识地应用更高级的心理表征解决问题，提升元认知能力。</p><p>>&gt; 而在认知能力这样的思维训练中，划小圈的内容就是我前面提到的对基本概念、临界知识、知识阻塞等关键地方进行反复的探究和思考，直到把这个问题吃透，弄明白。</p><p>>&gt; 你必须依靠模型组成的框架来安排你的经验。这里说的“模型”就是临界知识，“框架”就是把临界知识整合起来的认知方式。</p><p>◆ 持续提升学习能力的三个技巧</p><p>>&gt; 如实地记录整个事情的发展过程——我们要尝试训练自己记录发生了“什么”，是“如何”发生的，而不仅仅是事后自以为是地去解释</p><p>>&gt; 为什么</p><p>>&gt; 心理学家研究发现：时过境迁后，我们会根据现在的情况，扭曲自己过去的想法和对行为的解读！</p><p>>&gt; 在心理学上，有一个概念叫“认知失调”。当我们的认知和行为不一致时，我们往往会扭曲我们的想法，使之符合我们的认知，从而减少“失调”所带来的不舒服。</p><p>>&gt; “视界”是指我们能够通过经验进行学习的视野界限。如果事情发生的原因和呈现结果之间的间隔时间太长，我们就很难从中学习。</p><p>>&gt; 如果看不到事情背后的长期规律，那么我们就只能对发生的事情本身做出反应，而无法顾及更长远的利益</p><p>>&gt; 1.当时思考时，我考虑这件事情的目标了吗？如果考虑了，当初的目标是什么？</p><p>>&gt; 2.在这个目标下，我当时考虑了哪些因素？现在看，这些因素合理吗？有遗漏吗？3.我当时为什么会这么考虑？各种因素中，哪个条件发生变化，结果可能不一样？4.最后的结果和我的预期之间有什么差距？为什么？</p><p>>&gt; 回顾，有一种神奇的魔力，可以让我们今天看起来平淡无奇的日子在未来的时刻变得动人而有启发。</p><p>>&gt; 回顾是连接过去与未来的纽带</p><p>>&gt; 我们的生活都是由一个个没有正确答案的问题拼接而成的。有些答案是与时间做朋友的，随着时间的推移，会越来越产生价值；而有些答案是与时间做敌人的，时间过去越久，越被动。但是，我们常常只能看到和感受到眼前的压力和困难，无法超出自己的认识边界做出决定。</p><p>>&gt; 越是复杂的问题，越要用基本、简单的原则思考，比如正直、不撒谎、不贪婪、不给人添乱。</p><p>>&gt; .本周或本月的目标与期望是什么？</p><p>2.实际情况如何，比预期好还是不好？</p><p>3.为什么？</p><p>•做得好的原因是什么？做得不好的原因是什么？（当时我的假设是什么？）</p><p>•如果现在重新做，将会如何执行？新的假设有什么不一样？</p><p>•“跨领域经验”的类比与借鉴：思考自己遇到的问题可能与其他领域的哪些问题相类似，他们用了什么解决思路和方法？他们的假设是什么？这个假设的原理是什么？对我认识问题的方式有什么借鉴？</p><p>4.总结经验。</p><p>•有效的假设，是在什么样的前提下有效的？我未来一定要记得避免不考虑条件地乱用这次有效的经验。</p><p>•哪些假设这次验证是错误的？哪些行为是未来要坚决避免的？</p><p>•哪些假设是这次想到或者借鉴的，接下来要尝试应用的？</p><p>>&gt; 年度回顾，能够帮助我们在较长的时间跨度下，更容易看清错误的根源，从而更好地集中精力</p><p>>&gt; 解决问题</p><p>◆ 为什么临界知识能四两拨千斤？</p><p>>&gt; 第一个假设：很多时候，复杂的世界是由简单的基本规律决定的。</p><p>>&gt; 这个世界最底层的规律应该与化学、物理、数学密切相关。</p><p>>&gt; 面对复杂的问题，要从简单的、基本的原则入手。而巴菲特的合伙人查理·芒格则明确提出：我们要真正认识这个世界，就必须理解并掌握重要学科的基本规律，并把它们当作基本的思维模型来处理问题。同样，临界知识也是遵循了相似的道理：用简单的基础规律来解释复杂的世界现象。</p><p>>&gt; 第二个假设：复杂系统不是简单的因果关系累加，而是各因素相互影响的动态系统。</p><p>>&gt; 快速界定问题，结构化分析问题，提出解决问题的假设方案，快速进行验证试错。</p><p>>&gt; 如果你只是孤立地记住一些事物，试图把它们硬凑起来，那你无法真正理解任何事情……你必须依靠模型组成的框架来安排你的经验。</p><p>◆ 如何发现自己的临界知识？</p><p>>&gt; 可信度比较高、适用面比较广的重要硬学科里，比如数学、物理、化学、生理学等等。</p><p>>&gt; 解决问题最稳妥的办法是拿可信度更高的方法去处理问题。</p><p>>&gt; 把科学研究的严谨方法引入日常的生活思考决策中。如果你坚持这样训练，也能找到自己的临界知识！</p><p>◆ 天赋与学习临界知识的关系</p><p>>&gt; 在任何一个领域要做到杰出都不容易，学习临界知识也不例外，而坚持努力这件事情，除了要有意志力外，更重要的应该是对这个成长过程从心底热爱和喜欢。</p><p>>&gt; 天赋，是你自然投入而熟视无睹的事情，是你不由自主，理所当然去做的事情</p><p>>&gt; 尝试新领域的各种可能性是发现天赋的一部分</p><p>>&gt; 真正重要的是：我们应当对这个世界充满好奇，有自己的热情和独立思考</p><p>◆ 如何应用临界知识？</p><p>>&gt; 第一，在不同的场景中，重复应用同一个临界知识；第二，在不同的时间里，重复应用同一个临界知识。</p><p>>&gt; 遇到问题时，先找这个场景下的专业技术解释，然后再对专业技术解释进一步深入分析，联系到临界知识。</p><p>>&gt; 我们只能逼自己在每天反思的时候更积极主动地思考，尽可能把当天遇到的场景问题和我们掌握的临界知识进行联系分析。</p><p>>&gt; 刻意练习必须关注两点：1.抓住问题的本质进行训练</p><p>>&gt; 2.大量地持续练习。</p><p>>&gt; 学习知识的终极目的无非三个：解释问题、解决问题和预测问题。</p><p>>&gt; 穷人的思维带宽被眼前的危机占满了，他们没有多余的空间来考虑长远。</p><p>>&gt; 所谓结构性反应，是指我们在做选择时，不仅要根据接触到的现象做出反应，还要思考导致这个现象的系统结构是什么。</p><p>>&gt; 系统化思考，是将问题背后的推动因素纳入一个整体进行思考。</p><p>>&gt; 对问题的预见性认知=影响问题发展的结构（基础规律）+获得具体信息的数量与质量</p><p>>&gt; 人们对问题的解释大致可以分为三个层次：现象解释、技术规律解释和通用规律解释。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;成甲&quot;&gt;&lt;a href=&quot;#成甲&quot; class=&quot;headerlink&quot; title=&quot;成甲&quot;&gt;&lt;/a&gt;成甲&lt;/h2&gt;&lt;p&gt;◆ 引言 什么是知识？&lt;/p&gt;
-&lt;p&gt;&gt;&amp;gt; 只有能够改变你行动的信息才是知识&lt;/p&gt;
-&lt;p&gt;&gt;&amp;gt; 衡量你的学习是否有效的重要标准
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="自我提升" scheme="http://yoursite.com/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>娱乐至死</title>
-    <link href="http://yoursite.com/2020/09/28/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB/"/>
-    <id>http://yoursite.com/2020/09/28/读书笔记/娱乐至死/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:28:26.290Z</updated>
-    
-    <content type="html"><![CDATA[<p>尼尔·波兹曼</p><p>◆ 第1章 媒介即隐喻</p><p>>&gt; 在这里，一切公众话语都日渐以娱乐的方式出现，并成为一种文化精神。我们的政治、宗教、新闻、体育、教育和商业都心甘情愿地成为娱乐的附庸，毫无怨言，甚至无声无息，其结果是我们成了一个娱乐至死的物种。</p><p>>&gt; 批评界不乏有识之士，他们注意并记录了美国公众话语的解体及其向娱乐艺术的转变</p><p>>&gt; 电视需要的内容和其他媒体截然不同。电视无法表现政治哲学，电视的形式注定了它同政治哲学是水火不相容的</p><p>>&gt; 印刷术时代步入没落，而电视时代蒸蒸日上。这种转换从根本上不可逆转地改变了公众话语的内容和意义，因为这样两种截然不同的媒介不可能传达同样的思想。随着印刷术影响的减退，政治、宗教、教育和任何其他构成公共事务的领域都要改变其内容，并且用最适用于电视的表达方式去重新定义。</p><p>>&gt; 我对他的理论坚信不疑。他认为，深入一种文化的最有效途径是了解这种文化中用于会话的工具</p><p>>&gt; 那些如今已经习惯于用图画、雕塑或其他具体形象表达思想的人，会发现他们无法像原来一样去膜拜一个抽象的神。犹太人的上帝存在于文字中，或者通过文字而存在，这需要人们进行最精妙的抽象思考。运用图像是亵渎神祇的表现，这样就防止了新的上帝进入某种文化</p><p>>&gt; 我们的文化正处于从以文字为中心向以形象为中心转换的过程中，思考一下摩西的训诫对我们也许是有益的</p><p>>&gt; 我相信，某个文化中交流的媒介对于这个文化精神重心和物质重心的形成有着决定性的影响。</p><p>>&gt; 我们对语言的了解使我们知道，语言结构的差异会导致所谓“世界观”的不同。人们怎样看待时间和空间，怎样理解事物和过程，都会受到语言中的语法特征的重要影响，所以，我们不敢斗胆宣称所有的人类大脑对于世界的理解是一致的。</p><p>>&gt; 随着人们象征性活动的进展，物质现实似乎在成比例地缩小。人们没有直面周遭的事物，而是在不断地和自己对话。他们把自己完全包裹在语言形式、艺术形象、神话象征或宗教仪式之中，以至于不借助人工媒介，他们就无法看见或了解任何东西。</p><p>>&gt; 他思考钟表的哲学意义和隐喻象征</p><p>>&gt; 钟表不懈的嘀嗒声代表的是上帝至高无上的权威的日渐削弱，虽然很少有人能意识到其中的关联</p><p>>&gt; 用书面文字记录哲学观点，不是这些观点的终结，而是这些观点的起点。没有批评，哲学就无法存在，书面文字使思想能够方便地接受他人持续而严格的审查</p><p>>&gt; 书面文字远不只是一种简单的提醒物：它在现实中重新创造了过去，并且给了我们震撼人心的浓缩的想象，而不是什么寻常的记忆</p><p>>&gt; 我们创造的每一种工具都蕴含着超越其自身的意义</p><p>>&gt; 我们的语言即媒介，我们的媒介即隐喻，我们的隐喻创造了我们的文化的内容。</p><p>◆ 第2章 媒介即认识论</p><p>>&gt; 电视本是无足轻重的，所以，如果它强加于自己很高的使命，或者把自己表现成重要文化对话的载体，那么危险就出现了。</p><p>>&gt; 通过共鸣，某种特定语境中的某个特定说法获得了普遍意义。</p><p>>&gt; 词组、书、角色或历史都具有组织不同态度或经历的力量，并且可以赋予它们以意义。</p><p>>&gt; 我认为，任何一种媒介都有共鸣，因为共鸣就是扩大的隐喻</p><p>>&gt; 不管一种媒介原来的语境是怎样的，它都有能力越过这个语境并延伸到新的未知的语境中。由于它能够引导我们组织思想和总结生活经历，所以总是影响着我们的意识和不同的社会结构。</p><p>>&gt; 证词是口头的，因为人们认为口头表述比书面表述更能真实地反映证人的思想状况</p><p>>&gt; 我们可以说我们对于法律事实的理解存在共鸣的冲突：一方面，人们仍然相信口头语言的威力尚存，只有口头语言才可以代表真理；另一方面，人们更愿意相信书面文字的真实性，尤其是印刷文字。</p><p>>&gt; 在学术界里，出版的文字被赋予的权威性和真实性远远超过口头语言</p><p>>&gt; 对于真理的认识是同表达方式密切相连的</p><p>>&gt; 真理不能，也从来没有毫无修饰地存在。它必须穿着某种合适的外衣出现，否则就可能得不到承认，这也正说明了“真理”是一种文化偏见</p><p>>&gt; 尼采说过，任何哲学都是某个阶段生活的哲学</p><p>>&gt; 任何认识论都是某个媒介发展阶段的认识论</p><p>>&gt; 真理，和时间一样，是人通过他自己发明的交流技术同自己进行对话的产物。</p><p>>&gt; 既然智力主要被定义成人掌握事物真理的一种能力，那么一种文化的智力就决定于其重要交流方式的性质</p><p>>&gt; 一种重要的新媒介会改变话语的结构。实现这种变化的途径包括：鼓励某些运用理解力的方法，偏重某些有关智力和智慧的定义以及创造一种讲述事实的形式，从而使某个词语具有某种新的内容。</p><p>>&gt; 符号环境中的变化和自然环境中的变化一样，开始都是缓慢地累积，然后突然达到了物理学家所说的临界点</p><p>>&gt; 我说的只是以电视为中心的认识论污染了大众交流和相关活动，而不是说它污染了一切</p><p>>&gt; 随着印刷术退至我们文化的边缘以及电视占据了文化的中心，公众话语的严肃性、明确性和价值都出现了危险的退步，这就是我希望说清楚的。但是，对于同种情形下可能出现的好处，我们也应该保持坦诚的态度。</p><p>◆ 第3章 印刷机统治下的美国</p><p>但是真理越辩越明，写下来才真正有利于后世的评阅</p><p>>在人类社会存在之初，上帝以启蒙人智为乐，他让我们意识到，有些我们尊为真理的其实是谬误，有些我们斥为谬误的却是真正的真理。他不时地为我们拨去迷雾，使我们不断完善自己的原则，改正自己的错误。在这个过程中，他得到了无限的满足。现在我们不知道我们是否达到了发展的终极，是否达到了精神知识或神学知识的完满，我们担心，如果我们裹足不前，不愿意接受他人的意见，那么我们的后人会效仿我们，认为我们——他们的前辈和创立者，所做的一切都是神圣的，是不可丝毫背离的。</p><p>>&gt; 在人类社会存在之初，上帝以启蒙人智为乐，他让我们意识到，有些我们尊为真理的其实是谬误，有些我们斥为谬误的却是真正的真理。他不时地为我们拨去迷雾，使我们不断完善自己的原则，改正自己的错误。在这个过程中，他得到了无限的满足。现在我们不知道我们是否达到了发展的终极，是否达到了精神知识或神学知识的完满，我们担心，如果我们裹足不前，不愿意接受他人的意见，那么我们的后人会效仿我们，认为我们——他们的前辈和创立者，所做的一切都是神圣的，是不可丝毫背离的。</p><p>>&gt; 德美浸礼会教派的观点近乎制定了一条关于宗教话语的诫令：“不可记录汝等之教义，更不可将其印刷成文，否则汝等将永远受其束缚。”</p><p>>&gt; 刘易斯·芒福德写道：“印刷书籍比任何其他方式都更有效地把人们从现时现地的统治中解放出来……铅字比实际发生的事实更有威力……存在就是存在于铅字之中：其他的一切都将渐渐地成为虚无。所谓学习就是书本的学习。”</p><p>>&gt; 枪炮的发明使奴隶和贵族得以在战场上平等对峙；印刷术为各阶层的人们打开了同样的信息之门，邮差把知识一视同仁地送到茅屋和宫殿前。</p><p>所以美国快速崛起不是没有理由的</p><p>>19世纪中叶，很多英国人来到美国想亲自看看殖民地的变化，这里高度而广泛的文化普及率给他们所有人都留下了深刻的印象。</p><p>>&gt; 19世纪中叶，很多英国人来到美国想亲自看看殖民地的变化，这里高度而广泛的文化普及率给他们所有人都留下了深刻的印象。</p><p>>&gt; 理查德·霍夫施塔特[插图]提醒我们，美国是一个由知识分子建立的国家，这在现代历史上是罕见的。</p><p>>&gt; 这些开国元勋都是智者、科学家、学养高深之人，他们中的很多人都精于古典学问，善于借助熟知的历史、政治和法律来解决当时紧迫的问题</p><p>>&gt; 马克思完全明白，印刷机不仅是一种机器，更是话语的一种结构，它排除或选择某些类型的内容，然后不可避免地选择某一类型的受众</p><p>◆ 第4章 印刷机统治下的思想</p><p>>&gt; 首先，用当今的标准来衡量，那时的听众具有超常的注意广度。</p><p>>&gt; 其次，那时的听众必须具备非凡的、理解复杂长句的能力。</p><p>>&gt; 电视文化中的人们需要一种对于视觉和听觉都没有过高要求的“平白语言”，有些时候甚至要通过法律规定这样的语言。</p><p>>&gt; 印刷文字，或建立在印刷文字之上的口头语言，具有某种内容：一种有语义的、可释义的、有逻辑命题的内容</p><p>>&gt; 在阅读的时候，读者的反应是孤立的，他只能依靠自己的智力。面对印在纸上的句子，读者看见的是一些冷静的抽象符号，没有美感或归属感。所以，阅读从本质上来说是一件严肃的事情，当然也是一项理性的活动。</p><p>>&gt; 阅读过程能促进理性思维，铅字那种有序排列的、具有逻辑命题的特点，能够培养沃尔</p><p>>&gt; 特·翁所说的“对于知识的分析管理能力”。阅读文字意味着要跟随一条思路，这需要读者具有相当强的分类、推理和判断能力。读者要能够发现谎言，明察作者笔头流露的迷惑，分清过于笼统的概括，找出滥用逻辑和常识的地方。同时，读者还要具有评判能力，要对不同的观点进行对比，并且能够举一反三。为了做到这些，读者必须和文字保持一定距离，这是由文本自身不受情感影响的特征所决定的</p><p>>&gt; 在18世纪和19世纪，印刷术赋予智力一个新的定义，这个定义推崇客观和理性的思维，同时鼓励严肃、有序和具有逻辑性的公众话语。</p><p>>&gt; 不论是在英国，还是在美国，印刷术从来没有让理性如此彻底地出现在历史上的任何一个时期。但是，我们也不难证明，18世纪和19世纪的美国公众话语，由于深深扎根于铅字的传统，因而是严肃的，其论点和表现形式是倾向理性的，具有意味深长的实质内容。</p><p>>&gt; 关于耶稣，潘恩承认他是一个德高望重、亲切和蔼的人，但那些关于他神性的故事却被潘恩斥为荒诞不经的。作为一个理性主义者，潘恩是对《圣经》进行了细致的文本分析才得出这样的结论的。他写道：“所有的教堂，不论是犹太教、基督教或土耳其教，在我看来都只不过是人的发明，是为了吓唬和奴役人类、垄断权力和利益而建立的。</p><p>>&gt; 在以印刷品为基础的文化中，律师往往受过良好教育，相信理性，擅长论证</p><p>>&gt; 他们认为，虽然民主有种种的好处，但它无疑形成了一种助长不受约束的个人主义的危险。</p><p>>&gt; “如果只拘泥于耳熟能详的专门术语，就会丧失对事物进行宏观全面认识的能力，即使在熟悉的领域里也一样”</p><p>>&gt; 对于印刷机统治美国人思想的那个时期，我给了它一个名称，叫“阐释年代”。阐释是一种思想的模式，一种学习的方法，一种表达的途径。所有成熟话语所拥有的特征，都被偏爱阐释的印刷术发扬光大：富有逻辑的复杂思维，高度的理性和秩序，对于自相矛盾的憎恶，超常的冷静和客观以及等待受众反应的耐心。到了19世纪末期，由于某些我急于解释的原因，“阐释年代”开始逐渐逝去，另一个时代出现的早期迹象已经显现。这个新的时代就是“娱乐业时代”。</p><p>◆ 第5章 躲躲猫的世界</p><p>>&gt; 新的观念是指交通和通讯可以彼此脱离，空间不再是限制信息传播的、不可避免的障碍。</p><p>>&gt; 电报消除了洲际界线，消灭了地区概念，把整个美国纳入了同一个信息网络，从而使统一美国话语成为可能。</p><p>>&gt; 电报对于印刷术统治下的话语定义进行了三路进攻，遭到攻击后的话语内容无聊、表现无力、形式散乱。之所以会这样，是因为电报使脱离语境的信息合法化，也就是说，信息的价值不再取决于其在社会和政治对策和行动中所起的作用，而是取决于它是否新奇有趣。电报把信息变成了一种商品，一种可以置用处或意义于不顾而进行买卖的东西。</p><p>>&gt; 在很短的一段时间里，一些实际问题（主要是因为电报线路的紧张）使新闻保留了作为功能性信息的定义。</p><p>>&gt; 不久之后，报纸的财富不再取决于新闻的质量或用途，而是取决于这些新闻来源地的遥远程度和获取的速度。</p><p>>&gt; 梭罗说过，电报使相关的东西变得无关。这些源源不断的信息与它们的受众之间很少或几乎没有任何关系，也就是说，这些信息并没有可以赖以存在的社会环境和精神环境。柯勒律治[插图]关于“到处是水却没有一滴水可以喝”的著名诗句，也许很能代表这个失去语境的信息环境：在信息的海洋里，却找不到一点儿有用的信息。</p><p>>&gt; 这正是电报的传统：通过生产大量无关的信息，它完全改变了我们所称的“信息—行动比”。</p><p>不是很理解这部分的逻辑。只追求对自己生活有影响的信息，那视野会变的很狭隘。或者这段作者其实是想讲现在信息太过于泛滥啦？</p><p>>在电报时代之前，“信息—行动比”基本是平衡的，所以大多数人都有一种能够控制他们生活中突发事件的感觉。</p><p>>&gt; 在电报时代之前，“信息—行动比”基本是平衡的，所以大多数人都有一种能够控制他们生活中突发事件的感觉。</p><p>>&gt; 电报还使公众话语变得散乱无序。用刘易斯·芒福德的话来说就是，它带给我们的是支离破碎的时间和被割裂的注意力。</p><p>>&gt; 电报只适合于传播转瞬即逝的信息，因为会有更多更新的信息很快取代它们</p><p>>&gt; 电报引入的这种公众对话形式有着鲜明的特征：其语言是新闻标题的语言——耸人听闻、结构零散、没有特别的目标受众。新闻的形式类似口号，容易被记住，也容易被忘记。</p><p>>&gt; 新闻的语言是完全不连贯的，一个消息和它前面或后面的另一则消息毫无关系。每个“标题”都是独立存在的。新闻的受众必须自己找出其中的含义，发布新闻的人没有义务这样做。久而久之，经电报描绘过的世界开始变得无法控制，甚至无法解释了。报纸上一行行有序而连贯的文字渐渐失去了帮助我们获得知识和了解这个世界的能力。“了解”事实开始有了新的意义，因为“了解”并不意味着人们能够“理解”事实的言下之意、背景知识和与其他事实的关联。电报式话语不允许人们进行历史的回顾，也不鼓励深入的分析。对于电报来说，智力就是知道很多事情，而不是理解它们。</p><p>>&gt; 一个住满陌生人的拥挤的社区，一个破碎而断裂的世界。</p><p>>&gt; 照片表现的是事实，而不是关于这些事实的讨论或从这些事实中得出的结论。但这并不意味着照片没有认识倾向。</p><p>>&gt; 一切真正的理解起源于我们不接受这个世界表面所表现出来的东西。</p><p>>&gt; 照片具有能脱离现实和语境，并把很多没有逻辑、彼此无关的事件和东西堆积在一起的能力。</p><p>>&gt; 过去人们是为了解决生活中的问题而搜寻信息，现在是为了让无用的信息派上用场而制造问题。</p><p>>&gt; 躲躲猫的世界。在这个世界里，一会儿这个、一会儿那个突然进入你的视线，然后又很快消失。这是一个没有连续性、没有意义的世界，一个不要求我们也不允许我们做</p><p>>&gt; 任何事的世界，一个像孩子们玩的躲躲猫游戏那样完全独立闭塞的世界。但和躲躲猫一样，也是其乐无穷的。</p><p>>&gt; 电视正把我们的文化转变成娱乐业的广阔舞台。</p><p>◆ 第6章 娱乐业时代</p><p>>&gt; 只有那些对技术的历史一无所知的人，才会相信技术是完全中立的。</p><p>>&gt; 由于使用方法不同，某种技术可能无法充分发挥其潜能或者只能产生</p><p>>&gt; 最低限度的社会效应。</p><p>>&gt; 电视展示给观众的主题虽多，却不需要我们动一点儿脑筋，看电视的目的只是情感上得到满足。</p><p>>&gt; 但我这里想要说的不是电视的娱乐性，而是电视把娱乐本身变成了表现一切经历的形式。</p><p>>&gt; 我们的问题不在于电视为我们展示具有娱乐性的内容，而在于所有的内容都以娱乐的方式表现出来，这就完全是另一回事了。</p><p>>&gt; 思考不是表演艺术，而电视需要的是表演艺术。</p><p>>&gt; 正是电视本身的这种性质决定了它必须舍弃思想，来迎合人们对视觉快感的需求，适应娱乐业的发展。</p><p>◆ 第7章 “好……现在”</p><p>>&gt; 我们看见的不仅是零散不全的新闻，而且是没有背景、没有结果、没有价值、没有任何严肃性的新闻，也就是说，新闻成了纯粹的娱乐。</p><p>>&gt; 假信息并不意味着错误的信息，而是意味着使人产生误解的信息——没有依据、毫无关联、支离破碎或流于表面的信息——这些信息让人产生错觉，以为自己知道了很多事实，其实却离事实的真相越来越远。</p><p>>&gt; 奥尔德斯·赫胥黎对这样的情况不会感到吃惊，他早就预见了它的到来。他相信，西方民主社会将莺歌燕舞、醉生梦死地消亡，而不是戴着镣铐一路哀歌。</p><p>电视最大的影响是信息的碎片化。所有的信息都脱离前因后果，脱离了应有的语境。人们看电视的目的也不再是追求信息。很多时候都只是单纯的需要娱乐罢了</p><p>>而且，在电视的影响下，广播新闻的语言也越来越脱离语境，变得断断续续，所以人们了解这个世界的途径被有效地截断了。在纽约市，WINS广播电台请求听众：“给我们22分钟，我们将给你整个世界。”他们说这句话时是诚恳的，听众们也不会把这个口号当作痴人说梦。</p><p>于是，我们将快速地进入到一个真正可以被称为“欢乐问答”的信息环境。这个被称为“欢乐问答”的游戏使琐碎的事实作为娱乐的源泉，我们的新闻也一样。历史已经证明，一个文化不会因为假信息和错误观点而灭亡，但历史从来没有证明过，一个自认为可以在22分钟内评价整个世界的文化还会有生存的能力。除非，新闻的价值取决于它能带来多少笑声。</p><p>◆ 第8章 走向伯利恒</p><p>>&gt; 不论是历史还是电视的现实情况，都证明反省或精神超脱是不适合电视屏幕的</p><p>看电视的时候，我们很难融入电视营造的氛围。我们始终都处在旁观者的地位</p><p>>所以，电视上的传教完全不同于圣山上的传道。宗教节目充满了喝彩声，它们庆祝富有，让节目中的演员成为名人。虽然这些节目传递的信息琐碎无聊，但它们仍然会有很高的收视率，或许正是因为它们传递的信息琐碎无聊，它们才会拥有很高的收视率。</p><p>如果我说基督教是一种苛刻而严肃的宗教，我相信我没有说错。但是，当它被表现得轻松愉快时，就变成了一种完全不同的宗教。</p><p>当然，肯定会有人反对“电视使宗教堕落”这种说法，其中一个理由是，宗教和图像从来都是紧密相连的。除了贵格会[插图]和其他几个禁欲的教派，很多宗教都努力通过艺术、音乐、神像和令人敬畏的仪式来表现自己的吸引力。宗教的美感是它吸引人们的重要原因。对于天主教和犹太教来说，这一点尤其明显：在镶嵌着美丽彩色玻璃的教堂里，教徒们可以听到萦绕人心的曲调，看到华美的长袍、披肩和神奇的帽子，他们享受圣饼和美酒，聆听古老语言神秘的节奏。这些宗教仪式中的饰物与我们在电视上看到的鲜花、喷泉和布景是不同的，因为前者是宗教本身历史和教义的一个组成部分，教徒对它们应该表现出恰如其分的敬畏。</p><p>>&gt; 电视最大的长处是它让具体的形象进入我们的心里，而不是让抽象的概念留在我们脑海中。</p><p>就宗教而言。电视节目中，一切都变成了表演。缺乏了敬畏心，神圣感的宗教仪式已经失去了宗教原有的意义</p><p>>我前面提到，奥康纳红衣主教为了得到观众欢心进行了令人尴尬的努力，某教区的神甫则尝试把摇滚音乐和传教结合起来。我还知道有一个犹太教的拉比非常郑重地向教会提议，邀请帕瓦罗蒂在赎罪日演唱悔罪祈祷曲，他相信这样一定会让教堂空前爆满。谁会怀疑这一点呢？但正如汉娜·阿伦特说的，这是一个问题，而不是解决问题的方法。作为附属于全国基督教教堂委员会的神学、教育和电子媒介协会成员，我完全能够理解“官方”新教教派对把新教改造成一种适合电视播出的宗教所表现出来的担忧。在我们的委员会里，大家达成了一种共识：真正的危险不在于宗教已经成为电视节目的内容，而在于电视节目可能会成为宗教的内容。</p><p>>&gt; 真正的危险不在于宗教已经成为电视节目的内容，而在于电视节目可能会成为宗教的内容。</p><p>◆ 第9章 伸出你的手投上一票</p><p>>&gt; 如果政治真的像体育比赛，那么它至少有这样几个优点：一目了然、公正诚实、超越平凡。</p><p>>&gt; 资本主义与科学和自由民主一样，是启蒙运动的产物。</p><p>>&gt; 资本主义的理论家们都相信，买卖双方应该具有相当的成熟程度，了解足够的信息，然后理智地进行双方互惠的交易，这些是资本主义的基础。</p><p>>&gt; 买方的理性激励竞争者成为赢家，并且敦促赢家不断进步。在买方无法做出理性决定的情况下，法律就应该介入使交易无效，例如通过制定法律来禁止孩子签订合同。</p><p>>&gt; 图像广告使感染力成为消费者选择商品的依据，而不再是实践的检验。</p><p>>&gt; 电视广告的对象不是产品的品质，而是那些产品消费者的品质。电影明星、著名运动员、宁静的湖水、悠闲的垂钓、幽雅的晚餐、浪漫的插曲、快乐的家庭准备行装去乡间野餐——所有这些都丝毫没有提及要出售的产品，但是未来消费者的恐惧和梦想都尽在其中了。</p><p>>&gt; 按照这样的标准，黑人是美国唯一心智健全的选民，其他的大多数人都为了自己的利益投票，但这些利益都是象征性的，也就是说，只能起到心理安慰的作用。和电视广告一样，形象政治也是一种疗法，这就是为什么魅力、容貌、名气和个人隐私会如此充斥其中的道理。如果我们冷静地想一想，我们就会记得，林肯的照片没有一张是微笑的，他的妻子很可能是个精神病患者，他本人很长时间也是郁郁寡欢的。对于形象政治来说，他显然是不合适的。现在的我们当然不希望我们的镜子里出现如此阴郁而缺少乐趣的形象。我想说的是，就像电视广告为了起到心理疗法的作用而必须舍弃真实可信的产品信息一样，形象政治为了同样的目的也必须舍弃真实可信的政治内容。</p><p>由此我们可以推断，历史在形象政治中发挥不了重要作用，因为历史只有对于那些相信过去能够滋养现在的人才有价值。托马斯·卡莱尔[插图]说过：“过去是一个世界，而不是一片灰色的混沌。”他写这句话的时候，书还是严肃公众话语的主要媒介。一本书就是历史，它的一切都把我们带回到过去的时间里——从它的写作过程到它线形的陈述，再到通篇运用自如的过去时态。</p><p>◆ 第10章 教学是一种娱乐活动</p><p>>&gt; 就像阅读能培养人们对于学习的某种倾向一样（不管是怎样的书），看电视也能起到同样的作用</p><p>>&gt; 也许人们对于教育最大的错误认识是，一个人学会的只有他当时正在学习的东西。其实，伴随学习的过程形成持久的态度……也许比拼写课或地理历史课更为重要……因为这些态度才是在未来发挥重要作用的东西</p><p>>&gt; 一个人学到的最重要的东西是学习的方法</p><p>>&gt; 在他们看来，要想获得出色的思辨能力对于年轻人来说绝非易事，而是一场艰苦卓绝的斗争。西塞罗说过，教育的目的是让学生们摆脱现实的奴役，而现在的年轻人正竭力做着相反的努力——为了适应现实而改变自己。</p><p>>&gt; 你不能有前提条件</p><p>>&gt; 每一个电视节目都应该是完整独立的，观众在观看节目的时候不需要具备其他知识。我们不能说学习是循序渐进的，也不能强调知识的积累需要一定的基础</p><p>>&gt; 电视通过摒弃教育中的顺序和连贯性而彻底否定了它们和思想之间存在任何关系。</p><p>>&gt; 你不能令人困惑</p><p>>&gt; 在电视教学中，让观众心生困惑就意味着低收视率。遇到难题的学习者必然要转向其他频道。这就要求电视节目中不能有任何需要记忆、学习、运用甚至忍受的东西，也就是说，任何信息、故事或观点都要以最易懂的方式出现，因为对于电视来说，最重要的是学习者的满意程度，而不是学习者的成长。</p><p>>&gt; 你应像躲避瘟神一样避开阐述</p><p>>&gt; 威尔逊发现，普通的电视观众只能记住电视剧中20%的信息</p><p>>&gt; 从电视上获得的意义往往是一些具体的片断，不具备推论性，而从阅读中获得的意义往往和我们原来储存的知识相关，所以具有较强的推论性</p><p>>&gt; 电视在培养深层次的、具有推论性的思维方面明显不如铅字。</p><p>作者这里的观点过于绝对。人们不能只学习对于自己有用的知识。科学的发展大多是从一些看似无用的知识开始</p><p>>《咪咪见闻录》最重要的特点是它的内容是经过精心挑选的，因为所有内容必须能够通过电视来表现。学生们为什么要学习座头鲸的习性？所谓“学术主题”的识图能力和航海技术到底有多重要？航海技术从来就没有被看作“学术主题”，对于大城市里的学生来说根本就没有意义。为什么“鲸鱼和它们的生活环境”会成为一个如此有趣的话题，值得人们花上一整年的时间来制作这个节目？</p><p>◆ 第11章 赫胥黎的警告</p><p>>&gt; 有两种方法可以让文化精神枯萎，一种是奥威尔式的——文化成为一个监狱，另一种是赫胥黎式的——文化成为一场滑稽戏</p><p>>&gt; 在赫胥黎的预言中，“老大哥”并没有成心监视着我们，而是我们自己心甘情愿地一直注视着他，根本就不需要什么看守人、大门或“真理部”。如果一个民族分心于繁杂琐事，如果文化生活被重新定义为娱乐的周而复始，如果严肃的公众对话变成了幼稚的婴儿语言，总而言之，如果人民蜕化为被动的受众，而一切公共事务形同杂耍，那么这个民族就会发现自己危在旦夕，文化灭亡的命运就在劫难逃。</p><p>>&gt; 对于这一切，我们没有表示同意，也没有表示反对，我们没有进行任何讨论，我们只能顺从。</p><p>>&gt; 只有深刻而持久地意识到信息的结构和效应，消除对媒介的神秘感，我们才有可能对电视，或电脑，或任何其他媒介获得某种程度的控制</p><p>>&gt; 我们提出解决措施应该具有超前的意识，否则还要什么梦想呢？而且，帮助年轻人学习解读文化中的象征是学校不可推卸的责任，要做到这一点，学生应该学会怎样疏远某些信息形式。我们希望学校应该把这样的任务纳入课程之中，甚至成为教育的中心。</p><p>>&gt; 他不懈地著书强调理解媒介政治和媒介认识论的必要性</p><p>>&gt; 人们感到痛苦的不是他们用笑声代替了思考，而是他们不知道自己为什么笑以及为什么不再思考</p><p> <strong>◆</strong> <strong>点评</strong></p><p> 最重要的观点是电视上的知识都是零散的，碎片化的，以吸引人的眼球为目的。泛娱乐化会导致人们失去深度思考的能力，逻辑推理的能力。但是本文作者对于电视的态度太过于悲观。应该合理的利用电视，将其作为认识世界的辅助措施。</p><p>★★★★☆</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;尼尔·波兹曼&lt;/p&gt;
-&lt;p&gt;◆ 第1章 媒介即隐喻&lt;/p&gt;
-&lt;p&gt;&gt;&amp;gt; 在这里，一切公众话语都日渐以娱乐的方式出现，并成为一种文化精神。我们的政治、宗教、新闻、体育、教育和商业都心甘情愿地成为娱乐的附庸，毫无怨言，甚至无声无息，其结果是我们成了一个娱乐至死的物种。&lt;/
-      
-    
-    </summary>
-    
-      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="观点" scheme="http://yoursite.com/tags/%E8%A7%82%E7%82%B9/"/>
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
@@ -132,6 +111,31 @@
     
     
       <category term="Linux报错" scheme="http://yoursite.com/tags/Linux%E6%8A%A5%E9%94%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>修改jupyter目录</title>
+    <link href="http://yoursite.com/2020/09/28/Linux/%E4%BF%AE%E6%94%B9jupyter%E7%9B%AE%E5%BD%95/"/>
+    <id>http://yoursite.com/2020/09/28/Linux/修改jupyter目录/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:17:17.086Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p><p>2 用notepad打开</p><p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p><p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p><p>5 重新运行jupyter</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;修改jupyter目录&quot;&gt;&lt;a href=&quot;#修改jupyter目录&quot; class=&quot;headerlink&quot; title=&quot;修改jupyter目录&quot;&gt;&lt;/a&gt;修改jupyter目录&lt;/h1&gt;&lt;p&gt;1 在C:\Users\feng.jupyter中找到jupyter
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Jupyter" scheme="http://yoursite.com/tags/Jupyter/"/>
     
   </entry>
   
@@ -163,31 +167,6 @@
     
     
       <category term="自我提升" scheme="http://yoursite.com/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修改jupyter目录</title>
-    <link href="http://yoursite.com/2020/09/28/Linux/%E4%BF%AE%E6%94%B9jupyter%E7%9B%AE%E5%BD%95/"/>
-    <id>http://yoursite.com/2020/09/28/Linux/修改jupyter目录/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:17:17.086Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="修改jupyter目录"><a href="#修改jupyter目录" class="headerlink" title="修改jupyter目录"></a>修改jupyter目录</h1><p>1 在C:\Users\feng.jupyter中找到jupyter_notebook_config.py文件</p><p>2 用notepad打开</p><p>3 全文搜索【notebook_dir】，找到后填入自己的工作路径并保存</p><p>4 填好后，一定要将这一行前面的#号去掉，然后保存</p><p>5 重新运行jupyter</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;修改jupyter目录&quot;&gt;&lt;a href=&quot;#修改jupyter目录&quot; class=&quot;headerlink&quot; title=&quot;修改jupyter目录&quot;&gt;&lt;/a&gt;修改jupyter目录&lt;/h1&gt;&lt;p&gt;1 在C:\Users\feng.jupyter中找到jupyter
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
-    
-    
-      <category term="Jupyter" scheme="http://yoursite.com/tags/Jupyter/"/>
     
   </entry>
   
@@ -291,31 +270,6 @@
   </entry>
   
   <entry>
-    <title>李梢--单细胞转录组发现早期胃癌特异标记基因</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E6%9D%8E%E6%A2%A2-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%8F%91%E7%8E%B0%E6%97%A9%E6%9C%9F%E8%83%83%E7%99%8C%E7%89%B9%E5%BC%82%E6%A0%87%E8%AE%B0%E5%9F%BA%E5%9B%A0/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:26:54.533Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul><li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p></li><li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p></li><li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p></li></ul><h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p><ul><li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li><li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li><li>proliferative cells (PCs)  MKI67 and BRIC5</li><li>cancer cells  CEACAM5 and CEACAM6</li><li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li><li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li><li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li></ul><p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p><h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.celrep.2019.04.052&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dissecting the Single-Cell Transcriptome Network Un
-      
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
-    
-  </entry>
-  
-  <entry>
     <title>论文写作语句</title>
     <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E8%AF%81%E6%8D%AE%E8%A1%A8%E6%98%8E/"/>
     <id>http://yoursite.com/2020/09/28/文献笔记/越来越多证据表明/</id>
@@ -341,27 +295,52 @@
   </entry>
   
   <entry>
-    <title>pancreatic CAF associated papers</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/pancreatic-CAF-associated-papers/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/</id>
+    <title>李梢--单细胞转录组发现早期胃癌特异标记基因</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E6%9D%8E%E6%A2%A2-%E5%8D%95%E7%BB%86%E8%83%9E%E8%BD%AC%E5%BD%95%E7%BB%84%E5%8F%91%E7%8E%B0%E6%97%A9%E6%9C%9F%E8%83%83%E7%99%8C%E7%89%B9%E5%BC%82%E6%A0%87%E8%AE%B0%E5%9F%BA%E5%9B%A0/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/李梢-单细胞转录组发现早期胃癌特异标记基因/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:24:05.005Z</updated>
+    <updated>2020-09-29T07:26:54.533Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/" target="_blank" rel="noopener">Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer</a></p><p>PNAS, 2013</p><a id="more"></a><p>在胰腺癌中，α-CTLA-4 and α-PD-L1治疗效果不佳。</p><p> ELISpots 显示， 来自肿瘤的CD8 T细胞中 IFN-γ–secreting CD8+ T cells 更多。而且The frequency of IFN-γ–secreting CD8+ T cells was the same when the stimulating tumor cells were from the T-cell donor or from another PDA-bearing mouse</p><p><strong>Conclusion</strong>：PDA荷瘤小鼠对于肿瘤抗原有自发适应性免疫。免疫抑制剂疗效不佳，有别的原因</p><p>FAP+ cells were present in PanIN and both cytokeratin-19+ (CK19+) and CK19− PDA lesions but rarely α-smooth muscle actin (αSMA), whereas FAP+ cells among PDA cells were CD34−and αSMA+ </p><p>All FAP+ cells were PDGF receptor-α+ and CD45−, confirming their mesenchymal origin</p><p>RNAseq 显示胰腺癌中FAP+细胞编码基因与细胞外基质蛋白相关</p><p>Depleting FAP+ cells slowed PDA growth, but not when CD4+ and CD8+ T cells were removed. Combining depletion of FAP+ cells with administration of α-CTLA-4 or α-PD-L1 further diminished tumor growth.</p><p><strong>Conclusion</strong>：FAP+ 细胞介导PDA对于免疫抑制剂的抵抗作用</p><p>DTx- and α-PD-L1–treated mice 中IFN-γ–secreting CD8+ T cells并没有增加。</p><p><strong>Conclusion</strong>：FAP的作用并不是通过诱导CD8细胞</p><p>癌旁缺乏CD3+ T细胞，原因是因为CXCL12。作者发现肿瘤中FAP+ 细胞是CXCL12的唯一来源。但是CXCL12定位在肿瘤细胞上，可能是metabolically stressed cancer cells过表达并分泌HMGB1捕获CXCL12并形成高亲和力的复合物。</p><p>使用CXCR4抑制剂 AMD3100， 证实了CXCL12的作用。Tumor growth was slowed by AMD3100 in a T cell-dependent manner。 CXCR4-mediated exclusion of T cells reflects T-cell apoptosis</p><p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/figure/fig04/" alt></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.celrep.2019.04.052" target="_blank" rel="noopener">Dissecting the Single-Cell Transcriptome Network Underlying Gastric Premalignant Lesions and Early Gastric Cancer</a></p><h2 id="Abstract"><a href="#Abstract" class="headerlink" title="Abstract"></a>Abstract</h2><ul><li><p>constructed a single-cell atlas for 32,332 high-quality cells from gastric antral mucosa biopsies of patients spanning a cascade of gastric premalignant lesions and early gastric cancer (EGC) using single-cell RNA sequencing</p></li><li><p>We found that gland mucous cells tended to acquire an intestinal-like stem cell phenotype during metaplasia, and we identified <strong>OR51E1</strong> as a marker for unique endocrine cells in the early-malignant lesion.</p></li><li><p>We also found that <strong>HES6</strong> might mark the pre-goblet cell cluster, potentially aiding identification of metaplasia at the early stage.</p></li></ul><h2 id="RESULTS"><a href="#RESULTS" class="headerlink" title="RESULTS"></a>RESULTS</h2><h3 id="A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC"><a href="#A-Single-Cell-Atlas-of-Premalignant-Gastric-Antral-Mucosae-and-EGC" class="headerlink" title="A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC"></a>A Single-Cell Atlas of Premalignant Gastric Antral Mucosae and EGC</h3><p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1557755753032.png" alt="1557755753032"></p><ul><li>the atlas mainly comprised epithelial cells (<strong>EPCAM, KRT18, and MUC1</strong>) and non-epithelial cells (<strong>VIM and PTPRC</strong>)</li><li><font color="#F08080"><strong>epithelial cells</strong></font> mainly consisted of gastric epithelial cells, including antral <strong>basal gland mucous cells</strong> (GMCs, marked as MUC6 and TFF2), <strong>pit mucous cells </strong>(PMCs, marked as MUC5AC and TFF1), <strong>chief cells </strong>(PGA4 and PGA3), and <strong>enteroendocrine cells</strong> (CHGA and CHGB)  GMC：基底腺粘液细胞  PMC：坑粘液细胞 chief cell ：主细胞   肠内分泌细胞</li><li>proliferative cells (PCs)  MKI67 and BRIC5</li><li>cancer cells  CEACAM5 and CEACAM6</li><li>metaplastic stem-like cell (MSC)：elevated expression of the intestinal stem cell markers, including OLFM4, EPHB2, and SOX9</li><li><font color="#F08080"><strong>non-epithelial cell lineages</strong></font> comprised T cells (CD2 and CD3D), B cells (CD79A), macrophages (CSF1R and CD68), fibroblasts (DCN and PDPN), smooth muscle cells (SMCs, marked as ACTA2), endothelial cells (ECs, marked as VWF and ENG), and mast cells (TPSAB1)</li><li>FigD:  plot the cell of origin for some mediators in the cytokines and the nuclear factor kB (NF-kB) signaling pathway</li></ul><p>we found that macrophages might be a dominant source of <strong>interleukin-1B (IL-1B)</strong>, whose genotype was reported to confer a greater risk of GC, and <strong>PTGS2</strong>, which plays a crucial role in mediating the inflammatory process through the activation of NF-kB</p><h4 id="H-pylori-幽门螺旋杆菌-的影响"><a href="#H-pylori-幽门螺旋杆菌-的影响" class="headerlink" title="H. pylori(幽门螺旋杆菌)的影响"></a>H. pylori(幽门螺旋杆菌)的影响</h4><p><img src="https://i.loli.net/2019/05/13/5cd97a2caf31b74339.jpg" alt></p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;PNAS, 2013&lt;/p&gt;
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.celrep.2019.04.052&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Dissecting the Single-Cell Transcriptome Network Un
+      
     
     </summary>
     
       <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
     
     
-      <category term="Cancer" scheme="http://yoursite.com/tags/Cancer/"/>
+      <category term="single cell" scheme="http://yoursite.com/tags/single-cell/"/>
     
-      <category term="Fibroblast" scheme="http://yoursite.com/tags/Fibroblast/"/>
+  </entry>
+  
+  <entry>
+    <title>中性粒细胞在肿瘤中作用</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E4%B8%AD%E6%80%A7%E7%B2%92%E7%BB%86%E8%83%9E%E5%9C%A8%E8%82%BF%E7%98%A4%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/中性粒细胞在肿瘤中的作用/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:27:15.444Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity"><a href="#CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity" class="headerlink" title="CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity"></a>CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity</h2><p>Immunity, 2020</p><p>Neutrophils are the only cell type able to undergo a peculiar form of cell death called NETosis, as a<br>result of which the nuclear DNA of the neutrophil is extruded and projected into the tissular surroundings, where it can exert bactericidal properties. The majority of reports attribute pro-tumorigenic roles to neutrophils, including angiogenesis promotion and immunosuppressive<br>effects. Such extracellular DNA conjugated to neutrophil proteins is termed neutrophil extracellular traps(NETs), since it can entrap microorganisms.  Tumors may cunningly pervert NETosis in their own interest. The tumor microenvironment is in fact very rich in factors that can induce NET extrusion from infiltrating neutrophils or GR-MDSCs. In this paper, the study documents the ability of tumors producing ELR+ CXCL chemokines to induce NETs in a manner dependent on CXCR1 and/or CXCR2. CXCR1 is definitely involved in the process, as verified with a specific neutralizing mAb. No specific blocking antibody against CXCR2 was available. Complete blockade with a CXCR1 agent does not exclude a role for CXCR2, since the biology of this receptor is complex and is known to form heterodimers with CXCR1. This study also showed that NETs might coat and shield tumor cells against cytotoxicity, as mediated by CD8+T cells and NK lymphocytes. Such a protective mechanism that results in armored tumor cells was lost when extracellular DNA was digested and involved less frequent cytotoxic contact between effector and target cells. In their experiments, pharmacological NETosis inhibition synergizes with the most potent immunotherapy strategy in the clinic combining anti-PD-1 and anti-CTLA-4 mAbs. The mechanism is envisioned to involve NET inhibition of the ensuing<br>cytotoxic effector T cell response following checkpoint inhibition.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cyto
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
     
   </entry>
   
@@ -392,19 +371,97 @@
   </entry>
   
   <entry>
-    <title>中性粒细胞在肿瘤中作用</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/%E4%B8%AD%E6%80%A7%E7%B2%92%E7%BB%86%E8%83%9E%E5%9C%A8%E8%82%BF%E7%98%A4%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/中性粒细胞在肿瘤中的作用/</id>
+    <title>娱乐至死</title>
+    <link href="http://yoursite.com/2020/09/28/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E5%A8%B1%E4%B9%90%E8%87%B3%E6%AD%BB/"/>
+    <id>http://yoursite.com/2020/09/28/读书笔记/娱乐至死/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:27:15.444Z</updated>
+    <updated>2020-09-29T07:28:26.290Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity"><a href="#CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cytotoxicity" class="headerlink" title="CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity"></a>CXCR1 and CXCR2 Chemokine Receptor Agonists Produced by Tumors Induce Neutrophil Extracellular Traps that Interfere with Immune Cytotoxicity</h2><p>Immunity, 2020</p><p>Neutrophils are the only cell type able to undergo a peculiar form of cell death called NETosis, as a<br>result of which the nuclear DNA of the neutrophil is extruded and projected into the tissular surroundings, where it can exert bactericidal properties. The majority of reports attribute pro-tumorigenic roles to neutrophils, including angiogenesis promotion and immunosuppressive<br>effects. Such extracellular DNA conjugated to neutrophil proteins is termed neutrophil extracellular traps(NETs), since it can entrap microorganisms.  Tumors may cunningly pervert NETosis in their own interest. The tumor microenvironment is in fact very rich in factors that can induce NET extrusion from infiltrating neutrophils or GR-MDSCs. In this paper, the study documents the ability of tumors producing ELR+ CXCL chemokines to induce NETs in a manner dependent on CXCR1 and/or CXCR2. CXCR1 is definitely involved in the process, as verified with a specific neutralizing mAb. No specific blocking antibody against CXCR2 was available. Complete blockade with a CXCR1 agent does not exclude a role for CXCR2, since the biology of this receptor is complex and is known to form heterodimers with CXCR1. This study also showed that NETs might coat and shield tumor cells against cytotoxicity, as mediated by CD8+T cells and NK lymphocytes. Such a protective mechanism that results in armored tumor cells was lost when extracellular DNA was digested and involved less frequent cytotoxic contact between effector and target cells. In their experiments, pharmacological NETosis inhibition synergizes with the most potent immunotherapy strategy in the clinic combining anti-PD-1 and anti-CTLA-4 mAbs. The mechanism is envisioned to involve NET inhibition of the ensuing<br>cytotoxic effector T cell response following checkpoint inhibition.</p>]]></content>
+    <content type="html"><![CDATA[<p>尼尔·波兹曼</p><p>◆ 第1章 媒介即隐喻</p><p>>&gt; 在这里，一切公众话语都日渐以娱乐的方式出现，并成为一种文化精神。我们的政治、宗教、新闻、体育、教育和商业都心甘情愿地成为娱乐的附庸，毫无怨言，甚至无声无息，其结果是我们成了一个娱乐至死的物种。</p><p>>&gt; 批评界不乏有识之士，他们注意并记录了美国公众话语的解体及其向娱乐艺术的转变</p><p>>&gt; 电视需要的内容和其他媒体截然不同。电视无法表现政治哲学，电视的形式注定了它同政治哲学是水火不相容的</p><p>>&gt; 印刷术时代步入没落，而电视时代蒸蒸日上。这种转换从根本上不可逆转地改变了公众话语的内容和意义，因为这样两种截然不同的媒介不可能传达同样的思想。随着印刷术影响的减退，政治、宗教、教育和任何其他构成公共事务的领域都要改变其内容，并且用最适用于电视的表达方式去重新定义。</p><p>>&gt; 我对他的理论坚信不疑。他认为，深入一种文化的最有效途径是了解这种文化中用于会话的工具</p><p>>&gt; 那些如今已经习惯于用图画、雕塑或其他具体形象表达思想的人，会发现他们无法像原来一样去膜拜一个抽象的神。犹太人的上帝存在于文字中，或者通过文字而存在，这需要人们进行最精妙的抽象思考。运用图像是亵渎神祇的表现，这样就防止了新的上帝进入某种文化</p><p>>&gt; 我们的文化正处于从以文字为中心向以形象为中心转换的过程中，思考一下摩西的训诫对我们也许是有益的</p><p>>&gt; 我相信，某个文化中交流的媒介对于这个文化精神重心和物质重心的形成有着决定性的影响。</p><p>>&gt; 我们对语言的了解使我们知道，语言结构的差异会导致所谓“世界观”的不同。人们怎样看待时间和空间，怎样理解事物和过程，都会受到语言中的语法特征的重要影响，所以，我们不敢斗胆宣称所有的人类大脑对于世界的理解是一致的。</p><p>>&gt; 随着人们象征性活动的进展，物质现实似乎在成比例地缩小。人们没有直面周遭的事物，而是在不断地和自己对话。他们把自己完全包裹在语言形式、艺术形象、神话象征或宗教仪式之中，以至于不借助人工媒介，他们就无法看见或了解任何东西。</p><p>>&gt; 他思考钟表的哲学意义和隐喻象征</p><p>>&gt; 钟表不懈的嘀嗒声代表的是上帝至高无上的权威的日渐削弱，虽然很少有人能意识到其中的关联</p><p>>&gt; 用书面文字记录哲学观点，不是这些观点的终结，而是这些观点的起点。没有批评，哲学就无法存在，书面文字使思想能够方便地接受他人持续而严格的审查</p><p>>&gt; 书面文字远不只是一种简单的提醒物：它在现实中重新创造了过去，并且给了我们震撼人心的浓缩的想象，而不是什么寻常的记忆</p><p>>&gt; 我们创造的每一种工具都蕴含着超越其自身的意义</p><p>>&gt; 我们的语言即媒介，我们的媒介即隐喻，我们的隐喻创造了我们的文化的内容。</p><p>◆ 第2章 媒介即认识论</p><p>>&gt; 电视本是无足轻重的，所以，如果它强加于自己很高的使命，或者把自己表现成重要文化对话的载体，那么危险就出现了。</p><p>>&gt; 通过共鸣，某种特定语境中的某个特定说法获得了普遍意义。</p><p>>&gt; 词组、书、角色或历史都具有组织不同态度或经历的力量，并且可以赋予它们以意义。</p><p>>&gt; 我认为，任何一种媒介都有共鸣，因为共鸣就是扩大的隐喻</p><p>>&gt; 不管一种媒介原来的语境是怎样的，它都有能力越过这个语境并延伸到新的未知的语境中。由于它能够引导我们组织思想和总结生活经历，所以总是影响着我们的意识和不同的社会结构。</p><p>>&gt; 证词是口头的，因为人们认为口头表述比书面表述更能真实地反映证人的思想状况</p><p>>&gt; 我们可以说我们对于法律事实的理解存在共鸣的冲突：一方面，人们仍然相信口头语言的威力尚存，只有口头语言才可以代表真理；另一方面，人们更愿意相信书面文字的真实性，尤其是印刷文字。</p><p>>&gt; 在学术界里，出版的文字被赋予的权威性和真实性远远超过口头语言</p><p>>&gt; 对于真理的认识是同表达方式密切相连的</p><p>>&gt; 真理不能，也从来没有毫无修饰地存在。它必须穿着某种合适的外衣出现，否则就可能得不到承认，这也正说明了“真理”是一种文化偏见</p><p>>&gt; 尼采说过，任何哲学都是某个阶段生活的哲学</p><p>>&gt; 任何认识论都是某个媒介发展阶段的认识论</p><p>>&gt; 真理，和时间一样，是人通过他自己发明的交流技术同自己进行对话的产物。</p><p>>&gt; 既然智力主要被定义成人掌握事物真理的一种能力，那么一种文化的智力就决定于其重要交流方式的性质</p><p>>&gt; 一种重要的新媒介会改变话语的结构。实现这种变化的途径包括：鼓励某些运用理解力的方法，偏重某些有关智力和智慧的定义以及创造一种讲述事实的形式，从而使某个词语具有某种新的内容。</p><p>>&gt; 符号环境中的变化和自然环境中的变化一样，开始都是缓慢地累积，然后突然达到了物理学家所说的临界点</p><p>>&gt; 我说的只是以电视为中心的认识论污染了大众交流和相关活动，而不是说它污染了一切</p><p>>&gt; 随着印刷术退至我们文化的边缘以及电视占据了文化的中心，公众话语的严肃性、明确性和价值都出现了危险的退步，这就是我希望说清楚的。但是，对于同种情形下可能出现的好处，我们也应该保持坦诚的态度。</p><p>◆ 第3章 印刷机统治下的美国</p><p>但是真理越辩越明，写下来才真正有利于后世的评阅</p><p>>在人类社会存在之初，上帝以启蒙人智为乐，他让我们意识到，有些我们尊为真理的其实是谬误，有些我们斥为谬误的却是真正的真理。他不时地为我们拨去迷雾，使我们不断完善自己的原则，改正自己的错误。在这个过程中，他得到了无限的满足。现在我们不知道我们是否达到了发展的终极，是否达到了精神知识或神学知识的完满，我们担心，如果我们裹足不前，不愿意接受他人的意见，那么我们的后人会效仿我们，认为我们——他们的前辈和创立者，所做的一切都是神圣的，是不可丝毫背离的。</p><p>>&gt; 在人类社会存在之初，上帝以启蒙人智为乐，他让我们意识到，有些我们尊为真理的其实是谬误，有些我们斥为谬误的却是真正的真理。他不时地为我们拨去迷雾，使我们不断完善自己的原则，改正自己的错误。在这个过程中，他得到了无限的满足。现在我们不知道我们是否达到了发展的终极，是否达到了精神知识或神学知识的完满，我们担心，如果我们裹足不前，不愿意接受他人的意见，那么我们的后人会效仿我们，认为我们——他们的前辈和创立者，所做的一切都是神圣的，是不可丝毫背离的。</p><p>>&gt; 德美浸礼会教派的观点近乎制定了一条关于宗教话语的诫令：“不可记录汝等之教义，更不可将其印刷成文，否则汝等将永远受其束缚。”</p><p>>&gt; 刘易斯·芒福德写道：“印刷书籍比任何其他方式都更有效地把人们从现时现地的统治中解放出来……铅字比实际发生的事实更有威力……存在就是存在于铅字之中：其他的一切都将渐渐地成为虚无。所谓学习就是书本的学习。”</p><p>>&gt; 枪炮的发明使奴隶和贵族得以在战场上平等对峙；印刷术为各阶层的人们打开了同样的信息之门，邮差把知识一视同仁地送到茅屋和宫殿前。</p><p>所以美国快速崛起不是没有理由的</p><p>>19世纪中叶，很多英国人来到美国想亲自看看殖民地的变化，这里高度而广泛的文化普及率给他们所有人都留下了深刻的印象。</p><p>>&gt; 19世纪中叶，很多英国人来到美国想亲自看看殖民地的变化，这里高度而广泛的文化普及率给他们所有人都留下了深刻的印象。</p><p>>&gt; 理查德·霍夫施塔特[插图]提醒我们，美国是一个由知识分子建立的国家，这在现代历史上是罕见的。</p><p>>&gt; 这些开国元勋都是智者、科学家、学养高深之人，他们中的很多人都精于古典学问，善于借助熟知的历史、政治和法律来解决当时紧迫的问题</p><p>>&gt; 马克思完全明白，印刷机不仅是一种机器，更是话语的一种结构，它排除或选择某些类型的内容，然后不可避免地选择某一类型的受众</p><p>◆ 第4章 印刷机统治下的思想</p><p>>&gt; 首先，用当今的标准来衡量，那时的听众具有超常的注意广度。</p><p>>&gt; 其次，那时的听众必须具备非凡的、理解复杂长句的能力。</p><p>>&gt; 电视文化中的人们需要一种对于视觉和听觉都没有过高要求的“平白语言”，有些时候甚至要通过法律规定这样的语言。</p><p>>&gt; 印刷文字，或建立在印刷文字之上的口头语言，具有某种内容：一种有语义的、可释义的、有逻辑命题的内容</p><p>>&gt; 在阅读的时候，读者的反应是孤立的，他只能依靠自己的智力。面对印在纸上的句子，读者看见的是一些冷静的抽象符号，没有美感或归属感。所以，阅读从本质上来说是一件严肃的事情，当然也是一项理性的活动。</p><p>>&gt; 阅读过程能促进理性思维，铅字那种有序排列的、具有逻辑命题的特点，能够培养沃尔</p><p>>&gt; 特·翁所说的“对于知识的分析管理能力”。阅读文字意味着要跟随一条思路，这需要读者具有相当强的分类、推理和判断能力。读者要能够发现谎言，明察作者笔头流露的迷惑，分清过于笼统的概括，找出滥用逻辑和常识的地方。同时，读者还要具有评判能力，要对不同的观点进行对比，并且能够举一反三。为了做到这些，读者必须和文字保持一定距离，这是由文本自身不受情感影响的特征所决定的</p><p>>&gt; 在18世纪和19世纪，印刷术赋予智力一个新的定义，这个定义推崇客观和理性的思维，同时鼓励严肃、有序和具有逻辑性的公众话语。</p><p>>&gt; 不论是在英国，还是在美国，印刷术从来没有让理性如此彻底地出现在历史上的任何一个时期。但是，我们也不难证明，18世纪和19世纪的美国公众话语，由于深深扎根于铅字的传统，因而是严肃的，其论点和表现形式是倾向理性的，具有意味深长的实质内容。</p><p>>&gt; 关于耶稣，潘恩承认他是一个德高望重、亲切和蔼的人，但那些关于他神性的故事却被潘恩斥为荒诞不经的。作为一个理性主义者，潘恩是对《圣经》进行了细致的文本分析才得出这样的结论的。他写道：“所有的教堂，不论是犹太教、基督教或土耳其教，在我看来都只不过是人的发明，是为了吓唬和奴役人类、垄断权力和利益而建立的。</p><p>>&gt; 在以印刷品为基础的文化中，律师往往受过良好教育，相信理性，擅长论证</p><p>>&gt; 他们认为，虽然民主有种种的好处，但它无疑形成了一种助长不受约束的个人主义的危险。</p><p>>&gt; “如果只拘泥于耳熟能详的专门术语，就会丧失对事物进行宏观全面认识的能力，即使在熟悉的领域里也一样”</p><p>>&gt; 对于印刷机统治美国人思想的那个时期，我给了它一个名称，叫“阐释年代”。阐释是一种思想的模式，一种学习的方法，一种表达的途径。所有成熟话语所拥有的特征，都被偏爱阐释的印刷术发扬光大：富有逻辑的复杂思维，高度的理性和秩序，对于自相矛盾的憎恶，超常的冷静和客观以及等待受众反应的耐心。到了19世纪末期，由于某些我急于解释的原因，“阐释年代”开始逐渐逝去，另一个时代出现的早期迹象已经显现。这个新的时代就是“娱乐业时代”。</p><p>◆ 第5章 躲躲猫的世界</p><p>>&gt; 新的观念是指交通和通讯可以彼此脱离，空间不再是限制信息传播的、不可避免的障碍。</p><p>>&gt; 电报消除了洲际界线，消灭了地区概念，把整个美国纳入了同一个信息网络，从而使统一美国话语成为可能。</p><p>>&gt; 电报对于印刷术统治下的话语定义进行了三路进攻，遭到攻击后的话语内容无聊、表现无力、形式散乱。之所以会这样，是因为电报使脱离语境的信息合法化，也就是说，信息的价值不再取决于其在社会和政治对策和行动中所起的作用，而是取决于它是否新奇有趣。电报把信息变成了一种商品，一种可以置用处或意义于不顾而进行买卖的东西。</p><p>>&gt; 在很短的一段时间里，一些实际问题（主要是因为电报线路的紧张）使新闻保留了作为功能性信息的定义。</p><p>>&gt; 不久之后，报纸的财富不再取决于新闻的质量或用途，而是取决于这些新闻来源地的遥远程度和获取的速度。</p><p>>&gt; 梭罗说过，电报使相关的东西变得无关。这些源源不断的信息与它们的受众之间很少或几乎没有任何关系，也就是说，这些信息并没有可以赖以存在的社会环境和精神环境。柯勒律治[插图]关于“到处是水却没有一滴水可以喝”的著名诗句，也许很能代表这个失去语境的信息环境：在信息的海洋里，却找不到一点儿有用的信息。</p><p>>&gt; 这正是电报的传统：通过生产大量无关的信息，它完全改变了我们所称的“信息—行动比”。</p><p>不是很理解这部分的逻辑。只追求对自己生活有影响的信息，那视野会变的很狭隘。或者这段作者其实是想讲现在信息太过于泛滥啦？</p><p>>在电报时代之前，“信息—行动比”基本是平衡的，所以大多数人都有一种能够控制他们生活中突发事件的感觉。</p><p>>&gt; 在电报时代之前，“信息—行动比”基本是平衡的，所以大多数人都有一种能够控制他们生活中突发事件的感觉。</p><p>>&gt; 电报还使公众话语变得散乱无序。用刘易斯·芒福德的话来说就是，它带给我们的是支离破碎的时间和被割裂的注意力。</p><p>>&gt; 电报只适合于传播转瞬即逝的信息，因为会有更多更新的信息很快取代它们</p><p>>&gt; 电报引入的这种公众对话形式有着鲜明的特征：其语言是新闻标题的语言——耸人听闻、结构零散、没有特别的目标受众。新闻的形式类似口号，容易被记住，也容易被忘记。</p><p>>&gt; 新闻的语言是完全不连贯的，一个消息和它前面或后面的另一则消息毫无关系。每个“标题”都是独立存在的。新闻的受众必须自己找出其中的含义，发布新闻的人没有义务这样做。久而久之，经电报描绘过的世界开始变得无法控制，甚至无法解释了。报纸上一行行有序而连贯的文字渐渐失去了帮助我们获得知识和了解这个世界的能力。“了解”事实开始有了新的意义，因为“了解”并不意味着人们能够“理解”事实的言下之意、背景知识和与其他事实的关联。电报式话语不允许人们进行历史的回顾，也不鼓励深入的分析。对于电报来说，智力就是知道很多事情，而不是理解它们。</p><p>>&gt; 一个住满陌生人的拥挤的社区，一个破碎而断裂的世界。</p><p>>&gt; 照片表现的是事实，而不是关于这些事实的讨论或从这些事实中得出的结论。但这并不意味着照片没有认识倾向。</p><p>>&gt; 一切真正的理解起源于我们不接受这个世界表面所表现出来的东西。</p><p>>&gt; 照片具有能脱离现实和语境，并把很多没有逻辑、彼此无关的事件和东西堆积在一起的能力。</p><p>>&gt; 过去人们是为了解决生活中的问题而搜寻信息，现在是为了让无用的信息派上用场而制造问题。</p><p>>&gt; 躲躲猫的世界。在这个世界里，一会儿这个、一会儿那个突然进入你的视线，然后又很快消失。这是一个没有连续性、没有意义的世界，一个不要求我们也不允许我们做</p><p>>&gt; 任何事的世界，一个像孩子们玩的躲躲猫游戏那样完全独立闭塞的世界。但和躲躲猫一样，也是其乐无穷的。</p><p>>&gt; 电视正把我们的文化转变成娱乐业的广阔舞台。</p><p>◆ 第6章 娱乐业时代</p><p>>&gt; 只有那些对技术的历史一无所知的人，才会相信技术是完全中立的。</p><p>>&gt; 由于使用方法不同，某种技术可能无法充分发挥其潜能或者只能产生</p><p>>&gt; 最低限度的社会效应。</p><p>>&gt; 电视展示给观众的主题虽多，却不需要我们动一点儿脑筋，看电视的目的只是情感上得到满足。</p><p>>&gt; 但我这里想要说的不是电视的娱乐性，而是电视把娱乐本身变成了表现一切经历的形式。</p><p>>&gt; 我们的问题不在于电视为我们展示具有娱乐性的内容，而在于所有的内容都以娱乐的方式表现出来，这就完全是另一回事了。</p><p>>&gt; 思考不是表演艺术，而电视需要的是表演艺术。</p><p>>&gt; 正是电视本身的这种性质决定了它必须舍弃思想，来迎合人们对视觉快感的需求，适应娱乐业的发展。</p><p>◆ 第7章 “好……现在”</p><p>>&gt; 我们看见的不仅是零散不全的新闻，而且是没有背景、没有结果、没有价值、没有任何严肃性的新闻，也就是说，新闻成了纯粹的娱乐。</p><p>>&gt; 假信息并不意味着错误的信息，而是意味着使人产生误解的信息——没有依据、毫无关联、支离破碎或流于表面的信息——这些信息让人产生错觉，以为自己知道了很多事实，其实却离事实的真相越来越远。</p><p>>&gt; 奥尔德斯·赫胥黎对这样的情况不会感到吃惊，他早就预见了它的到来。他相信，西方民主社会将莺歌燕舞、醉生梦死地消亡，而不是戴着镣铐一路哀歌。</p><p>电视最大的影响是信息的碎片化。所有的信息都脱离前因后果，脱离了应有的语境。人们看电视的目的也不再是追求信息。很多时候都只是单纯的需要娱乐罢了</p><p>>而且，在电视的影响下，广播新闻的语言也越来越脱离语境，变得断断续续，所以人们了解这个世界的途径被有效地截断了。在纽约市，WINS广播电台请求听众：“给我们22分钟，我们将给你整个世界。”他们说这句话时是诚恳的，听众们也不会把这个口号当作痴人说梦。</p><p>于是，我们将快速地进入到一个真正可以被称为“欢乐问答”的信息环境。这个被称为“欢乐问答”的游戏使琐碎的事实作为娱乐的源泉，我们的新闻也一样。历史已经证明，一个文化不会因为假信息和错误观点而灭亡，但历史从来没有证明过，一个自认为可以在22分钟内评价整个世界的文化还会有生存的能力。除非，新闻的价值取决于它能带来多少笑声。</p><p>◆ 第8章 走向伯利恒</p><p>>&gt; 不论是历史还是电视的现实情况，都证明反省或精神超脱是不适合电视屏幕的</p><p>看电视的时候，我们很难融入电视营造的氛围。我们始终都处在旁观者的地位</p><p>>所以，电视上的传教完全不同于圣山上的传道。宗教节目充满了喝彩声，它们庆祝富有，让节目中的演员成为名人。虽然这些节目传递的信息琐碎无聊，但它们仍然会有很高的收视率，或许正是因为它们传递的信息琐碎无聊，它们才会拥有很高的收视率。</p><p>如果我说基督教是一种苛刻而严肃的宗教，我相信我没有说错。但是，当它被表现得轻松愉快时，就变成了一种完全不同的宗教。</p><p>当然，肯定会有人反对“电视使宗教堕落”这种说法，其中一个理由是，宗教和图像从来都是紧密相连的。除了贵格会[插图]和其他几个禁欲的教派，很多宗教都努力通过艺术、音乐、神像和令人敬畏的仪式来表现自己的吸引力。宗教的美感是它吸引人们的重要原因。对于天主教和犹太教来说，这一点尤其明显：在镶嵌着美丽彩色玻璃的教堂里，教徒们可以听到萦绕人心的曲调，看到华美的长袍、披肩和神奇的帽子，他们享受圣饼和美酒，聆听古老语言神秘的节奏。这些宗教仪式中的饰物与我们在电视上看到的鲜花、喷泉和布景是不同的，因为前者是宗教本身历史和教义的一个组成部分，教徒对它们应该表现出恰如其分的敬畏。</p><p>>&gt; 电视最大的长处是它让具体的形象进入我们的心里，而不是让抽象的概念留在我们脑海中。</p><p>就宗教而言。电视节目中，一切都变成了表演。缺乏了敬畏心，神圣感的宗教仪式已经失去了宗教原有的意义</p><p>>我前面提到，奥康纳红衣主教为了得到观众欢心进行了令人尴尬的努力，某教区的神甫则尝试把摇滚音乐和传教结合起来。我还知道有一个犹太教的拉比非常郑重地向教会提议，邀请帕瓦罗蒂在赎罪日演唱悔罪祈祷曲，他相信这样一定会让教堂空前爆满。谁会怀疑这一点呢？但正如汉娜·阿伦特说的，这是一个问题，而不是解决问题的方法。作为附属于全国基督教教堂委员会的神学、教育和电子媒介协会成员，我完全能够理解“官方”新教教派对把新教改造成一种适合电视播出的宗教所表现出来的担忧。在我们的委员会里，大家达成了一种共识：真正的危险不在于宗教已经成为电视节目的内容，而在于电视节目可能会成为宗教的内容。</p><p>>&gt; 真正的危险不在于宗教已经成为电视节目的内容，而在于电视节目可能会成为宗教的内容。</p><p>◆ 第9章 伸出你的手投上一票</p><p>>&gt; 如果政治真的像体育比赛，那么它至少有这样几个优点：一目了然、公正诚实、超越平凡。</p><p>>&gt; 资本主义与科学和自由民主一样，是启蒙运动的产物。</p><p>>&gt; 资本主义的理论家们都相信，买卖双方应该具有相当的成熟程度，了解足够的信息，然后理智地进行双方互惠的交易，这些是资本主义的基础。</p><p>>&gt; 买方的理性激励竞争者成为赢家，并且敦促赢家不断进步。在买方无法做出理性决定的情况下，法律就应该介入使交易无效，例如通过制定法律来禁止孩子签订合同。</p><p>>&gt; 图像广告使感染力成为消费者选择商品的依据，而不再是实践的检验。</p><p>>&gt; 电视广告的对象不是产品的品质，而是那些产品消费者的品质。电影明星、著名运动员、宁静的湖水、悠闲的垂钓、幽雅的晚餐、浪漫的插曲、快乐的家庭准备行装去乡间野餐——所有这些都丝毫没有提及要出售的产品，但是未来消费者的恐惧和梦想都尽在其中了。</p><p>>&gt; 按照这样的标准，黑人是美国唯一心智健全的选民，其他的大多数人都为了自己的利益投票，但这些利益都是象征性的，也就是说，只能起到心理安慰的作用。和电视广告一样，形象政治也是一种疗法，这就是为什么魅力、容貌、名气和个人隐私会如此充斥其中的道理。如果我们冷静地想一想，我们就会记得，林肯的照片没有一张是微笑的，他的妻子很可能是个精神病患者，他本人很长时间也是郁郁寡欢的。对于形象政治来说，他显然是不合适的。现在的我们当然不希望我们的镜子里出现如此阴郁而缺少乐趣的形象。我想说的是，就像电视广告为了起到心理疗法的作用而必须舍弃真实可信的产品信息一样，形象政治为了同样的目的也必须舍弃真实可信的政治内容。</p><p>由此我们可以推断，历史在形象政治中发挥不了重要作用，因为历史只有对于那些相信过去能够滋养现在的人才有价值。托马斯·卡莱尔[插图]说过：“过去是一个世界，而不是一片灰色的混沌。”他写这句话的时候，书还是严肃公众话语的主要媒介。一本书就是历史，它的一切都把我们带回到过去的时间里——从它的写作过程到它线形的陈述，再到通篇运用自如的过去时态。</p><p>◆ 第10章 教学是一种娱乐活动</p><p>>&gt; 就像阅读能培养人们对于学习的某种倾向一样（不管是怎样的书），看电视也能起到同样的作用</p><p>>&gt; 也许人们对于教育最大的错误认识是，一个人学会的只有他当时正在学习的东西。其实，伴随学习的过程形成持久的态度……也许比拼写课或地理历史课更为重要……因为这些态度才是在未来发挥重要作用的东西</p><p>>&gt; 一个人学到的最重要的东西是学习的方法</p><p>>&gt; 在他们看来，要想获得出色的思辨能力对于年轻人来说绝非易事，而是一场艰苦卓绝的斗争。西塞罗说过，教育的目的是让学生们摆脱现实的奴役，而现在的年轻人正竭力做着相反的努力——为了适应现实而改变自己。</p><p>>&gt; 你不能有前提条件</p><p>>&gt; 每一个电视节目都应该是完整独立的，观众在观看节目的时候不需要具备其他知识。我们不能说学习是循序渐进的，也不能强调知识的积累需要一定的基础</p><p>>&gt; 电视通过摒弃教育中的顺序和连贯性而彻底否定了它们和思想之间存在任何关系。</p><p>>&gt; 你不能令人困惑</p><p>>&gt; 在电视教学中，让观众心生困惑就意味着低收视率。遇到难题的学习者必然要转向其他频道。这就要求电视节目中不能有任何需要记忆、学习、运用甚至忍受的东西，也就是说，任何信息、故事或观点都要以最易懂的方式出现，因为对于电视来说，最重要的是学习者的满意程度，而不是学习者的成长。</p><p>>&gt; 你应像躲避瘟神一样避开阐述</p><p>>&gt; 威尔逊发现，普通的电视观众只能记住电视剧中20%的信息</p><p>>&gt; 从电视上获得的意义往往是一些具体的片断，不具备推论性，而从阅读中获得的意义往往和我们原来储存的知识相关，所以具有较强的推论性</p><p>>&gt; 电视在培养深层次的、具有推论性的思维方面明显不如铅字。</p><p>作者这里的观点过于绝对。人们不能只学习对于自己有用的知识。科学的发展大多是从一些看似无用的知识开始</p><p>>《咪咪见闻录》最重要的特点是它的内容是经过精心挑选的，因为所有内容必须能够通过电视来表现。学生们为什么要学习座头鲸的习性？所谓“学术主题”的识图能力和航海技术到底有多重要？航海技术从来就没有被看作“学术主题”，对于大城市里的学生来说根本就没有意义。为什么“鲸鱼和它们的生活环境”会成为一个如此有趣的话题，值得人们花上一整年的时间来制作这个节目？</p><p>◆ 第11章 赫胥黎的警告</p><p>>&gt; 有两种方法可以让文化精神枯萎，一种是奥威尔式的——文化成为一个监狱，另一种是赫胥黎式的——文化成为一场滑稽戏</p><p>>&gt; 在赫胥黎的预言中，“老大哥”并没有成心监视着我们，而是我们自己心甘情愿地一直注视着他，根本就不需要什么看守人、大门或“真理部”。如果一个民族分心于繁杂琐事，如果文化生活被重新定义为娱乐的周而复始，如果严肃的公众对话变成了幼稚的婴儿语言，总而言之，如果人民蜕化为被动的受众，而一切公共事务形同杂耍，那么这个民族就会发现自己危在旦夕，文化灭亡的命运就在劫难逃。</p><p>>&gt; 对于这一切，我们没有表示同意，也没有表示反对，我们没有进行任何讨论，我们只能顺从。</p><p>>&gt; 只有深刻而持久地意识到信息的结构和效应，消除对媒介的神秘感，我们才有可能对电视，或电脑，或任何其他媒介获得某种程度的控制</p><p>>&gt; 我们提出解决措施应该具有超前的意识，否则还要什么梦想呢？而且，帮助年轻人学习解读文化中的象征是学校不可推卸的责任，要做到这一点，学生应该学会怎样疏远某些信息形式。我们希望学校应该把这样的任务纳入课程之中，甚至成为教育的中心。</p><p>>&gt; 他不懈地著书强调理解媒介政治和媒介认识论的必要性</p><p>>&gt; 人们感到痛苦的不是他们用笑声代替了思考，而是他们不知道自己为什么笑以及为什么不再思考</p><p> <strong>◆</strong> <strong>点评</strong></p><p> 最重要的观点是电视上的知识都是零散的，碎片化的，以吸引人的眼球为目的。泛娱乐化会导致人们失去深度思考的能力，逻辑推理的能力。但是本文作者对于电视的态度太过于悲观。应该合理的利用电视，将其作为认识世界的辅助措施。</p><p>★★★★☆</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;CXCR1-and-CXCR2-Chemokine-Receptor-Agonists-Produced-by-Tumors-Induce-Neutrophil-Extracellular-Traps-that-Interfere-with-Immune-Cyto
+        &lt;p&gt;尼尔·波兹曼&lt;/p&gt;
+&lt;p&gt;◆ 第1章 媒介即隐喻&lt;/p&gt;
+&lt;p&gt;&gt;&amp;gt; 在这里，一切公众话语都日渐以娱乐的方式出现，并成为一种文化精神。我们的政治、宗教、新闻、体育、教育和商业都心甘情愿地成为娱乐的附庸，毫无怨言，甚至无声无息，其结果是我们成了一个娱乐至死的物种。&lt;/
+      
+    
+    </summary>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="观点" scheme="http://yoursite.com/tags/%E8%A7%82%E7%82%B9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pancreatic CAF associated papers</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/pancreatic-CAF-associated-papers/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/pancreatic-CAF-associated-papers/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:24:05.005Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/" target="_blank" rel="noopener">Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer</a></p><p>PNAS, 2013</p><a id="more"></a><p>在胰腺癌中，α-CTLA-4 and α-PD-L1治疗效果不佳。</p><p> ELISpots 显示， 来自肿瘤的CD8 T细胞中 IFN-γ–secreting CD8+ T cells 更多。而且The frequency of IFN-γ–secreting CD8+ T cells was the same when the stimulating tumor cells were from the T-cell donor or from another PDA-bearing mouse</p><p><strong>Conclusion</strong>：PDA荷瘤小鼠对于肿瘤抗原有自发适应性免疫。免疫抑制剂疗效不佳，有别的原因</p><p>FAP+ cells were present in PanIN and both cytokeratin-19+ (CK19+) and CK19− PDA lesions but rarely α-smooth muscle actin (αSMA), whereas FAP+ cells among PDA cells were CD34−and αSMA+ </p><p>All FAP+ cells were PDGF receptor-α+ and CD45−, confirming their mesenchymal origin</p><p>RNAseq 显示胰腺癌中FAP+细胞编码基因与细胞外基质蛋白相关</p><p>Depleting FAP+ cells slowed PDA growth, but not when CD4+ and CD8+ T cells were removed. Combining depletion of FAP+ cells with administration of α-CTLA-4 or α-PD-L1 further diminished tumor growth.</p><p><strong>Conclusion</strong>：FAP+ 细胞介导PDA对于免疫抑制剂的抵抗作用</p><p>DTx- and α-PD-L1–treated mice 中IFN-γ–secreting CD8+ T cells并没有增加。</p><p><strong>Conclusion</strong>：FAP的作用并不是通过诱导CD8细胞</p><p>癌旁缺乏CD3+ T细胞，原因是因为CXCL12。作者发现肿瘤中FAP+ 细胞是CXCL12的唯一来源。但是CXCL12定位在肿瘤细胞上，可能是metabolically stressed cancer cells过表达并分泌HMGB1捕获CXCL12并形成高亲和力的复合物。</p><p>使用CXCR4抑制剂 AMD3100， 证实了CXCL12的作用。Tumor growth was slowed by AMD3100 in a T cell-dependent manner。 CXCR4-mediated exclusion of T cells reflects T-cell apoptosis</p><p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/figure/fig04/" alt></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3864274/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Targeting CXCL12 from FAP-expressing carcinoma-associated fibroblasts synergizes with anti–PD-L1 immunotherapy in pancreatic cancer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PNAS, 2013&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="Cancer" scheme="http://yoursite.com/tags/Cancer/"/>
+    
+      <category term="Fibroblast" scheme="http://yoursite.com/tags/Fibroblast/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cDC2的亚群可以prime CD4</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/cDC2%E7%9A%84%E4%BA%9A%E7%BE%A4%E5%8F%AF%E4%BB%A5prime%20CD4/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/cDC2的亚群可以prime CD4/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:22:08.007Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.cell.2019.02.005" target="_blank" rel="noopener">Unleashing Type-2 Dendritic Cells to Drive Protective Antitumor CD4+ T Cell Immunity</a></p><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>目前，免疫抑制剂治疗疗效不佳的原因之一是因为存在dysfunction或exhausted的T。而且这种耗竭的状态无法被免疫检查点抑制剂逆转</p><p>antitumor中，CD4的作用：</p><ul><li>Effector CD4+ Tconv can augment immunity by licensing dendritic cells (DC) and stimulating pro-inflammatory myeloid cell programs</li><li>Effective anti- CTLA-4 therapy generates <strong>ICOS+PD-1lo </strong>CD4+ T helper 1-like (Th1-like) effector CD4+ Tconv critical for an antitumor response</li><li>Presence of PD-1hi CD4+ Tconv cells, correlated with high tumor burden and likely T cell exhaustion, is a negative prognostic indicator for ICB</li></ul><p>在浸润肿瘤前，T细胞现在肿瘤引流淋巴结（tumor-draining lymph node (tdLN)）中由cDC激活</p><p>cDC：</p><ul><li>cDC can be divided into cDC1 and cDC2 populations that are either LN resident or migrate to the LN from peripheral tissues</li><li>cDC1 are critical for directing CD8+ T cell immunity to various pathogens</li><li>cDC2, a heterogeneous population, preferentially initiate CD4+ Tconv responses in several conditions</li></ul><h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="Myeloid-Heterogeneity-at-Single-Cell-Resolution"><a href="#Myeloid-Heterogeneity-at-Single-Cell-Resolution" class="headerlink" title="Myeloid Heterogeneity at Single-Cell Resolution"></a>Myeloid Heterogeneity at Single-Cell Resolution</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.02.005&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Unleashing Type-2 Dendritic Cells to Drive Protective
+      
+    
+    </summary>
+    
+      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
+    
+    
+      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TGF-β--肿瘤免疫</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/TGF-%CE%B2--%E8%82%BF%E7%98%A4%E5%85%8D%E7%96%AB/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/TGF-β--肿瘤免疫/</id>
+    <published>2020-09-27T16:00:00.000Z</published>
+    <updated>2020-09-29T07:25:33.397Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><p>TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。</p><p>晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-β水平升高便可以<strong>阻断未成熟的T细胞向Th1细胞分化，促进其向Treg亚群的转化，并抑制树突状细胞的抗原递呈功能</strong>，从而导致肿瘤细胞的免疫逃逸。随着肿瘤的发展，肿瘤细胞内TGF-β受体或其下游的<em>Smad</em>基因突变积累，其抑制作用减弱。并且<strong>TGF-β信号促进上皮细胞间质转型</strong>（Epithelial-Mesenchymal Transition, EMT），这个过程使具有极性的上皮细胞转化为具有活动能力的间质细胞，从而获得侵袭和迁移的能力，这个转化过程在肿瘤的发生、恶化及转移中非常重要。肿瘤转移是导致癌症病人死亡的一个非常重要的原因，实体瘤患者中高达90%的患者死于肿瘤转移。</p><h1 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h1><h2 id="TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis"><a href="#TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis" class="headerlink" title="TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis"></a>TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h1&gt;&lt;p&gt;TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。&lt;/p&gt;
+&lt;p&gt;晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-
       
     
     </summary>
@@ -439,68 +496,18 @@
   </entry>
   
   <entry>
-    <title>cDC2的亚群可以prime CD4</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/cDC2%E7%9A%84%E4%BA%9A%E7%BE%A4%E5%8F%AF%E4%BB%A5prime%20CD4/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/cDC2的亚群可以prime CD4/</id>
+    <title>SPTLC2 +  TGF-β活化&amp;记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募</title>
+    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/SPTLC2%20+%20%20TGF-%CE%B2%E6%B4%BB%E5%8C%96&amp;%E8%AE%B0%E5%BF%86%E6%80%A7CD8%20T%20%E7%BB%86%E8%83%9E%E7%9A%84%E6%8B%9B%E5%8B%9F%20+%20cDC1%E7%9A%84%E4%BA%9A%E7%BE%A4%E4%BB%8B%E5%AF%BC%E5%AF%B9%E4%BA%8E%E4%B8%AD%E6%80%A7%E7%B2%92%E7%BB%86%E8%83%9E%E7%9A%84%E6%8B%9B%E5%8B%9F/"/>
+    <id>http://yoursite.com/2020/09/28/文献笔记/SPTLC2 +  TGF-β活化&amp;记忆性CD8 T 细胞的招募 + cDC1的亚群介导对于中性粒细胞的招募/</id>
     <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:22:08.007Z</updated>
+    <updated>2020-09-29T07:25:22.514Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.cell.2019.02.005" target="_blank" rel="noopener">Unleashing Type-2 Dendritic Cells to Drive Protective Antitumor CD4+ T Cell Immunity</a></p><h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>目前，免疫抑制剂治疗疗效不佳的原因之一是因为存在dysfunction或exhausted的T。而且这种耗竭的状态无法被免疫检查点抑制剂逆转</p><p>antitumor中，CD4的作用：</p><ul><li>Effector CD4+ Tconv can augment immunity by licensing dendritic cells (DC) and stimulating pro-inflammatory myeloid cell programs</li><li>Effective anti- CTLA-4 therapy generates <strong>ICOS+PD-1lo </strong>CD4+ T helper 1-like (Th1-like) effector CD4+ Tconv critical for an antitumor response</li><li>Presence of PD-1hi CD4+ Tconv cells, correlated with high tumor burden and likely T cell exhaustion, is a negative prognostic indicator for ICB</li></ul><p>在浸润肿瘤前，T细胞现在肿瘤引流淋巴结（tumor-draining lymph node (tdLN)）中由cDC激活</p><p>cDC：</p><ul><li>cDC can be divided into cDC1 and cDC2 populations that are either LN resident or migrate to the LN from peripheral tissues</li><li>cDC1 are critical for directing CD8+ T cell immunity to various pathogens</li><li>cDC2, a heterogeneous population, preferentially initiate CD4+ Tconv responses in several conditions</li></ul><h1 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h1><h2 id="Myeloid-Heterogeneity-at-Single-Cell-Resolution"><a href="#Myeloid-Heterogeneity-at-Single-Cell-Resolution" class="headerlink" title="Myeloid Heterogeneity at Single-Cell Resolution"></a>Myeloid Heterogeneity at Single-Cell Resolution</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应"><a href="#HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应" class="headerlink" title="HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应"></a>HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Loss of Neurological Disease HSAN-I-Associated Gene <em>SPTLC2</em> Impairs CD8+ T Cell Responses to Infection by Inhibiting T Cell Metabolic Fitness</a>)</p><p>Immmunity, 2019.03</p><a id="more"></a><p>SPTLC2(serine palmitoyltransferase subunit)</p><p>SPTLC2 mutations are associated with the neurological disorder HSAN-I, in which patients get frequent infections, attributed to loss of pain sensation and failure to seek treatment for minor injuries. Wu et al. show that protective CD8+ T cell responses are defective in HSAN-I patients and that CD8+ T cells require SPTLC2-mediated sphingolipid synthesis to promote T cell metabolic fitness.</p><p><em>Sptlc2</em> deficiency reduced <strong>sphingolipid biosynthetic flux and led to prolonged activation of the mechanistic target of rapamycin complex 1 (mTORC1), endoplasmic reticulum (ER) stress, and CD8 + T cell death</strong>. Protective CD8 + T cell responses in HSAN-I patient PBMCs and <em>Sptlc2</em>-deficient mice were restored by supplementing with sphingolipids and pharmacologically inhibiting ER stress-induced cell death. Therefore, SPTLC2 underpins protective immunity by translating extracellular stimuli into intracellular anabolic signals and antagonizes ER stress to promote T cell metabolic fitness.</p><p><img src="https://i.loli.net/2019/04/12/5cb073b2d43d4.jpg" alt></p><h2 id="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募"><a href="#角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8-T-细胞的招募" class="headerlink" title="角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募"></a>角质形成细胞介导的TGF-β活化维持皮肤对于记忆性CD8 T 细胞的招募</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">Keratinocyte-Mediated Activation of the Cytokine TGF-β Maintains Skin Recirculating Memory CD8+ T Cells</a>)</p><p>Regulated activation of the cytokine TGF-β by integrins α vβ 6 and α vβ 8 expressed on keratinocytes is required for residence of epidermal-resident memory T cells, but whether skin-derived signals also affect recirculating memory cells in the skin remains unclear. Here, we show that <strong>after resolution of skin vaccinia virus (VV) infection, antigen-specific circulating memory CD8 + T cells migrated into skin</strong>. In mice lacking α vβ 6 and α vβ 8 integrins ( <em>Itgb6</em> −/− <em>Itgb8</em> fl/fl <em>-</em>K14-cre), the absence of epidermal-activated TGF-β resulted in a gradual loss of E- or P-selectin-binding central and peripheral memory populations, which were rescued when skin entry was inhibited. Skin recirculating memory cells were required for optimal host defense against skin VV infection. These data demonstrate that skin migration can persist after resolution of local skin infection and that the cytokine environment within this nonlymphoid tissue shapes the differentiation state and persistence of the central and peripheral memory-T-cell pool.</p><p><img src="https://i.loli.net/2019/04/12/5cb07f58b3da3.jpg" alt></p><h2 id="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"><a href="#cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染" class="headerlink" title="cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染"></a>cDC1的一个亚群通过VEGFα介导的对于中性粒细胞的募集控制皮肤感染</h2><p><a href="https://www.cell.com/immunity/fulltext/S1074-7613(19" target="_blank" rel="noopener">A Subset of Type I Conventional Dendritic Cells Controls Cutaneous Bacterial Infections through VEGFα-Mediated Recruitment of Neutrophils</a>)</p><p>皮肤常规树突细胞（cDC）有两种不同的子集cDC1和cDC2存在，从而维持对病原体的免疫和对自身微生物群耐受的平衡。本文作者检测了皮肤cDC1s和cDC2s在细菌尤其是痤疮丙酸杆菌感染期间的作用。 cDC1s，而不是cDC2s，通过控制炎症部位的中性粒细胞募集及其存活和功能来调节对真皮中痤疮丙酸杆菌的免疫应答的程度。单细胞mRNA测序显示，该调节依赖于由一小部分活化的<font color="#F08080"><strong>EpCAM + CD59 + Ly-6D + cDC1s</strong></font>细胞分泌的细胞因子<font color="#F08080"><strong>VEGF-α</strong></font>。在金黄色葡萄球菌，卡介苗或大肠杆菌感染期间以及在人皮肤中的细菌损伤模型中也观察到真皮cDC1对中性粒细胞的募集作用。因此，皮肤cDC1是皮肤免疫中先天反应的必需调节剂，并且具有超出经典抗原呈递的作用。</p><p>In the skin, two subsets of ontogenetically distinct and functionally specialized conventional DCs (cDCs) exist: cDC1s, identified in mice as expressing <font color="#F08080"><strong>CD103 (integrin aE) and XCR1</strong></font>; and cDC2s, expressing <font color="#F08080"><strong>CD11b (integrin aM) and SIRPa</strong></font></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.cell.2019.02.005&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Unleashing Type-2 Dendritic Cells to Drive Protective
-      
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Serine Metabolism Supports Macrophage IL-1b production</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/Serine-Metabolism-Supports-Macrophage-IL-1b-production/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/Serine-Metabolism-Supports-Macrophage-IL-1b-production/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:25:05.775Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://doi.org/10.1016/j.cmet.2019.01.014" target="_blank" rel="noopener">Serine Metabolism Supports Macrophage IL-1b Production </a></p><a id="more"></a><p> <img src="https://i.loli.net/2019/04/12/5cb043518e049.jpg" alt></p><p>&nbsp;</p><h2 id="highlight"><a href="#highlight" class="headerlink" title="highlight"></a>highlight</h2><ul><li>Serine deprivation diminishes LPS-induced IL-1b mRNA expression </li><li>LPS stimulates serine generation of glycine for glutathione synthesis</li><li>Glutathione is necessary to maintain LPS induction of IL-1bproduction </li><li>Inhibition of de novo serine synthesis promotes survival of mice exposed to LPS </li></ul><h2 id="Result"><a href="#Result" class="headerlink" title="Result"></a>Result</h2><h3 id="Serine-Is-Necessary-for-Optimal-IL-1b-Gene-Expression"><a href="#Serine-Is-Necessary-for-Optimal-IL-1b-Gene-Expression" class="headerlink" title="Serine Is Necessary for Optimal IL-1b Gene Expression"></a>Serine Is Necessary for Optimal IL-1b Gene Expression</h3><p> <img src="https://i.loli.net/2019/04/12/5cb0450d4943f.jpg" alt></p><p>ECAR:胞外产酸能力，间接反映糖酵解水平</p><p>OCR：检测耗氧量</p><p>&nbsp;</p><h3 id="Serine-Metabolism-Supports-LPS-Induction-of-GSH-synthesis-which-Is-Required-for-IL-1b-Gene-Expression"><a href="#Serine-Metabolism-Supports-LPS-Induction-of-GSH-synthesis-which-Is-Required-for-IL-1b-Gene-Expression" class="headerlink" title="Serine Metabolism Supports LPS Induction of GSH synthesis, which Is Required for IL-1b Gene Expression"></a>Serine Metabolism Supports LPS Induction of GSH synthesis, which Is Required for IL-1b Gene Expression</h3><p> <img src="https://i.loli.net/2019/04/12/5cb045235a5a2.jpg" alt></p><p>&nbsp;</p><h3 id="Serine-Deprivation-Diminishes-IL-1b-Gene-Expression-of-BMDMs-without-Altering-Inflammation-Associated-Gene-Networks-or-Inflammasome-Activation"><a href="#Serine-Deprivation-Diminishes-IL-1b-Gene-Expression-of-BMDMs-without-Altering-Inflammation-Associated-Gene-Networks-or-Inflammasome-Activation" class="headerlink" title="Serine Deprivation Diminishes IL-1b Gene Expression of BMDMs without Altering Inflammation-Associated Gene Networks or Inflammasome Activation"></a>Serine Deprivation Diminishes IL-1b Gene Expression of BMDMs without Altering Inflammation-Associated Gene Networks or Inflammasome Activation</h3><p><img src="https://i.loli.net/2019/04/12/5cb044648650a.jpg" alt></p><p>&nbsp;</p><h3 id="De-Novo-Serine-Synthesis-Is-Required-for-LPS-Responses-In-Vivo"><a href="#De-Novo-Serine-Synthesis-Is-Required-for-LPS-Responses-In-Vivo" class="headerlink" title="De Novo Serine Synthesis Is Required for LPS Responses In Vivo"></a>De Novo Serine Synthesis Is Required for LPS Responses In Vivo</h3><p><img src="https://i.loli.net/2019/04/12/5cb044d36de7c.jpg" alt></p><p>&nbsp;</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://doi.org/10.1016/j.cmet.2019.01.014&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Serine Metabolism Supports Macrophage IL-1b Production &lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="paper" scheme="http://yoursite.com/categories/paper/"/>
-    
-    
-      <category term="Immunity" scheme="http://yoursite.com/tags/Immunity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TGF-β--肿瘤免疫</title>
-    <link href="http://yoursite.com/2020/09/28/%E6%96%87%E7%8C%AE%E7%AC%94%E8%AE%B0/TGF-%CE%B2--%E8%82%BF%E7%98%A4%E5%85%8D%E7%96%AB/"/>
-    <id>http://yoursite.com/2020/09/28/文献笔记/TGF-β--肿瘤免疫/</id>
-    <published>2020-09-27T16:00:00.000Z</published>
-    <updated>2020-09-29T07:25:33.397Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h1><p>TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。</p><p>晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-β水平升高便可以<strong>阻断未成熟的T细胞向Th1细胞分化，促进其向Treg亚群的转化，并抑制树突状细胞的抗原递呈功能</strong>，从而导致肿瘤细胞的免疫逃逸。随着肿瘤的发展，肿瘤细胞内TGF-β受体或其下游的<em>Smad</em>基因突变积累，其抑制作用减弱。并且<strong>TGF-β信号促进上皮细胞间质转型</strong>（Epithelial-Mesenchymal Transition, EMT），这个过程使具有极性的上皮细胞转化为具有活动能力的间质细胞，从而获得侵袭和迁移的能力，这个转化过程在肿瘤的发生、恶化及转移中非常重要。肿瘤转移是导致癌症病人死亡的一个非常重要的原因，实体瘤患者中高达90%的患者死于肿瘤转移。</p><h1 id="文献"><a href="#文献" class="headerlink" title="文献"></a>文献</h1><h2 id="TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis"><a href="#TGFβ-drives-immune-evasion-in-genetically-reconstituted-colon-cancer-metastasis" class="headerlink" title="TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis"></a>TGFβ drives immune evasion in genetically reconstituted colon cancer metastasis</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;headerlink&quot; title=&quot;概况&quot;&gt;&lt;/a&gt;概况&lt;/h1&gt;&lt;p&gt;TGF-β在肿瘤早期可以抑制肿瘤生长，而在后期则转变成一个肿瘤促进因子。&lt;/p&gt;
-&lt;p&gt;晚期，大多数肿瘤细胞均可分泌TGF-β，一旦TGF-
-      
+      &lt;h2 id=&quot;HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应&quot;&gt;&lt;a href=&quot;#HSAN-I-相关SPTLC2缺失通过抑制T-细胞代谢抑制CD8-T细胞对于感染的反应&quot; class=&quot;headerlink&quot; title=&quot;HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应&quot;&gt;&lt;/a&gt;HSAN-I 相关SPTLC2缺失通过抑制T 细胞代谢抑制CD8 T细胞对于感染的反应&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://www.cell.com/immunity/fulltext/S1074-7613(19&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Loss of Neurological Disease HSAN-I-Associated Gene &lt;em&gt;SPTLC2&lt;/em&gt; Impairs CD8+ T Cell Responses to Infection by Inhibiting T Cell Metabolic Fitness&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Immmunity, 2019.03&lt;/p&gt;
     
     </summary>
     
