@@ -231,133 +231,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/气泡图/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/气泡图/" itemprop="url">气泡图</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="create-a-simulated-grouping-variable"><a href="#create-a-simulated-grouping-variable" class="headerlink" title="create a simulated grouping variable"></a>create a simulated grouping variable</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbmc@meta.data$orig.ident &lt;- c(rep(<span class="string">"TAO"</span>, <span class="number">1044</span>), rep(<span class="string">"NC"</span>, <span class="number">5801</span>))</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="translate-cluster-numbers-to-cell-names"><a href="#translate-cluster-numbers-to-cell-names" class="headerlink" title="translate cluster numbers to cell names"></a>translate cluster numbers to cell names</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">current.cluster.ids &lt;- c(c(<span class="number">0</span>,<span class="number">13</span>),c(<span class="number">1</span>,<span class="number">3</span>,<span class="number">4</span>),c(<span class="number">2</span>),c(<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">11</span>),c(<span class="number">9</span>,<span class="number">10</span>),c(<span class="number">12</span>),c(<span class="number">5</span>))</span><br><span class="line">new.cluster.ids &lt;-c(rep(<span class="string">"adipocyte"</span>,<span class="number">2</span>),rep(<span class="string">"fibroblast"</span>,<span class="number">3</span>),<span class="string">"myocyte"</span>,rep(<span class="string">"APC"</span>,<span class="number">4</span>),rep(<span class="string">"lymphocytes"</span>,<span class="number">2</span>),<span class="string">"neutrophil"</span>,<span class="string">"epithelial"</span>)</span><br><span class="line">pbmc@ident &lt;- plyr::mapvalues(x = pbmc@ident, from = current.cluster.ids, to = new.cluster.ids)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<h3 id="remove-clusters-that-are-not-of-interest"><a href="#remove-clusters-that-are-not-of-interest" class="headerlink" title="remove clusters that are not of interest"></a>remove clusters that are not of interest</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbmc_rm &lt;- SubsetData(pbmc, ident.remove = c(<span class="string">"myocyte"</span>,<span class="string">"neutrophil"</span>))</span><br></pre></td></tr></table></figure>
-<h6 id="Seurat对象，不能直接用subset取子集"><a href="#Seurat对象，不能直接用subset取子集" class="headerlink" title="Seurat对象，不能直接用subset取子集"></a>Seurat对象，不能直接用subset取子集</h6><p>&nbsp;</p>
-<h3 id="SplitDotPlotGG"><a href="#SplitDotPlotGG" class="headerlink" title="SplitDotPlotGG"></a>SplitDotPlotGG</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">markers.to.plot &lt;- c(<span class="string">"CD3D"</span>,<span class="string">"CD19"</span>,<span class="string">"CD27"</span>,<span class="string">"TBX21"</span>,<span class="string">"STAT1"</span>,<span class="string">"GATA3"</span>,<span class="string">"STAT6"</span>,<span class="string">"RORA"</span>,<span class="string">"STAT3"</span>,<span class="string">"AHR"</span>,<span class="string">"IL2RA"</span>,<span class="string">"BCL6"</span>,<span class="string">"SPI1"</span>,<span class="string">"CD14"</span>,<span class="string">"CD68"</span>,<span class="string">"CD1C"</span>,<span class="string">"THBD"</span>,<span class="string">"NCAM1"</span>,<span class="string">"FCGR3A"</span>,<span class="string">"PECAM1"</span>,<span class="string">"MCAM"</span>,<span class="string">"CD34"</span>,<span class="string">"COL1A1"</span>)</span><br><span class="line"></span><br><span class="line">sdp &lt;- SplitDotPlotGG(object=pbmc_rm, grouping.var = <span class="string">"orig.ident"</span>, genes.plot = rev(markers.to.plot), cols.use = c(<span class="string">"blue"</span>, <span class="string">"red"</span>), x.lab.rot = <span class="literal">T</span>, plot.legend = <span class="literal">T</span>, dot.scale = <span class="number">8</span>, do.return = <span class="literal">T</span>)</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.loli.net/2018/10/22/5bcd81f459509.png" alt></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  Package fontconfig was not found in the pkg-config search path/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -481,6 +354,129 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
+<p>暂时解决：</p>
+<p><code>nbin</code> 调低</p>
+<p>？？？？nbin的意义是什么</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Convert/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -554,6 +550,126 @@
           
             <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> (from, to, filename, chunk.dims = <span class="string">"auto"</span>, chunk.size = <span class="number">1000</span>, </span><br><span class="line">    overwrite = <span class="literal">FALSE</span>, display.progress = <span class="literal">TRUE</span>, anndata.raw = <span class="string">"raw.data"</span>, </span><br><span class="line">    anndata.X = <span class="string">"data"</span>, <span class="keyword">...</span>) </span><br><span class="line">&#123;</span><br><span class="line">    object.to &lt;- <span class="keyword">switch</span>(EXPR = to, loom = &#123;</span><br><span class="line">        <span class="keyword">stop</span>(<span class="string">"Converting to and from loom files is currently unavailable; we are working on restoring this functionality"</span>)</span><br><span class="line">    &#125;, anndata = &#123;</span><br><span class="line">        .Defunct(new = <span class="string">"WriteH5AD"</span>, msg = <span class="string">"Use WriteH5AD to store Seurat objects as h5ad"</span>)</span><br><span class="line">    &#125;, <span class="keyword">stop</span>(paste0(<span class="string">"Cannot convert Seurat objects to class '"</span>, </span><br><span class="line">        to, <span class="string">"'"</span>)))</span><br><span class="line">    <span class="keyword">return</span>(object.to)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="https://i.loli.net/2019/04/03/5ca49d43bf3eb.jpg" alt></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/KM生存曲线计算HR/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/KM生存曲线计算HR/" itemprop="url">KM生存曲线计算HR</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://www.bio-info-trainee.com/5458.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/5458.html</a></p>
 
           
         
@@ -978,249 +1094,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/KM生存曲线计算HR/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/KM生存曲线计算HR/" itemprop="url">KM生存曲线计算HR</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="http://www.bio-info-trainee.com/5458.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/5458.html</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Insufficient data values to produce n bins/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FlorenceXie">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="keep exceeding">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/09/27/R语言/Insufficient data values to produce n bins/" itemprop="url">Insufficient data values to produce n bins</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
-                2020-09-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><img src="C:\Users\feng\AppData\Roaming\Typora\typora-user-images\1553835557828.png" alt="1553835557828"></p>
-<p>暂时解决：</p>
-<p><code>nbin</code> 调低</p>
-<p>？？？？nbin的意义是什么</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/R-Error-in-dyn-load-file-DLLpath-DLLpath-…/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1343,7 +1216,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rtsne/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Debug R  CellChat ELF头无效/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FlorenceXie">
@@ -1362,7 +1235,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/09/27/R语言/Rtsne/" itemprop="url">Rtsne</a></h1>
+                <a class="post-title-link" href="/2020/09/27/R语言/Debug R  CellChat ELF头无效/" itemprop="url">Cellchat ELF头无效</a></h1>
         
 
         <div class="post-meta">
@@ -1414,16 +1287,137 @@
       
         
           
-            <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(Rtsne)</span><br><span class="line"></span><br><span class="line">setwd(<span class="string">"D:/Common/project/yangyangli/scRNA"</span>)</span><br><span class="line"></span><br><span class="line">file &lt;- read.table(file=<span class="string">"GSE110692_indrops_MouseTreg_VATSpleen_counts.txt"</span>,header=<span class="literal">TRUE</span>)</span><br><span class="line">file[file == <span class="string">''</span>] &lt;- <span class="literal">NA</span></span><br><span class="line">file &lt;- na.omit(file)</span><br><span class="line">file &lt;- file[,-<span class="number">1</span>]</span><br><span class="line">file_t &lt;- as.matrix(t(file))</span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">42</span>)</span><br><span class="line">tsne_out &lt;- Rtsne(file_t,perplexity = <span class="number">50</span>, max_iter = <span class="number">1000</span>,check_duplicates = <span class="literal">F</span>,partial_pca=<span class="literal">T</span>)</span><br><span class="line"></span><br><span class="line">opar &lt;- par(mar=c(<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">4</span>),no.readonly=<span class="literal">TRUE</span>)</span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>))</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,main=<span class="string">"Nt5e+Pparg"</span>,xlab=<span class="string">"t-SNE1"</span>,ylab=<span class="string">"t-SNE2"</span>)</span><br><span class="line"></span><br><span class="line">par(fig=c(<span class="number">0</span>,<span class="number">0.85</span>,<span class="number">0</span>,<span class="number">0.85</span>),new=<span class="literal">TRUE</span>)</span><br><span class="line">plot(tsne_out$Y,col= c(<span class="string">"#6495EDFF"</span>,<span class="string">"#80808000"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Pparg"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))], asp=<span class="number">1</span>,pch=<span class="number">16</span>,cex=<span class="number">0.7</span></span><br><span class="line">    ,xlab=<span class="string">""</span>,ylab=<span class="string">""</span>)</span><br><span class="line">par(opar)</span><br></pre></td></tr></table></figure>
-<p>&nbsp;</p>
-<p>用于跑tsne的必须是matrix，data.frame会报错：栈溢出</p>
-<p>感兴趣的点被遮盖的解决方法:调整透明度</p>
-<p><a href="https://blog.csdn.net/sky1203850702/article/details/44916819" target="_blank" rel="noopener">透明度与十六进制代码转换</a></p>
-<p><a href="http://www.tagindex.net/color/color_name.html" target="_blank" rel="noopener">配色</a></p>
-<p><a href="https://blog.csdn.net/yepeng2007fei/article/details/76578093" target="_blank" rel="noopener">R 图形叠加绘制</a></p>
-<p>&nbsp;</p>
-<p><strong>按照factor配色</strong></p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">col= c(<span class="string">"#FA8072FF"</span>,<span class="string">"#8080804c"</span>)[as.factor(ifelse(file_t[,colnames(file_t) == <span class="string">"Nt5e"</span>]&gt;<span class="number">0</span>,<span class="string">"high"</span>,<span class="string">"low"</span>))]</span><br></pre></td></tr></table></figure>
+            <p>使用安装包安装github包</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">devtools::install_local(<span class="string">'/home/jiang/test/_test/feng/CellChat-master.zip'</span>)</span><br></pre></td></tr></table></figure>
+<p>报错：</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Error: package or namespace load failed <span class="keyword">for</span> ‘CellChat’ <span class="keyword">in</span> dyn.load(file, DLLpath = DLLpath                                                                                                               , <span class="keyword">...</span>):</span><br><span class="line"> 无法载入共享目标对象‘/home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master                                                                                                               /00new/CellChat/libs/CellChat.so’：:</span><br><span class="line">  /home/jiang/R/x86_64-pc-linux-gnu-<span class="keyword">library</span>/<span class="number">3.6</span>/00LOCK-CellChat-master/00new/CellChat/libs                                                                                                               /CellChat.so: 无效的 ELF 头</span><br></pre></td></tr></table></figure>
+<p>解决：</p>
+<p>删掉src文件夹中的*.o和*.so</p>
+<p><a href="https://github.com/sqjin/CellChat/issues/5" target="_blank" rel="noopener">https://github.com/sqjin/CellChat/issues/5</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FlorenceXie">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="keep exceeding">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/27/R语言/Rstudio不能安装bioconductor中R包问题解决/" itemprop="url">Rstudio不能安装bioconductor中R包问题解决</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-27T00:00:00+08:00">
+                2020-09-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://i.loli.net/2018/10/22/5bcd8031d16fc.png" alt>   </p>
+<p>尝试tools-global options-packages更改镜像未成功</p>
+<p>最终解决方案：</p>
+<p>更改为</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">source</span>(<span class="string">"http://www.bioconductor.org/biocLite.R"</span>)</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1530,10 +1524,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
